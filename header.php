@@ -3,7 +3,7 @@
         <div class="row">
             <!--Logo-->
             <div class="logo col-5 col-sm-3 col-md-3 col-lg-2 mb-2 align-self-center">
-                <a class="logoImg" href="javascript:void(0)"><img src="<?php echo $path ?>img/logo/logo1.png" alt="Hema Multipurpose Html Template" title="Hema Multipurpose Html Template" style="width: 100px;"/></a>
+                <a class="logoImg" href="javascript:void(0)"><img src="<?php echo $path ?>img/logo/logo1.png" alt="Hema Multipurpose Html Template" title="Hema Multipurpose Html Template" style="height: 100px !important;"/></a>
             </div>
             <!--End Logo-->
             <style>
