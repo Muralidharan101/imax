@@ -36,6 +36,47 @@
         <!-- Body Container -->
         <div id="page-content">
 
+              <!-- Meet Our Team section-->
+              <div class="team-section section">
+                <div class="container">
+                    <div class="section-header">
+                        <p class="mb-2 mt-0"></p>
+                        <h2>Founder & MD</h2>
+                    </div>
+
+                    <div
+                        class="team-items row col-row row-cols-lg-4 row-cols-md-4 row-cols-sm-2 row-cols-2 text-center justify-content-center">
+                        <div class="team-item col-item">
+                            <div class="team-img zoom-scal rounded-0">
+                                <img  class="rounded-0 blur-up lazyload w-100"
+                                    data-src="<?php echo $path ?>assets/img/aboutUs/contact 11.jpg"
+                                    src="<?php echo $path ?>assets/img/aboutUs/contact 11.jpg" alt="team" />
+                                <ul class="list-inline social-icons d-flex-justify-center">
+                                    <li class="list-inline-item"><a class="clr-none" href="#" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Facebook"><i
+                                                class="icon anm anm-facebook-f"></i></a></li>
+                                    <li class="list-inline-item"><a class="clr-none" href="#" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Twitter"><i
+                                                class="icon anm anm-twitter"></i></a></li>
+                                    <li class="list-inline-item"><a class="clr-none" href="#" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Pinterest"><i
+                                                class="icon anm anm-pinterest-p"></i></a></li>
+                                    <li class="list-inline-item"><a class="clr-none" href="#" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Instagram"><i
+                                                class="icon anm anm-linkedin-in"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="team-bio pt-3">
+                                <h3 class="mb-2">Saran Raj</h3>
+                                <p>Founder - Managing Director</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--End Meet Our Team section -->
+
 
             <!--Main Content-->
             <!-- Destination section -->
@@ -47,8 +88,7 @@
                                 <div class="row g-3">
                                     <img class="rounded-0 blur-up lazyload"
                                         data-src="<?php echo $path ?>assets/img/aboutUs/about 1.jpg"
-                                        src="<?php echo $path ?>assets/img/aboutUs/about 1.jpg" alt="about" width="700"
-                                        height="827" />
+                                        src="<?php echo $path ?>assets/img/aboutUs/about 1.jpg" alt="about" style="width: 80%;border-radius: 10px !important; " />
                                 </div>
                             </div>
                         </div>
@@ -156,8 +196,7 @@
                                 <div class="row g-3">
                                     <img class="rounded-0 blur-up lazyload"
                                         data-src="<?php echo $path ?>assets/img/aboutUs/about 2.jpg"
-                                        src="<?php echo $path ?>assets/img/aboutUs/about 2.jpg" alt="about" width="700"
-                                        height="827" />
+                                        src="<?php echo $path ?>assets/img/aboutUs/about 2.jpg" alt="about" style="width: 80%;border-radius: 10px !important;" />
                                 </div>
                             </div>
                         </div>
@@ -166,47 +205,7 @@
             </div>
             <!-- End Destination section -->
 
-            <!-- Meet Our Team section-->
-            <!-- <div class="team-section section">
-                <div class="container">
-                    <div class="section-header">
-                        <p class="mb-2 mt-0"></p>
-                        <h2>Founder & MD</h2>
-                    </div>
-
-                    <div
-                        class="team-items row col-row row-cols-lg-4 row-cols-md-4 row-cols-sm-2 row-cols-2 text-center justify-content-center">
-                        <div class="team-item col-item">
-                            <div class="team-img zoom-scal rounded-0">
-                                <img  class="rounded-0 blur-up lazyload w-100"
-                                    data-src="<?php echo $path ?>assets/img/aboutUs/contact 11.jpg"
-                                    src="<?php echo $path ?>assets/img/aboutUs/contact 11.jpg" alt="team" width="350" height="350" />
-                                <ul class="list-inline social-icons d-flex-justify-center">
-                                    <li class="list-inline-item"><a class="clr-none" href="#" data-bs-toggle="tooltip"
-                                            data-bs-placement="top" title="Facebook"><i
-                                                class="icon anm anm-facebook-f"></i></a></li>
-                                    <li class="list-inline-item"><a class="clr-none" href="#" data-bs-toggle="tooltip"
-                                            data-bs-placement="top" title="Twitter"><i
-                                                class="icon anm anm-twitter"></i></a></li>
-                                    <li class="list-inline-item"><a class="clr-none" href="#" data-bs-toggle="tooltip"
-                                            data-bs-placement="top" title="Pinterest"><i
-                                                class="icon anm anm-pinterest-p"></i></a></li>
-                                    <li class="list-inline-item"><a class="clr-none" href="#" data-bs-toggle="tooltip"
-                                            data-bs-placement="top" title="Instagram"><i
-                                                class="icon anm anm-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="team-bio pt-3">
-                                <h3 class="mb-2">Saran Raj</h3>
-                                <p>Founder - Managing Director</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div> -->
-            <!--End Meet Our Team section -->
-
+          
 
 
             <!--Testimonial Section-->
