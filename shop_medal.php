@@ -179,9 +179,8 @@
                                 <form class="widget-content price-filter filterDD" action="#" method="post">
                                     <div id="slider-range" class="mt-2"></div>
                                     <div class="row">
-                                        <div class="col-8"><input id="amount" type="text" /></div>
-                                        <div class="col-4 text-right"><button class="btn btn-sm" id="setrange" >filter</button></div>
-                                    </div>
+                                        <div class="col-10"><input id="amount" type="text" /></div>
+                                                                            </div>
                                 </form>
                             </div>
                             <!--End Price Filter-->
