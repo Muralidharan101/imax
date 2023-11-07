@@ -1,0 +1,13 @@
+RewriteEngine on
+
+Rewriterule ^home index.php
+
+Rewriterule ^Purchase_Token Token_form.php
+
+Rewriterule ^Purchase_DSC Purchase_DSC.php
+
+Rewriterule ^Exchange_DSC Exchange.php
+
+Rewriterule ^Sales_Token Sales_Token.php
+
+Rewriterule ^Reseller_DSC Reseller_DSC.php
