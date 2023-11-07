@@ -26,14 +26,13 @@
 <body class="template-index index-demo4">
     <!--Page Wrapper-->
     <div class="page-wrapper">
-        <div class="classic-topHeader">
+     
 
 
             <!--Header-->
             <?php include('header.php'); ?>
 
-            <!--End Header-->
-        </div>
+        
 
 
         <!-- Body Container -->
@@ -88,25 +87,52 @@
                 </section>
             <!--End Home Slideshow-->
 
-            <video controls muted autoplay loop>
+            <!-- <video controls muted autoplay loop>
                 <source src="../assets/img/imax_trophies.mp4" type="video/mp4">
+            </video> -->
 
-            </video>
+            <div class="destination-section section pb-0">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-sm-12 col-md-6">
+                            <div class="about-details px-50 py-5">
+                                <h2 class="fs-4 mb-3">Discover the Excellence of Our Trophies.</h2>
+                                <p>At IMAX Trophies, we take immense pride in the art of recognition. Our trophy
+                                    collection represents the epitome of craftsmanship, designed to honor achievements,
+                                    celebrate victories, and etch moments in time. With a wide array of options for
+                                    every occasion, we invite you to explore the essence of our trophies:</p>
 
+                                <p>From championship cups to elegant plaques, from sparkling crystal to timeless metal,
+                                    our trophies are a testament to your achievements and the recognition they deserve.
+                                    Join us in celebrating success and let our trophies tell the story of your journey.
+                                    At IMAX Trophies, we are more than just a trophy store; we are the keepers of your
+                                    proudest moments.</p>
+                               
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6">
+                            <div class="about-images mt-4 mt-md-0">
+                                <div class="row g-3">
+                                        <video class="rounded-0 blur-up lazyload" controls muted autoplay loop width="700" height="827">
+                                        <source src="../assets/img/imax_trophies.mp4" type="video/mp4">
+                                        </video> 
 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!--Products Slider-->
             <section class="section product-banner-slider">
                 <div class="container">
                     <div class="section-header style2 d-flex-center justify-content-sm-between">
                         <div class="section-header-left text-start">
-                            <h2 class='text-dark'>Best Sellers</h2>
+                            <h2 class='text-dark'>Our Best collections</h2>
                             <p>Shop our best sellers from established trophies</p>
                         </div>
-                        <div class="section-header-right text-start text-sm-end mt-3 mt-sm-0">
-                            <a href="shop-left-sidebar.html" class="btn btn-primary">View More <i
-                                    class="icon anm anm-arw-right ms-2"></i></a>
-                        </div>
+                       
                     </div>
 
                     <div class="row">
@@ -123,8 +149,7 @@
                                         Collections</h2>
                                     <p class="ctg-des mt-3 mb-4">Shop our weekly edit of what's new in online at IMAX
                                         collections.</p>
-                                    <a class="btn btn-secondary explore-btn" href="shop-left-sidebar.html">Explore Now
-                                        <i class="icon anm anm-arw-right ms-2"></i></a>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -166,24 +191,14 @@
                                             </div>
                                             <!-- End Product Name -->
                                             <!-- Product Price -->
-                                            <div class="product-price">
-                                                <span class="price">$128.00</span>
+                                              <!-- Product Price -->
+                                              <div class="product-price">
+                                                <span class="price old-price">₹1099.00</span><span
+                                                    class="price">₹999.00</span>
                                             </div>
                                             <!-- End Product Price -->
+                                            <!-- End Product Price -->
 
-                                            <!-- Product Button -->
-                                            <div class="button-action">
-                                                <div class="addtocart-btn">
-
-                                                    <a href="shop"
-                                                        class="btn btn-secondary quick-shop quick-shop-modal">
-                                                        <i class="icon anm anm-basket-l me-2"></i><span class="text">
-                                                            Shop Now</span>
-                                                    </a>
-
-                                                </div>
-                                            </div>
-                                            <!-- End Product Button -->
                                         </div>
                                         <!-- End product details -->
                                     </div>
@@ -227,23 +242,11 @@
                                             <!-- End Product Name -->
                                             <!-- Product Price -->
                                             <div class="product-price">
-                                                <span class="price old-price">$114.00</span><span
-                                                    class="price">$99.00</span>
+                                                <span class="price old-price">₹1099.00</span><span
+                                                    class="price">₹999.00</span>
                                             </div>
                                             <!-- End Product Price -->
 
-                                            <!-- Product Button -->
-                                            <div class="button-action">
-                                                <div class="addtocart-btn">
-                                                    <a href="shop"
-                                                        class="btn btn-secondary quick-shop quick-shop-modal">
-                                                        <i class="icon anm anm-basket-l me-2"></i><span
-                                                            class="text">Shop Now</span>
-                                                    </a>
-
-                                                </div>
-                                            </div>
-                                            <!-- End Product Button -->
                                         </div>
                                         <!-- End product details -->
                                     </div>
@@ -287,22 +290,10 @@
                                             <!-- End Product Name -->
                                             <!-- Product Price -->
                                             <div class="product-price">
-                                                <span class="price">$99.00</span>
+                                                <span class="price old-price">₹1099.00</span><span
+                                                    class="price">₹999.00</span>
                                             </div>
                                             <!-- End Product Price -->
-
-                                            <!-- Product Button -->
-                                            <div class="button-action">
-                                                <div class="addtocart-btn">
-
-                                                    <a href="shop"
-                                                        class="btn btn-secondary addtocart add-to-cart-modal">
-                                                        <i class="icon anm anm-basket-l me-2"></i><span class="text">Shop Now</span>
-                                                    </a>
-
-                                                </div>
-                                            </div>
-                                            <!-- End Product Button -->
                                         </div>
                                         <!-- End product details -->
                                     </div>
@@ -347,22 +338,12 @@
                                             <!-- End Product Name -->
                                             <!-- Product Price -->
                                             <div class="product-price">
-                                                <span class="price">$99.00</span>
+                                                <span class="price old-price">₹1099.00</span><span
+                                                    class="price">₹999.00</span>
                                             </div>
                                             <!-- End Product Price -->
 
-                                            <!-- Product Button -->
-                                            <div class="button-action">
-                                                <div class="addtocart-btn">
-
-                                                    <a href="shop"
-                                                        class="btn btn-secondary addtocart add-to-cart-modal">
-                                                        <i class="icon anm anm-basket-l me-2"></i><span class="text">Shop Now</span>
-                                                    </a>
-
-                                                </div>
-                                            </div>
-                                            <!-- End Product Button -->
+                                           
                                         </div>
                                         <!-- End product details -->
                                     </div>
@@ -407,22 +388,12 @@
                                             <!-- End Product Name -->
                                             <!-- Product Price -->
                                             <div class="product-price">
-                                                <span class="price">$99.00</span>
+                                                <span class="price old-price">₹1099.00</span><span
+                                                    class="price">₹999.00</span>
                                             </div>
                                             <!-- End Product Price -->
 
-                                            <!-- Product Button -->
-                                            <div class="button-action">
-                                                <div class="addtocart-btn">
-
-                                                    <a href="shop"
-                                                        class="btn btn-secondary addtocart add-to-cart-modal">
-                                                        <i class="icon anm anm-basket-l me-2"></i><span class="text">Shop Now</span>
-                                                    </a>
-
-                                                </div>
-                                            </div>
-                                            <!-- End Product Button -->
+                                        
                                         </div>
                                         <!-- End product details -->
                                     </div>
@@ -466,23 +437,11 @@
                                             </div>
                                             <!-- End Product Name -->
                                             <!-- Product Price -->
-                                            <div class="product-price">
-                                                <span class="price">$299.00</span>
+                                             <div class="product-price">
+                                                <span class="price old-price">₹1099.00</span><span
+                                                    class="price">₹999.00</span>
                                             </div>
                                             <!-- End Product Price -->
-
-                                            <!-- Product Button -->
-                                            <div class="button-action">
-                                                <div class="addtocart-btn">
-
-                                                    <a href="shop"
-                                                        class="btn btn-secondary addtocart add-to-cart-modal">
-                                                        <i class="icon anm anm-basket-l me-2"></i><span class="text">Shop Now</span>
-                                                    </a>
-
-                                                </div>
-                                            </div>
-                                            <!-- End Product Button -->
                                         </div>
                                         <!-- End product details -->
                                     </div>
@@ -503,10 +462,7 @@
                             <h2 class="text-dark">Shop By Category</h2>
                             <p>Shop our new arrivals from established category</p>
                         </div>
-                        <div class="section-header-right text-start text-sm-end mt-3 mt-sm-0">
-                            <a href="shop" class="btn btn-primary">View All Category <i
-                                    class="icon anm anm-arw-right ms-2"></i></a>
-                        </div>
+                        
                     </div>
 
                     <div class="collection-slider-3items slick-arrow-dots gp15 arwOut5 hov-arrow circle-arrow">
@@ -566,7 +522,7 @@
             <section class="section product-slider tab-slider-product">
                 <div class="container container-1330">
                     <div class="section-header">
-                        <h2 class='text-dark'>Our Best Products</h2>
+                        <h2 class='text-dark'>Our Best Selling Products</h2>
                     </div>
 
                     <div class="tabs-listing">
@@ -631,23 +587,13 @@
                                                     <!-- End Product Name -->
                                                     <!-- Product Price -->
                                                     <div class="product-price">
-                                                        <span class="price old-price">$198.00</span><span
-                                                            class="price">$99.00</span>
+                                                        <span class="price old-price">₹1099.00</span><span
+                                                            class="price">₹999.00</span>
                                                     </div>
                                                     <!-- End Product Price -->
 
                                                     <!-- Product Button -->
-                                                    <div class="button-action">
-                                                        <div class="addtocart-btn">
-
-                                                            <a href="shop"
-                                                                class="btn btn-secondary addtocart add-to-cart-modal">
-                                                                <i class="icon anm anm-basket-l me-2"></i><span
-                                                                    class="text">Shop Now</span>
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
+                                                 
                                                     <!-- End Product Button -->
                                                 </div>
                                                 <!-- End product details -->
@@ -690,23 +636,13 @@
                                                     <!-- End Product Name -->
                                                     <!-- Product Price -->
                                                     <div class="product-price">
-                                                        <span class="price old-price">$198.00</span><span
-                                                            class="price">$99.00</span>
+                                                        <span class="price old-price">₹1099.00</span><span
+                                                            class="price">₹999.00</span>
                                                     </div>
                                                     <!-- End Product Price -->
 
                                                     <!-- Product Button -->
-                                                    <div class="button-action">
-                                                        <div class="addtocart-btn">
-
-                                                            <a href="shop"
-                                                                class="btn btn-secondary addtocart add-to-cart-modal">
-                                                                <i class="icon anm anm-basket-l me-2"></i><span
-                                                                    class="text">Shop Now</span>
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
+                                                   
                                                     <!-- End Product Button -->
                                                 </div>
                                                 <!-- End product details -->
@@ -758,17 +694,7 @@
                                                     <!-- End Product Price -->
 
                                                     <!-- Product Button -->
-                                                    <div class="button-action">
-                                                        <div class="addtocart-btn">
-
-                                                            <a href="shop"
-                                                                class="btn btn-secondary addtocart add-to-cart-modal">
-                                                                <i class="icon anm anm-basket-l me-2"></i><span
-                                                                    class="text">Shop Now</span>
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
+                                                   
                                                     <!-- End Product Button -->
                                                 </div>
                                                 <!-- End product details -->
@@ -815,22 +741,13 @@
                                                     <!-- End Product Name -->
                                                     <!-- Product Price -->
                                                     <div class="product-price">
-                                                        <span class="price">$199.00</span>
+                                                        <span class="price old-price">₹1099.00</span><span
+                                                            class="price">₹999.00</span>
                                                     </div>
                                                     <!-- End Product Price -->
 
                                                     <!-- Product Button -->
-                                                    <div class="button-action">
-                                                        <div class="addtocart-btn">
-
-                                                            <a href="shop"
-                                                                class="btn btn-secondary addtocart add-to-cart-modal">
-                                                                <i class="icon anm anm-basket-l me-2"></i><span
-                                                                    class="text">Shop Now</span>
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
+                                                    
                                                     <!-- End Product Button -->
                                                 </div>
                                                 <!-- End product details -->
@@ -887,23 +804,13 @@
                                                     <!-- End Product Name -->
                                                     <!-- Product Price -->
                                                     <div class="product-price">
-                                                        <span class="price old-price">$198.00</span><span
-                                                            class="price">$99.00</span>
+                                                        <span class="price old-price">₹1099.00</span><span
+                                                            class="price">₹999.00</span>
                                                     </div>
                                                     <!-- End Product Price -->
 
                                                     <!-- Product Button -->
-                                                    <div class="button-action">
-                                                        <div class="addtocart-btn">
-
-                                                            <a href="shop"
-                                                                class="btn btn-secondary addtocart add-to-cart-modal">
-                                                                <i class="icon anm anm-basket-l me-2"></i><span
-                                                                    class="text">Shop Now</span>
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
+                                                  
                                                     <!-- End Product Button -->
                                                 </div>
                                                 <!-- End product details -->
@@ -947,22 +854,13 @@
                                                     <!-- End Product Name -->
                                                     <!-- Product Price -->
                                                     <div class="product-price">
-                                                        <span class="price">$199.00</span>
+                                                        <span class="price old-price">₹1099.00</span><span
+                                                            class="price">₹999.00</span>
                                                     </div>
                                                     <!-- End Product Price -->
 
                                                     <!-- Product Button -->
-                                                    <div class="button-action">
-                                                        <div class="addtocart-btn">
-
-                                                            <a href="shop"
-                                                                class="btn btn-secondary addtocart add-to-cart-modal">
-                                                                <i class="icon anm anm-basket-l me-2"></i><span
-                                                                    class="text">Shop Now</span>
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
+                                                  
                                                     <!-- End Product Button -->
                                                 </div>
                                                 <!-- End product details -->
@@ -1006,22 +904,13 @@
                                                     <!-- End Product Name -->
                                                     <!-- Product Price -->
                                                     <div class="product-price">
-                                                        <span class="price">$99.00</span>
+                                                        <span class="price old-price">₹1099.00</span><span
+                                                            class="price">₹999.00</span>
                                                     </div>
                                                     <!-- End Product Price -->
 
                                                     <!-- Product Button -->
-                                                    <div class="button-action">
-                                                        <div class="addtocart-btn">
-
-                                                            <a href="shop"
-                                                                class="btn btn-secondary addtocart add-to-cart-modal">
-                                                                <i class="icon anm anm-basket-l me-2"></i><span
-                                                                    class="text">Shop Now</span>
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
+                                                
                                                     <!-- End Product Button -->
                                                 </div>
                                                 <!-- End product details -->
@@ -1065,22 +954,13 @@
                                                     <!-- End Product Name -->
                                                     <!-- Product Price -->
                                                     <div class="product-price">
-                                                        <span class="price">$199.00</span>
+                                                        <span class="price old-price">₹1099.00</span><span
+                                                            class="price">₹999.00</span>
                                                     </div>
                                                     <!-- End Product Price -->
 
                                                     <!-- Product Button -->
-                                                    <div class="button-action">
-                                                        <div class="addtocart-btn">
-
-                                                            <a href="shop"
-                                                                class="btn btn-secondary addtocart add-to-cart-modal">
-                                                                <i class="icon anm anm-basket-l me-2"></i><span
-                                                                    class="text">Shop Now</span>
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
+                                                    
                                                     <!-- End Product Button -->
                                                 </div>
                                                 <!-- End product details -->
@@ -1137,23 +1017,13 @@
                                                     <!-- End Product Name -->
                                                     <!-- Product Price -->
                                                     <div class="product-price">
-                                                        <span class="price old-price">$198.00</span><span
-                                                            class="price">$99.00</span>
+                                                        <span class="price old-price">₹1099.00</span><span
+                                                            class="price">₹999.00</span>
                                                     </div>
                                                     <!-- End Product Price -->
 
                                                     <!-- Product Button -->
-                                                    <div class="button-action">
-                                                        <div class="addtocart-btn">
-
-                                                            <a href="shop"
-                                                                class="btn btn-secondary addtocart add-to-cart-modal">
-                                                                <i class="icon anm anm-basket-l me-2"></i><span
-                                                                    class="text">Shop Now</span>
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
+                                                  
                                                     <!-- End Product Button -->
                                                 </div>
                                                 <!-- End product details -->
@@ -1197,23 +1067,13 @@
                                                     <!-- End Product Name -->
                                                     <!-- Product Price -->
                                                     <div class="product-price">
-                                                        <span class="price old-price">$198.00</span><span
-                                                            class="price">$99.00</span>
+                                                        <span class="price old-price">₹1099.00</span><span
+                                                            class="price">₹999.00</span>
                                                     </div>
                                                     <!-- End Product Price -->
 
                                                     <!-- Product Button -->
-                                                    <div class="button-action">
-                                                        <div class="addtocart-btn">
-
-                                                            <a href="shop"
-                                                                class="btn btn-secondary addtocart add-to-cart-modal">
-                                                                <i class="icon anm anm-basket-l me-2"></i><span
-                                                                    class="text">Shop Now</span>
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
+                                                   
                                                     <!-- End Product Button -->
                                                 </div>
                                                 <!-- End product details -->
@@ -1257,23 +1117,13 @@
                                                     <!-- End Product Name -->
                                                     <!-- Product Price -->
                                                     <div class="product-price">
-                                                        <span class="price old-price">$198.00</span><span
-                                                            class="price">$99.00</span>
+                                                        <span class="price old-price">₹1099.00</span><span
+                                                            class="price">₹999.00</span>
                                                     </div>
                                                     <!-- End Product Price -->
 
                                                     <!-- Product Button -->
-                                                    <div class="button-action">
-                                                        <div class="addtocart-btn">
-
-                                                            <a href="shop"
-                                                                class="btn btn-secondary addtocart add-to-cart-modal">
-                                                                <i class="icon anm anm-basket-l me-2"></i><span
-                                                                    class="text">Shop Now</span>
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
+                                                    
                                                     <!-- End Product Button -->
                                                 </div>
                                                 <!-- End product details -->
@@ -1317,23 +1167,13 @@
                                                     <!-- End Product Name -->
                                                     <!-- Product Price -->
                                                     <div class="product-price">
-                                                        <span class="price old-price">$198.00</span><span
-                                                            class="price">$99.00</span>
+                                                        <span class="price old-price">₹1099.00</span><span
+                                                            class="price">₹999.00</span>
                                                     </div>
                                                     <!-- End Product Price -->
 
                                                     <!-- Product Button -->
-                                                    <div class="button-action">
-                                                        <div class="addtocart-btn">
-
-                                                            <a href="shop"
-                                                                class="btn btn-secondary addtocart add-to-cart-modal">
-                                                                <i class="icon anm anm-basket-l me-2"></i><span
-                                                                    class="text">Shop Now</span>
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
+                                                   
                                                     <!-- End Product Button -->
                                                 </div>
                                                 <!-- End product details -->
@@ -1402,8 +1242,8 @@
                                             </div>
                                         
                                             <div class="product-price">
-                                                <span class="price old-price">$198.00</span><span
-                                                    class="price">$99.00</span>
+                                                <span class="price old-price">₹1099.00</span><span
+                                                    class="price">₹999.00</span>
                                             </div>
                                            
                                             <div class="button-action">
@@ -1443,8 +1283,8 @@
                                                 <a href="shop">King Grand Cup</a>
                                             </div>
                                             <div class="product-price">
-                                                <span class="price old-price">$198.00</span><span
-                                                    class="price">$99.00</span>
+                                                <span class="price old-price">₹1099.00</span><span
+                                                    class="price">₹999.00</span>
                                             </div>
 
                                             <div class="button-action">
@@ -1570,7 +1410,7 @@
 
             <!--End Products Slider-->
 
-            <!--Collection banner-->
+            <!--Collection banner
             <section class="section collection-banners two-one-bnr py-0">
                 <div class="container">
                     <div class="collection-banner-grid two-bnr">
@@ -1605,7 +1445,7 @@
                     </div>
                 </div>
             </section>
-            <!--End Collection banner-->
+            End Collection banner-->
 
             <!--Testimonial Section-->
             <section class="section testimonial-slider style1 pb-0">
@@ -1833,7 +1673,7 @@
                                 <div class="variant-cart my-2">Yellow / M</div>
                                 <div class="priceRow">
                                     <div class="product-price">
-                                        <span class="price old-price">$114.00</span><span class="price">$99.00</span>
+                                        <span class="price old-price">₹1099.00</span><span class="price">₹999.00</span>
                                     </div>
                                 </div>
                             </div>
@@ -1908,8 +1748,8 @@
                                         <div class="variant-cart mb-1">Electronic</div>
                                         <a class="product-title" href="product-layout1.html">Digital SLR Camera</a>
                                         <div class="priceRow mt-2 mb-3">
-                                            <div class="product-price m-0"><span class="old-price">$114.00</span><span
-                                                    class="price">$99.00</span></div>
+                                            <div class="product-price m-0"><span class="old-price">₹1099.00</span><span
+                                                    class="price">₹999.00</span></div>
                                         </div>
                                         <div class="qtyField">
                                             <a class="qtyBtn minus" href="#;"><i class="icon anm anm-minus-r"></i></a>
@@ -2011,7 +1851,7 @@
                                     <div class="addcart-total rounded-5">
                                         <p class="product-items mb-2">There are <strong>1</strong> items in your cart
                                         </p>
-                                        <p class="d-flex-justify-center">Total: <span class="price">$198.00</span></p>
+                                        <p class="d-flex-justify-center">Total: <span class="price">₹1099.00</span></p>
                                     </div>
                                     <!-- End Product Info -->
                                     <!-- Product Action -->
@@ -2184,7 +2024,7 @@
                                             <span class="items">10</span> left!</span></span>
                                 </div>
                                 <div class="product-price d-flex-center my-3">
-                                    <span class="price old-price">$135.00</span><span class="price">$99.00</span>
+                                    <span class="price old-price">$135.00</span><span class="price">₹999.00</span>
 
                                 </div>
                                 <div class="sort-description">The standard chunk of Lorem Ipsum used since the 1500s is
