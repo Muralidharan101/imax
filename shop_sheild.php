@@ -26,10 +26,11 @@
 
         .cat{
             cursor: pointer;
+            padding: 5px 10px;
         }
         .active {
-            background-color: #e0e0e0;
-            /* Apply your desired active styling here */
+            border: 1px solid #fe0609;
+            padding: 0 20px;
         }
     </style>
 </head>
@@ -45,7 +46,7 @@
         <!--End Mobile Menu-->
 
         <!-- Body Container -->
-        <div id="page-content">
+     
 
             <style>
                 .collection-slider-6items .category-item img {
@@ -61,8 +62,24 @@
                 }
             </style>
 
-            <!--Main Content-->
-            <div class="container">
+        <div id="page-content"> 
+                <!--Page Header-->
+                <div class="page-header text-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex justify-content-between align-items-center">
+                                <div class="page-title"><h1>Product - Sheild section</h1></div>
+                             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Page Header-->
+
+                <!--Main Content-->
+                <div class="container">
+                    <!--Category Slider-->
+                    
             <section class="section collection-slider pb-0">
                               <div class="container">
                                  
@@ -132,11 +149,11 @@
                                       </div>
                                   </div>
                               </div>
-                          </section><br>
-                                    </div>
-                                    <div class="row">
-                    <!--Sidebar-->
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 sidebar sidebar-bg filterbar">
+                          </section><br><br>
+                    <!--End Category Slider-->
+                    <div class="row">
+                        <!--Sidebar-->
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 sidebar sidebar-bg filterbar">
                         <div class="closeFilter d-block d-lg-none"><i class="icon anm anm-times-r"></i></div>
                         <div class="sidebar-tags sidebar-sticky clearfix">
                        
@@ -179,7 +196,7 @@
                                     <div id="slider-range" class="mt-2"></div>
                                     <div class="row">
                                         <div class="col-10"><input id="amount" type="text" /></div>
-                                                                          </div>
+                                     </div>
                                 </form>
                             </div>
                             <!--End Price Filter-->
@@ -187,7 +204,7 @@
 
                             <!--End Color Swatches-->
                             <!--Size Swatches-->
-                            <div class="sidebar-widget filterBox filter-widget">
+                            <!-- <div class="sidebar-widget filterBox filter-widget">
                                 <div class="widget-title">
                                     <h2>Size</h2>
                                 </div>
@@ -244,10 +261,10 @@
                                             <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="XXL">XXL</span></li>
                                             <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="25">25</span></li>
                                             <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="35">35</span></li>
-                                            <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="40">40</span></li> -->
+                                            <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="40">40</span></li> 
                                     </ul>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="col-4 text-right"><button class="btn btn-sm" id="filteration">filter</button></div>
                             <!--End Size Swatches-->
                             <!--Product Brands-->
@@ -262,13 +279,12 @@
                                 </div> -->
                             <!--End Banner-->
                         </div>
-                    </div>
-                    <!--End Sidebar-->
+                        </div>
+                        <!--End Sidebar-->
 
-                    <!--Products-->
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-9 main-col">
-                       
-                    <!--Toolbar-->
+                        <!--Products-->
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-9 main-col">
+                            
                         <div class="search-body mb-5">
                             <form class="form minisearch" id="header-search" action="#" method="get">
                                 <!--Search Field-->
@@ -295,91 +311,71 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="row align-items-center">
-                                <div class="col-4 col-sm-2 col-md-4 col-lg-4 text-left filters-toolbar-item d-flex order-1 order-sm-0">
-                                    <button type="button" class="btn btn-filter icon anm anm-sliders-hr d-inline-flex d-lg-none me-2"><span class="d-none">Filter</span></button>
-                                    <div class="filters-item d-flex align-items-center">
-                                        <div class="grid-options view-mode d-flex">
-                                            <a class="icon-mode mode-list d-block" data-col="1"></a>
-                                            <a class="icon-mode mode-grid grid-2 d-block active" data-col="2"></a>
+                        <!--Toolbar-->
+                            <div class="toolbar toolbar-wrapper shop-toolbar">
+                                <div class="row align-items-center">
+                                    <div class="col-4 col-sm-2 col-md-4 col-lg-4 text-left filters-toolbar-item d-flex order-1 order-sm-0">
+                                        <button type="button" class="btn btn-filter icon anm anm-sliders-hr d-inline-flex d-lg-none me-2"><span class="d-none">Filter</span></button>
+      
+                                    </div>
+                                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center product-count order-0 order-md-1 mb-3 mb-sm-0">
+                                        <span class="toolbar-product-count">Showing: 15 products</span>
+                                    </div>
+                                    <div class="col-8 col-sm-6 col-md-4 col-lg-4 text-right filters-toolbar-item d-flex justify-content-end order-2 order-sm-2">
+                                        <div class="filters-item d-flex align-items-center">
+                                            <label for="ShowBy" class="mb-0 me-2 text-nowrap d-none d-sm-inline-flex">Show:</label>
+                                            <select name="ShowBy" id="ShowBy" class="filters-toolbar-show">
+                                                <option value="title-ascending" selected="selected">10</option>
+                                                <option>15</option>
+                                                <option>20</option>
+                                                <option>25</option>
+                                                <option>30</option>
+                                            </select>
+                                        </div>
+                                        <div class="filters-item d-flex align-items-center ms-2 ms-lg-3">
+                                            <label for="SortBy" class="mb-0 me-2 text-nowrap d-none">Sort by:</label>
+                                            <select name="SortBy" id="SortBy" class="filters-toolbar-sort">
+                                                <option value="featured" selected="selected">Featured</option>
+                                                <option value="best-selling">Best selling</option>
+                                                <option value="title-ascending">Alphabetically, A-Z</option>
+                                                <option value="title-descending">Alphabetically, Z-A</option>
+                                                <option value="price-ascending">Price, low to high</option>
+                                                <option value="price-descending">Price, high to low</option>
+                                                <option value="created-ascending">Date, old to new</option>
+                                                <option value="created-descending">Date, new to old</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center product-count order-0 order-md-1 mb-3 mb-sm-0">
-                                    <span class="toolbar-product-count">Showing: 15 products</span>
-                                </div>
-                                <div class="col-8 col-sm-6 col-md-4 col-lg-4 text-right filters-toolbar-item d-flex justify-content-end order-2 order-sm-2">
-                                    <div class="filters-item d-flex align-items-center">
-                                        <label for="ShowBy" class="mb-0 me-2 text-nowrap d-none d-sm-inline-flex">Show:</label>
-                                        <select name="ShowBy" id="ShowBy" class="filters-toolbar-show">
-                                            <option value="title-ascending" selected="selected">10</option>
-                                            <option>15</option>
-                                            <option>20</option>
-                                            <option>25</option>
-                                            <option>30</option>
-                                        </select>
-                                    </div>
-                                    <div class="filters-item d-flex align-items-center ms-2 ms-lg-3">
-                                        <label for="SortBy" class="mb-0 me-1 text-nowrap d-none">Sort by:</label>
-                                        <select name="SortBy" id="SortBy" class="filters-toolbar-sort">
-                                            <option value="featured" selected="selected">Featured</option>
-                                            <option value="best-selling">Best selling</option>
-                                            <option value="title-ascending">Alphabetically, A-Z</option>
-                                            <option value="title-descending">Alphabetically, Z-A</option>
-                                            <option value="price-ascending">Price, low to high</option>
-                                            <option value="price-descending">Price, high to low</option>
-                                            <option value="created-ascending">Date, old to new</option>
-                                            <option value="created-descending">Date, new to old</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            
-                    </div>
-                        
-                 <!--End Toolbar-->
-                        <style>
-                            .grid-products .product-img img {
-                                height: 300px;
-                            }
-
-                            @media screen and (max-width: 567.67px) {
-                                .grid-products .product-img img {
-                                    height: 200px !important;
-                                }
-                            }
-                        </style>
-
-                        <!--Product Grid-->
-                        <div class="grid-products grid-view-items">
-                            <div class="row col-row product-options row-cols-lg-4 row-cols-md-3 row-cols-sm-3 row-cols-2"
-                                id="cart-product">
-
-
-
                             </div>
+                            <!--End Toolbar-->
 
-                            <!-- Pagination -->
-                            <nav class="clearfix pagination-bottom">
-                                <ul class="pagination justify-content-center">
-                                    <li class="page-item disabled"><a class="page-link" href="#"><i
-                                                class="icon anm anm-angle-left-l"></i></a></li>
-                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link dot" href="#">...</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                    <li class="page-item"><a class="page-link" href="#"><i
-                                                class="icon anm anm-angle-right-l"></i></a></li>
-                                </ul>
-                            </nav>
-                            <!-- End Pagination -->
+                            <!--Product Grid-->
+                            <div class="grid-products grid-view-items">
+                                <div class="row col-row product-options row-cols-lg-3 row-cols-md-3 row-cols-sm-3 row-cols-2" id="cart-product">
+                            
+                                </div>
+
+                                <!-- Pagination -->
+                                <nav class="clearfix pagination-bottom">
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item disabled"><a class="page-link" href="#"><i class="icon anm anm-angle-left-l"></i></a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link dot" href="#">...</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item"><a class="page-link" href="#"><i class="icon anm anm-angle-right-l"></i></a></li>
+                                    </ul>
+                                </nav>
+                                <!-- End Pagination -->
+                            </div>
+                            <!--End Product Grid-->
                         </div>
-                        <!--End Product Grid-->
+                        <!--End Products-->
                     </div>
-                    <!--End Products-->
                 </div>
+                <!--End Main Content-->
             </div>
-            <!--End Main Content-->
-        </div>
         <!-- End Body Container -->
 
         <!--Footer-->
@@ -407,8 +403,7 @@
         var selectedValuesOutput;
         var categoryValue;
 
-
-        document.addEventListener('DOMContentLoaded', function() {
+       
             $("#slider-range").slider({
                 range: true,
                 min: 0,
@@ -423,12 +418,12 @@
             setpriceRange.addEventListener('click', function(e) {
                 e.preventDefault();
                 var inputElement = document.getElementById("amount");
-                var inputValue = inputElement.value;
+                priceInputValue = inputElement.value;
 
                 // Process the input value as needed
-                console.log("Input Value: " + inputValue);
+                console.log("Input Value: " + priceInputValue);
             });
-        });
+
 
         var swatchList = document.querySelectorAll('.swatch.available');
 
@@ -508,18 +503,16 @@
         $('#filteration').click(function (e) {
             e.preventDefault();{
                 var fd = new FormData();
-
+                
                 fd.append("Category", categoryValue);
-                fd.append("Size", selectedValuesOutput);
                 fd.append("Price", priceInputValue);
 
                 fetchingdata(fd)
             }
         })
 
-
-function fetchingdata(formdata){
-$.ajax({
+        function fetchingdata(formdata){
+        $.ajax({
                 url: 'ajax',
                 type: 'post',
                 contentType: false,
@@ -536,16 +529,10 @@ $.ajax({
                     }
                 }
             })
-
         }
-
-
-
-
 
         $(document).ready(function () {
             var product_id, main_img, alt_img;
-
 
             function colorList() {
                 $.ajax({
@@ -578,15 +565,11 @@ $.ajax({
                     }
                 });
             }
-
             colorList();
 
             function fetchdata() {
-
-
-
                 $.ajax({
-                    url: 'ajax/shield_list.php',
+                    url: 'ajax/trophy_list.php',
                     type: 'get',
 
                     success: function (response) {
@@ -612,60 +595,53 @@ $.ajax({
                                     var alt_img = altImage.product_img;
 
                                     var cartHtml = `
-                <div class="item col-item">
-                    <div class="product-box">
-                        <div class="product-image">
-                            <a href="product-desc.php?id=${product_id}" class="product-img rounded-0">
-                                <img class="main-img"
-                                    data-src="product_images/${product_id}/main/${main_img}"
-                                    src="product_images/${product_id}/main/${main_img}"
-                                    alt="Product Main Image" title="Product Main Image" width="625" height="808" />
-                                <img class="hover"
-                                    data-src="product_images/${product_id}/alt/${alt_img}"
-                                    src="product_images/${product_id}/alt/${alt_img}"
-                                    alt="Product Alt Image" title="Product Alt Image" width="625" height="808" style="display: none;" />
-                            </a>
-                        </div>
-                        <div class="product-details text-left">
-                            <span class="product-vendor">${mainImage.product_category}</span>
-                            
-                            <div class="product-name">
-                                <a href="product-desc.php?id=${mainImage.id}">${mainImage.product_name}</a>
-                            </div>
-                            
-                            <div class="product-price">
-                                <span class="price">$${mainImage.product_price}</span>
-                            </div>
-                            
-                            <p class="sort-desc hidden">${mainImage.product_desc}</p>
-                            
-                            <div class="button-action hidden">
-                                <div class="addtocart-btn">
-                                    <div class="addtocart" action="#" method="post">
-                                        <a href="#addtocart-modal" class="btn btn-md add-to-cart-modal"
-                                            data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                            <i class="icon anm anm-cart-l me-2"></i><span
-                                                class="text">Add to Cart</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            `;
+                                        <div class="item col-item">
+                                            <div class="product-box">
+                                                <div class="product-image">
+                                                    <a href="product-desc.php?id=${product_id}" class="product-img rounded-0">
+                                                        <img class="main-img"
+                                                            data-src="product_images/${product_id}/main/${main_img}"
+                                                            src="product_images/${product_id}/main/${main_img}"
+                                                            alt="Product Main Image" title="Product Main Image" width="625" height="808" />
+                                                        <img class="hover"
+                                                            data-src="product_images/${product_id}/alt/${alt_img}"
+                                                            src="product_images/${product_id}/alt/${alt_img}"
+                                                            alt="Product Alt Image" title="Product Alt Image" width="625" height="808" style="display: none;" />
+                                                    </a>
+                                                </div>
+                                                <div class="product-details text-left">
+                                                    <span class="product-vendor">${mainImage.product_category}</span>
+                                                    
+                                                    <div class="product-name">
+                                                        <a href="product-desc.php?id=${mainImage.id}">${mainImage.product_name}</a>
+                                                    </div>
+                                                    
+                                                    <div class="product-price">
+                                                        <span class="price">₹${mainImage.product_price}</span>
+                                                    </div>
+                                                    
+                                                    <p class="sort-desc hidden">${mainImage.product_desc}</p>
+                                                    
+                                                    <div class="button-action hidden">
+                                                        <div class="addtocart-btn">
+                                                            <div class="addtocart" action="#" method="post">
+                                                                <a href="#addtocart-modal" class="btn btn-md add-to-cart-modal"
+                                                                    data-bs-toggle="modal" data-bs-target="#addtocart_modal">
+                                                                    <i class="icon anm anm-cart-l me-2"></i><span
+                                                                        class="text">Add to Cart</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    `;
                                     cart.insertAdjacentHTML("beforeend", cartHtml);
                                 }
-
-
                             }
                         }
-
-
-
-
-
                         // if (result.status == 'Success') {
                         //     var data = result.data;
 

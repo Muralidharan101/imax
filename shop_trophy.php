@@ -23,13 +23,14 @@
     <link rel="stylesheet" href="<?php echo $path ?>assets/css/responsive.css">
 
     <style>
-
-        .cat{
+        .cat {
             cursor: pointer;
+            padding: 5px 10px;
         }
+
         .active {
-            background-color: #e0e0e0;
-            /* Apply your desired active styling here */
+            border: 1px solid #fe0609;
+            padding: 0 20px;
         }
     </style>
 </head>
@@ -45,101 +46,141 @@
         <!--End Mobile Menu-->
 
         <!-- Body Container -->
-        <div id="page-content">
 
-            <style>
+
+        <style>
+            .collection-slider-6items .category-item img {
+                width: 180px;
+                height: 200px;
+            }
+
+            @media screen and (max-width: 567.67px) {
                 .collection-slider-6items .category-item img {
-                    width: 180px;
+                    width: 205px;
                     height: 200px;
                 }
+            }
+        </style>
 
-                @media screen and (max-width: 567.67px) {
-                    .collection-slider-6items .category-item img {
-                        width: 205px;
-                        height: 200px;
-                    }
-                }
-            </style>
+        <div id="page-content">
+            <!--Page Header-->
+            <div class="page-header text-center">
+                <div class="container">
+                    <div class="row">
+                        <div
+                            class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex justify-content-between align-items-center">
+                            <div class="page-title">
+                                <h1>Product - Sheild section</h1>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Page Header-->
 
             <!--Main Content-->
             <div class="container">
-            <section class="section collection-slider pb-0">
-                              <div class="container">
-                                 
-                                  <div class="collection-slider-5items gp15 arwOut5 hov-arrow">
-                                      <div class="category-item zoomscal-hov">
-                                          <a href="shop-left-sidebar.html" class="category-link clr-none">
-                                              <div class="zoom-scal zoom-scal-nopb rounded-3"><img class="blur-up lazyload" data-src="<?php echo $path ?>img\trophy_category\silambam.jpg" src="<?php echo $path ?>img\trophy_category\silambam.jpg" alt="Men's Jakets" title="Men's Jakets" width="365" height="365" /></div>
-                                              <div class="details mt-3 text-center">
-                                                  <h4 class="category-title mb-0">Silambam</h4>
-                                                  <p class="counts">20 Products</p>
-                                              </div>
-                                          </a>
-                                      </div>
-                                      <div class="category-item zoomscal-hov">
-                                          <a href="shop-left-sidebar.html" class="category-link clr-none">
-                                              <div class="zoom-scal zoom-scal-nopb rounded-3"><img class="blur-up lazyload" data-src="<?php echo $path ?>img\trophy_category\vollyball.jpg" src="<?php echo $path ?>img\trophy_category\vollyball.jpg" alt="Tops" title="Tops" width="365" height="365" /></div>
-                                              <div class="details mt-3 text-center">
-                                                  <h4 class="category-title mb-0">VollyBall</h4>
-                                                  <p class="counts">13 Products</p>
-                                              </div>
-                                          </a>
-                                      </div>
-                                      <div class="category-item zoomscal-hov">
-                                          <a href="shop-left-sidebar.html" class="category-link clr-none">
-                                              <div class="zoom-scal zoom-scal-nopb rounded-3"><img class="blur-up lazyload" data-src="<?php echo $path ?>img\trophy_category\soccer.jpg" src="<?php echo $path ?>img\trophy_category\soccer.jpg" alt="T-Shirts" title="T-Shirts" width="365" height="365" /></div>
-                                              <div class="details mt-3 text-center">
-                                                  <h4 class="category-title mb-0">Soccer</h4>
-                                                  <p class="counts">18 Products</p>
-                                              </div>
-                                          </a>
-                                      </div>
-                                      <div class="category-item zoomscal-hov">
-                                          <a href="shop-left-sidebar.html" class="category-link clr-none">
-                                              <div class="zoom-scal zoom-scal-nopb rounded-3"><img class="blur-up lazyload" data-src="<?php echo $path ?>img\trophy_category\jallikattu.jpg" src="<?php echo $path ?>img\trophy_category\jallikattu.jpg" alt="Shoes" title="Shoes" width="365" height="365" /></div>
-                                              <div class="details mt-3 text-center">
-                                                  <h4 class="category-title mb-0">Shoes</h4>
-                                                  <p class="counts">11 Products</p>
-                                              </div>
-                                          </a>
-                                      </div>
-                                      <div class="category-item zoomscal-hov">
-                                          <a href="shop-left-sidebar.html" class="category-link clr-none">
-                                              <div class="zoom-scal zoom-scal-nopb rounded-3"><img class="blur-up lazyload" data-src="<?php echo $path ?>img\trophy_category\badmiton.jpg" src="<?php echo $path ?>img\trophy_category\badmiton.jpg" alt="Shorts" title="Shorts" width="365" height="365"/></div>
-                                              <div class="details mt-3 text-center">
-                                                  <h4 class="category-title mb-0">badmiton</h4>
-                                                  <p class="counts">28 Products</p>
-                                              </div>
-                                          </a>
-                                      </div>
-                                      <div class="category-item zoomscal-hov">
-                                          <a href="shop-left-sidebar.html" class="category-link clr-none">
-                                              <div class="zoom-scal zoom-scal-nopb rounded-3"><img class="blur-up lazyload" data-src="<?php echo $path ?>img\trophy_category\kabadi.jpg" src="<?php echo $path ?>img\trophy_category\kabadi.jpg" alt="Sunglasses" title="Sunglasses" width="365" height="365" /></div>
-                                              <div class="details mt-3 text-center">
-                                                  <h4 class="category-title mb-0">Kabaadi</h4>
-                                                  <p class="counts">24 Products</p>
-                                              </div>
-                                          </a>
-                                      </div>
-                                      <div class="category-item zoomscal-hov">
-                                          <a href="shop-left-sidebar.html" class="category-link clr-none">
-                                              <div class="zoom-scal zoom-scal-nopb rounded-3"><img class="blur-up lazyload" data-src="<?php echo $path ?>img\trophy_category\karate.jpg" src="<?php echo $path ?>img\trophy_category\karate.jpg" alt="Girls Top" title="Girls Top" width="365" height="365" /></div>
-                                              <div class="details mt-3 text-center">
-                                                  <h4 class="category-title mb-0">karate</h4>
-                                                  <p class="counts">26 Products</p>
-                                              </div>
-                                          </a>
-                                      </div>
-                                  </div>
-                              </div>
-                          </section><br>
+                <!--Category Slider-->
+
+                <section class="section collection-slider pb-0">
+                    <div class="container">
+
+                        <div class="collection-slider-5items gp15 arwOut5 hov-arrow">
+                            <div class="category-item zoomscal-hov">
+                                <a href="shop-left-sidebar.html" class="category-link clr-none">
+                                    <div class="zoom-scal zoom-scal-nopb rounded-3"><img class="blur-up lazyload"
+                                            data-src="<?php echo $path ?>img\trophy_category\silambam.jpg"
+                                            src="<?php echo $path ?>img\trophy_category\silambam.jpg" alt="Men's Jakets"
+                                            title="Men's Jakets" width="365" height="365" /></div>
+                                    <div class="details mt-3 text-center">
+                                        <h4 class="category-title mb-0">Silambam</h4>
+                                        <p class="counts">20 Products</p>
                                     </div>
+                                </a>
+                            </div>
+                            <div class="category-item zoomscal-hov">
+                                <a href="shop-left-sidebar.html" class="category-link clr-none">
+                                    <div class="zoom-scal zoom-scal-nopb rounded-3"><img class="blur-up lazyload"
+                                            data-src="<?php echo $path ?>img\trophy_category\vollyball.jpg"
+                                            src="<?php echo $path ?>img\trophy_category\vollyball.jpg" alt="Tops"
+                                            title="Tops" width="365" height="365" /></div>
+                                    <div class="details mt-3 text-center">
+                                        <h4 class="category-title mb-0">VollyBall</h4>
+                                        <p class="counts">13 Products</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="category-item zoomscal-hov">
+                                <a href="shop-left-sidebar.html" class="category-link clr-none">
+                                    <div class="zoom-scal zoom-scal-nopb rounded-3"><img class="blur-up lazyload"
+                                            data-src="<?php echo $path ?>img\trophy_category\soccer.jpg"
+                                            src="<?php echo $path ?>img\trophy_category\soccer.jpg" alt="T-Shirts"
+                                            title="T-Shirts" width="365" height="365" /></div>
+                                    <div class="details mt-3 text-center">
+                                        <h4 class="category-title mb-0">Soccer</h4>
+                                        <p class="counts">18 Products</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="category-item zoomscal-hov">
+                                <a href="shop-left-sidebar.html" class="category-link clr-none">
+                                    <div class="zoom-scal zoom-scal-nopb rounded-3"><img class="blur-up lazyload"
+                                            data-src="<?php echo $path ?>img\trophy_category\jallikattu.jpg"
+                                            src="<?php echo $path ?>img\trophy_category\jallikattu.jpg" alt="Shoes"
+                                            title="Shoes" width="365" height="365" /></div>
+                                    <div class="details mt-3 text-center">
+                                        <h4 class="category-title mb-0">Shoes</h4>
+                                        <p class="counts">11 Products</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="category-item zoomscal-hov">
+                                <a href="shop-left-sidebar.html" class="category-link clr-none">
+                                    <div class="zoom-scal zoom-scal-nopb rounded-3"><img class="blur-up lazyload"
+                                            data-src="<?php echo $path ?>img\trophy_category\badmiton.jpg"
+                                            src="<?php echo $path ?>img\trophy_category\badmiton.jpg" alt="Shorts"
+                                            title="Shorts" width="365" height="365" /></div>
+                                    <div class="details mt-3 text-center">
+                                        <h4 class="category-title mb-0">badmiton</h4>
+                                        <p class="counts">28 Products</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="category-item zoomscal-hov">
+                                <a href="shop-left-sidebar.html" class="category-link clr-none">
+                                    <div class="zoom-scal zoom-scal-nopb rounded-3"><img class="blur-up lazyload"
+                                            data-src="<?php echo $path ?>img\trophy_category\kabadi.jpg"
+                                            src="<?php echo $path ?>img\trophy_category\kabadi.jpg" alt="Sunglasses"
+                                            title="Sunglasses" width="365" height="365" /></div>
+                                    <div class="details mt-3 text-center">
+                                        <h4 class="category-title mb-0">Kabaadi</h4>
+                                        <p class="counts">24 Products</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="category-item zoomscal-hov">
+                                <a href="shop-left-sidebar.html" class="category-link clr-none">
+                                    <div class="zoom-scal zoom-scal-nopb rounded-3"><img class="blur-up lazyload"
+                                            data-src="<?php echo $path ?>img\trophy_category\karate.jpg"
+                                            src="<?php echo $path ?>img\trophy_category\karate.jpg" alt="Girls Top"
+                                            title="Girls Top" width="365" height="365" /></div>
+                                    <div class="details mt-3 text-center">
+                                        <h4 class="category-title mb-0">karate</h4>
+                                        <p class="counts">26 Products</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section><br><br>
+                <!--End Category Slider-->
                 <div class="row">
                     <!--Sidebar-->
                     <div class="col-12 col-sm-12 col-md-12 col-lg-3 sidebar sidebar-bg filterbar">
                         <div class="closeFilter d-block d-lg-none"><i class="icon anm anm-times-r"></i></div>
                         <div class="sidebar-tags sidebar-sticky clearfix">
-                       
+
                             <!--End Filter By-->
                             <!--Categories-->
                             <div class="sidebar-widget clearfix categories filterBox filter-widget">
@@ -148,23 +189,32 @@
                                 </div>
                                 <div class="widget-content filterDD">
                                     <ul class="sidebar-categories scrollspy morelist clearfix">
-                                        <li class="lvl1 more-item" data-value="Football"><p class="cat"
-                                        >Football Trophies <span class="count">(14)</span></p>
+                                        <li class="lvl1 more-item" data-value="Football">
+                                            <p class="cat">Football Trophies <span class="count">(14)</span></p>
                                         </li>
-                                        <li class="lvl1 more-item" data-value="Cricket"><p class="cat" >Cricket
-                                                Trophies <span class="count">(18)</span></p></li>
-                                        <li class="lvl1 more-item" data-value="Kabaadi"><p class="cat" >Kabaadi
-                                                Trophies <span class="count">(22)</span></p></li>
-                                        <li class="lvl1 more-item" data-value="Volleyball"><p class="cat"
-                                                >Volleyball Trophies
-                                                <span class="count">(27)</span></p></li>
-                                        <li class="lvl1 more-item" data-value="Throw ball"><p class="cat">Throw
+                                        <li class="lvl1 more-item" data-value="Cricket">
+                                            <p class="cat">Cricket
+                                                Trophies <span class="count">(18)</span></p>
+                                        </li>
+                                        <li class="lvl1 more-item" data-value="Kabaadi">
+                                            <p class="cat">Kabaadi
+                                                Trophies <span class="count">(22)</span></p>
+                                        </li>
+                                        <li class="lvl1 more-item" data-value="Volleyball">
+                                            <p class="cat">Volleyball Trophies
+                                                <span class="count">(27)</span></p>
+                                        </li>
+                                        <li class="lvl1 more-item" data-value="Throw ball">
+                                            <p class="cat">Throw
                                                 ball Trophies
-                                                <span class="count">(27)</span></p></li>
-                                        <li class="lvl1 more-item"  data-value="Kho-kho"><p class="cat">Kho-kho
-                                                Trophies <span class="count">(27)</span></p></li>
-                                        <li class="lvl1 more-item" data-value="Silambam"><p class="cat"
-                                                >Silambam Trophies <span class="count">(27)</span></p>
+                                                <span class="count">(27)</span></p>
+                                        </li>
+                                        <li class="lvl1 more-item" data-value="Kho-kho">
+                                            <p class="cat">Kho-kho
+                                                Trophies <span class="count">(27)</span></p>
+                                        </li>
+                                        <li class="lvl1 more-item" data-value="Silambam">
+                                            <p class="cat">Silambam Trophies <span class="count">(27)</span></p>
                                         </li>
                                     </ul>
                                 </div>
@@ -178,8 +228,9 @@
                                 <form class="widget-content price-filter filterDD" action="#" method="post">
                                     <div id="slider-range" class="mt-2"></div>
                                     <div class="row">
-                                        <div class="col-10"><input id="amount" type="text" /></div>
-                                                                            </div>
+                                        <div class="col-10"><input id="amount" type="text"
+                                                placeholder="Ex : ₹100 to ₹"/></div>
+                                    </div>
                                 </form>
                             </div>
                             <!--End Price Filter-->
@@ -187,7 +238,7 @@
 
                             <!--End Color Swatches-->
                             <!--Size Swatches-->
-                            <div class="sidebar-widget filterBox filter-widget">
+                            <!-- <div class="sidebar-widget filterBox filter-widget">
                                 <div class="widget-title">
                                     <h2>Size</h2>
                                 </div>
@@ -244,11 +295,12 @@
                                             <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="XXL">XXL</span></li>
                                             <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="25">25</span></li>
                                             <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="35">35</span></li>
-                                            <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="40">40</span></li> -->
+                                            <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="40">40</span></li> 
                                     </ul>
                                 </div>
+                            </div> -->
+                            <div class="col-4 text-right"><button class="btn btn-sm" id="filteration">filter</button>
                             </div>
-                            <div class="col-4 text-right"><button class="btn btn-sm" id="filteration">filter</button></div>
                             <!--End Size Swatches-->
                             <!--Product Brands-->
 
@@ -267,8 +319,7 @@
 
                     <!--Products-->
                     <div class="col-12 col-sm-12 col-md-12 col-lg-9 main-col">
-                       
-                    <!--Toolbar-->
+
                         <div class="search-body mb-5">
                             <form class="form minisearch" id="header-search" action="#" method="get">
                                 <!--Search Field-->
@@ -295,22 +346,25 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="row align-items-center">
-                                <div class="col-4 col-sm-2 col-md-4 col-lg-4 text-left filters-toolbar-item d-flex order-1 order-sm-0">
-                                    <button type="button" class="btn btn-filter icon anm anm-sliders-hr d-inline-flex d-lg-none me-2"><span class="d-none">Filter</span></button>
-                                    <div class="filters-item d-flex align-items-center">
-                                        <div class="grid-options view-mode d-flex">
-                                            <a class="icon-mode mode-list d-block" data-col="1"></a>
-                                            <a class="icon-mode mode-grid grid-2 d-block active" data-col="2"></a>
-                                        </div>
-                                    </div>
+                        <!--Toolbar-->
+                        <div class="toolbar toolbar-wrapper shop-toolbar">
+                            <div class="row align-items-center">
+                                <div
+                                    class="col-4 col-sm-2 col-md-4 col-lg-4 text-left filters-toolbar-item d-flex order-1 order-sm-0">
+                                    <button type="button"
+                                        class="btn btn-filter icon anm anm-sliders-hr d-inline-flex d-lg-none me-2"><span
+                                            class="d-none">Filter</span></button>
+
                                 </div>
-                                <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center product-count order-0 order-md-1 mb-3 mb-sm-0">
+                                <div
+                                    class="col-12 col-sm-4 col-md-4 col-lg-4 text-center product-count order-0 order-md-1 mb-3 mb-sm-0">
                                     <span class="toolbar-product-count">Showing: 15 products</span>
                                 </div>
-                                <div class="col-8 col-sm-6 col-md-4 col-lg-4 text-right filters-toolbar-item d-flex justify-content-end order-2 order-sm-2">
+                                <div
+                                    class="col-8 col-sm-6 col-md-4 col-lg-4 text-right filters-toolbar-item d-flex justify-content-end order-2 order-sm-2">
                                     <div class="filters-item d-flex align-items-center">
-                                        <label for="ShowBy" class="mb-0 me-2 text-nowrap d-none d-sm-inline-flex">Show:</label>
+                                        <label for="ShowBy"
+                                            class="mb-0 me-2 text-nowrap d-none d-sm-inline-flex">Show:</label>
                                         <select name="ShowBy" id="ShowBy" class="filters-toolbar-show">
                                             <option value="title-ascending" selected="selected">10</option>
                                             <option>15</option>
@@ -320,7 +374,7 @@
                                         </select>
                                     </div>
                                     <div class="filters-item d-flex align-items-center ms-2 ms-lg-3">
-                                        <label for="SortBy" class="mb-0 me-1 text-nowrap d-none">Sort by:</label>
+                                        <label for="SortBy" class="mb-0 me-2 text-nowrap d-none">Sort by:</label>
                                         <select name="SortBy" id="SortBy" class="filters-toolbar-sort">
                                             <option value="featured" selected="selected">Featured</option>
                                             <option value="best-selling">Best selling</option>
@@ -333,28 +387,14 @@
                                         </select>
                                     </div>
                                 </div>
-                            
-                    </div>
-                        
-                 <!--End Toolbar-->
-                        <style>
-                            .grid-products .product-img img {
-                                height: 300px;
-                            }
-
-                            @media screen and (max-width: 567.67px) {
-                                .grid-products .product-img img {
-                                    height: 200px !important;
-                                }
-                            }
-                        </style>
+                            </div>
+                        </div>
+                        <!--End Toolbar-->
 
                         <!--Product Grid-->
                         <div class="grid-products grid-view-items">
-                            <div class="row col-row product-options row-cols-lg-4 row-cols-md-3 row-cols-sm-3 row-cols-2"
+                            <div class="row col-row product-options row-cols-lg-3 row-cols-md-3 row-cols-sm-3 row-cols-2"
                                 id="cart-product">
-
-
 
                             </div>
 
@@ -397,6 +437,13 @@
         <script src="<?php echo $path ?>assets//js/plugins.js"></script>
         <!-- Main JS -->
         <script src="<?php echo $path ?>assets//js/main.js"></script>
+        <!--Toastr  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+            integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
+            integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     </div>
     <!--End Page Wrapper-->
@@ -407,27 +454,27 @@
         var selectedValuesOutput;
         var categoryValue;
 
-        document.addEventListener('DOMContentLoaded', function() {
-            $("#slider-range").slider({
-                range: true,
-                min: 0,
-                max: 10000,
-                values: [0, 0],
-                slide: function(event, ui) {
-                    $("#amount").val("₹" + ui.values[0] + " - ₹" + ui.values[1]);
-                }
-            });
 
-            var setpriceRange = document.getElementById('filteration');
-            setpriceRange.addEventListener('click', function(e) {
-                e.preventDefault();
-                var inputElement = document.getElementById("amount");
-                var inputValue = inputElement.value;
-
-                // Process the input value as needed
-                console.log("Input Value: " + inputValue);
-            });
+        $("#slider-range").slider({
+            range: true,
+            min: 1000,
+            max: 100000,
+            values: [1000, 10000],
+            slide: function (event, ui) {
+                $("#amount").val("₹" + ui.values[0] + " - ₹" + ui.values[1]);
+            }
         });
+
+        var setpriceRange = document.getElementById('filteration');
+        setpriceRange.addEventListener('click', function (e) {
+            e.preventDefault();
+            var inputElement = document.getElementById("amount");
+            priceInputValue = inputElement.value;
+
+            // Process the input value as needed
+            console.log("Input Value: " + priceInputValue);
+        });
+
 
         var swatchList = document.querySelectorAll('.swatch.available');
 
@@ -470,11 +517,11 @@
 
         var selectedCategory = null;
 
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             var categoryList = document.querySelectorAll('.more-item');
 
-            categoryList.forEach(function(category) {
-                category.addEventListener('click', function(e) {
+            categoryList.forEach(function (category) {
+                category.addEventListener('click', function (e) {
                     e.preventDefault(); // Prevent the default link behavior
 
                     categoryValue = this.dataset.value;
@@ -487,7 +534,8 @@
                     } else {
                         // Unselect the previously selected category, if any
                         if (selectedCategory) {
-                            var previousCategory = document.querySelector('.more-item[data-value="' + selectedCategory + '"]');
+                            var previousCategory = document.querySelector(
+                                '.more-item[data-value="' + selectedCategory + '"]');
                             if (previousCategory) {
                                 // Remove the 'active' class to unselect the previously selected category
                                 previousCategory.classList.remove('active');
@@ -505,19 +553,30 @@
         });
 
         $('#filteration').click(function (e) {
-            e.preventDefault();{
+            e.preventDefault(); {
                 var fd = new FormData();
 
                 fd.append("Category", categoryValue);
-                fd.append("Size", selectedValuesOutput);
                 fd.append("Price", priceInputValue);
 
-                fetchingdata(fd)
+
+
+
+                if (categoryValue === undefined) {
+                    toastr.error("Unable To Filter Product, Select any category ", "Error");
+                }
+                else {
+
+                    fetchingdata(fd)
+                }
+
+
+
             }
         })
 
-        function fetchingdata(formdata){
-        $.ajax({
+        function fetchingdata(formdata) {
+            $.ajax({
                 url: 'ajax',
                 type: 'post',
                 contentType: false,
@@ -554,7 +613,7 @@
                                 var checkbox = document.createElement("input");
                                 checkbox.type = "checkbox";
                                 checkbox.name =
-                                "productColor[]"; // You can set a name for the checkbox
+                                    "productColor[]"; // You can set a name for the checkbox
                                 checkbox.value = obj.color;
                                 checkbox.style.marginRight = "5px";
 
@@ -592,7 +651,7 @@
                                 var mainImage = productImages.find(img => img.img_category ===
                                     'main');
                                 var altImage = productImages.find(img => img.img_category ===
-                                'alt');
+                                    'alt');
 
                                 if (mainImage && altImage) {
                                     var product_id = mainImage.id;
@@ -622,7 +681,7 @@
                                                     </div>
                                                     
                                                     <div class="product-price">
-                                                        <span class="price">$${mainImage.product_price}</span>
+                                                        <span class="price">₹${mainImage.product_price}</span>
                                                     </div>
                                                     
                                                     <p class="sort-desc hidden">${mainImage.product_desc}</p>
