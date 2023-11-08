@@ -1,4 +1,4 @@
-<div class="footer" style="background-color: #ff091a;">
+<div class="footer" style="background-color: #fe0609;color:white;" >
     <!-- <div class="newsletterbg clearfix">
                     <div class="container">
                         <form action="#" method="post" class="footer-newsletter">
@@ -17,7 +17,7 @@
                         </form>
                     </div>
                 </div> -->
-    <div class="footer-top clearfix">
+    <div class="footer-top clearfix" style="background-color: #fe0609;color:white;">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
@@ -35,7 +35,7 @@
                     <h4 class="h4">Customer Services</h4>
                     <ul>
                         <li><a href="#">Privacy policy</a></li>
-                        <li><a href="javascript:void(0)">FAQ's</a></li>
+                        <li><a href="faq_page.php">FAQ's</a></li>
                         <li><a href="javascript:void(0)">Terms &amp; condition</a></li>
                         <li><a href="#">Orders and Returns</a></li>
                         <li><a href="#">Support Center</a></li>
@@ -76,7 +76,7 @@
             </div>
         </div>
     </div>
-    <div class="footer-bottom clearfix">
+    <div class="footer-bottom clearfix" style="background-color: #fe0609;color:white;">
         <div class="container">
             <div class="d-flex-center flex-column justify-content-md-between flex-md-row-reverse">
                 <ul class="payment-icons d-flex-center mb-2 mb-md-0">

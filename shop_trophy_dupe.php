@@ -1,5 +1,3 @@
-
-
 <?php
     include 'datab.php'; 
 ?>
@@ -25,13 +23,13 @@
     <link rel="stylesheet" href="<?php echo $path ?>assets/css/responsive.css">
 
     <style>
+
         .cat{
             cursor: pointer;
-            padding: 5px 10px;
         }
         .active {
-            border: 1px solid #fe0609;
-            padding: 0 20px;
+            background-color: #e0e0e0;
+            /* Apply your desired active styling here */
         }
     </style>
 </head>
@@ -69,7 +67,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex justify-content-between align-items-center">
-                                <div class="page-title"><h1>Product - Sheild section</h1></div>
+                                <div class="page-title"><h1>Product - Trophy section</h1></div>
                              
                             </div>
                         </div>
@@ -197,7 +195,7 @@
                                     <div id="slider-range" class="mt-2"></div>
                                     <div class="row">
                                         <div class="col-10"><input id="amount" type="text" /></div>
-                                     </div>
+                                                                            </div>
                                 </form>
                             </div>
                             <!--End Price Filter-->
@@ -205,7 +203,7 @@
 
                             <!--End Color Swatches-->
                             <!--Size Swatches-->
-                            <!-- <div class="sidebar-widget filterBox filter-widget">
+                            <div class="sidebar-widget filterBox filter-widget">
                                 <div class="widget-title">
                                     <h2>Size</h2>
                                 </div>
@@ -262,10 +260,10 @@
                                             <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="XXL">XXL</span></li>
                                             <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="25">25</span></li>
                                             <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="35">35</span></li>
-                                            <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="40">40</span></li> 
+                                            <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="40">40</span></li> -->
                                     </ul>
                                 </div>
-                            </div> -->
+                            </div>
                             <div class="col-4 text-right"><button class="btn btn-sm" id="filteration">filter</button></div>
                             <!--End Size Swatches-->
                             <!--Product Brands-->
@@ -404,7 +402,7 @@
         var selectedValuesOutput;
         var categoryValue;
 
-       
+        document.addEventListener('DOMContentLoaded', function() {
             $("#slider-range").slider({
                 range: true,
                 min: 0,
@@ -419,12 +417,12 @@
             setpriceRange.addEventListener('click', function(e) {
                 e.preventDefault();
                 var inputElement = document.getElementById("amount");
-                priceInputValue = inputElement.value;
+                var inputValue = inputElement.value;
 
                 // Process the input value as needed
-                console.log("Input Value: " + priceInputValue);
+                console.log("Input Value: " + inputValue);
             });
-
+        });
 
         var swatchList = document.querySelectorAll('.swatch.available');
 
@@ -504,8 +502,9 @@
         $('#filteration').click(function (e) {
             e.preventDefault();{
                 var fd = new FormData();
-                
+
                 fd.append("Category", categoryValue);
+                fd.append("Size", selectedValuesOutput);
                 fd.append("Price", priceInputValue);
 
                 fetchingdata(fd)
@@ -618,7 +617,7 @@
                                                     </div>
                                                     
                                                     <div class="product-price">
-                                                        <span class="price">₹${mainImage.product_price}</span>
+                                                        <span class="price">$${mainImage.product_price}</span>
                                                     </div>
                                                     
                                                     <p class="sort-desc hidden">${mainImage.product_desc}</p>

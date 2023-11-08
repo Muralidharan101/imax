@@ -41,8 +41,7 @@
                         <div class="col-1 col-sm-1 col-md-1 col-lg-7 align-self-center d-menu-col">
                             <nav class="navigation" id="AccessibleNav">
                                 <ul id="siteNav" class="site-nav medium center">
-                                    <li class="lvl1"><a href="javascript:void(0)">Home</a>
-                                    </li>
+                                    
                                     <li class="lvl1"><a href="javascript:void(0)">About us</a>
                                     </li>
                                     <!-- <li class="lvl1"><a href="javascript:void(0)">Shop</a>

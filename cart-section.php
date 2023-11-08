@@ -152,7 +152,9 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" fdprocessedid="8upl9f"></button>
                             <div class="row">
                                 <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 mb-md-0">
-                                    <p class>Reference No: <span id="ref_no"></span></p>                
+                                    <p class>Reference No: <span id="ref_no"></span></p>   
+                                    
+                                    <label for=""></label>
                                 </div>
                                 <div class="col-12 col-sm-6 col-md-6 col-lg-6">
                                     <div class="product-arrow d-flex justify-content-between">
@@ -375,7 +377,7 @@
             })
 
             $('#cartCheckout').on('click', function() {
-                $('#ref_no').text('ON' + Math.floor(10000 + Math.random() * 90000));
+                // $('#ref_no').text('ON' + Math.floor(10000 + Math.random() * 90000));
 
                 var modal = $('#quickview_modal');
                 modal.modal('show');
