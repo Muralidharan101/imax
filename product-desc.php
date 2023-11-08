@@ -338,14 +338,14 @@
                                     </div> -->
                                     <!-- End Swatches Color -->
                                     <!-- Swatches Size -->
-                                    <div class="product-item swatches-size w-100 mb-4 swatch-1 option2"
+                                    <!-- <div class="product-item swatches-size w-100 mb-4 swatch-1 option2"
                                         data-option-index="1">
                                         <label class="label d-flex align-items-center">Size :<span
                                                 class="slVariant ms-1 fw-bold" id="product_size"></span></label>
                                         <ul class="d-flex-wrap pt-1 clearfix" id="sizeRadioContainer">
                                          
                                         </ul>
-                                    </div>
+                                    </div> -->
                                     <!-- End Swatches Size -->
                                 </div>
                                 <!-- End Swatches -->
@@ -446,22 +446,6 @@
         <div id="site-scroll"><i class="icon anm anm-arw-up"></i></div>
         <!--End Scoll Top-->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <!-- Including Jquery/Javascript -->
         <!-- Plugins JS -->
         <script src="https://code.jquery.com/jquery-3.7.1.js"
@@ -486,8 +470,8 @@
 
         <script>
             $(document).ready(function () {
-                var selectedSize = document.getElementById('product_size').textContent;
-                console.log(selectedSize);
+                // var selectedSize = document.getElementById('product_size').textContent;
+                // console.log(selectedSize);
 
                 var queryParams = new URLSearchParams(window.location.search);
 
@@ -542,9 +526,9 @@
                                      productCategory = value.product_category;
                                     //  productSize = value.product_size;
                                      productColor = value.product_color;
-                                     image_category = value.img_category;
+                                    //  image_category = value.img_category;
 
-                                    console.log(productColor, sizeArray)
+                                    console.log(productId, productImg, productName, productPrice, productDesc, productCategory)
 
                                     var image_thumb = document.getElementById(
                                         'slick-tracks');
@@ -598,58 +582,60 @@
                                     // });
 
 
-                                    var show_product_size = document.getElementById('sizeRadioContainer');
-                                    var product_size = document.getElementById('product_size');
-                                    var trophysize = value.product_size;
-                                    var sizeArray = trophysize.split(',');
+                                    // var show_product_size = document.getElementById('sizeRadioContainer');
+                                    // var product_size = document.getElementById('product_size');
+                                    // var trophysize = value.product_size;
+                                    // var sizeArray = trophysize.split(',');
 
-                                    show_product_size.innerHTML = '';
+                                    // show_product_size.innerHTML = '';
 
-                                    if (Array.isArray(sizeArray)) {
-                                        sizeArray.forEach(function (size) {
-                                        var sizeRadio = `
-                                        <li class="customRadio me-3 mb-0">
-                                                <input name="swatch_size_radio" id="${size}" value="${size}"" type="radio" />
-                                                <label for="${size}" class="mb-0">${size}</label>
-                                            </li>`;
+                                    // if (Array.isArray(sizeArray)) {
+                                    //     sizeArray.forEach(function (size) {
+                                    //     var sizeRadio = `
+                                    //     <li class="customRadio me-3 mb-0">
+                                    //             <input name="swatch_size_radio" id="${size}" value="${size}"" type="radio" />
+                                    //             <label for="${size}" class="mb-0">${size}</label>
+                                    //         </li>`;
 
-                                        show_product_size.insertAdjacentHTML('beforeend', sizeRadio);
-                                    });
-                                    } else {
-                                    console.error('Size is not an array');
-                                    }
+                                    //     show_product_size.insertAdjacentHTML('beforeend', sizeRadio);
+                                    // });
+                                    // } else {
+                                    // console.error('Size is not an array');
+                                    // }
 
+                                    // var radioButtons = document.querySelectorAll('input[name="swatch_size_radio"]');
+                                    // radioButtons.forEach(function (radioButton) {
+                                    //     radioButton.addEventListener('change', function () {
+                                    //         // Update the product_size span with the selected color
+                                    //         product_radio=this.value;
+                                    //         product_size.textContent = this.value;
 
-                                    var radioButtons = document.querySelectorAll('input[name="swatch_size_radio"]');
-                                    radioButtons.forEach(function (radioButton) {
-                                    radioButton.addEventListener('change', function () {
-                                        // Update the product_size span with the selected color
-                                        product_radio=this.value;
-                                        product_size.textContent = this.value;
+                                    //         console.log(product_radio);
 
-                                        console.log(product_radio);
+                                    //     });
+                                    // });
 
-                                    });
-                                    });
-
-                                    var mainProductImage = data.find(function (value) {
-                                        return value.img_category === 'main';
-                                    });
+                                    // var mainProductImage = data.find(function (value) {
+                                    //     return value.img_category === 'main';
+                                    // });
 
                                     var product_img = document.getElementById('prod_img');
                                     var product_name = document.getElementById('product_name');
                                     var product_price = document.getElementById('product_price');
                                     var product_desc = document.getElementById('product_description');
                                     var product_category = document.getElementById('product_category');
+                                    console.log(product_name);
+                                    console.log(product_price);
+                                    console.log(product_img);
+                                    console.log(product_category);
 
-                                    if (mainProductImage) {
+                                    if (product_img) {
                                         // Set the image and other details based on the main product image
-                                        product_img.src = `product_images/${mainProductImage.id}/main/${mainProductImage.product_img}`;
+                                        product_img.src = `product_images/${productId}/main/${productImg}`;
                                         product_price.innerHTML = '₹' + value.product_price;
-                                        product_name.innerHTML = mainProductImage.product_name;
-                                        product_desc.innerHTML = mainProductImage.product_desc;
-
-                                            // productCategory.innerHTML=value.product_category
+                                        product_name.innerHTML = value.product_name;
+                                        product_desc.innerHTML = value.product_desc;
+                                        product_category.innerHTML = value.product_category
                                     }
 
                                 });
@@ -661,114 +647,85 @@
 
             })    
 
+            var submit_btn = document.getElementById('cart_submit');
+            var sizeRadioButtons = document.querySelectorAll('input[name="swatch_size_radio"]');
+            var colorRadioButtons = document.querySelectorAll('input[name="swatch_clr_radio"]');
 
-                                var submit_btn = document.getElementById('cart_submit');
-                                var sizeRadioButtons = document.querySelectorAll('input[name="swatch_size_radio"]');
-                                var colorRadioButtons = document.querySelectorAll('input[name="swatch_clr_radio"]');
+            function getCookie(cookieName) {
+                var name = cookieName + "=";
+                var decodedCookie = decodeURIComponent(document.cookie);
+                var cookieArray = decodedCookie.split(';');
+                
+                for (var i = 0; i < cookieArray.length; i++) {
+                    var cookie = cookieArray[i].trim();
+                    if (cookie.indexOf(name) === 0) {
+                    return cookie.substring(name.length, cookie.length);
+                    }
+                }
+                return "";
+            }
+                
+            var cookieValue = getCookie('imax_login_user_id');
+            console.log(cookieValue);
 
-                                function getCookie(cookieName) {
-                                    var name = cookieName + "=";
-                                    var decodedCookie = decodeURIComponent(document.cookie);
-                                    var cookieArray = decodedCookie.split(';');
-                                    
-                                    for (var i = 0; i < cookieArray.length; i++) {
-                                        var cookie = cookieArray[i].trim();
-                                        if (cookie.indexOf(name) === 0) {
-                                        return cookie.substring(name.length, cookie.length);
-                                        }
-                                    }
-                                    return "";
-                                    }
-                                  
-                                var cookieValue = getCookie('imax_login_user_id');
-                                    console.log(cookieValue);
+            var product_radio;
+            var customerId = cookieValue;
+                
+            var productId,
+            productImg,
+            productName,
+            productPrice,
+            productDesc,
+            productCategory,
+            productColor,
+            image_category; 
 
+            $("#cart_submit").click(function (e) {
+            e.preventDefault();
 
-                                    var product_radio;
-                                    var customerId = cookieValue;
-                                        
-                                        var productId,
-                                        productImg,
-                                        productName,
-                                        productPrice,
-                                        productDesc,
-                                        productCategory,
-                                        productColor,
-                                        image_category; 
+                var formData = new FormData();
+                
+                    // var productSize=product_radio;   
+                    var productQuantity=currentValue;
+                if (cookieValue === "") {
+                    window.location.href = 'register.php';
+                } else {
 
-                                       
-                                        
+                    console.log(productId,productImg,productName,productPrice,productDesc,productQuantity,);
+                
+                    formData.append("customer_id", cookieValue);
+                    formData.append("product_id", productId);
+                    formData.append("product_name", productName);
+                    formData.append("product_price", productPrice);
+                    formData.append("product_description", productDesc);
+                    formData.append("main_Img", productImg);
+                    // formData.append("product_size",productSize);
+                    formData.append("Quantity",productQuantity);
 
-                                    
-            
-                                $("#cart_submit").click(function (e) {
-                                e.preventDefault();
+                    postdata(formData);
+                }
+                
+            });
 
-                                  var formData = new FormData();
-                                 
-                                        var productSize=product_radio;   
-                                        var productQuantity=currentValue;
-                                    if (cookieValue === "") {
-                                        window.location.href = 'register.php';
-                                    }
-                                        else if(productSize === undefined){
-                                            
-                                            toastr.error("Unable To Add Product", "Error");
-                                        }
-                                        else{
-
-                                        console.log(productId,productImg,productName,productPrice,productDesc,productQuantity,productSize);
-                                    
-                                        formData.append("customer_id", cookieValue);
-                                        formData.append("product_id", productId);
-                                        formData.append("product_name", productName);
-                                        formData.append("product_price", productPrice);
-                                        formData.append("product_description", productDesc);
-                                        formData.append("main_Img", productImg);
-                                        formData.append("product_size",productSize);
-                                        formData.append("Quantity",productQuantity);
-
-                                        postdata(formData);
-                                        }
-
-                                    
-                                });
-
-                                function postdata(formdata){
-                                    $.ajax({
-                                        url: 'ajax/add_to_cart.php',
-                                        type: 'post',
-                                        contentType: false,
-                                        processData: false,
-                                        data: formdata,
-                                        success: function (response) {
-                                            var result = JSON.parse(response);
-                                            if (result.status == "Success") {
-                                            toastr.success("Product Addedd Successfully", "Welcome!");
-                                            } else {
-                                            toastr.error("Unable To Add Product", "Error");
-                                            }
-                                        }
-                                    })
-                                };
+            function postdata(formdata){
+                $.ajax({
+                    url: 'ajax/add_to_cart.php',
+                    type: 'post',
+                    contentType: false,
+                    processData: false,
+                    data: formdata,
+                    success: function (response) {
+                        var result = JSON.parse(response);
+                        if (result.status == "Success") {
+                        toastr.success("Product Addedd Successfully", "Welcome!");
+                        } else {
+                        toastr.error("Unable To Add Product", "Error");
+                        }
+                    }
+                })
+            };
 
         </script>
-
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         <!-- Elevatezoom Zoom -->
         <script src="assets/js/vendor/jquery.elevatezoom.js"></script>

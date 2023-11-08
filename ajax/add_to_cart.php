@@ -4,7 +4,7 @@
 
     $pro_id = mysqli_real_escape_string($conn, $_POST['product_id']);
     $cus_id = mysqli_real_escape_string($conn, $_POST['customer_id']);
-    $size = mysqli_real_escape_string($conn, $_POST['product_size']);
+    // $size = mysqli_real_escape_string($conn, $_POST['product_size']);
     $quantity = mysqli_real_escape_string($conn, $_POST['Quantity']);
 
     $select_query = "SELECT * FROM cart_data WHERE `product_id`='$pro_id' AND `customer_id`='$cus_id' AND `status`='Active'";
@@ -23,7 +23,7 @@
             $res['remarks'] = 'Cart Updated';
         }
     } else {
-        $sql = "INSERT INTO cart_data (`product_id`, `customer_id`, `size`, `quantity`, `status`, `dateTime`) VALUES ('$pro_id', '$cus_id', '$size', '$quantity', 'Active', NOW()) ";
+        $sql = "INSERT INTO cart_data (`product_id`, `customer_id`, `quantity`, `status`, `dateTime`) VALUES ('$pro_id', '$cus_id', '$quantity', 'Active', NOW()) ";
 
         if ($result = mysqli_query($conn, $sql)) {
             $res['status'] = 'Success';

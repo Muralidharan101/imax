@@ -69,7 +69,7 @@
                                     <tr>
                                         <th class="action">&nbsp;</th>
                                         <th colspan="2" class="text-start">Product</th>
-                                        <th class="text-center">Size</th>
+                                        <!-- <th class="text-center">Size</th> -->
                                         <th class="text-center">Price</th>
                                         <th class="text-center">Quantity</th>
                                         <th class="text-center">Total</th>
@@ -287,9 +287,8 @@
                 cart_id,
                 product_name,
                 product_price,
-                product_quantity,
-                product_size;      
-
+                product_quantity;      
+                // product_size
                 function postdata() {
                     var formData = new FormData();
                     formData.append("customer_id", customer_id);
@@ -318,7 +317,7 @@
                                     product_name=value.product_name;
                                     product_price=value.product_price;
                                     product_quantity=value.quantity;
-                                    product_size=value.size;
+                                    // product_size=value.size;
 
                                     var total_price_cart = value.product_price*value.quantity;
                     
@@ -339,9 +338,7 @@
                                                     <span class="price fw-500">${value.product_price}</span>
                                                     </div>
                                                 </td>
-                                                <td class="cart-price cart-flex-item text-center small-hide">
-                                                    <span class="size">${value.size}</span>
-                                                </td>
+                                               
                                                 <td class="cart-price cart-flex-item text-center small-hide">₹
                                                     <span class="money">${value.product_price}</span>
                                                 </td>
