@@ -43,13 +43,13 @@
                         <div class="slide">
                             <div class="slideshow-wrap">
                                 <picture>
-                                    <source media="(max-width:767px)" srcset="assets/images/slideshow/demo10-banner3-mbl.jpg" width="1100" height="800">
-                                    <img class="blur-up lazyload" src="assets/images/slideshow/demo10-banner3.jpg" alt="slideshow" title="" width="1920" height="800"/>
+                                    <source media="(max-width:767px)" srcset="<?php echo $path ?>main/img/banner1.jpg" width="1100" height="800">
+                                    <img class="blur-up lazyload" src="<?php echo $path ?>main/img/banner1.jpg" alt="slideshow" title="" width="1920" height="800"/>
                                 </picture> 
                                 <div class="container">
-                                    <div class="slideshow-content slideshow-overlay middle-right">
+                                    <div class="slideshow-content slideshow-overlay middle-right hidden-sm">
                                         <div class="slideshow-content-in">
-                                            <div class="wrap-caption animation style1">
+                                            <div class="wrap-caption animation style1" style="background-color:gainsboro;">
                                                 <p class="ss-small-title">Precision, Quality & Longevity</p>
                                                 <h2 class="ss-mega-title">IMAX Trophies</h2>
                                                 <div class="ss-btnWrap">
@@ -64,13 +64,13 @@
                         <div class="slide">
                             <div class="slideshow-wrap">
                                 <picture>
-                                    <source media="(max-width:767px)" srcset="assets/images/slideshow/demo10-banner2-mbl.jpg" width="1100" height="800">
-                                    <img class="blur-up lazyload" src="assets/images/slideshow/demo10-banner2.jpg" alt="slideshow" title="" width="1920" height="800"/>
+                                    <source media="(max-width:767px)" srcset="<?php echo $path ?>main/img/banner1.jpg" width="1100" height="800">
+                                    <img class="blur-up lazyload" src="<?php echo $path ?>main/img/banner2.jpg" alt="slideshow" title="" width="1920" height="800"/>
                                 </picture>
                                 <div class="container">
                                     <div class="slideshow-content slideshow-overlay middle-left">
                                         <div class="slideshow-content-in">
-                                            <div class="wrap-caption animation style1">
+                                            <div class="wrap-caption animation style1" style="background-color:gainsboro;">
                                                 <h2 class="ss-mega-title">The New Era of <br>Trophies</h2>
                                                 <p class="ss-sub-title xs-hide text-large">Celebrate your victory !</p>
                                                 <div class="ss-btnWrap">
