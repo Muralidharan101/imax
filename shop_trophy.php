@@ -465,11 +465,13 @@
             }
         });
 
+
         var setpriceRange = document.getElementById('filteration');
         setpriceRange.addEventListener('click', function (e) {
             e.preventDefault();
             var inputElement = document.getElementById("amount");
             priceInputValue = inputElement.value;
+
 
             // Process the input value as needed
             console.log("Input Value: " + priceInputValue);
@@ -654,6 +656,7 @@
                             if (Array.isArray(data)) {
                                 data.forEach(function(obj) {
                                     var cartHtml = `
+
                                             <div class="item col-item">
                                                 <div class="product-box">
                                                     <div class="product-image">
