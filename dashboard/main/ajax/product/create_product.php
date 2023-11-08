@@ -6,12 +6,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $product_name = $_POST["product_name"];
     $product_price = $_POST["product_price"];
     $pro_type = $_POST["pro_type"];
-    $product_size = $_POST["product_size"];
+    // $product_size = $_POST["product_size"];
     $product_description = $_POST["product_description"];
     $product_category  = mysqli_real_escape_string($conn, $_POST['category']);
 
-    $insertProduct = mysqli_query($conn, "INSERT INTO product_data (product_name, product_price, product_size, product_desc, product_type,product_category,status, dateTime)
-                                        VALUES ('$product_name', $product_price, '$product_size', '$product_description', '$pro_type','$product_category','Active', NOW())");
+    $insertProduct = mysqli_query($conn, "INSERT INTO product_data (product_name, product_price,  product_desc, product_type,product_category,status, dateTime)
+                                        VALUES ('$product_name', $product_price, '$product_description', '$pro_type','$product_category','Active', NOW())");
 
     if ($insertProduct) {
         $product_id = mysqli_insert_id($conn);
