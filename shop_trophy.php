@@ -465,11 +465,13 @@
             }
         });
 
+
         var setpriceRange = document.getElementById('filteration');
         setpriceRange.addEventListener('click', function (e) {
             e.preventDefault();
             var inputElement = document.getElementById("amount");
             priceInputValue = inputElement.value;
+
 
             // Process the input value as needed
             console.log("Input Value: " + priceInputValue);
@@ -586,8 +588,6 @@
                     var result = JSON.parse(response);
                     if (result.status == "Success") {
                         toastr.success("Product Addedd Successfully", "Welcome!");
-
-
                     } else {
                         toastr.error("Unable To Add Product", "Error");
                     }
@@ -596,7 +596,7 @@
         }
 
         $(document).ready(function () {
-            var product_id, main_img, alt_img;
+            var product_id;
 
             function colorList() {
                 $.ajax({
@@ -638,143 +638,68 @@
 
                     success: function (response) {
                         var result = JSON.parse(response);
-                        console.log(result);
 
                         var cart = document.getElementById('cart-product');
 
                         if (result.status === 'Success') {
                             var data = result.data;
+                            console.log(data);
 
-                            for (var productId in data) {
-                                var productImages = data[productId];
+                            // Use for hover image when needed
 
-                                var mainImage = productImages.find(img => img.img_category ===
-                                    'main');
-                                var altImage = productImages.find(img => img.img_category ===
-                                    'alt');
+                            // <img class="hover"
+                            //     data-src="product_images/${product_id}/alt/${alt_img}"
+                            //     src="product_images/${product_id}/alt/${alt_img}"
+                            //     alt="Product Alt Image" title="Product Alt Image" width="625" height="808" style="display: none;" />
 
-                                if (mainImage && altImage) {
-                                    var product_id = mainImage.id;
-                                    var main_img = mainImage.product_img;
-                                    var alt_img = altImage.product_img;
 
+                            if (Array.isArray(data)) {
+                                data.forEach(function(obj) {
                                     var cartHtml = `
-                                        <div class="item col-item">
-                                            <div class="product-box">
-                                                <div class="product-image">
-                                                    <a href="product-desc.php?id=${product_id}" class="product-img rounded-0">
-                                                        <img class="main-img"
-                                                            data-src="product_images/${product_id}/main/${main_img}"
-                                                            src="product_images/${product_id}/main/${main_img}"
-                                                            alt="Product Main Image" title="Product Main Image" width="625" height="808" />
-                                                        <img class="hover"
-                                                            data-src="product_images/${product_id}/alt/${alt_img}"
-                                                            src="product_images/${product_id}/alt/${alt_img}"
-                                                            alt="Product Alt Image" title="Product Alt Image" width="625" height="808" style="display: none;" />
-                                                    </a>
-                                                </div>
-                                                <div class="product-details text-left">
-                                                    <span class="product-vendor">${mainImage.product_category}</span>
-                                                    
-                                                    <div class="product-name">
-                                                        <a href="product-desc.php?id=${mainImage.id}">${mainImage.product_name}</a>
+
+                                            <div class="item col-item">
+                                                <div class="product-box">
+                                                    <div class="product-image">
+                                                        <a href="product-desc.php?id=${obj.product_id}" class="product-img rounded-0">
+                                                            <img class="main-img"
+                                                                data-src="product_images/${obj.product_id}/main/${obj.product_img}"
+                                                                src="product_images/${obj.product_id}/main/${obj.product_img}"
+                                                                alt="Product Main Image" title="Product Main Image" width="625" height="808" />
+                                                            </a>
+
                                                     </div>
-                                                    
-                                                    <div class="product-price">
-                                                        <span class="price">₹${mainImage.product_price}</span>
-                                                    </div>
-                                                    
-                                                    <p class="sort-desc hidden">${mainImage.product_desc}</p>
-                                                    
-                                                    <div class="button-action hidden">
-                                                        <div class="addtocart-btn">
-                                                            <div class="addtocart" action="#" method="post">
-                                                                <a href="#addtocart-modal" class="btn btn-md add-to-cart-modal"
-                                                                    data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                                    <i class="icon anm anm-cart-l me-2"></i><span
-                                                                        class="text">Add to Cart</span>
-                                                                </a>
+                                                    <div class="product-details text-left">
+                                                        <span class="product-vendor">${obj.product_category}</span>
+                                                        <div class="product-name">
+                                                            <a href="product-desc.php?id=${obj.id}">${obj.product_name}</a>
+                                                        </div>
+                                                        <div class="product-price">
+                                                            <span class="price">₹${obj.product_price}</span>
+                                                        </div>
+                                                        <p class="sort-desc hidden">${obj.product_desc}</p>
+                                                        <div class="button-action hidden">
+                                                            <div class="addtocart-btn">
+                                                                <div class="addtocart" action="#" method="post">
+                                                                    <a href="#addtocart-modal" class="btn btn-md add-to-cart-modal"
+                                                                        data-bs-toggle="modal" data-bs-target="#addtocart_modal">
+                                                                        <i class="icon anm anm-cart-l me-2"></i><span
+                                                                            class="text">Add to Cart</span>
+                                                                    </a>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    
                                                 </div>
                                             </div>
-                                        </div>
-                                    `;
-                                    cart.insertAdjacentHTML("beforeend", cartHtml);
-                                }
+                                        `;
+                                        cart.insertAdjacentHTML("beforeend", cartHtml);
+                                })
                             }
+                            else {
+                                console.error("Data is not an array.");
+                                // Handle the non-array data scenario as required
+                            } 
                         }
-                        // if (result.status == 'Success') {
-                        //     var data = result.data;
-
-
-                        //     data.map(function (value) {
-
-                        //         product_id=value.id;
-                        //         main_img=value.product_img;
-                        //         alt_img=value.img_category;
-
-
-                        //         console.log(alt_img);
-
-                        //         var cartHtml = `
-                        //         <div class="item col-item" >
-
-                        //             <div class="product-box">
-
-                        //                 <div class="product-image">
-
-                        //                     <a href="product-desc.php?id=${product_id}" class="product-img rounded-0">
-
-                        //                         <img class=""
-                        //                             data-src="product_images/${product_id}/main/${main_img}"
-                        //                             src="product_images/${product_id}/main/${main_img}"
-                        //                             alt="Product" title="Product" width="625" height="808" />
-
-                        //                                     <!-- Hover Image -->
-                        //                                     <img class="hover" 
-                        //                                     data-src="product_images/${product_id}/alt/${alt_img}" 
-                        //                                     src="product_images/${product_id}/alt/${alt_img}" alt="" title="Product" width="625" height="808"/>
-                        //                     </a>
-
-                        //                 </div>
-
-                        //                 <div class="product-details text-left">
-                        //                         <span class="product-vendor">${value.product_category}</span>
-
-                        //                     <div class="product-name">
-                        //                         <a href="product-desc.php?id=${value.id}">${value.product_name}</a>
-                        //                     </div>
-
-                        //                     <div class="product-price">
-                        //                         <span class="price">$${value.product_price}</span>
-                        //                     </div>
-
-                        //                     <p class="sort-desc hidden">${value.product_desc}</p>
-
-                        //                     <div class="button-action hidden">
-                        //                         <div class="addtocart-btn">
-                        //                             <div class="addtocart" action="#" method="post">
-                        //                                 <a href="#addtocart-modal" class="btn btn-md add-to-cart-modal"
-                        //                                     data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                        //                                     <i class="icon anm anm-cart-l me-2"></i><span
-                        //                                         class="text">Add to Cart</span>
-                        //                                 </a>
-                        //                             </div>
-                        //                         </div>
-                        //                     </div>
-
-                        //                 </div>
-
-                        //         </div>
-                        //         </div>
-                        //         `;
-
-                        //             cart.insertAdjacentHTML("beforeend", cartHtml);
-                        //         });
-                        // }
                     }
                 })
             }

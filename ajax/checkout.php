@@ -16,8 +16,8 @@
         $quantity = mysqli_real_escape_string($conn, $quantities[$key]);
         $total_price = mysqli_real_escape_string($conn, $total_prices[$key]);
 
-        $sql = "INSERT INTO order_data (`order_id`, `product_id`, `customer_id`, `size`, `quantity`, `total_price`, `order_status`, `status`, `dateTime`)
-                VALUES ('$order_id', '$product_id', '$customer_id', '$size', '$quantity', '$total_price', 'Unpaid', 'Active', NOW())";
+        $sql = "INSERT INTO order_data (`order_id`, `product_id`, `customer_id`, `quantity`, `total_price`, `order_status`, `status`, `dateTime`)
+                VALUES ('$order_id', '$product_id', '$customer_id', '$quantity', '$total_price', 'Unpaid', 'Active', NOW())";
 
         if(mysqli_query($conn, $sql)) {
             $res['status'] = 'Success';

@@ -252,14 +252,14 @@
                             </select>
                             </div>
                           </div>
-                          <div class="col-lg-4">
+                          <!-- <div class="col-lg-4">
                             <div class="mb-3">
                               <label class="form-label">Product Size</label>
                               <div id="sizeOptions" class="pt-3 ps-3" name="productSize[]"
                                 style="height: 110px; overflow-y: auto; border:.5px solid #9b9999;border-radius: .25rem">
                               </div>
                             </div>
-                          </div>
+                          </div> -->
                         </div>
 
                         <div class="row">
@@ -423,7 +423,6 @@
       }
     }
 
-
     $(document).ready(function () {
       var formData = new FormData();
 
@@ -452,20 +451,20 @@
         var selectedSizes = [];
        
     
-        function getCheckedSizes() {
-            // Select all checkboxes with the name 'fruit'
+        // function getCheckedSizes() {
+        //     // Select all checkboxes with the name 'fruit'
             
-            var checkboxes = document.querySelectorAll('input[name="productSize[]"]:checked');
+        //     var checkboxes = document.querySelectorAll('input[name="productSize[]"]:checked');
 
-            // Loop through the checked checkboxes and extract their values
-            for (var i = 0; i < checkboxes.length; i++) {
-              selectedSizes.push(checkboxes[i].value);
-            }
+        //     // Loop through the checked checkboxes and extract their values
+        //     for (var i = 0; i < checkboxes.length; i++) {
+        //       selectedSizes.push(checkboxes[i].value);
+        //     }
 
-            // Display the selected values (you can use these values as needed)
-            console.log("Selected values: " + selectedSizes.join(", "));
-            trophy_sizes=selectedSizes.join(", ");
-        } getCheckedSizes()
+        //     // Display the selected values (you can use these values as needed)
+        //     console.log("Selected values: " + selectedSizes.join(", "));
+        //     trophy_sizes=selectedSizes.join(", ");
+        // } getCheckedSizes()
         
 
 
@@ -544,38 +543,38 @@
 
 
 
-      function sizeList() {
-        $.ajax({
-          url: 'ajax/size/list_size.php',
-          type: 'get',
-          success: function (response) {
-            var result = JSON.parse(response);
+      // function sizeList() {
+      //   $.ajax({
+      //     url: 'ajax/size/list_size.php',
+      //     type: 'get',
+      //     success: function (response) {
+      //       var result = JSON.parse(response);
 
-            if (result.status == "Success") {
-              var data = result.data;
-              var sizeOptions = document.getElementById("sizeOptions");
+      //       if (result.status == "Success") {
+      //         var data = result.data;
+      //         var sizeOptions = document.getElementById("sizeOptions");
 
-              data.map(obj => {
-                var checkbox = document.createElement("input");
-                checkbox.type = "checkbox";
-                checkbox.name = "productSize[]"; // You can set a name for the checkbox
-                checkbox.value = obj.size;
-                checkbox.style.marginRight = "5px";
+      //         data.map(obj => {
+      //           var checkbox = document.createElement("input");
+      //           checkbox.type = "checkbox";
+      //           checkbox.name = "productSize[]"; // You can set a name for the checkbox
+      //           checkbox.value = obj.size;
+      //           checkbox.style.marginRight = "5px";
 
-                var label = document.createElement("label");
-                label.style.marginRight = "10px"; // Add margin to the right
+      //           var label = document.createElement("label");
+      //           label.style.marginRight = "10px"; // Add margin to the right
 
-                label.appendChild(checkbox);
-                label.appendChild(document.createTextNode(obj.size));
+      //           label.appendChild(checkbox);
+      //           label.appendChild(document.createTextNode(obj.size));
 
-                sizeOptions.appendChild(label);
-              });
-            }
-          }
-        });
-      }
+      //           sizeOptions.appendChild(label);
+      //         });
+      //       }
+      //     }
+      //   });
+      // }
 
-      sizeList();
+      // sizeList();
 
 
       // function colorList() {

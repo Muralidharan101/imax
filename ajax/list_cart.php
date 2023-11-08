@@ -4,7 +4,7 @@
 
     $customer_id = mysqli_real_escape_string($conn, $_POST['customer_id']);
 
-    $sql = "SELECT DISTINCT cd.size,cd.quantity,(cd.id) AS cart_id,
+    $sql = "SELECT DISTINCT cd.quantity,(cd.id) AS cart_id,
             (pd.id) AS product_id, pd.product_name, pd.product_price, pd.product_category,
             pi.product_img, (pi.product_id) AS img_id
             FROM cart_data cd 
