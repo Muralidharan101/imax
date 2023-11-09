@@ -160,23 +160,15 @@ Notes : Stickering included + metal cups all</p>
                             <div class="row">
                                 <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 mb-md-0">
                                     <p class>Reference No: <span id="ref_no"></span></p>   
-                                    
                                     <label for=""></label>
                                 </div>
-                                
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
         <!-- End Body Container -->
-
-        <!--Footer-->
-
-        <!--End Footer-->
 
         <!--Scoll Top-->
         <div id="site-scroll" style="background-color:orangered;"><i class="icon anm anm-arw-up"></i></div>
@@ -315,7 +307,7 @@ Notes : Stickering included + metal cups all</p>
                                                     <div class="cart-qty d-flex justify-content-end justify-content-md-center">
                                                     <div class="qtyField">
                                                         <button class="qtyBtn minus" data-id="" ><i class="icon anm anm-minus-r"></i></button>
-                                                        <input class="cart-qty-input qty" type="text" value="${value.quantity}" data-id=""/>
+                                                        <input class="cart-qty-input qty" type="text" value="${value.quantity}"/>
                                                         <button class="qtyBtn plus" data-id="" ><i class="icon anm anm-plus-r"></i></button>
                                                     </div>
                                                     </div>
@@ -327,7 +319,6 @@ Notes : Stickering included + metal cups all</p>
                                             </td>
                                             </tr>
                                             `;
-
 
                                     product_cart.insertAdjacentHTML('beforebegin', html);
 
@@ -355,11 +346,11 @@ Notes : Stickering included + metal cups all</p>
                     return $(this).data('id');
                 }).get();
 
-                var size = $('.size').map(function(){
-                    var size_val = $(this).text().trim();
-                    // console.log($(this).html());
-                    return  $(this).text().trim();
-                }).get();
+                // var size = $('.size').map(function(){
+                //     var size_val = $(this).text().trim();
+                //     // console.log($(this).html());
+                //     return  $(this).text().trim();
+                // }).get();
 
                 var price = $('.price').map(function(){
                     var price_val = $(this).html();
@@ -379,14 +370,14 @@ Notes : Stickering included + metal cups all</p>
                 }).get();
 
                 var product_id_arr = JSON.stringify(product_id);
-                var size_arr       = JSON.stringify(size);
+                // var size_arr       = JSON.stringify(size);
                 var quantity_arr   = JSON.stringify(quantity);
                 var price_arr      = JSON.stringify(price);
                 var total_price    = JSON.stringify(total_price);
 
                 console.log(customer_id);
                 console.log(product_id_arr);
-                console.log(size_arr);
+                // console.log(size_arr);
                 console.log(quantity_arr);
                 console.log(price_arr);
                 console.log(total_price);
@@ -396,7 +387,7 @@ Notes : Stickering included + metal cups all</p>
                 
                 fd.append('customer_id', customer_id);
                 fd.append('product_id', product_id_arr);
-                fd.append('size', size_arr);
+                // fd.append('size', size_arr);
                 fd.append('quantity', quantity_arr);
                 fd.append('price', price_arr);
                 fd.append('total_price', total_price);
@@ -419,6 +410,58 @@ Notes : Stickering included + metal cups all</p>
                     }
                 })
             });
+
+            $(document).ready(function() {
+                $(document).on('click', '.qtyBtn.plus, .qtyBtn.minus', function() {
+                    var button = $(this);
+                    var inputField = button.siblings('.cart-qty-input');
+                    var currentValue = parseInt(inputField.val());
+                    var productId = inputField.closest('.tr').data('id');
+                    // console.log(currentValue);
+
+                    if (button.hasClass('plus')) {
+                        currentValue += 1;
+                        // console.log(currentValue);
+                    } else if (button.hasClass('minus') && currentValue > 1) {
+                        currentValue -= 1;
+                        // console.log(currentValue);
+
+                    } else {
+                        return; // If the value is 1 and minus is clicked or other unexpected case, don't send an update
+                    }
+
+                    var formData = new FormData();
+                    formData.append('product_id', productId);
+                    formData.append('customer_id', customer_id);
+                    formData.append('quantity', currentValue);
+
+                    $.ajax({
+                        type: 'POST',
+                        url: 'ajax/update_quantity.php',
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function(response) {
+                            console.log(response); 
+                            var result = JSON.parse(response)
+                            if (result.status === 'Success') {
+                                // inputField.val('');
+                                // console.log(currentValue);
+                                inputField.val(currentValue);
+                            } else {
+                                console.log('Update failed');
+                            }
+                        },
+                        error: function(xhr, status, error) {
+                            console.log(xhr.responseText); // Log the error response for debugging
+                            console.log('Error in the AJAX request:', status, error);
+                        }
+                    });
+                });
+            });
+
+
+
 
 
 
