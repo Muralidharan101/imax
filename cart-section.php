@@ -94,12 +94,12 @@
                             <div class="cart-order-detail cart-col">
                                 <div class="row g-0 border-bottom pb-2">
                                     <span class="col-6 col-sm-6 cart-subtotal-title"><strong>Subtotal</strong></span>
-                                    <span class="col-6 col-sm-6 cart-subtotal-title cart-subtotal text-end"><span
+                                    <span class="col-6 col-sm-6 cart-subtotal-title cart-subtotal text-end" id="grand-total"><span
                                             class="money" id="total-price"></span></span>
                                 </div>
                                 <div class="row g-0 border-bottom py-2">
                                     <span class="col-6 col-sm-6 cart-subtotal-title"><strong>CGST</strong></span>
-                                    <span class="col-6 col-sm-6 cart-subtotal-title cart-subtotal text-end"><span
+                                    <span class="col-6 col-sm-6 cart-subtotal-title cart-subtotal text-end" ><span
                                             class="money">6%</span></span>
                                 </div>
                                 <div class="row g-0 border-bottom py-2">
@@ -114,7 +114,7 @@
                                 </div> -->
                                 <div class="row g-0 border-bottom py-2">
                                     <span class="col-6 col-sm-6 cart-subtotal-title"><strong>GST calc</strong></span>
-                                    <span class="col-6 col-sm-6 cart-subtotal-title cart-subtotal text-end"><span
+                                    <span class="col-6 col-sm-6 cart-subtotal-title cart-subtotal text-end" id="tax-total"><span
                                             id="gst-total"></span></span>
                                 </div>
 
@@ -122,10 +122,17 @@
                                     <span class="col-6 col-sm-6 cart-subtotal-title fs-6"><strong>Total</strong></span>
                                     <span
                                         class="col-6 col-sm-6 cart-subtotal-title fs-5 cart-subtotal text-end text-primary">
-                                        <b id="grand-total-price"></b></span>
+                                        <b id="grandTotalWithTax"></b></span>
                                 </div>
 
-                                <p class="cart-shipping mt-3">Shipping &amp; taxes calculated at checkout</p>
+
+                                <p class="cart-shipping mt-3">1. Goods once sold will not be taken back</p>
+                                
+                                <p class="cart-shipping mt-3">2. If any damage occurred while transport, Company not responsible for that.</p>
+                                
+                                <p class="cart-shipping mt-3">3. Subject to
+'Manapparai Jurisdiction' only.
+Notes : Stickering included + metal cups all</p>
                                 <!-- <p class="cart-shipping fst-normal freeShipclaim"><i
                                         class="me-2 align-middle icon anm anm-truck-l"></i><b>FREE SHIPPING</b> ELIGIBLE
                                 </p> -->
@@ -156,81 +163,7 @@
                                     
                                     <label for=""></label>
                                 </div>
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                                    <div class="product-arrow d-flex justify-content-between">
-                                        <h2 class="product-title">Product Quick View Popup</h2>
-                                    </div>
-                                    <div class="product-review d-flex mt-0 mb-2">
-                                        <div class="rating"><i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star-o"></i></div>
-                                        <div class="reviews ms-2"><a href="#">6 Reviews</a></div>
-                                    </div>
-                                    <div class="product-info">
-                                        <p class="product-vendor">Vendor:<span class="text"><a href="#">HVL</a></span></p>  
-                                        <p class="product-sku">SKU:<span class="text">RF104</span></p>
-                                    </div>
-                                    <div class="pro-stockLbl my-2">
-                                        <span class="d-flex-center stockLbl instock d-none"><span> In stock</span></span>
-                                        <span class="d-flex-center stockLbl preorder d-none"><span> Pre-order Now</span></span>
-                                        <span class="d-flex-center stockLbl outstock d-none"><span>Sold out</span></span>
-                                    </div>
-                                    <div class="product-price d-flex-center my-3">
-                                        <span class="price old-price">$135.00</span><span class="price">$129.00</span>
-                                    </div>
-                                    <div class="sort-description">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</div>
-                                    <form method="post" action="#" id="product_form--option" class="product-form">
-                                        <div class="product-options d-flex-wrap">
-                                            <div class="product-item swatches-image w-100 mb-3 swatch-0 option1" data-option-index="0">
-                                                <label class="label d-flex align-items-center">Color:<span class="slVariant ms-1 fw-bold">Blue</span></label>
-                                                <ul class="variants-clr swatches d-flex-center pt-1 clearfix">
-                                                    <li class="swatch large radius available blue"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Blue" aria-label="Blue"></span></li>
-                                                    <li class="swatch large radius available black"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Black" aria-label="Black"></span></li>
-                                                    <li class="swatch large radius available pink"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Pink" aria-label="Pink"></span></li>
-                                                    <li class="swatch large radius available green"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Green" aria-label="Green"></span></li>
-                                                    <li class="swatch large radius soldout yellow"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Yellow" aria-label="Yellow"></span></li>
-                                                </ul>
-                                            </div>
-                                            <div class="product-item swatches-size w-100 mb-3 swatch-1 option2" data-option-index="1">
-                                                <label class="label d-flex align-items-center">Size:<span class="slVariant ms-1 fw-bold">S</span></label>
-                                                <ul class="variants-size size-swatches d-flex-center pt-1 clearfix">
-                                                    <li class="swatch large radius soldout"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="XS">XS</span></li>
-                                                    <li class="swatch large radius available active"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="S">S</span></li>
-                                                    <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="M">M</span></li>
-                                                    <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="L">L</span></li>
-                                                    <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="XL">XL</span></li>
-                                                </ul>
-                                            </div>
-                                            <div class="product-action d-flex-wrap w-100 pt-1 mb-3 clearfix">
-                                                <div class="quantity">
-                                                    <div class="qtyField">
-                                                        <a class="qtyBtn minus" href="#;"><i class="icon anm anm-minus-r" aria-hidden="true"></i></a>
-                                                        <input type="text" name="quantity" value="1" class="product-form__input qty" data-ddg-inputtype="unknown" fdprocessedid="5j73d7">
-                                                        <a class="qtyBtn plus" href="#;"><i class="icon anm anm-plus-l" aria-hidden="true"></i></a>
-                                                    </div>
-                                                </div>                                
-                                                <div class="addtocart ms-3 fl-1">
-                                                    <button type="submit" name="add" class="btn product-cart-submit w-100" fdprocessedid="1o7zza"><span>Add to cart</span></button>
-                                                    <button type="submit" name="sold" class="btn btn-secondary product-sold-out w-100 d-none" disabled="disabled"><span>Sold out</span></button>
-                                                    <button type="submit" name="buy" class="btn btn-secondary proceed-to-checkout w-100 d-none"><span>Buy it now</span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                    <div class="wishlist-btn d-flex-center">
-                                        <a class="add-wishlist d-flex-center me-3" href="wishlist-style1.html" title="Add to Wishlist"><i class="icon anm anm-heart-l me-1"></i> <span>Add to Wishlist</span></a>
-                                        <a class="add-compare d-flex-center" href="compare-style1.html" title="Add to Compare"><i class="icon anm anm-random-r me-2"></i> <span>Add to Compare</span></a>
-                                    </div>
-                                    <!-- Social Sharing -->
-                                    <div class="social-sharing share-icon d-flex-center mx-0 mt-3">
-                                        <span class="sharing-lbl">Share :</span>
-                                        <a href="#" class="d-flex-center btn btn-link btn--share share-facebook" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Share on Facebook"><i class="icon anm anm-facebook-f"></i><span class="share-title d-none">Facebook</span></a>
-                                        <a href="#" class="d-flex-center btn btn-link btn--share share-twitter" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Tweet on Twitter"><i class="icon anm anm-twitter"></i><span class="share-title d-none">Tweet</span></a>
-                                        <a href="#" class="d-flex-center btn btn-link btn--share share-pinterest" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Pin on Pinterest"><i class="icon anm anm-pinterest-p"></i> <span class="share-title d-none">Pin it</span></a>
-                                        <a href="#" class="d-flex-center btn btn-link btn--share share-linkedin" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Share on Instagram"><i class="icon anm anm-linkedin-in"></i><span class="share-title d-none">Instagram</span></a>
-                                        <a href="#" class="d-flex-center btn btn-link btn--share share-whatsapp" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Share on WhatsApp"><i class="icon anm anm-envelope-l"></i><span class="share-title d-none">WhatsApp</span></a>
-                                        <a href="#" class="d-flex-center btn btn-link btn--share share-email" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Share by Email"><i class="icon anm anm-whatsapp"></i><span class="share-title d-none">Email</span></a>
-                                    </div>
-                                    <!-- End Social Sharing -->
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -287,8 +220,29 @@
                 cart_id,
                 product_name,
                 product_price,
-                product_quantity;      
-                // product_size
+
+                product_quantity,
+                product_size,grand_total=0,taxRate = 0.12;     
+                
+                  
+                var cartTearmCheckbox = document.getElementById('cart-tearm');
+                var cartCheckoutButton = document.getElementById('cartCheckout');
+
+                // Initially, hide the "Proceed To Checkout" button
+                cartCheckoutButton.style.display = 'none';
+
+                // Add an event listener to the checkbox
+                cartTearmCheckbox.addEventListener('change', function () {
+                    // Check if the checkbox is checked
+                    if (cartTearmCheckbox.checked) {
+                        // If checked, display the "Proceed To Checkout" button
+                        cartCheckoutButton.style.display = 'block';
+                    } else {
+                        // If unchecked, hide the "Proceed To Checkout" button
+                        cartCheckoutButton.style.display = 'none';
+                    }
+                });
+
                 function postdata() {
                     var formData = new FormData();
                     formData.append("customer_id", customer_id);
@@ -308,6 +262,9 @@
                                 data.map(function (value) {
 
                                     var product_cart = document.getElementById('product-carts');
+                                    var grandtotal = document.getElementById('grand-total');
+                                    var taxtotal = document.getElementById('tax-total');
+                                    var  grandTotTax= document.getElementById('grandTotalWithTax');
 
                                     console.log(value.product_id) 
                                     
@@ -320,7 +277,19 @@
                                     // product_size=value.size;
 
                                     var total_price_cart = value.product_price*value.quantity;
-                    
+
+                                    grand_total += total_price_cart;
+
+                                    tax_total = grand_total * taxRate;
+
+                                    var grandTotalWithTax = grand_total + tax_total;
+                                    
+
+                                    
+                                    grandtotal.innerHTML = grand_total;
+                                    taxtotal.innerHTML = tax_total;
+                                    grandTotTax.innerHTML = '₹'+grandTotalWithTax;
+
                                     let html = `
                                                 <tr class="tr" data-id="${value.product_id}">
                                                 <td class="cart-delete text-center small-hide">
