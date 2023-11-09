@@ -21,6 +21,7 @@
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="<?php echo $path; ?>assets/css/style-min.css">
     <link rel="stylesheet" href="<?php echo $path; ?>assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
 <body class="cart-page cart-style1-page">
@@ -61,29 +62,120 @@
                     <div class="col-12 col-sm-12 col-md-12 col-lg-8 main-col">
 
                         <!--End Alert msg-->
+                        <div class="row faqs-style mt-4 mt-md-0">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-10 mx-auto">
+                                <div class="accordion" id="accordionFaq">
+                                    <div class="section pt-0">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button">Product
+                                                    Cart</button>
+                                            </h2>
+                                            <div id="collapseOne" class="accordion-collapse show"
+                                                data-bs-parent="#accordionFaq">
+                                                <div class="accordion-body">
+                                                    <!--Cart Form-->
+                                                    <div class="cart-table table-bottom-brd form">
+                                                        <table class="table align-middle">
+                                                            <thead
+                                                                class="cart-row cart-header small-hide position-relative">
+                                                                <tr>
+                                                                    <th class="action">&nbsp;</th>
+                                                                    <th colspan="2" class="text-start">Product</th>
+                                                                    <!-- <th class="text-center">Size</th> -->
+                                                                    <th class="text-center">Price</th>
+                                                                    <th class="text-center">Quantity</th>
+                                                                    <th class="text-center">Total</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="cart-row cart-flex position-relative"
+                                                                    id="product-carts">
+                                                                </tr>
+                                                            </tbody>
+                                                            <tfoot>
+                                                            </tfoot>
+                                                        </table>
+                                                        <button id="placeOrderButton"
+                                                            class="btn btn-lg my-4 checkout w-100"
+                                                            style="background-color:orangered;"
+                                                            onclick="toggleAccordions()">Place Order</button>
+                                                    </div>
+                                                    <!--End Cart Form-->
+                                                </div>
+                                            </div>
+                                        </div>
 
-                        <!--Cart Form-->
-                        <div class="cart-table table-bottom-brd form">
-                            <table class="table align-middle">
-                                <thead class="cart-row cart-header small-hide position-relative">
-                                    <tr>
-                                        <th class="action">&nbsp;</th>
-                                        <th colspan="2" class="text-start">Product</th>
-                                        <!-- <th class="text-center">Size</th> -->
-                                        <th class="text-center">Price</th>
-                                        <th class="text-center">Quantity</th>
-                                        <th class="text-center">Total</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="cart-row cart-flex position-relative" id="product-carts">
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                </tfoot>
-                            </table>
-                        </div >
-                        <!--End Cart Form-->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed mb-0" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                    aria-expanded="false" aria-controls="collapseTwo">Delievery
+                                                    Section</button>
+                                            </h2>
+                                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                                aria-labelledby="headingTwo" data-bs-parent="#accordionFaq">
+                                                <div class="accordion-body">
+                                                    <!--Cart Form-->
+                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb-4">
+                                                        <div class="product-review-form new-review-form">
+                                                            <h3 class="spr-form-title">order No: <span
+                                                                    id="ref_no"></span></h3>
+
+                                                            <fieldset class="row spr-form-contact">
+                                                                <div class="col-sm-6 spr-form-contact-name form-group">
+                                                                    <label class="spr-form-label" for="nickname">Name
+                                                                        <span class="required">*</span></label>
+                                                                    <input class="spr-form-input spr-form-input-text"
+                                                                        id="username" type="text" name="name"
+                                                                        >
+                                                                </div>
+                                                                <div class="col-sm-6 spr-form-contact-email form-group">
+                                                                    <label class="spr-form-label" for="email">Email
+                                                                        <span class="required">*</span></label>
+                                                                    <input class="spr-form-input spr-form-input-email "
+                                                                        id="useremail" type="email" name="email"
+                                                                        >
+                                                                </div>
+                                                                <div class="col-sm-6 spr-form-review-title form-group">
+                                                                    <label class="spr-form-label" for="review">Mobile.No
+                                                                        <span class="required">*</span></label>
+                                                                    <input class="spr-form-input spr-form-input-text "
+                                                                        id="usermobile" type="tel" name="review">
+                                                                </div>
+                                                                <!-- <div class="col-sm-6 spr-form-review-title form-group">
+                                                    <label class="spr-form-label" for="review">Coupen code</label>
+                                                    <input class="spr-form-input spr-form-input-text " id="review" type="text" name="review">
+                                                </div> -->
+                                                                <div class="col-12 spr-form-review-body form-group">
+                                                                    <label class="spr-form-label"
+                                                                        for="message">Address<span
+                                                                            class="required">*</span></label>
+                                                                    <div class="spr-form-input">
+                                                                        <textarea
+                                                                            class="spr-form-input spr-form-input-textarea"
+                                                                            id="useraddress" name="message" rows="3"
+                                                                            style="resize:none;"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </fieldset>
+                                                            <div class="spr-form-actions clearfix">
+                                                                <!-- <input type="submit" class="btn btn-primary spr-button spr-button-primary" value="Submit" onclick="closeSecondAccordion()"> -->
+                                                                <input
+                                                                    class="btn btn-primary spr-button spr-button-primary"
+                                                                    id="form-submited" value="Submit">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--End Cart Form-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
 
                     </div>
                     <!--End Cart Content-->
@@ -94,12 +186,12 @@
                             <div class="cart-order-detail cart-col">
                                 <div class="row g-0 border-bottom pb-2">
                                     <span class="col-6 col-sm-6 cart-subtotal-title"><strong>Subtotal</strong></span>
-                                    <span class="col-6 col-sm-6 cart-subtotal-title cart-subtotal text-end" id="grand-total"><span
-                                            class="money" id="total-price"></span></span>
+                                    <span class="col-6 col-sm-6 cart-subtotal-title cart-subtotal text-end"
+                                        id="grand-total"><span class="money" id="total-price"></span></span>
                                 </div>
                                 <div class="row g-0 border-bottom py-2">
                                     <span class="col-6 col-sm-6 cart-subtotal-title"><strong>CGST</strong></span>
-                                    <span class="col-6 col-sm-6 cart-subtotal-title cart-subtotal text-end" ><span
+                                    <span class="col-6 col-sm-6 cart-subtotal-title cart-subtotal text-end"><span
                                             class="money">6%</span></span>
                                 </div>
                                 <div class="row g-0 border-bottom py-2">
@@ -114,8 +206,8 @@
                                 </div> -->
                                 <div class="row g-0 border-bottom py-2">
                                     <span class="col-6 col-sm-6 cart-subtotal-title"><strong>GST calc</strong></span>
-                                    <span class="col-6 col-sm-6 cart-subtotal-title cart-subtotal text-end" id="tax-total"><span
-                                            id="gst-total"></span></span>
+                                    <span class="col-6 col-sm-6 cart-subtotal-title cart-subtotal text-end"
+                                        id="tax-total"><span id="gst-total"></span></span>
                                 </div>
 
                                 <div class="row g-0 pt-2">
@@ -126,22 +218,7 @@
                                 </div>
 
 
-                                <p class="cart-shipping mt-3">1. Goods once sold will not be taken back</p>
-                                
-                                <p class="cart-shipping mt-3">2. If any damage occurred while transport, Company not responsible for that.</p>
-                                
-                                <p class="cart-shipping mt-3">3. Subject to
-'Manapparai Jurisdiction' only.
-Notes : Stickering included + metal cups all</p>
-                                <!-- <p class="cart-shipping fst-normal freeShipclaim"><i
-                                        class="me-2 align-middle icon anm anm-truck-l"></i><b>FREE SHIPPING</b> ELIGIBLE
-                                </p> -->
-                                <div class="customCheckbox cart-tearm">
-                                    <input type="checkbox" value="allen-vela" id="cart-tearm">
-                                    <label for="cart-tearm">I agree with the terms and conditions</label>
-                                </div>
-                                <a id="cartCheckout" class="btn btn-lg my-4 checkout w-100"
-                                    style="background-color:orangered;">Proceed To Checkout</a>
+
                                 <!-- <div class="paymnet-img text-center"><img
                                         src="<?php echo $path; ?>assets/images/icons/safepayment.png" alt="Payment"
                                         width="299" height="28" /></div> -->
@@ -152,15 +229,50 @@ Notes : Stickering included + metal cups all</p>
                 </div>
             </div>
             <!--End Main Content-->
-            <div class="quickview-modal modal fade" id="quickview_modal" tabindex="-1" style="display: none;" aria-hidden="true">           
+            <div class="quickview-modal modal fade" id="quickview_modal" tabindex="-1" style="display: none;"
+                aria-hidden="true">
                 <div class="modal-dialog modal-lg modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-body">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" fdprocessedid="8upl9f"></button>
                             <div class="row">
+
+
+
                                 <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 mb-md-0">
-                                    <p class>Reference No: <span id="ref_no"></span></p>   
-                                    <label for=""></label>
+                                    <div class="spr-form-actions clearfix">
+                                        <img src="img\qr.jpg" alt="">
+                                        <p>UPI - <b>Q79891202@ybl</b></p>
+                                        <div style="background-color:white;">
+                                            <p class="cart-shipping mt-3">Note : Send a WhatsApp message with your order
+                                                number after making a payment.</p>
+                                        </div>
+                                        <br>
+                                        <button class="btn btn-primary spr-button spr-button-primary"
+                                            style="background-color:limegreen;"><i class="bi bi-whatsapp"></i>&nbsp;Send
+                                            message</button>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 mb-md-0">
+                                    <div class="spr-form-actions clearfix">
+                                        <p class="cart-shipping mt-3">1. Goods once sold will not be taken back</p>
+
+                                        <p class="cart-shipping mt-3">2. If any damage occurred while transport, Company
+                                            not responsible for that.</p>
+
+                                        <p class="cart-shipping mt-3">3. Subject to
+                                            'Manapparai Jurisdiction' only.
+                                            Notes : Stickering included + metal cups all</p>
+                                        <!-- <p class="cart-shipping fst-normal freeShipclaim"><i
+                                        class="me-2 align-middle icon anm anm-truck-l"></i><b>FREE SHIPPING</b> ELIGIBLE
+                                </p> -->
+                                        <div class="customCheckbox cart-tearm">
+                                            <input type="checkbox" value="allen-vela" id="cart-tearm">
+                                            <label for="cart-tearm">I agree with the terms and conditions</label>
+                                        </div>
+                                        <button id="cartCheckout" class="btn btn-lg my-4 checkout w-100"
+                                            style="background-color:orangered;">Proceed To Checkout</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -189,6 +301,28 @@ Notes : Stickering included + metal cups all</p>
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         <script>
+            function toggleAccordions() {
+                // Close the first accordion
+                var collapseOne = new bootstrap.Collapse(document.getElementById('collapseOne'), {
+                    toggle: true
+                });
+                collapseOne.hide();
+
+                // Open the second accordion
+                var collapseTwo = new bootstrap.Collapse(document.getElementById('collapseTwo'), {
+                    toggle: true
+                });
+                collapseTwo.show();
+            }
+
+            function closeSecondAccordion() {
+                // Close the second accordion
+                var collapseTwo = new bootstrap.Collapse(document.getElementById('collapseTwo'), {
+                    toggle: true
+                });
+                collapseTwo.hide();
+            }
+
             function getCookie(cookieName) {
                 var name = cookieName + "=";
                 var decodedCookie = decodeURIComponent(document.cookie);
@@ -206,34 +340,113 @@ Notes : Stickering included + metal cups all</p>
             const customer_id = getCookie('imax_login_user_id');
             console.log(customer_id);
 
-            $(document).ready(function () {                  
+            $(document).ready(function () {
                 var product_id,
-                product_category,
-                cart_id,
-                product_name,
-                product_price,
+                    product_category,
+                    cart_id,
+                    product_name,
+                    product_price,
 
-                product_quantity,
-                product_size,grand_total=0,taxRate = 0.12;     
-                
-                  
+                    product_quantity,
+                    product_size, grand_total = 0,
+                    taxRate = 0.12;
+
+
                 var cartTearmCheckbox = document.getElementById('cart-tearm');
                 var cartCheckoutButton = document.getElementById('cartCheckout');
 
                 // Initially, hide the "Proceed To Checkout" button
-                cartCheckoutButton.style.display = 'none';
-
+                // cartCheckoutButton.style.display = 'none';
+                cartCheckoutButton.disabled = true;
                 // Add an event listener to the checkbox
                 cartTearmCheckbox.addEventListener('change', function () {
                     // Check if the checkbox is checked
                     if (cartTearmCheckbox.checked) {
                         // If checked, display the "Proceed To Checkout" button
-                        cartCheckoutButton.style.display = 'block';
+                        // cartCheckoutButton.style.display = 'block';
+                        cartCheckoutButton.disabled = false;
                     } else {
                         // If unchecked, hide the "Proceed To Checkout" button
-                        cartCheckoutButton.style.display = 'none';
+                        // cartCheckoutButton.style.display = 'none';
+                        cartCheckoutButton.disabled = true;
                     }
                 });
+
+
+                $('#form-submited').click(function(){
+              
+                var username = $("#username").val().trim();
+                console.log(username);
+                
+                var useremail = $("#useremail").val().trim();
+                console.log(useremail);
+                
+                var usermobile = $("#usermobile").val().trim();
+                console.log(usermobile);
+
+                var useraddress = $("#useraddress").val().trim();
+                console.log(useraddress);
+
+                if(username == "")
+                {
+                    toastr.error('Enter name here !', 'Empty');
+                }
+                else if(useremail == "")
+                {
+                    toastr.error('Enter mail here !', 'Empty');
+                }
+                else if(usermobile == "")
+                {
+                    toastr.error('Enter mobile number here !', 'Empty');
+                }
+                else if(useraddress == "")
+                {
+                    toastr.error('Enter address here !', 'Empty');
+                }
+              
+                else
+                {
+                    var fd = new FormData();
+
+                    fd.append("username", username);
+                    fd.append("useremail", useremail);
+                    fd.append("usermobile", usermobile);
+                    fd.append("useraddress", useraddress);
+
+                    var modal = $('#quickview_modal');
+                    modal.modal('show');
+
+            $.ajax({
+                        url: 'ajax',
+                        data: fd,
+                        type:'post',
+                        contentType: false,
+                        processData: false,
+                        success: function(response)
+                        {
+                                // console.log(response);
+                                data = JSON.parse(response);
+                                console.log(data);
+                                if(data.status == 'Success')
+                                {
+                                    toastr.success('Welcome!', 'Success');
+
+                                    $("#username").val("");
+                                    $("#useremail").val("");
+                                    $("#usermobile").val("");
+                                    $("#useraddress").val("");
+                                }
+                                else
+                                {
+                                    toastr.error('Error!', 'Error Found!')
+                                }
+                            }
+                        });
+                }
+
+            })
+                    
+
 
                 function postdata() {
                     var formData = new FormData();
@@ -253,34 +466,37 @@ Notes : Stickering included + metal cups all</p>
                                 console.log(data);
                                 data.map(function (value) {
 
-                                    var product_cart = document.getElementById('product-carts');
+                                    var product_cart = document.getElementById(
+                                        'product-carts');
                                     var grandtotal = document.getElementById('grand-total');
                                     var taxtotal = document.getElementById('tax-total');
-                                    var  grandTotTax= document.getElementById('grandTotalWithTax');
+                                    var grandTotTax = document.getElementById(
+                                        'grandTotalWithTax');
 
-                                    console.log(value.product_id) 
-                                    
-                                    product_id=value.product_id;
-                                    product_category=value.product_category;
-                                    cart_id=value.cart_id;
-                                    product_name=value.product_name;
-                                    product_price=value.product_price;
-                                    product_quantity=value.quantity;
+                                    console.log(value.product_id)
+
+                                    product_id = value.product_id;
+                                    product_category = value.product_category;
+                                    cart_id = value.cart_id;
+                                    product_name = value.product_name;
+                                    product_price = value.product_price;
+                                    product_quantity = value.quantity;
                                     // product_size=value.size;
 
-                                    var total_price_cart = value.product_price*value.quantity;
+                                    var total_price_cart = value.product_price * value
+                                        .quantity;
 
                                     grand_total += total_price_cart;
 
                                     tax_total = grand_total * taxRate;
 
                                     var grandTotalWithTax = grand_total + tax_total;
-                                    
 
-                                    
+
+
                                     grandtotal.innerHTML = grand_total;
                                     taxtotal.innerHTML = tax_total;
-                                    grandTotTax.innerHTML = '₹'+grandTotalWithTax;
+                                    grandTotTax.innerHTML = '₹' + grandTotalWithTax;
 
                                     let html = `
                                                 <tr class="tr" data-id="${value.product_id}">
@@ -333,16 +549,10 @@ Notes : Stickering included + metal cups all</p>
                 postdata()
             })
 
-            $('#cartCheckout').on('click', function() {
-                // $('#ref_no').text('ON' + Math.floor(10000 + Math.random() * 90000));
-
-                var modal = $('#quickview_modal');
-                modal.modal('show');
-            });
 
 
-            $('#place_order').on('click', function(e) { 
-                var product_id = $('.tr').map(function(){
+            $('#place_order').on('click', function (e) {
+                var product_id = $('.tr').map(function () {
                     return $(this).data('id');
                 }).get();
 
@@ -352,18 +562,18 @@ Notes : Stickering included + metal cups all</p>
                 //     return  $(this).text().trim();
                 // }).get();
 
-                var price = $('.price').map(function(){
+                var price = $('.price').map(function () {
                     var price_val = $(this).html();
                     // console.log($(this).html());
                     return $(this).html();
                 }).get();
 
-                var quantity = $('.qty').map(function(){
+                var quantity = $('.qty').map(function () {
                     var quantity_val = $(this).val();
                     return $(this).val();
                 }).get();
 
-                var total_price = $('.total_price').map(function(){
+                var total_price = $('.total_price').map(function () {
                     var total_val = $(this).html();
                     // console.log($(this));
                     return $(this).html();
@@ -371,9 +581,9 @@ Notes : Stickering included + metal cups all</p>
 
                 var product_id_arr = JSON.stringify(product_id);
                 // var size_arr       = JSON.stringify(size);
-                var quantity_arr   = JSON.stringify(quantity);
-                var price_arr      = JSON.stringify(price);
-                var total_price    = JSON.stringify(total_price);
+                var quantity_arr = JSON.stringify(quantity);
+                var price_arr = JSON.stringify(price);
+                var total_price = JSON.stringify(total_price);
 
                 console.log(customer_id);
                 console.log(product_id_arr);
@@ -384,7 +594,7 @@ Notes : Stickering included + metal cups all</p>
 
 
                 var fd = new FormData();
-                
+
                 fd.append('customer_id', customer_id);
                 fd.append('product_id', product_id_arr);
                 // fd.append('size', size_arr);
@@ -399,10 +609,10 @@ Notes : Stickering included + metal cups all</p>
                     contentType: false,
                     data: fd,
 
-                    success:function(response){
+                    success: function (response) {
                         var result = JSON.parse(response);
 
-                        if(result.status == 'Success') {
+                        if (result.status == 'Success') {
                             toastr.success('Order Placed');
                         } else {
                             toastr.error('Unable to place order');
@@ -411,8 +621,8 @@ Notes : Stickering included + metal cups all</p>
                 })
             });
 
-            $(document).ready(function() {
-                $(document).on('click', '.qtyBtn.plus, .qtyBtn.minus', function() {
+            $(document).ready(function () {
+                $(document).on('click', '.qtyBtn.plus, .qtyBtn.minus', function () {
                     var button = $(this);
                     var inputField = button.siblings('.cart-qty-input');
                     var currentValue = parseInt(inputField.val());
@@ -441,8 +651,8 @@ Notes : Stickering included + metal cups all</p>
                         data: formData,
                         processData: false,
                         contentType: false,
-                        success: function(response) {
-                            console.log(response); 
+                        success: function (response) {
+                            console.log(response);
                             var result = JSON.parse(response)
                             if (result.status === 'Success') {
                                 // inputField.val('');
@@ -452,8 +662,9 @@ Notes : Stickering included + metal cups all</p>
                                 console.log('Update failed');
                             }
                         },
-                        error: function(xhr, status, error) {
-                            console.log(xhr.responseText); // Log the error response for debugging
+                        error: function (xhr, status, error) {
+                            console.log(xhr
+                            .responseText); // Log the error response for debugging
                             console.log('Error in the AJAX request:', status, error);
                         }
                     });
@@ -469,18 +680,18 @@ Notes : Stickering included + metal cups all</p>
 
             // function sendCartToBackend() {
             //     // Retrieve the customer ID or any other necessary information
-                
+
             //     // Collect all products in the cart or relevant cart data
             //     var cartProducts = []; // Store products or cart data here
 
             //     // Loop through the products in the cart or relevant HTML elements to collect product information
             //     // For example, let's assume products are listed in a table with 'data' attributes containing product details
             //     var productRows = document.querySelectorAll('.cart-product-row'); // Replace with your actual selector
-                
+
             //     productRows.forEach(function(row) {
             //         var productInfo = {
             //             product_id: row.dataset.productId,
-                    
+
             //         };
             //         cartProducts.push(productInfo);
             //     });
@@ -507,9 +718,6 @@ Notes : Stickering included + metal cups all</p>
             //         }
             //     });
             // }
-
-           
-
         </script>
 
 
