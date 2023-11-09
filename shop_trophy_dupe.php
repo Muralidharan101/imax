@@ -24,12 +24,14 @@
 
     <style>
 
-        .cat{
+.cat {
             cursor: pointer;
+            padding: 5px 10px;
         }
+
         .active {
-            background-color: #e0e0e0;
-            /* Apply your desired active styling here */
+            border: 1px solid #fe0609;
+            padding: 0 20px;
         }
     </style>
 </head>

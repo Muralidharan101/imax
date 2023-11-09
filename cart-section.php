@@ -138,7 +138,7 @@
                                                                         >
                                                                 </div>
                                                                 <div class="col-sm-6 spr-form-review-title form-group">
-                                                                    <label class="spr-form-label" for="review">Mobile.No
+                                                                    <label class="spr-form-label" for="review">Mobile No
                                                                         <span class="required">*</span></label>
                                                                     <input class="spr-form-input spr-form-input-text "
                                                                         id="usermobile" type="tel" name="review">
@@ -372,6 +372,78 @@
                     }
                 });
 
+                $('#placeOrderButton').click(function(){
+
+                    var product_id = $('.tr').map(function () {
+                    return $(this).data('id');
+                }).get();
+
+                // var size = $('.size').map(function(){
+                //     var size_val = $(this).text().trim();
+                //     // console.log($(this).html());
+                //     return  $(this).text().trim();
+                // }).get();
+
+                var price = $('.price').map(function () {
+                    var price_val = $(this).html();
+                    // console.log($(this).html());
+                    return $(this).html();
+                }).get();
+
+                var quantity = $('.qty').map(function () {
+                    var quantity_val = $(this).val();
+                    return $(this).val();
+                }).get();
+
+                var total_price = $('.total_price').map(function () {
+                    var total_val = $(this).html();
+                    // console.log($(this));
+                    return $(this).html();
+                }).get();
+
+
+                var product_id_arr = JSON.stringify(product_id);
+                // var size_arr       = JSON.stringify(size);
+                var quantity_arr = JSON.stringify(quantity);
+                var price_arr = JSON.stringify(price);
+                var total_price = JSON.stringify(total_price);
+
+                console.log(customer_id);
+                console.log(product_id_arr);
+                // console.log(size_arr);
+                console.log(quantity_arr);
+                console.log(price_arr);
+                console.log(total_price);
+
+
+                var fd = new FormData();
+
+                fd.append('customer_id', customer_id);
+                fd.append('product_id', product_id_arr);
+                // fd.append('size', size_arr);
+                fd.append('quantity', quantity_arr);
+                fd.append('price', price_arr);
+                fd.append('total_price', total_price);
+
+                $.ajax({
+                    url: 'ajax/checkout.php',
+                    method: 'post',
+                    processData: false,
+                    contentType: false,
+                    data: fd,
+
+                    success: function (response) {
+                        var result = JSON.parse(response);
+
+                        if (result.status == 'Success') {
+                            toastr.success('Order Placed');
+                        } else {
+                            toastr.error('Unable to place order');
+                        }
+                    }
+                })
+            });
+
 
                 $('#form-submited').click(function(){
               
@@ -551,75 +623,6 @@
 
 
 
-            $('#place_order').on('click', function (e) {
-                var product_id = $('.tr').map(function () {
-                    return $(this).data('id');
-                }).get();
-
-                // var size = $('.size').map(function(){
-                //     var size_val = $(this).text().trim();
-                //     // console.log($(this).html());
-                //     return  $(this).text().trim();
-                // }).get();
-
-                var price = $('.price').map(function () {
-                    var price_val = $(this).html();
-                    // console.log($(this).html());
-                    return $(this).html();
-                }).get();
-
-                var quantity = $('.qty').map(function () {
-                    var quantity_val = $(this).val();
-                    return $(this).val();
-                }).get();
-
-                var total_price = $('.total_price').map(function () {
-                    var total_val = $(this).html();
-                    // console.log($(this));
-                    return $(this).html();
-                }).get();
-
-                var product_id_arr = JSON.stringify(product_id);
-                // var size_arr       = JSON.stringify(size);
-                var quantity_arr = JSON.stringify(quantity);
-                var price_arr = JSON.stringify(price);
-                var total_price = JSON.stringify(total_price);
-
-                console.log(customer_id);
-                console.log(product_id_arr);
-                // console.log(size_arr);
-                console.log(quantity_arr);
-                console.log(price_arr);
-                console.log(total_price);
-
-
-                var fd = new FormData();
-
-                fd.append('customer_id', customer_id);
-                fd.append('product_id', product_id_arr);
-                // fd.append('size', size_arr);
-                fd.append('quantity', quantity_arr);
-                fd.append('price', price_arr);
-                fd.append('total_price', total_price);
-
-                $.ajax({
-                    url: 'ajax/checkout.php',
-                    method: 'post',
-                    processData: false,
-                    contentType: false,
-                    data: fd,
-
-                    success: function (response) {
-                        var result = JSON.parse(response);
-
-                        if (result.status == 'Success') {
-                            toastr.success('Order Placed');
-                        } else {
-                            toastr.error('Unable to place order');
-                        }
-                    }
-                })
-            });
 
             $(document).ready(function () {
                 $(document).on('click', '.qtyBtn.plus, .qtyBtn.minus', function () {
