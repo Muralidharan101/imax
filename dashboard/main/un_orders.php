@@ -94,9 +94,12 @@
                     <table class="display" id="basic-1">
                       <thead>
                         <tr>
-                          <th>Order Id</th>
+                          <th>Product Image</th>
                           <th>Customer Name</th>
-                          <th>Total Price</th>
+                          <th>Product Name</th>
+                          <th>Product Size</th>
+                          <th>Quantity</th>
+                          <th>Order Price</th>
                           <th>Order Status</th>
                           <th>Action</th>
                         </tr>
@@ -192,9 +195,12 @@
                 `<img src="../../product_images/${value.id}/main/${value.product_img}" width="70" height="100"/>`,
                
                 value.product_name,
+                value.user_name,
+                value.size,
+                value.quantity,
                 value.total_price,
                 value.order_status,
-                `${viewButton}`
+                `${editButton}<a data-id="${value.id}" class='text-danger me-2 delete_button'><i class="bi bi-trash3-fill h6"></i></a>${viewButton}`
               ]).draw(false);
             });
           }

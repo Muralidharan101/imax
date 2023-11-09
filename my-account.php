@@ -1,5 +1,6 @@
 <?php
     require_once 'datab.php';
+    include 'ajax/session.php';
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -11,7 +12,7 @@
         <meta name="description" content="description">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Title Of Site -->
-        <title>My Account - Hema Multipurpose eCommerce Bootstrap 5 Html Template</title>
+        <title>My Account - Imax Trophies</title>
         <!-- Favicon -->
         <link rel="shortcut icon" href="<?php echo $path;?>assets/images/favicon.png" />
         <!-- Plugins CSS -->
@@ -70,27 +71,28 @@
                                 <div class="tab-pane fade h-100 show active" id="info">
                                     <div class="account-info h-100">
                                         <div class="welcome-msg mb-4">
-                                            <h2>Hello, <span class="text-primary">Jecno Janesen</span></h2>
+                                            <h2>Hello, <span class="text-primary" id="acc_name"></span></h2>
                                             <p>From your My Account Dashboard you have the ability to view a snapshot of your recent account activity and update your account information. Select a link below to view or edit information.</p>
                                         </div>
-
-                                      
-
                                         <div class="account-box">
                                             <h3 class="mb-3">Account Information</h3>
                                             <div class="row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1">
                                                 <div class="box-info mb-4">
                                                     <div class="box-title d-flex-center">
-                                                        <h4>Contact Information</h4> <a href="#" class="btn-link ms-auto">Edit</a>
+                                                        <h4>Contact Information:<span id="acc_phone"></span></h4> <a href="javascript:void(0)" id="editLink" class="btn-link ms-auto">Edit</a>
+                                                    </div>
+                                                    <div class="form-group d-none" id="edt_grp">
+                                                        <input type="text" class="form-control" id="edit_contact" oninput="onlyNum(this)">
+                                                        <button class="btn btn-danger btn-sm mt-2" id="update_phone">Update</button>
                                                     </div>
                                                     <div class="box-content mt-3">
-                                                      
-                                                        <p><a href="#" class="btn-link ps-3">Change Password</a></p>
+                                                        <p><a href="javascript:void(0)" id="pass_link" class="btn-link ps-3">Change Password</a></p>
+                                                    </div>
+                                                    <div class="form-group d-none" id="pass_grp">
+                                                        <input type="text" class="form-control" id="pass">
+                                                        <button class="btn btn-danger btn-sm mt-2" id="update_pass">Update</button>
                                                     </div>
                                                 </div>
-                                               
-                                            
-                                               
                                             </div>
                                         </div>
                                     </div>
@@ -109,61 +111,19 @@
                                             <table class="table align-middle text-center order-table">
                                                 <thead>
                                                     <tr class="table-head text-nowrap">
-                                                        <th scope="col">image</th>
                                                         <th scope="col">Order Id</th>
-                                                        <th scope="col">Product Details</th>
                                                         <th scope="col">Price</th>
                                                         <th scope="col">Status</th>
                                                         <th scope="col">View</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td><img class="blur-up lazyload" data-src="<?php echo $path;?>/assets/images/products/product1-120x170.jpg" src="<?php echo $path;?>/assets/images/products/product1-120x170.jpg" width="50" alt="product" title="product" /></td>
-                                                        <td><span class="id">#12301</span></td>
-                                                        <td><span class="name">Oxford Cuban Shirt</span></td>
-                                                        <td><span class="price fw-500">$99.00</span></td>
-                                                        <td><span class="badge rounded-pill bg-success custom-badge">Shipped</span></td>
-                                                        <td><a href="product-layout1.html" class="view"><i class="icon anm anm-eye btn-link fs-6"></i></a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><img class="blur-up lazyload" data-src="<?php echo $path;?>/assets/images/products/product2-120x170.jpg" src="<?php echo $path;?>/assets/images/products/product2-120x170.jpg" width="50" alt="product" title="product" /></td>
-                                                        <td><span class="id">#12302</span></td>
-                                                        <td><span class="name">Cuff Beanie Cap</span></td>
-                                                        <td><span class="price fw-500">$128.00</span></td>
-                                                        <td><span class="badge rounded-pill bg-danger custom-badge">Pending</span></td>
-                                                        <td><a href="product-layout2.html" class="view"><i class="icon anm anm-eye btn-link fs-6"></i></a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><img class="blur-up lazyload" data-src="<?php echo $path;?>/assets/images/products/product3-120x170.jpg" src="<?php echo $path;?>/assets/images/products/product3-120x170.jpg" width="50" alt="product" title="product" /></td>
-                                                        <td><span class="id">#12303</span></td>
-                                                        <td><span class="name">Flannel Collar Shirt</span></td>
-                                                        <td><span class="price fw-500">$114.00</span></td>
-                                                        <td><span class="badge rounded-pill bg-dark custom-badge">Processing</span></td>
-                                                        <td><a href="product-layout3.html" class="view"><i class="icon anm anm-eye btn-link fs-6"></i></a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><img class="blur-up lazyload" data-src="<?php echo $path;?>/assets/images/products/product4-120x170.jpg" src="<?php echo $path;?>/assets/images/products/product4-120x170.jpg" width="50" alt="product" title="product" /></td>
-                                                        <td><span class="id">#12304</span></td>
-                                                        <td><span class="name">Cotton Hooded Hoodie</span></td>
-                                                        <td><span class="price fw-500">$198.00</span></td>
-                                                        <td><span class="badge rounded-pill bg-secondary custom-badge">Canceled</span></td>
-                                                        <td><a href="product-layout4.html" class="view"><i class="icon anm anm-eye btn-link fs-6"></i></a></td>
-                                                    </tr>
+                                                <tbody id="order_table">
                                                 </tbody>
                                             </table>
                                         </div>                                               
                                     </div>
                                 </div>
                                 <!-- End My Orders -->
-
-                          
-
-                               
-
-                        
-                               
-                              
                             </div>
                         </div>
                     </div>
@@ -181,103 +141,7 @@
             <div id="site-scroll"><i class="icon anm anm-arw-up"></i></div>
             <!--End Scoll Top-->
 
-            <!--MiniCart Drawer-->
-            <div id="minicart-drawer" class="minicart-right-drawer offcanvas offcanvas-end" tabindex="-1">
-                <!--MiniCart Empty-->
-                <div id="cartEmpty" class="cartEmpty d-flex-justify-center flex-column text-center p-3 text-muted d-none">
-                    <div class="minicart-header d-flex-center justify-content-between w-100">
-                        <h4 class="fs-6">Your cart (0 Items)</h4>
-                        <button class="close-cart border-0" data-bs-dismiss="offcanvas" aria-label="Close"><i class="icon anm anm-times-r" data-bs-toggle="tooltip" data-bs-placement="left" title="Close"></i></button>
-                    </div>
-                    <div class="cartEmpty-content mt-4">
-                        <i class="icon anm anm-cart-l fs-1 text-muted"></i> 
-                        <p class="my-3">No Products in the Cart</p>
-                        <a href="index.html" class="btn btn-primary cart-btn">Continue shopping</a>
-                    </div>
-                </div>
-                <!--End MiniCart Empty-->
-
-                <!--MiniCart Content-->
-                <div id="cart-drawer" class="block block-cart">
-                    <div class="minicart-header">
-                        <button class="close-cart border-0" data-bs-dismiss="offcanvas" aria-label="Close"><i class="icon anm anm-times-r" data-bs-toggle="tooltip" data-bs-placement="left" title="Close"></i></button>
-                        <h4 class="fs-6">Your cart (2 Items)</h4>
-                    </div>
-                    <div class="minicart-content">
-                        <ul class="m-0 clearfix">
-                            <li class="item d-flex justify-content-center align-items-center">
-                                <a class="product-image rounded-0" href="product-layout1.html">
-                                    <img class="rounded-0 blur-up lazyload" data-src="<?php echo $path;?>/assets/images/products/cart-product-img1.jpg" src="<?php echo $path;?>/assets/images/products/cart-product-img1.jpg" alt="product" title="Product" width="120" height="170" />
-                                </a>
-                                <div class="product-details">
-                                    <a class="product-title" href="product-layout1.html">Women Sandals</a>
-                                    <div class="variant-cart my-2">Black / XL</div>
-                                    <div class="priceRow">
-                                        <div class="product-price">
-                                            <span class="price">$54.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="qtyDetail text-center">
-                                    <div class="qtyField">
-                                        <a class="qtyBtn minus" href="#;"><i class="icon anm anm-minus-r"></i></a>
-                                        <input type="text" name="quantity" value="1" class="qty">
-                                        <a class="qtyBtn plus" href="#;"><i class="icon anm anm-plus-r"></i></a>
-                                    </div>
-                                    <a href="#" class="edit-i remove"><i class="icon anm anm-pencil-ar" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"></i></a>
-                                    <a href="#" class="remove"><i class="icon anm anm-times-r" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove"></i></a>
-                                </div>
-                            </li>
-                            <li class="item d-flex justify-content-center align-items-center">
-                                <a class="product-image rounded-0" href="product-layout1.html">
-                                    <img class="rounded-0 blur-up lazyload" data-src="<?php echo $path;?>/assets/images/products/cart-product-img2.jpg" src="<?php echo $path;?>/assets/images/products/cart-product-img2.jpg" alt="product" title="Product" width="120" height="170" />
-                                </a>
-                                <div class="product-details">
-                                    <a class="product-title" href="product-layout1.html">High Waist Jeans</a>
-                                    <div class="variant-cart my-2">Yellow / M</div>
-                                    <div class="priceRow">
-                                        <div class="product-price">
-                                            <span class="price old-price">$114.00</span><span class="price">$99.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="qtyDetail text-center">
-                                    <div class="qtyField">
-                                        <a class="qtyBtn minus" href="#;"><i class="icon anm anm-minus-r"></i></a>
-                                        <input type="text" name="quantity" value="1" class="qty">
-                                        <a class="qtyBtn plus" href="#;"><i class="icon anm anm-plus-r"></i></a>
-                                    </div>
-                                    <a href="#" class="edit-i remove"><i class="icon anm anm-pencil-ar" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"></i></a>
-                                    <a href="#" class="remove"><i class="icon anm anm-times-r" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove"></i></a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="minicart-bottom">
-                        <div class="shipinfo">
-                            <div class="progress mb-2"><div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div></div>
-                            <div class="freeShipMsg"><i class="icon anm anm-truck-l fs-6 me-2 align-middle"></i>Only <span class="money" data-currency-usd="$199.00" data-currency="USD">$199.00</span> away from <b>Free Shipping</b></div>
-                            <div class="freeShipMsg d-none"><i class="icon anm anm-truck-l fs-6 me-2 align-middle"></i>Congrats! You are eligible for <b>Free Shipping</b></div>
-                        </div>
-                        <div class="subtotal clearfix my-3">
-                            <div class="totalInfo clearfix mb-1 d-none"><span>Shipping:</span><span class="item product-price">$10.00</span></div>
-                            <div class="totalInfo clearfix mb-1 d-none"><span>Tax:</span><span class="item product-price">$0.00</span></div>
-                            <div class="totalInfo clearfix"><span>Total:</span><span class="item product-price">$163.00</span></div>
-
-                        </div>
-                        <div class="agree-check customCheckbox">
-                            <input id="prTearm" name="tearm" type="checkbox" value="tearm" required />
-                            <label for="prTearm"> I agree with the </label><a href="#" class="ms-1 text-link">Terms &amp; conditions</a>
-                        </div>
-                        <div class="minicart-action d-flex mt-3">
-                            <a href="checkout-style1.html" class="proceed-to-checkout btn btn-primary w-50 me-1">Check Out</a>
-                            <a href="cart-style1.html" class="cart-btn btn btn-secondary w-50 ms-1">View Cart</a>
-                        </div>
-                    </div>
-                </div>
-                <!--MiniCart Content-->
-            </div>
-            <!--End MiniCart Drawer-->
+   
 
 
             <!-- Including Jquery/Javascript -->
@@ -285,6 +149,166 @@
             <script src="<?php echo $path;?>/assets/js/plugins.js"></script>
             <!-- Main JS -->
             <script src="<?php echo $path;?>/assets/js/main.js"></script>
+
+            <script>
+                function getCookie(cookieName) {
+                    var name = cookieName + "=";
+                    var decodedCookie = decodeURIComponent(document.cookie);
+                    var cookieArray = decodedCookie.split(';');
+
+                    for (var i = 0; i < cookieArray.length; i++) {
+                        var cookie = cookieArray[i].trim();
+                        if (cookie.indexOf(name) === 0) {
+                            return cookie.substring(name.length, cookie.length);
+                        }
+                    }
+                    return "";
+                }
+
+                const customer_id = getCookie('imax_login_user_id');
+                // console.log(customer_id);
+
+
+                function fetchAccountData() {
+                    var fd = new FormData();
+                    fd.append('customer_id', customer_id); 
+                    var acc_phone = document.getElementById('acc_phone');
+                    
+                    $.ajax({
+                        url: 'ajax/account/account_data_using_id.php',
+                        method: 'post',
+                        contentType: false,
+                        processData: false,
+                        data: fd,
+
+                        success:function(response) {
+                            var result = JSON.parse(response);
+
+                            if(result.status == 'Success') {
+                                var acc_name = document.getElementById('acc_name');
+                                
+                                var data = result.data;
+
+                                if(data.length > 0) {
+                                    acc_name.innerHTML = data[0].user_name;
+                                    acc_phone.innerHTML = data[0].phone;
+                                }
+                            } else {
+                                toastr.error("Account data unavailable","Error")
+                            }
+                        }
+                    })
+                } fetchAccountData()
+
+                function onlyNum(e) {
+                    e.value = e.value.replace(/[^0-9]/g, '');
+                }
+
+                function fetchOrderData() {
+                    var fd = new FormData();
+                    fd.append('customer_id', customer_id);
+                    $.ajax({
+                        url: 'ajax/order/list_orders_using_id.php',
+                        method: 'post',
+                        contentType:false,
+                        processData:false,
+                        data:fd,
+
+                        success:function (response) {
+                            var result = JSON.parse(response);
+                            
+                            if(result.status == 'Success') {
+                                var data = result.data;
+
+                                var table = $('#order_table');
+
+                                data.map(function(value){
+                                    
+                                    console.log(1);
+                                    // <td><img class="blur-up lazyload" data-src="<?php echo $path;?>/assets/images/products/product1-120x170.jpg" src="<?php echo $path;?>/assets/images/products/product1-120x170.jpg" width="50" alt="product" title="product" /></td>
+                                    
+                                    let table_html=`
+                                        <tr data-orderId="${value.id}" data-customerId="${value.customer_id}">
+                                            <td><span class="id">${value.ref_no}</span></td>
+                                            <td><span class="price fw-500">${value.total_price}</span></td>
+                                            <td><span class="badge rounded-pill bg-success custom-badge">${value.order_status}</span></td>
+                                            <td><a href="javascript:void(0)" class="view"><i class="icon anm anm-eye btn-link fs-6"></i></a></td>
+                                        </tr>
+                                    `;
+
+                                    table.insertAdjacentHTML('beforeend', table_html);
+                                })
+                            } else {
+
+                            }
+                        }
+                    })
+                } fetchOrderData();
+
+                $(document).ready(function() {
+                    $('#editLink').click(function(){
+                        var edt_grp = document.getElementById('edt_grp');
+
+                        edt_grp.classList.toggle('d-none');
+                    })
+
+                    $('#update_phone').click(function() {
+                        var new_con = document.getElementById('edit_contact').innerHTML;
+                        
+                        var fd = new FormData();
+
+                        fd.append('phone', new_con);
+                        $.ajax({
+                            url: 'ajax/account/edit_phone.php',
+                            method: 'post',
+                            contentType: false,
+                            processData: false,
+                            data: fd,
+                            
+                            success:function(response) {
+                                var result = JSON.parse(response);
+
+                                if(result.status == 'Success') {
+                                    toastr.success('Contact information updated');
+                                } else {
+                                    toastr.error('Unable to update');
+                                }
+                            }
+                        })        
+                    })
+
+                    $('#pass_link').click(function(){
+                        var pass_input = document.getElementById('pass_grp');
+                        
+                        pass_input.classList.toggle('d-none');
+                    })
+
+                    $('#update_pass').click(function(){
+                        var pass = $('#pass').val();
+
+                        var fd = new FormData();
+
+                        fd.append('pass', pass);
+                        $.ajax({
+                            url: 'ajax/account/edit_phone.php',
+                            method: 'post',
+                            contentType: false,
+                            processData: false,
+                            data: fd,
+                            
+                            success:function(response) {
+                                var result = JSON.parse(response);
+
+                                if(result.status == 'Success') {
+                                    toastr.success('Contact information updated');
+                                } else {
+                                    toastr.error('Unable to update');
+                                }
+                            }
+                        })
+                    })
+                })
+            </script>
 
         </div>
         <!--End Page Wrapper-->
