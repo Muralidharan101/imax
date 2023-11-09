@@ -23,15 +23,22 @@
     <link rel="stylesheet" href="<?php echo $path ?>assets/css/responsive.css">
 
     <style>
-        .cat {
-            cursor: pointer;
-            padding: 5px 10px;
-        }
+     /* Add some styling for the active category */
+.sidebar-categories .lvl1.active-category {
+    border: 2px solid #ff6600; /* Adjust the color as needed */
+    border-radius: 5px;
+    padding: 0 20px;
 
-        .active {
-            border: 1px solid #fe0609;
-            padding: 0 20px;
-        }
+}
+
+#sidebar_category li{
+cursor:pointer !important;
+padding:5px 10px;
+}
+
+
+
+
     </style>
 </head>
 
@@ -515,6 +522,7 @@
                 } else {
                     var fd = new FormData();
                     fd.append("Category", selectedCategory);
+                    fd.append("Price",priceInputValue)
                     // Add other parameters if needed
 
                     fetchingData(fd);
@@ -653,35 +661,50 @@
                 })
             }
             fetchdata();
-
             function fetchSidebarCategory() {
-                $.ajax({
-                    url: 'ajax/category_list_sidebar.php',
-                    method: 'get',
+    $.ajax({
+        url: 'ajax/category_list_sidebar.php',
+        method: 'get',
 
-                    success: function(response) {
-                        var result = JSON.parse(response);
-                        if (result.status === 'Success') {
-                            var data = result.data;
-                            var sidebar_cty = document.getElementById('sidebar_category');
+        success: function(response) {
+            var result = JSON.parse(response);
+            if (result.status === 'Success') {
+                var data = result.data;
+                var sidebarCty = document.getElementById('sidebar_category');
 
-                            data.forEach(function(item) {
-                                let category = item.category;
-                                let count = item.count;
+                data.forEach(function(item) {
+                    let category = item.category;
+                    let count = item.count;
 
-                                let cty_html = `
-                                    <li class="lvl1 more-item" data-value="${category}">
-                                        <p class="cat">${category}</p>
-                                    </li>
-                                `;
+                    let ctyHtml = `
+                        <li class="lvl1 more-item" data-value="${category}">
+                            <p class="cat">${category}</p>
+                        </li>
+                    `;
 
-                                sidebar_cty.insertAdjacentHTML("beforeend", cty_html);
-                            });
-                        }
-                    }
+                    sidebarCty.insertAdjacentHTML("beforeend", ctyHtml);
+                });
+
+                // Add click event listener to each category item
+                var categoryItems = sidebarCty.querySelectorAll('.lvl1');
+                categoryItems.forEach(function(item) {
+                    item.addEventListener('click', function() {
+                        // Remove active class from all items
+                        categoryItems.forEach(function(cItem) {
+                            cItem.classList.remove('active-category');
+                        });
+
+                        // Add active class to the clicked item
+                        item.classList.add('active-category');
+                    });
                 });
             }
-            fetchSidebarCategory();
+        }
+    });
+}
+
+fetchSidebarCategory();
+
 
 
         })
