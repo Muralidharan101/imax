@@ -266,7 +266,6 @@ Notes : Stickering included + metal cups all</p>
                                     product_name=value.product_name;
                                     product_price=value.product_price;
                                     product_quantity=value.quantity;
-                                    // product_size=value.size;
 
                                     var total_price_cart = value.product_price*value.quantity;
 
@@ -458,6 +457,35 @@ Notes : Stickering included + metal cups all</p>
                         }
                     });
                 });
+
+                $(document).on('click', '.cart-remove', function() {
+                    var productId = $(this).closest('.tr').data('id');
+
+                    var formData = new FormData();
+                    formData.append('product_id', productId);
+                    formData.append('customer_id', customer_id);
+
+                    $.ajax({
+                        type: 'POST',
+                        url: 'ajax/cart/remove_from_cart.php',
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function(response) {
+                            console.log(response); 
+                            var result = JSON.parse(response)
+                            if (result.status === 'Success') {
+                                console.log("product row remove");
+                            } else {
+                                console.log('Update failed');
+                            }
+                        },
+                        error: function(xhr, status, error) {
+                            console.log(xhr.responseText);
+                            console.log('Error in the AJAX request:', status, error);
+                        }
+                    });
+                })
             });
 
 

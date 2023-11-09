@@ -74,12 +74,10 @@
                         <div id="accountBox">
                             <div class="customer-links">
                                 <ul class="m-0">
-                                    <li><a href="javascript:void(0)"><i class="icon anm anm-sign-in-al"></i>Sign In</a></li>
-                                    <li><a href="javascript:void(0)"><i class="icon anm anm-user-al"></i>Register</a></li>
+                                    <li class="d-none" id="login_header"><a href="login.php"><i class="icon anm anm-sign-in-al"></i>Sign In</a></li>
+                                    <li  class="d-none" id="reg_header"><a href="register.php"><i class="icon anm anm-user-al"></i>Register</a></li>
                                     <li><a href="my-account.php"><i class="icon anm anm-user-cil"></i>My Account</a></li>
-                                    <li><a href="javascript:void(0)"><i class="icon anm anm-heart-l"></i>Wishlist</a></li>
-                                    <li><a href="javascript:void(0)"><i class="icon anm anm-random-r"></i>Compare</a></li>
-                                    <li><a href="javascript:void(0)"><i class="icon anm anm-sign-out-al"></i>Sign out</a></li>
+                                    <li><a href="ajax/auth/logout.php"><i class="icon anm anm-sign-out-al"></i>Sign out</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -125,15 +123,14 @@
         <li class="lvl1 parent megamenu"><a href="gallery.php">Gallery </a></li>
         <li class="lvl1 parent dropdown"><a href="contact.php">Contact Us</a></li>
 
-
         <li class="mobile-menu-bottom">
             <div class="mobile-links">
                 <ul class="list-inline d-inline-flex flex-column w-100">
-                    <li><a href="login.html" class="d-flex align-items-center"><i
+                    <li><a href="login.php" class="d-flex align-items-center"><i
                                 class="icon anm anm-sign-in-al"></i>Sign In</a></li>
-                    <li><a href="register.html" class="d-flex align-items-center"><i
+                    <li><a href="register.php" class="d-flex align-items-center"><i
                                 class="icon anm anm-user-al"></i>Register</a></li>
-                    <li><a href="my-account.html" class="d-flex align-items-center"><i
+                    <li><a href="my-account.php" class="d-flex align-items-center"><i
                                 class="icon anm anm-user-cil"></i>My Account</a></li>
                     <li class="title h5">Need Help?</li>
                     <li><a href="tel:401234567890" class="d-flex align-items-center"><i

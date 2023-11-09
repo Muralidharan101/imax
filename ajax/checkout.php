@@ -8,7 +8,7 @@
     $quantities = json_decode($_POST['quantity'], true);
     $total_prices = json_decode($_POST['total_price'], true);
 
-    $sql = mysqli_query($conn, "INSERT INTO orders (`ref_no`, `order_status`, `status`,`dateTime`) VALUES ('1', 'Unpaid','Active', NOW())");
+    $sql = mysqli_query($conn, "INSERT INTO orders (`ref_no`, `customer_id`, `total_price`, `order_status`, `status`,`dateTime`) VALUES ('1', '$customer_id', '$total_price','Unpaid','Active', NOW())");
     $order_id = mysqli_insert_id($conn);
 
     foreach ($product_id_arr as $key => $product_id) {

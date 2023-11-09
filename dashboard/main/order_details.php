@@ -194,7 +194,9 @@
                 value.product_name,
                 value.total_price,
                 value.order_status,
-                `${viewButton}`
+                `${editButton}
+                <a data-id="${value.id}" class='text-danger me-2 delete_button'><i class="bi bi-trash3-fill h6"></i></a>
+                ${viewButton}`
               ]).draw(false);
             });
           }
