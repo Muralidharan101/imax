@@ -267,9 +267,6 @@
                                             <div class="slick-track"
                                                 style="opacity: 1; width: 2159px; transform: translate3d(-635px, 0px, 0px);"
                                                 id="slick-tracks">
-
-
-
                                             </div>
                                         </div><button class="slick-next slick-arrow" aria-label="Next" type="button"
                                             >Next</button>

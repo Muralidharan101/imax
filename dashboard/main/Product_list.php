@@ -97,8 +97,6 @@
                           <th>Product Image</th>
                           <th>Product Name</th>
                           <th>Product Price</th>
-                          <th>Product Size</th>
-                          <th>Product Color</th>
                           <th>Product Description</th>
                           <th>Action</th>
                         </tr>
@@ -199,8 +197,6 @@
                
                 value.product_name,
                 value.product_price,
-                value.product_size,
-                value.product_color,
                 value.product_desc,
                 `${editButton}<a data-id="${value.id}" class='text-danger me-2 delete_button'><i class="bi bi-trash3-fill h6"></i></a>${viewButton}`
               ]).draw(false);

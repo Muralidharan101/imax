@@ -188,34 +188,7 @@
                                     <h2>Categories</h2>
                                 </div>
                                 <div class="widget-content filterDD">
-                                    <ul class="sidebar-categories scrollspy morelist clearfix">
-                                        <li class="lvl1 more-item" data-value="Football">
-                                            <p class="cat">Football Trophies <span class="count">(14)</span></p>
-                                        </li>
-                                        <li class="lvl1 more-item" data-value="Cricket">
-                                            <p class="cat">Cricket
-                                                Trophies <span class="count">(18)</span></p>
-                                        </li>
-                                        <li class="lvl1 more-item" data-value="Kabaadi">
-                                            <p class="cat">Kabaadi
-                                                Trophies <span class="count">(22)</span></p>
-                                        </li>
-                                        <li class="lvl1 more-item" data-value="Volleyball">
-                                            <p class="cat">Volleyball Trophies
-                                                <span class="count">(27)</span></p>
-                                        </li>
-                                        <li class="lvl1 more-item" data-value="Throw ball">
-                                            <p class="cat">Throw
-                                                ball Trophies
-                                                <span class="count">(27)</span></p>
-                                        </li>
-                                        <li class="lvl1 more-item" data-value="Kho-kho">
-                                            <p class="cat">Kho-kho
-                                                Trophies <span class="count">(27)</span></p>
-                                        </li>
-                                        <li class="lvl1 more-item" data-value="Silambam">
-                                            <p class="cat">Silambam Trophies <span class="count">(27)</span></p>
-                                        </li>
+                                    <ul class="sidebar-categories scrollspy morelist clearfix" id="sidebar_category">
                                     </ul>
                                 </div>
                             </div>
@@ -229,9 +202,11 @@
                                     <div id="slider-range" class="mt-2"></div>
                                     <div class="row">
                                         <div class="col-10"><input id="amount" type="text"
-                                                placeholder="Ex : ₹100 to ₹"/></div>
+                                                placeholder="Ex : ₹1000 to ₹10000"/></div>
                                     </div>
                                 </form>
+                                <div class="col-4 mt-4"><button class="btn btn-sm" id="filteration">filter</button>
+                                </div>
                             </div>
                             <!--End Price Filter-->
                             <!--Color Swatches-->
@@ -299,8 +274,7 @@
                                     </ul>
                                 </div>
                             </div> -->
-                            <div class="col-4 text-right"><button class="btn btn-sm" id="filteration">filter</button>
-                            </div>
+                            
                             <!--End Size Swatches-->
                             <!--Product Brands-->
 
@@ -472,7 +446,6 @@
             var inputElement = document.getElementById("amount");
             priceInputValue = inputElement.value;
 
-
             // Process the input value as needed
             console.log("Input Value: " + priceInputValue);
         });
@@ -519,81 +492,57 @@
 
         var selectedCategory = null;
 
-        document.addEventListener("DOMContentLoaded", function () {
-            var categoryList = document.querySelectorAll('.more-item');
+        $(document).ready(function () {
+            var selectedCategory = null;
 
-            categoryList.forEach(function (category) {
-                category.addEventListener('click', function (e) {
-                    e.preventDefault(); // Prevent the default link behavior
+            // Click event for selecting a category
+            $(document).on('click', '#sidebar_category li', function() {
+                var categoryValue = $(this).data('value');
 
-                    categoryValue = this.dataset.value;
+                // Highlight the selected category and store the value
+                $('#sidebar_category li').removeClass('selected');
+                $(this).addClass('selected');
 
-                    if (selectedCategory === categoryValue) {
-                        // If the same category is already selected, unselect it
-                        selectedCategory = null;
-                        // Remove the 'active' class to unselect the category
-                        this.classList.remove('active');
-                    } else {
-                        // Unselect the previously selected category, if any
-                        if (selectedCategory) {
-                            var previousCategory = document.querySelector(
-                                '.more-item[data-value="' + selectedCategory + '"]');
-                            if (previousCategory) {
-                                // Remove the 'active' class to unselect the previously selected category
-                                previousCategory.classList.remove('active');
-                            }
+                selectedCategory = categoryValue;
+            });
+
+            // Click event for the filter button
+            $('#filteration').click(function (e) {
+                e.preventDefault();
+
+                if (selectedCategory === null) {
+                    toastr.error("Select a category to filter products.", "Error");
+                } else {
+                    var fd = new FormData();
+                    fd.append("Category", selectedCategory);
+                    // Add other parameters if needed
+
+                    fetchingData(fd);
+                }
+            });
+
+            // Function to handle AJAX call
+            function fetchingData(formData) {
+                $.ajax({
+                    url: 'your_backend_endpoint.php',
+                    type: 'POST',
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                    success: function (response) {
+                        var result = JSON.parse(response);
+                        if (result.status === "Success") {
+                            toastr.success("Products filtered successfully", "Success");
+                        } else {
+                            toastr.error("Failed to filter products", "Error");
                         }
-
-                        // Select the new category and set it as the selected value
-                        selectedCategory = categoryValue;
-                        // Add the 'active' class to select the category
-                        this.classList.add('active');
-                        console.log(categoryValue);
+                    },
+                    error: function (xhr, status, error) {
+                        toastr.error("Error occurred while filtering products", "Error");
                     }
                 });
-            });
-        });
-
-        $('#filteration').click(function (e) {
-            e.preventDefault(); {
-                var fd = new FormData();
-
-                fd.append("Category", categoryValue);
-                fd.append("Price", priceInputValue);
-
-
-
-
-                if (categoryValue === undefined) {
-                    toastr.error("Unable To Filter Product, Select any category ", "Error");
-                }
-                else {
-
-                    fetchingdata(fd)
-                }
-
-
-
             }
-        })
-
-        function fetchingdata(formdata) {
-            $.ajax({
-                url: 'ajax',
-                type: 'post',
-                contentType: false,
-                processData: false,
-                data: formdata,
-                success: function (response) {
-                    var result = JSON.parse(response);
-                    if (result.status == "Success") {
-                        toastr.success("Product Addedd Successfully", "Welcome!");
-                    } else {
-                        toastr.error("Unable To Add Product", "Error");
-                    }
-                }
-            })
-        }
+        });
 
         $(document).ready(function () {
             var product_id;
@@ -704,6 +653,36 @@
                 })
             }
             fetchdata();
+
+            function fetchSidebarCategory() {
+                $.ajax({
+                    url: 'ajax/category_list_sidebar.php',
+                    method: 'get',
+
+                    success: function(response) {
+                        var result = JSON.parse(response);
+                        if (result.status === 'Success') {
+                            var data = result.data;
+                            var sidebar_cty = document.getElementById('sidebar_category');
+
+                            data.forEach(function(item) {
+                                let category = item.category;
+                                let count = item.count;
+
+                                let cty_html = `
+                                    <li class="lvl1 more-item" data-value="${category}">
+                                        <p class="cat">${category}</p>
+                                    </li>
+                                `;
+
+                                sidebar_cty.insertAdjacentHTML("beforeend", cty_html);
+                            });
+                        }
+                    }
+                });
+            }
+            fetchSidebarCategory();
+
 
         })
     </script>
