@@ -345,13 +345,20 @@
                             </div>
                         </div>
                         <!--Testimonial Slider Items-->
+
+
+                        
+
                     </div>
                 </div>
             </section>
             <!--End Testimonial section-->
             <!--End Main Content-->
+            
         </div>
         <!-- End Body Container -->
+
+
 
         <!--Footer-->
         <?php include('footer.php'); ?>

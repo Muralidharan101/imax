@@ -77,7 +77,7 @@ padding:5px 10px;
                         <div
                             class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex justify-content-between align-items-center">
                             <div class="page-title">
-                                <h1>Product - Sheild section</h1>
+                                <h1>Product - Trophy section</h1>
                             </div>
 
                         </div>
@@ -90,7 +90,7 @@ padding:5px 10px;
             <div class="container">
                 <!--Category Slider-->
 
-                <section class="section collection-slider pb-0">
+                <!-- <section class="section collection-slider pb-0">
                     <div class="container">
 
                         <div class="collection-slider-5items gp15 arwOut5 hov-arrow">
@@ -180,7 +180,9 @@ padding:5px 10px;
                             </div>
                         </div>
                     </div>
-                </section><br><br>
+                </section>
+                 -->
+                
                 <!--End Category Slider-->
                 <div class="row">
                     <!--Sidebar-->
@@ -546,7 +548,7 @@ padding:5px 10px;
                         }
                     },
                     error: function (xhr, status, error) {
-                        r.error("Error occurred while filtering products", "Error");toast
+                        toastr.error("Error occurred while filtering products", "Error");
                     }
                 });
             }

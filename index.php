@@ -462,7 +462,7 @@
 
                     <div class="collection-slider-3items slick-arrow-dots gp15 arwOut5 hov-arrow circle-arrow">
                         <div class="category-item zoomscal-hov overlay-content">
-                            <a href="shop" class="category-link clr-none">
+                            <a href="shop_trophy.php?category=football" class="category-link clr-none">
                                 <div class="zoom-scal"><img class="blur-up lazyload" style="width:416px;height:416px"
                                         data-src="<?php echo $path ?>assets/img/trophy/football.jpeg"
                                         src="<?php echo $path ?>assets/img/trophy/football.jpeg" alt="collection"
@@ -474,7 +474,7 @@
                             </a>
                         </div>
                         <div class="category-item zoomscal-hov overlay-content">
-                            <a href="shop" class="category-link clr-none">
+                            <a href="shop_trophy.php?category=cricket" class="category-link clr-none">
                                 <div class="zoom-scal"><img style="width:416px;height:416px" class="blur-up lazyload"
                                         data-src="<?php echo $path ?>assets/img/trophy/cricket.jpg"
                                         src="<?php echo $path ?>assets/img/trophy/cricket.jpg" alt="collection" title=""
@@ -486,7 +486,7 @@
                             </a>
                         </div>
                         <div class="category-item zoomscal-hov overlay-content">
-                            <a href="shop" class="category-link clr-none">
+                            <a href="shop_trophy.php?category=kabaddi" class="category-link clr-none">
                                 <div class="zoom-scal"><img style="width:416px;height:416px" class="blur-up lazyload"
                                         data-src="<?php echo $path ?>assets/img/trophy/kabaddi.jpg"
                                         src="<?php echo $path ?>assets/img/trophy/kabaddi.jpg" alt="collection" title=""
@@ -498,7 +498,7 @@
                             </a>
                         </div>
                         <div class="category-item zoomscal-hov overlay-content">
-                            <a href="shop" class="category-link clr-none">
+                            <a href="shop_trophy.php?category=batmiton" class="category-link clr-none">
                                 <div class="zoom-scal"><img style="width:416px;height:416px" class="blur-up lazyload"
                                         data-src="<?php echo $path ?>assets/img/trophy/badminton.jpg"
                                         src="<?php echo $path ?>assets/img/trophy/badminton.jpg" alt="collection"
@@ -513,6 +513,42 @@
                 </div>
             </section>
             <!--End Shop By Category-->
+            <section class="section collection-slider section-text section-clr">
+                    <div class="container">
+                        <div class="image-text-slider3items gp15 arwOut5 hov-arrow">
+                            <div class="category-item zoomscal-hov">
+                                <a href="shop_trophy.php?type=trophy" class="category-link clr-none">
+                                    <div class="zoom-scal zoom-scal-nopb"><img class="blur-up lazyload" data-src="<?php echo $path ?>img/index/trop1.png" src="<?php echo $path ?>img/index/trop1.png" alt="collection" title="" width="220" height="260" /></div>
+                                    <div class="details mt-4 text-left">
+                                        <h4 class="category-title">Trophies</h4>
+                                        <p class="dec">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.</p>
+                                        <span class="btn btn-secondary">Shop Now</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="category-item zoomscal-hov">
+                                <a href="shop_medal.php?type=medal" class="category-link clr-none">
+                                    <div class="zoom-scal zoom-scal-nopb"><img class="blur-up lazyload" data-src="<?php echo $path ?>assets/img/shields/shield 44.jpg" src="<?php echo $path ?>assets/img/shields/shield 44.jpg" alt="collection" title="" width="220" height="260" /></div>
+                                    <div class="details mt-4 text-left">
+                                        <h4 class="category-title">Medals</h4>
+                                        <p class="dec">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.</p>
+                                        <span class="btn btn-secondary">Shop Now</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="category-item zoomscal-hov">
+                                <a href="shop_sheild.php/type=sheild" class="category-link clr-none">
+                                    <div class="zoom-scal zoom-scal-nopb"><img class="blur-up lazyload" data-src="<?php echo $path ?>assets/img/shields/medal 2.png" src="<?php echo $path ?>assets/img/shields/medal 2.png" alt="collection" title="" width="220" height="260" /></div>
+                                    <div class="details mt-4 text-left">
+                                        <h4 class="category-title">Sheilds</h4>
+                                        <p class="dec">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.</p>
+                                        <span class="btn btn-secondary">Shop Now</span>
+                                    </div>
+                                </a>
+                            </div>                           
+                        </div>
+                    </div>
+                </section>
 
             <section class="section product-slider tab-slider-product">
                 <div class="container container-1330">
