@@ -54,7 +54,7 @@
                   </li>
                   <li class="sidebar-list"><i class="fa fa-thumb-tack"></i>
                   <a class="sidebar-link sidebar-title" href="Product_creation.php">
-                    <i data-feather="airplay"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-square"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
                     <span>Product Creation</span>
                     <span class="fa fa-down-arrow"></span>
                   </a>
@@ -62,12 +62,12 @@
 
                   <li class="sidebar-list"><i class="fa fa-thumb-tack"></i>
                   <a class="sidebar-link sidebar-title" href="Product_list.php">
-                    <i data-feather="airplay"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3" y2="6"></line><line x1="3" y1="12" x2="3" y2="12"></line><line x1="3" y1="18" x2="3" y2="18"></line></svg>
                     <span>Products List</span>
                     <span class="fa fa-down-arrow"></span>
                   </a>
                   </li>
-                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title active" href="javascript:void(0)" data-bs-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay"><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path><polygon points="12 15 17 21 7 21 12 15"></polygon></svg><span >Orders Data </span><div class="according-menu"><span><i class="bi bi-chevron-down"></i></span></div></a>
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title active" href="javascript:void(0)" data-bs-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span >Orders Data </span><div class="according-menu"><span><i class="bi bi-chevron-down"></i></span></div></a>
                     <ul class="sidebar-submenu" style="">
                       <li><a href="orders.php" data-bs-original-title="" title="">Confirmed Orders</a></li>
                       <li><a href="un_orders.php" data-bs-original-title="" title="">Un-confirmed Orders</a></li>
@@ -76,13 +76,13 @@
                   </li>
                   <li class="sidebar-list"><i class="fa fa-thumb-tack"></i>
                   <a class="sidebar-link sidebar-title" href="customer_list.php">
-                    <i data-feather="airplay"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                     <span>Customers Data</span>
                     <span class="fa fa-down-arrow"></span>
                   </a>
                   </li>
 
-                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title active" href="javascript:void(0)" data-bs-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay"><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path><polygon points="12 15 17 21 7 21 12 15"></polygon></svg><span >Master Data </span><div class="according-menu"><span><i class="bi bi-chevron-down"></i></span></div></a>
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title active" href="javascript:void(0)" data-bs-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-zap"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg><span >Master Data </span><div class="according-menu"><span><i class="bi bi-chevron-down"></i></span></div></a>
                     <ul class="sidebar-submenu" style="">
                       <li><a href="Product_size.php" data-bs-original-title="" title="">Product Size Creation</a></li>
                       <li><a href="Product_color.php" data-bs-original-title="" title="">Product Color Creation</a></li>
