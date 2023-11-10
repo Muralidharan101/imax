@@ -141,7 +141,7 @@
                                                                     <label class="spr-form-label" for="review">Mobile No
                                                                         <span class="required">*</span></label>
                                                                     <input class="spr-form-input spr-form-input-text "
-                                                                        id="usermobile" type="tel" name="review">
+                                                                        id="usermobile" type="tel" name="review" oninput="onlyNum(this)">
                                                                 </div>
                                                                 <!-- <div class="col-sm-6 spr-form-review-title form-group">
                                                     <label class="spr-form-label" for="review">Coupen code</label>
@@ -214,7 +214,7 @@
                                     <span class="col-6 col-sm-6 cart-subtotal-title fs-6"><strong>Total</strong></span>
                                     <span
                                         class="col-6 col-sm-6 cart-subtotal-title fs-5 cart-subtotal text-end text-primary">
-                                        <b id="grandTotalWithTax"></b></span>
+                                        ₹<b id="grandTotalWithTax"></b></span>
                                 </div>
 
 
@@ -301,6 +301,9 @@
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         <script>
+            function onlyNum(e) {
+                e.value = e.value.replace(/[^0-9]/g,'');
+            }
             function toggleAccordions() {
                 // Close the first accordion
                 var collapseOne = new bootstrap.Collapse(document.getElementById('collapseOne'), {
@@ -341,6 +344,8 @@
             console.log(customer_id);
 
             $(document).ready(function () {
+                var ref_no_in_cart;
+
                 var product_id,
                     product_category,
                     cart_id,
@@ -401,6 +406,8 @@
                     return $(this).html();
                 }).get();
 
+                var total_order_price = $('#grandTotalWithTax').html();
+                // console.log(total_order_price);
 
                 var product_id_arr = JSON.stringify(product_id);
                 // var size_arr       = JSON.stringify(size);
@@ -418,6 +425,7 @@
 
                 var fd = new FormData();
 
+                fd.append('total_order_price', total_order_price);
                 fd.append('customer_id', customer_id);
                 fd.append('product_id', product_id_arr);
                 // fd.append('size', size_arr);
@@ -437,86 +445,95 @@
 
                         if (result.status == 'Success') {
                             toastr.success('Order Placed');
+
+                            var ref_no_div = $('#ref_no');
+                            ref_no_in_cart = ref_no_div.html(result.ref_no);
+
                         } else {
                             toastr.error('Unable to place order');
                         }
                     }
                 })
-            });
-
 
                 $('#form-submited').click(function(){
               
-                var username = $("#username").val().trim();
-                console.log(username);
-                
-                var useremail = $("#useremail").val().trim();
-                console.log(useremail);
-                
-                var usermobile = $("#usermobile").val().trim();
-                console.log(usermobile);
-
-                var useraddress = $("#useraddress").val().trim();
-                console.log(useraddress);
-
-                if(username == "")
-                {
-                    toastr.error('Enter name here !', 'Empty');
-                }
-                else if(useremail == "")
-                {
-                    toastr.error('Enter mail here !', 'Empty');
-                }
-                else if(usermobile == "")
-                {
-                    toastr.error('Enter mobile number here !', 'Empty');
-                }
-                else if(useraddress == "")
-                {
-                    toastr.error('Enter address here !', 'Empty');
-                }
+              var username = $("#username").val().trim();
+              console.log(username);
               
-                else
-                {
-                    var fd = new FormData();
+              var useremail = $("#useremail").val().trim();
+              console.log(useremail);
+              
+              var usermobile = $("#usermobile").val().trim();
+              console.log(usermobile);
 
-                    fd.append("username", username);
-                    fd.append("useremail", useremail);
-                    fd.append("usermobile", usermobile);
-                    fd.append("useraddress", useraddress);
+              var useraddress = $("#useraddress").val().trim();
+              console.log(useraddress);
 
-                    var modal = $('#quickview_modal');
-                    modal.modal('show');
+              if(username == "")
+              {
+                  toastr.error('Enter name here !', 'Empty');
+              }
+              else if(useremail == "")
+              {
+                  toastr.error('Enter mail here !', 'Empty');
+              }
+              else if(usermobile == "")
+              {
+                  toastr.error('Enter mobile number here !', 'Empty');
+              }
+              else if(useraddress == "")
+              {
+                  toastr.error('Enter address here !', 'Empty');
+              }
+            
+              else
+              {
+                  var fd = new FormData();
+                  var ref_no_in_cart = $('#ref_no').text();
+                    console.log(ref_no_in_cart);
+                  fd.append("ref_no", ref_no_in_cart);
+                  fd.append("customer_id", customer_id);
+                  fd.append("username", username);
+                  fd.append("useremail", useremail);
+                  fd.append("usermobile", usermobile);
+                  fd.append("useraddress", useraddress);
 
-            $.ajax({
-                        url: 'ajax',
-                        data: fd,
-                        type:'post',
-                        contentType: false,
-                        processData: false,
-                        success: function(response)
-                        {
-                                // console.log(response);
-                                data = JSON.parse(response);
-                                console.log(data);
-                                if(data.status == 'Success')
-                                {
-                                    toastr.success('Welcome!', 'Success');
+                  var modal = $('#quickview_modal');
+                  modal.modal('show');
 
-                                    $("#username").val("");
-                                    $("#useremail").val("");
-                                    $("#usermobile").val("");
-                                    $("#useraddress").val("");
-                                }
-                                else
-                                {
-                                    toastr.error('Error!', 'Error Found!')
-                                }
-                            }
-                        });
-                }
+                    $.ajax({
+                      url: 'ajax/', // order/order_confirmation.php
+                      data: fd,
+                      type:'post',
+                      contentType: false,
+                      processData: false,
+                      success: function(response)
+                      {
+                              // console.log(response);
+                              data = JSON.parse(response);
+                              console.log(data);
+                              if(data.status == 'Success')
+                              {
+                                  toastr.success('Welcome!', 'Success');
 
-            })
+                                  $("#username").val("");
+                                  $("#useremail").val("");
+                                  $("#usermobile").val("");
+                                  $("#useraddress").val("");
+                              }
+                              else
+                              {
+                                  toastr.error('Error!', 'Error Found!')
+                              }
+                          }
+                      });
+                    }
+
+                })
+            });
+
+
+                
                     
 
 
@@ -570,7 +587,7 @@
 
                                     grandtotal.innerHTML = grand_total;
                                     taxtotal.innerHTML = tax_total;
-                                    grandTotTax.innerHTML = '₹' + grandTotalWithTax;
+                                    grandTotTax.innerHTML = grandTotalWithTax;
 
                                     let html = `
                                                 <tr class="tr" data-id="${value.product_id}">
