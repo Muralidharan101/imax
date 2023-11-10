@@ -546,7 +546,7 @@ padding:5px 10px;
                         }
                     },
                     error: function (xhr, status, error) {
-                        toastr.error("Error occurred while filtering products", "Error");
+                        r.error("Error occurred while filtering products", "Error");toast
                     }
                 });
             }
