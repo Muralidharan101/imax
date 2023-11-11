@@ -12,7 +12,7 @@
             ON cd.product_id = pd.id
             LEFT JOIN product_images pi 
             ON cd.product_id = pi.product_id
-            WHERE cd.status='Active' AND cd.customer_id='$customer_id' AND pi.img_category = 'main' ";
+            WHERE cd.customer_id='$customer_id' AND pi.img_category = 'main' AND cd.status='Active' ";
 
     if($result = mysqli_query($conn, $sql)) {
         $data = [];

@@ -88,22 +88,69 @@
             <!-- Zero Configuration  Starts-->
             <div class="col-sm-12">
               <div class="card">
-
                 <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="mb-3">
+                            <label class="form-check-label">Order Username :</label>&emsp;
+                            <label class="form-check-label" style="color: blue"
+                                id="order_user_name">(null)</label>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-check-label">Order Delivery Name :</label>&emsp;
+                            <label class="form-check-label" style="color: blue"
+                                id="order_del_name">(null)</label>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-check-label">Mobile Number :</label>&emsp;
+                            <label class="form-check-label" style="color: blue"
+                                id="phone">(null)</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="mb-3">
+                            <label class="form-check-label" id="dynamic1">Reference Number:</label>&emsp;
+                            <label class="form-check-label" style="color: blue"
+                                id="ref_no">(null)</label>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-check-label" id="dynamic2">Order Total Price: </label>&emsp;
+                            <label class="form-check-label" style="color: blue"
+                                id="order_total">(null)</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="mb-3">
+                            <label class="form-check-label">Address: </label>&emsp;
+                            <label class="form-check-label" style="color: blue"
+                                id="address">(null)</label>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="card">
+
+                <div class="card-body"> 
+                  <div class="payment-buttons text-end mt-3 mb-3">
+                    <button class="btn btn-sm btn-success" id="paid_btn">Paid</button>
+                    <button class="btn btn-sm btn-danger"  id="cancel_btn">Cancel</button>
+                  </div>
+
                   <div class="table-responsive theme-scrollbar">
                     <table class="display" id="basic-1">
                       <thead>
                         <tr>
-                          <th>Order Id</th>
-                          <th>Customer Name</th>
-                          <th>Total Price</th>
-                          <th>Order Status</th>
-                          <th>Action</th>
+                          <th>Product Image</th>
+                          <th>Product Name</th>
+                          <th>Quantity</th>
+                          <th>Price</th>
+                          <th>Total price</th>
                         </tr>
                       </thead>
-                      <tbody>
-                       
-                      </tbody>
+                      <tbody></tbody>
                     </table>
                   </div>
                 </div>
@@ -156,12 +203,26 @@
 
   <script>
     
-    var product_id; //trophy_size,trophy_color;
+    var order_id, user_name, order_by_name, phone, ref_no, total_order_value, address, product_price, product_name, total_price, product_id;
+
+    var param = new URLSearchParams(window.location.search);
+
+    if(param.has('id')){
+      order_id = param.get('id');
+    }
 
     function fetchdata() {
+
+      var fd = new FormData();
+
+      fd.append('order_id', order_id);
+
       $.ajax({
-        url: '../../ajax/list_order.php',
-        type: 'get',
+        url: 'ajax/orders/confirmed_orders_details_list.php',
+        type: 'post',
+        contentType: false,
+        processData: false,
+        data: fd,
 
         success: function (response) {
           var result = JSON.parse(response);
@@ -174,29 +235,29 @@
             console.log(data);
 
             data.map(function (value) {
-              product_id = value.id;
-              // console.log()
+             
+              $('#order_user_name').html(value.user_name);
+              $('#order_del_name').html(value.order_by_name);
+              $('#phone').html(value.phone);
+              $('#ref_no').html(value.ref_no);
+              $('#order_total').html(value.total_order_value);
+              $('#address').html(value.address);
 
-          var product_size_parsed = JSON.stringify(value.product_size);
-          var product_color_parsed = JSON.stringify(value.product_color);
+              user_name = value.user_name;
+              order_by_name = value.order_by_name;
+              phone = value.phone;
+              ref_no = value.ref_no;
+              total_order_value = value.total_order_value;
+              address = value.address;
 
-
-          console.log('product size'+ product_size_parsed);
-          console.log('product color'+product_color_parsed);
-
-              var editButton =
-                `<a href="Product_edit.php?id=${value.id}" class='text-success me-2'><i class="bi bi-pencil-fill h6"></i></a>`;
-              var viewButton =
-                `<a href=".php?id=${value.id}" class=text-success' me-2'><i class="bi bi-box-arrow-up-right pt-2 h6"></i></a>`;
               dataTable.row.add([
-                `<img src="../../product_images/${value.id}/main/${value.product_img}" width="70" height="100"/>`,
+                `<img src="../../product_images/${value.product_id}/main/${value.product_img}" width="70" height="100"/>`,
                
                 value.product_name,
+                value.quantity,
+                value.product_price,
                 value.total_price,
-                value.order_status,
-                `${editButton}
-                <a data-id="${value.id}" class='text-danger me-2 delete_button'><i class="bi bi-trash3-fill h6"></i></a>
-                ${viewButton}`
+                
               ]).draw(false);
             });
           }
@@ -205,14 +266,48 @@
     }
     fetchdata();
 
-
-    $(document).on('click', '.delete_button', function () {
-      var deleteId = $(this).data("id");
-      console.log(deleteId);
-
+    $('#paid_btn').click(function () {
+      
       var fd = new FormData();
 
-      fd.append('id', deleteId);
+      fd.append('order_id', order_id);
+      fd.append('user_name', user_name);
+      fd.append('order_by_name', order_by_name);
+      fd.append('phone', phone);
+      fd.append('ref_no', ref_no);
+      fd.append('total_order_value', total_order_value);
+      fd.append('address', address);
+      fd.append('product_price', product_price);
+      fd.append('product_name', product_name);
+      fd.append('total_price', total_price);
+      fd.append('product_id', product_id);
+
+      $.ajax({
+        url: 'ajax/orders/order_paid.php',
+        data: fd,
+        type: 'post',
+        contentType: false,
+        processData: false,
+
+        success: function (response) {
+          dataTable.clear().draw();
+          data = JSON.parse(response);
+
+          if (data.status == "Success") {
+            toastr.success("Product Deleted !", "Success")
+
+            fetchdata();
+          } else {
+            toastr.error("Error", "Error Found!")
+          }
+        }
+      });
+    });
+
+    $('#cancel_btn').click(function () {
+      
+      var fd = new FormData();
+      fd.append('order_id', order_id);
 
       $.ajax({
         url: 'ajax',
