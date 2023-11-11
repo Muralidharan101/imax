@@ -86,9 +86,10 @@
         <div class="container-fluid">
           <div class="row">
             <!-- Zero Configuration  Starts-->
+
+            
             <div class="col-sm-12">
               <div class="card">
-
                 <div class="card-body">
                   <div class="table-responsive theme-scrollbar">
                     <table class="display" id="basic-1">
@@ -96,6 +97,7 @@
                         <tr>
                           <th>Order Id</th>
                           <th>Customer Name</th>
+                          <th>Order By</th>
                           <th>Total Price</th>
                           <th>Order Status</th>
                           <th>Action</th>
@@ -160,7 +162,7 @@
 
     function fetchdata() {
       $.ajax({
-        url: '../../ajax/list_order.php',
+        url: 'ajax/orders/confirmed_orders.php',
         type: 'get',
 
         success: function (response) {
@@ -174,24 +176,13 @@
             console.log(data);
 
             data.map(function (value) {
-              product_id = value.id;
-              // console.log()
-
-          var product_size_parsed = JSON.stringify(value.product_size);
-          var product_color_parsed = JSON.stringify(value.product_color);
-
-
-          console.log('product size'+ product_size_parsed);
-          console.log('product color'+product_color_parsed);
-
-              var editButton =
-                `<a href="Product_edit.php?id=${value.id}" class='text-success me-2'><i class="bi bi-pencil-fill h6"></i></a>`;
+              
               var viewButton =
-                `<a href=".php?id=${value.id}" class=text-success' me-2'><i class="bi bi-box-arrow-up-right pt-2 h6"></i></a>`;
+                `<a href="order_details.php?id=${value.id}" class=text-success' me-2'><i class="bi bi-box-arrow-up-right pt-2 h6"></i></a>`;
               dataTable.row.add([
-                `<img src="../../product_images/${value.id}/main/${value.product_img}" width="70" height="100"/>`,
-               
-                value.product_name,
+                value.ref_no,
+                value.user_name,
+                value.order_by_name,
                 value.total_price,
                 value.order_status,
                 `${viewButton}`

@@ -71,7 +71,7 @@
                     <ul class="sidebar-submenu" style="">
                       <li><a href="orders.php" data-bs-original-title="" title="">Confirmed Orders</a></li>
                       <li><a href="un_orders.php" data-bs-original-title="" title="">Un-confirmed Orders</a></li>
-                      <!-- <li><a href="Product_category.php" data-bs-original-title="" title="">Product Category Creation</a></li> -->
+                      <li><a href="paid_orders.php" data-bs-original-title="" title="">Paid Orders</a></li>
                     </ul>
                   </li>
                   <li class="sidebar-list"><i class="fa fa-thumb-tack"></i>

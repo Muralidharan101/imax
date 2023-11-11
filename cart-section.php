@@ -372,7 +372,7 @@
             console.log(customer_id);
 
             $(document).ready(function () {
-                var ref_no_in_cart;
+                var ref_no_in_cart, order_id_checkout;
 
                 var product_id,
                     product_category,
@@ -477,6 +477,9 @@
                             var ref_no_div = $('#ref_no');
                             ref_no_in_cart = ref_no_div.html(result.ref_no);
 
+                            order_id_checkout = result.order_id;
+                            console.log(order_id_checkout);
+
                         } else {
                             toastr.error('Unable to place order');
                         }
@@ -517,8 +520,10 @@
               else
               {
                   var fd = new FormData();
+
                   var ref_no_in_cart = $('#ref_no').text();
-                    console.log(ref_no_in_cart);
+
+                  fd.append("order_id", order_id_checkout);
                   fd.append("ref_no", ref_no_in_cart);
                   fd.append("customer_id", customer_id);
                   fd.append("username", username);
@@ -530,7 +535,7 @@
                   modal.modal('show');
 
                     $.ajax({
-                      url: 'ajax/', // order/order_confirmation.php
+                      url: 'ajax/order/order_confirmation.php',
                       data: fd,
                       type:'post',
                       contentType: false,
@@ -560,9 +565,6 @@
                 })
             });
 
-
-                
-          
                 function postdata() {
                     var formData = new FormData();
                     formData.append("customer_id", customer_id);

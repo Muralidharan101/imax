@@ -94,12 +94,10 @@
                     <table class="display" id="basic-1">
                       <thead>
                         <tr>
-                          <th>Product Image</th>
+                          <th>Order Id</th>
                           <th>Customer Name</th>
-                          <th>Product Name</th>
-                          <th>Product Size</th>
-                          <th>Quantity</th>
-                          <th>Order Price</th>
+                          <!-- <th>Order By</th> -->
+                          <th>Total Price</th>
                           <th>Order Status</th>
                           <th>Action</th>
                         </tr>
@@ -158,12 +156,10 @@
   <!-- login js-->
 
   <script>
-    
-    var product_id; //trophy_size,trophy_color;
-
+  
     function fetchdata() {
       $.ajax({
-        url: '../../ajax/list_order.php',
+        url: 'ajax/orders/unconfirmed_order_list.php',
         type: 'get',
 
         success: function (response) {
@@ -177,31 +173,15 @@
             console.log(data);
 
             data.map(function (value) {
-              product_id = value.id;
-              // console.log()
-
-          var product_size_parsed = JSON.stringify(value.product_size);
-          var product_color_parsed = JSON.stringify(value.product_color);
-
-
-          console.log('product size'+ product_size_parsed);
-          console.log('product color'+product_color_parsed);
-
-              var editButton =
-                `<a href="Product_edit.php?id=${value.id}" class='text-success me-2'><i class="bi bi-pencil-fill h6"></i></a>`;
               var viewButton =
-                `<a href=".php?id=${value.id}" class=text-success' me-2'><i class="bi bi-box-arrow-up-right pt-2 h6"></i></a>`;
+                `<a href="order_details_unconfirmed.php?id=${value.id}" class=text-success' me-2'><i class="bi bi-box-arrow-up-right pt-2 h6"></i></a>`;
               dataTable.row.add([
-                `<img src="../../product_images/${value.id}/main/${value.product_img}" width="70" height="100"/>`,
-               
-                value.product_name,
+                value.ref_no,
                 value.user_name,
-                value.size,
-                value.quantity,
+                // value.order_by_name,
                 value.total_price,
                 value.order_status,
-                `${editButton}<a data-id="${value.id}" class='text-danger me-2 delete_button'><i class="bi bi-trash3-fill h6"></i></a>${viewButton}`
-              ]).draw(false);
+                `${viewButton}`]).draw(false);
             });
           }
         }
