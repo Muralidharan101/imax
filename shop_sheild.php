@@ -80,7 +80,7 @@
                 <div class="container">
                     <!--Category Slider-->
                     
-            <section class="section collection-slider pb-0">
+            <!-- <section class="section collection-slider pb-0">
                               <div class="container">
                                  
                                   <div class="collection-slider-5items gp15 arwOut5 hov-arrow">
@@ -149,7 +149,7 @@
                                       </div>
                                   </div>
                               </div>
-                          </section><br><br>
+                          </section><br><br> -->
                     <!--End Category Slider-->
                     <div class="row">
                         <!--Sidebar-->
@@ -164,25 +164,7 @@
                                     <h2>Categories</h2>
                                 </div>
                                 <div class="widget-content filterDD">
-                                    <ul class="sidebar-categories scrollspy morelist clearfix">
-                                        <li class="lvl1 more-item" data-value="Football"><p class="cat"
-                                        >Football Trophies <span class="count">(14)</span></p>
-                                        </li>
-                                        <li class="lvl1 more-item" data-value="Cricket"><p class="cat" >Cricket
-                                                Trophies <span class="count">(18)</span></p></li>
-                                        <li class="lvl1 more-item" data-value="Kabaadi"><p class="cat" >Kabaadi
-                                                Trophies <span class="count">(22)</span></p></li>
-                                        <li class="lvl1 more-item" data-value="Volleyball"><p class="cat"
-                                                >Volleyball Trophies
-                                                <span class="count">(27)</span></p></li>
-                                        <li class="lvl1 more-item" data-value="Throw ball"><p class="cat">Throw
-                                                ball Trophies
-                                                <span class="count">(27)</span></p></li>
-                                        <li class="lvl1 more-item"  data-value="Kho-kho"><p class="cat">Kho-kho
-                                                Trophies <span class="count">(27)</span></p></li>
-                                        <li class="lvl1 more-item" data-value="Silambam"><p class="cat"
-                                                >Silambam Trophies <span class="count">(27)</span></p>
-                                        </li>
+                                    <ul class="sidebar-categories scrollspy morelist clearfix" id="sidebar_category">
                                     </ul>
                                 </div>
                             </div>
@@ -717,6 +699,50 @@
             fetchdata();
 
         })
+
+        function fetchSidebarCategory() {
+    $.ajax({
+        url: 'ajax/category_list_sidebar.php',
+        method: 'get',
+
+        success: function(response) {
+            var result = JSON.parse(response);
+            if (result.status === 'Success') {
+                var data = result.data;
+                var sidebarCty = document.getElementById('sidebar_category');
+
+                data.forEach(function(item) {
+                    let category = item.category;
+                    let count = item.count;
+
+                    let ctyHtml = `
+                        <li class="lvl1 more-item" data-value="${category}">
+                            <p class="cat">${category}</p>
+                        </li>
+                    `;
+
+                    sidebarCty.insertAdjacentHTML("beforeend", ctyHtml);
+                });
+
+                // Add click event listener to each category item
+                var categoryItems = sidebarCty.querySelectorAll('.lvl1');
+                categoryItems.forEach(function(item) {
+                    item.addEventListener('click', function() {
+                        // Remove active class from all items
+                        categoryItems.forEach(function(cItem) {
+                            cItem.classList.remove('active-category');
+                        });
+
+                        // Add active class to the clicked item
+                        item.classList.add('active-category');
+                    });
+                });
+            }
+        }
+    });
+}
+
+fetchSidebarCategory();
     </script>
 </body>
 

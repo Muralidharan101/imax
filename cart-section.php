@@ -23,6 +23,18 @@
     <link rel="stylesheet" href="<?php echo $path; ?>assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
+<style>
+         .modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+            z-index: 1050; /* Ensure it has a higher z-index than the modal */
+            display: none; /* Initially hidden */
+        }
+</style>
 
 <body class="cart-page cart-style1-page">
     <!--Page Wrapper-->
@@ -229,7 +241,8 @@
                 </div>
             </div>
             <!--End Main Content-->
-            <div class="quickview-modal modal fade" id="quickview_modal" tabindex="-1" style="display: none;"
+            <div class="modal-backdrop" id="overlay"></div>
+            <div class="quickview-modal modal fade show" id="quickview_modal" tabindex="-1"
                 aria-hidden="true">
                 <div class="modal-dialog modal-lg modal-dialog-centered">
                     <div class="modal-content">
@@ -339,6 +352,21 @@
                 }
                 return "";
             }
+
+
+   var modal = document.getElementById('quickview_modal');
+        var overlay = document.getElementsByClassName('modal-backdrop')[0];
+
+
+
+
+
+
+
+
+
+
+
 
             const customer_id = getCookie('imax_login_user_id');
             console.log(customer_id);
