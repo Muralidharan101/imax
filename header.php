@@ -88,7 +88,7 @@
                     <!--End Wishlist-->
                     <!--Minicart-->
                     <div class="header-cart iconset" title="Cart">
-                        <a href="cart-section.php" class="header-cart btn-minicart clr-none"><i class="hdr-icon icon anm anm-cart-l"></i><span class="cart-count">2</span></a>
+                        <a href="cart-section.php" class="header-cart btn-minicart clr-none"><i class="hdr-icon icon anm anm-cart-l"></i></a>
                     </div>
                     <!--End Minicart-->
                     <!--Mobile Toggle-->
