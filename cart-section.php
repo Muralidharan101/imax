@@ -30,10 +30,39 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
-            z-index: 1050; /* Ensure it has a higher z-index than the modal */
-            display: none; /* Initially hidden */
+            background: rgba(0, 0, 0, 0.5); 
+            z-index: 1050; 
+            display: none; 
         }
+
+        #no_prod {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #no_prod .modal-dialog {
+        max-width: 600px; /* Adjust the maximum width as needed */
+    }
+
+    #no_prod .modal-content {
+        border-radius: 10px; /* Add some border-radius for a modern look */
+    }
+
+    #no_prod .modal-body {
+        padding: 20px; /* Add some padding for better spacing */
+    }
+
+    #no_prod .btn-success {
+        background-color: #28a745; /* Change button color to green */
+        border-color: #28a745; /* Change button border color to green */
+    }
+
+
+
+
+
+
 </style>
 
 <body class="cart-page cart-style1-page">
@@ -94,7 +123,6 @@
                                                                 <tr>
                                                                     <th class="action">&nbsp;</th>
                                                                     <th colspan="2" class="text-start">Product</th>
-                                                                    <!-- <th class="text-center">Size</th> -->
                                                                     <th class="text-center">Price</th>
                                                                     <th class="text-center">Quantity</th>
                                                                     <th class="text-center">Total</th>
@@ -187,8 +215,6 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                     <!--End Cart Content-->
 
@@ -229,8 +255,6 @@
                                         ₹<b id="grandTotalWithTax"></b></span>
                                 </div>
 
-
-
                                 <!-- <div class="paymnet-img text-center"><img
                                         src="<?php echo $path; ?>assets/images/icons/safepayment.png" alt="Payment"
                                         width="299" height="28" /></div> -->
@@ -241,57 +265,90 @@
                 </div>
             </div>
             <!--End Main Content-->
-            <div class="modal-backdrop" id="overlay"></div>
-            <div class="quickview-modal modal fade show" id="quickview_modal" tabindex="-1"
-                aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <div class="row">
+                <div class="modal-backdrop" id="overlay"></div>
+                <div class="quickview-modal modal fade" id="quickview_modal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="row">
 
-
-
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 mb-md-0">
-                                    <div class="spr-form-actions clearfix">
-                                        <img src="img\qr.jpg" alt="">
-                                        <p>UPI - <b>Q79891202@ybl</b></p>
-                                        <div style="background-color:white;">
-                                            <p class="cart-shipping mt-3">Note : Send a WhatsApp message with your order
-                                                number after making a payment.</p>
+                                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 mb-md-0">
+                                        <h2>Payment</h2>
+                                        <div class="spr-form-actions clearfix">
+                                            <img src="img\qr.jpg" alt="">
                                         </div>
-                                        <br>
-                                        <button class="btn btn-primary spr-button spr-button-primary"
-                                            style="background-color:limegreen;"><i class="bi bi-whatsapp"></i>&nbsp;Send
-                                            message</button>
                                     </div>
-                                </div>
 
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 mb-md-0">
-                                    <div class="spr-form-actions clearfix">
-                                        <p class="cart-shipping mt-3">1. Goods once sold will not be taken back</p>
+                                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 mb-md-0">
+                                        <div class="spr-form-actions clearfix">
+                                            <h3 class="spr-form-title">order No: <span id="ref_no1"></span></h3>
 
-                                        <p class="cart-shipping mt-3">2. If any damage occurred while transport, Company
-                                            not responsible for that.</p>
+                                            <h5 class="spr-form-title">Note: Send a WhatsApp Message with your ORDER NO to confirm order.</h5>
+                                            <h5 class="spr-form-title">குறிப்பு: ஆர்டர் மாற்றத்தை உறுதிப்படுத்த உங்கள் ஆர்டர் எண்ணுடன் வாட்ஸ்அப் செய்தியை அனுப்பவும்.</h5>
+                                            <p class="cart-shipping mt-3">1. Goods once sold will not be taken back</p>
 
-                                        <p class="cart-shipping mt-3">3. Subject to
-                                            'Manapparai Jurisdiction' only.
-                                            Notes : Stickering included + metal cups all</p>
-                                        <!-- <p class="cart-shipping fst-normal freeShipclaim"><i
-                                        class="me-2 align-middle icon anm anm-truck-l"></i><b>FREE SHIPPING</b> ELIGIBLE
-                                </p> -->
-                                        <div class="customCheckbox cart-tearm">
-                                            <input type="checkbox" value="allen-vela" id="cart-tearm">
-                                            <label for="cart-tearm">I agree with the terms and conditions</label>
+                                            <p class="cart-shipping mt-3">2. If any damage occurred while transport, Company
+                                                not responsible for that.</p>
+
+                                            <p class="cart-shipping mt-3">3. Subject to
+                                                'Manapparai Jurisdiction' only.
+                                                Notes : Stickering included + metal cups all</p>
+                                            <!-- <p class="cart-shipping fst-normal freeShipclaim"><i
+                                            class="me-2 align-middle icon anm anm-truck-l"></i><b>FREE SHIPPING</b> ELIGIBLE
+                                            </p> -->
+                                            <p>UPI - <b>Q79891202@ybl</b></p>
+                                            <!-- <div style="background-color:white;">
+                                                <p class="cart-shipping mt-3"><b>Note : Send a WhatsApp message with your order
+                                                    number after making a payment.</b></p>
+                                            </div> -->
+                                            <br>
+                                            <!-- <div class="customCheckbox cart-tearm">
+                                                <input type="checkbox" value="allen-vela" id="cart-tearm">
+                                                <label for="cart-tearm">I agree with the terms and conditions</label>
+                                            </div> -->
+                                            <button class="btn btn-primary spr-button spr-button-primary" onclick="openWhatsApp();"
+                                                style="background-color:limegreen;"><i class="bi bi-whatsapp"></i>&nbsp;Send
+                                                message</button>
+                                                <a href="shop_trophy.php">
+                                                    <button class="btn btn-secondary  spr-button spr-button-secondary">Continue Shopping</button>
+                                                </a>
                                         </div>
-                                        <button id="cartCheckout" class="btn btn-lg my-4 checkout w-100"
-                                            style="background-color:orangered;">Proceed To Checkout</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <style>
+                    #no_prod {
+                        background-color: rgba(0, 0, 0, 0.5);
+                    } 
+                    #quickview_modal{
+                        background-color: rgba(0, 0, 0, 0.5);
+                    }
+                </style>
+
+              
+<div class="modal-backdrop" id="no_prod_modal"></div>
+<div class="quickview-modal justify-content-center modal fade" id="no_prod" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p>No Products In the Cart</p>
+                        <a href="shop_trophy.php">
+                            <button class="btn btn-lg btn-success">
+                                Continue Shopping
+                            </button>
+                        </a>
+                    </div>
+                </div>
             </div>
+        </div>
+    </div>
+</div>
+
         </div>
         <!-- End Body Container -->
 
@@ -314,6 +371,18 @@
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         <script>
+            var ref_no_whatsapp;
+
+             function openWhatsApp() {
+                var phoneNumber = '+917010303571';
+
+                var referenceNumber = ref_no_whatsapp;
+
+                var message = encodeURIComponent('Hi, my reference number is ' + referenceNumber);
+                var whatsappURL = 'https://wa.me/' + phoneNumber + '?text=' + message;
+
+                window.open(whatsappURL, '_blank');
+            }
             function onlyNum(e) {
                 e.value = e.value.replace(/[^0-9]/g,'');
             }
@@ -353,21 +422,8 @@
                 return "";
             }
 
-
    var modal = document.getElementById('quickview_modal');
         var overlay = document.getElementsByClassName('modal-backdrop')[0];
-
-
-
-
-
-
-
-
-
-
-
-
             const customer_id = getCookie('imax_login_user_id');
             console.log(customer_id);
 
@@ -385,25 +441,25 @@
                     taxRate = 0.12;
 
 
-                var cartTearmCheckbox = document.getElementById('cart-tearm');
-                var cartCheckoutButton = document.getElementById('cartCheckout');
+                // var cartTearmCheckbox = document.getElementById('cart-tearm');
+                // var cartCheckoutButton = document.getElementById('cartCheckout');
 
-                // Initially, hide the "Proceed To Checkout" button
-                // cartCheckoutButton.style.display = 'none';
-                cartCheckoutButton.disabled = true;
-                // Add an event listener to the checkbox
-                cartTearmCheckbox.addEventListener('change', function () {
-                    // Check if the checkbox is checked
-                    if (cartTearmCheckbox.checked) {
-                        // If checked, display the "Proceed To Checkout" button
-                        // cartCheckoutButton.style.display = 'block';
-                        cartCheckoutButton.disabled = false;
-                    } else {
-                        // If unchecked, hide the "Proceed To Checkout" button
-                        // cartCheckoutButton.style.display = 'none';
-                        cartCheckoutButton.disabled = true;
-                    }
-                });
+                // // Initially, hide the "Proceed To Checkout" button
+                // // cartCheckoutButton.style.display = 'none';
+                // cartCheckoutButton.disabled = true;
+                // // Add an event listener to the checkbox
+                // cartTearmCheckbox.addEventListener('change', function () {
+                //     // Check if the checkbox is checked
+                //     if (cartTearmCheckbox.checked) {
+                //         // If checked, display the "Proceed To Checkout" button
+                //         // cartCheckoutButton.style.display = 'block';
+                //         cartCheckoutButton.disabled = false;
+                //     } else {
+                //         // If unchecked, hide the "Proceed To Checkout" button
+                //         // cartCheckoutButton.style.display = 'none';
+                //         cartCheckoutButton.disabled = true;
+                //     }
+                // });
 
                 $('#placeOrderButton').click(function(){
 
@@ -475,7 +531,10 @@
                             toastr.success('Order Placed');
 
                             var ref_no_div = $('#ref_no');
-                            ref_no_in_cart = ref_no_div.html(result.ref_no);
+                            var ref_no_div2 = $('#ref_no1')
+                           ref_no_div.html(result.ref_no);
+                           ref_no_div2.html(result.ref_no);
+                           ref_no_whatsapp = result.ref_no;
 
                             order_id_checkout = result.order_id;
                             console.log(order_id_checkout);
@@ -580,6 +639,10 @@
                             var result = JSON.parse(response);
                             if (result.status == "Success") {
                                 var data = result.data;
+
+                                if(data.length == 0 ) {
+                                    $('#no_prod').modal('show');
+                                }
                                 console.log(data);
                                 data.map(function (value) {
 
@@ -654,10 +717,7 @@
                                             </td>
                                             </tr>
                                             `;
-
                                     product_cart.insertAdjacentHTML('beforebegin', html);
-
-
                                 })
                             } else {
                                 toastr.error("Unable To Add Product", "Error");
@@ -667,9 +727,6 @@
                 };
                 postdata()
             })
-
-
-
 
             $(document).ready(function () {
                 $(document).on('click', '.qtyBtn.plus, .qtyBtn.minus', function () {

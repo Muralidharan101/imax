@@ -23,22 +23,22 @@
                 <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
                     <h4 class="h4">Pages</h4>
                     <ul>
-                        <li><a href="javascript:void(0)">Home</a></li>
-                        <li><a href="javascript:void(0)">About us</a></li>
-                        <li><a href="javascript:void(0)">Gallery</a></li>
-                        <li><a href="javascript:void(0)">Shop</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="aboutUs.php">About us</a></li>
+                        <li><a href="gallery.php">Gallery</a></li>
+                        <li><a href="shop_trophy.php">Shop</a></li>
+                        <li><a href="contact.php">Contact Us</a></li>
                     </ul>
                 </div>
 
                 <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
                     <h4 class="h4">Customer Services</h4>
                     <ul>
-                        <li><a href="#">Privacy policy</a></li>
+                        <!-- <li><a href="#">Privacy policy</a></li> -->
                         <li><a href="faq_page.php">FAQ's</a></li>
-                        <li><a href="javascript:void(0)">Terms &amp; condition</a></li>
-                        <li><a href="#">Orders and Returns</a></li>
-                        <li><a href="#">Support Center</a></li>
+                        <!-- <li><a href="javascript:void(0)">Terms &amp; condition</a></li> -->
+                        <!-- <li><a href="#">Orders and Returns</a></li> -->
+                        <!-- <li><a href="#">Support Center</a></li> -->
                     </ul>
                 </div>
                 <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-contact">

@@ -47,7 +47,7 @@
                 <!--Main Content-->
                 <div class="container">
                     <!-- Frequently Content -->
-                    <div class="row help-center mb-4 mb-md-0">
+                    <!-- <div class="row help-center mb-4 mb-md-0">
                         <div class="col-12 col-sm-12 col-md-10 col-lg-6 mx-auto">
                             <!-- <h2 class="mb-3 text-center">Frequently Asked Questions</h2> -->
                             <form class="frequently-search" id="frequentlysearch" action="#" method="get">
@@ -57,7 +57,7 @@
                                 </div> -->
                             </form>
                         </div>
-                    </div>
+                    </div> -->
                   
                     <!-- End Frequently Content -->
 

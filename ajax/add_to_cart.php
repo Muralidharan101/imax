@@ -4,9 +4,7 @@
 
     $pro_id = mysqli_real_escape_string($conn, $_POST['product_id']);
     $cus_id = mysqli_real_escape_string($conn, $_POST['customer_id']);
-    // $size = mysqli_real_escape_string($conn, $_POST['product_size']);
     $quantity = mysqli_real_escape_string($conn, $_POST['Quantity']);
-
     $select_query = "SELECT * FROM cart_data WHERE `product_id`='$pro_id' AND `customer_id`='$cus_id' AND `status`='Active'";
     $result = mysqli_query($conn, $select_query);
 
