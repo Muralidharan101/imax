@@ -1,3 +1,32 @@
+<?php 
+session_start();
+
+// Admin credentials (hard-coded for demonstration purposes)
+$adminUserphone = "1";
+$adminPassword = "1";
+
+// Check if the admin is already logged in
+if (isset($_SESSION['admin']) && $_SESSION['admin'] === true) {
+    echo 'Welcome, Admin!<br>';
+    echo '<a href="/logout">Logout</a>';
+} else {
+    // Check login attempt
+    if (isset($_POST['userphone']) && isset($_POST['password'])) {
+        $userphone = $_POST['userphone'];
+        $password = $_POST['password'];
+
+        // Check if entered credentials match admin credentials
+        if ($userphone === $adminUserphone && $password === $adminPassword) {
+            $_SESSION['admin'] = true;
+            header('Location: /');
+            exit();
+        } else {
+            echo 'Invalid username or password';
+        }
+    }
+  }
+
+?>
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -46,12 +75,12 @@
                <br><br>
                   <div class="form-group">
                     <label class="col-form-label">Phone No.</label>
-                    <input class="form-control" type="tel" required=""  required id="phone">
+                    <input class="form-control" type="tel" required="" name="userphone" required id="phone">
                   </div>
                   <div class="form-group">
                     <label class="col-form-label">Password</label>
                     <div class="form-input position-relative">
-                      <input class="form-control" type="password" name="login[password]" required="" id="password">
+                      <input class="form-control" type="password" name="password" required="" id="password">
                       <div class="show-hide"><span class="show">                         </span></div>
                     </div>
                   </div>
@@ -93,7 +122,7 @@
 
     </div>
     
-    <script>
+    <!-- <script>
       var phone=document.getElementById('phone');
       var password=document.getElementById('password');
       var login_btn=document.getElementById('loggin');
@@ -112,6 +141,6 @@
   
       })
 
-    </script>
+    </script> -->
 </body>
 </html>
