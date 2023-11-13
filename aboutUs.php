@@ -37,7 +37,7 @@
         <div id="page-content">
 
               <!-- Meet Our Team section-->
-              <div class="team-section section">
+              <!-- <div class="team-section section">
                 <div class="container">
                     <div class="section-header">
                         <p class="mb-2 mt-0"></p>
@@ -74,7 +74,7 @@
 
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!--End Meet Our Team section -->
 
 
@@ -87,8 +87,8 @@
                             <div class="about-images mb-4 mb-md-0">
                                 <div class="row g-3">
                                     <img class="rounded-0 blur-up lazyload"
-                                        data-src="<?php echo $path ?>assets/img/aboutUs/about 1.jpg"
-                                        src="<?php echo $path ?>assets/img/aboutUs/about 1.jpg" alt="about" style="width: 80%;border-radius: 10px !important; " />
+                                    data-src="<?php echo $path ?>assets/img/aboutUs/contact 11.jpg"
+                                    src="<?php echo $path ?>assets/img/aboutUs/contact 11.jpg"alt="about" style="width: 80%;border-radius: 10px !important; " />
                                 </div>
                             </div>
                         </div>

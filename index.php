@@ -120,6 +120,55 @@
                 </div>
             </div>
 
+            <br>
+            <section class="section collection-slider pt-0">
+                <div class="container">
+                    <div class="section-header style2 d-flex-center justify-content-sm-between">
+                        <div class="section-header-left text-start">
+                            <h2 class="text-dark">Shop By Category</h2>
+                            <p>Shop our new arrivals from established category</p>
+                        </div>
+                        
+                    </div>
+
+                    <div class="collection-slider-3items slick-arrow-dots gp15 arwOut5 hov-arrow circle-arrow">
+                        <div class="category-item zoomscal-hov overlay-content">
+                            <a href="shop_trophy.php?type=trophy" class="category-link clr-none">
+                                <div class="zoom-scal"><img class="blur-up lazyload" style="width:360px;height:360px"
+                                data-src="<?php echo $path ?>img/index/trop1.png" src="<?php echo $path ?>img/index/trop1.png" alt="collection"
+                                        title="" width="416" height="416" /></div>
+                                <div class="details whiteText text-center p-0">
+                                    <h4 class="category-title h2 text-uppercase mb-2 pb-1">Trophies</h4>
+                                    <span class="category-btn btn-brd fw-500 text-uppercase">Shop Now</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="category-item zoomscal-hov overlay-content">
+                            <a href="shop_medal.php?type=medal" class="category-link clr-none">
+                                <div class="zoom-scal"><img style="width:360px;height:360px" class="blur-up lazyload"
+                                data-src="<?php echo $path ?>assets/img/shields/shield 33.jpg" src="<?php echo $path ?>assets/img/shields/shield 33.jpg" alt="collection" title=""
+                                        width="416px" height="416px" /></div>
+                                <div class="details whiteText text-center p-0">
+                                    <h4 class="category-title h2 text-uppercase mb-2 pb-1">Medals</h4>
+                                    <span class="category-btn btn-brd fw-500 text-uppercase">Shop Now</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="category-item zoomscal-hov overlay-content">
+                            <a href="shop_sheild.php?type=sheild" class="category-link clr-none">
+                                <div class="zoom-scal"><img style="width:360px;height:360px" class="blur-up lazyload"
+                                data-src="<?php echo $path ?>assets/img/shields/medal 2.jpg" src="<?php echo $path ?>assets/img/shields/medal 2.jpg" alt="collection" title=""
+                                        width="416" height="416" /></div>
+                                <div class="details whiteText text-center p-0">
+                                    <h4 class="category-title h2 text-uppercase mb-2 pb-1">Sheilds</h4>
+                                    <span class="category-btn btn-brd fw-500 text-uppercase">Shop Now</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!--Products Slider-->
             <section class="section product-banner-slider">
                 <div class="container">
@@ -514,7 +563,10 @@
                 </div>
             </section>
             <!--End Shop By Category-->
-            <section class="section collection-slider section-text section-clr">
+
+
+            
+            <!-- <section class="section collection-slider section-text section-clr">
                     <div class="container">
                         <div class="image-text-slider3items gp15 arwOut5 hov-arrow">
                             <div class="category-item zoomscal-hov">
@@ -549,7 +601,9 @@
                             </div>                           
                         </div>
                     </div>
-                </section>
+
+                </section> -->
+
 
             
 
@@ -563,8 +617,7 @@
                             <p>Shop our new arrivals from established brands</p>
                         </div>
                         <div class="section-header-right text-start text-sm-end mt-3 mt-sm-0">
-                            <a href="shop" class="btn btn-primary">View More <i
-                                    class="icon anm anm-arw-right ms-2"></i></a>
+                            
                         </div>
                     </div>
 
@@ -736,17 +789,35 @@
                             <h2 class="text-dark">New Arrivals</h2>
                             <p>Shop our new arrivals from established brands</p>
                         </div>
-                        <div class="section-header-right text-start text-sm-end mt-3 mt-sm-0">
-                            <a href="shop" class="btn btn-primary">View More <i
-                                    class="icon anm anm-arw-right ms-2"></i></a>
-                        </div>
-                    </div>
 
+                    </div>
+                    
                     <div class="row">
+                     
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 mb-4 mb-lg-0">
+                            <div class="ctg-bnr-wrap one position-relative h-100">
+                                <div class="ctg-image ratio ratio-1x1 h-100">
+                                    <img class="blur-up lazyload"
+                                        data-src="<?php echo $path ?>assets/img/slider/cup44.jpg"
+                                        src="<?php echo $path ?>assets/img/slider/cup44.jpg" alt="collection"
+                                        width="390" height="483" />
+                                </div>
+                                <div class="ctg-content text-white d-flex-justify-center flex-nowrap flex-column h-100">
+                                    <h2 class="ctg-title text-white m-0">Medal collections</h2>
+                                    <p class="ctg-des mt-3 mb-4">Shop our weekly edit of what's new in online at IMAX
+                                        collections.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="col-12 col-sm-12 col-md-12 col-lg-9">
                             <div
                                 class="grid-products product-slider-3items gp15 arwOut5 hov-arrow circle-arrow arrowlr-0">
                                
+
+
+
                                 <div class="item col-item">
 
 <div class="product-box">
@@ -950,7 +1021,9 @@
                             </div>
                         </div>
 
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 mt-4 mt-lg-0">
+
+                        <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-3 mt-4 mt-lg-0">
+
                             <div class="ctg-bnr-wrap two position-relative h-100">
                                 <div class="ctg-image ratio ratio-1x1 h-100">
                                     <img class="blur-up lazyload"
@@ -966,7 +1039,9 @@
                                             class="icon anm anm-arw-right ms-2"></i></a>
                                 </div>
                             </div>
-                        </div>
+
+                        </div> -->
+
                     </div>
                 </div>
             </section>
@@ -979,8 +1054,9 @@
                             <p>Shop our new arrivals from established brands</p>
                         </div>
                         <div class="section-header-right text-start text-sm-end mt-3 mt-sm-0">
-                            <a href="shop" class="btn btn-primary">View More <i
-                                    class="icon anm anm-arw-right ms-2"></i></a>
+
+                            
+
                         </div>
                     </div>
 
