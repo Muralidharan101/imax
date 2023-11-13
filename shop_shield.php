@@ -2,9 +2,9 @@
     include 'datab.php'; 
 
     function getTotalItems() {
-        global $conn; // Assuming $conn is your database connection variable
+        global $conn;
 
-        $result = mysqli_query($conn, "SELECT COUNT(id) AS total FROM product_data WHERE `status`='Active' AND `product_type`='trophy'");
+        $result = mysqli_query($conn, "SELECT COUNT(id) AS total FROM product_data WHERE `status`='Active' AND `product_type`='shield'");
 
         if ($result) {
             $row = mysqli_fetch_assoc($result);
@@ -93,7 +93,7 @@ padding:5px 10px;
                         <div
                             class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex justify-content-between align-items-center">
                             <div class="page-title">
-                                <h1>Product - Trophy section</h1>
+                                <h1>Product - Shield section</h1>
                             </div>
 
                         </div>
@@ -548,7 +548,7 @@ padding:5px 10px;
                     fd.append("start", startValue);
                     fd.append("end", endValue);
 
-                    fd.append('product_type', 'trophy');
+                    fd.append('product_type', 'shield');
 
                     fetchingData(fd);
                 } else {
@@ -558,7 +558,7 @@ padding:5px 10px;
                     fd.append("start", startValue);
                     fd.append("end", endValue);
 
-                    fd.append('product_type', 'trophy');
+                    fd.append('product_type', 'shield');
 
                     fetchingData(fd);
                 }
@@ -585,7 +585,7 @@ padding:5px 10px;
 
                     var fd = new FormData();
                     fd.append('Category', category);
-                    fd.append('product_type', 'trophy');
+                    fd.append('product_type', 'meadl');
 
 
                     $.ajax({
@@ -661,7 +661,7 @@ padding:5px 10px;
                 fd.append('page', pages);
 
                 $.ajax({
-                    url: 'ajax/trophy_list.php',
+                    url: 'ajax/shield_list.php',
                     type: 'get',
 
                     success: function (response) {
@@ -793,7 +793,7 @@ padding:5px 10px;
                                 })
                             }
                         } else {
-                            fetchdata();
+                           fetchdata();
                         }
                     },
                     error: function (xhr, status, error) {

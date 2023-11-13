@@ -97,12 +97,13 @@
                                     celebrate victories, and etch moments in time. With a wide array of options for
                                     every occasion, we invite you to explore the essence of our trophies:</p>
 
-                                <p>From championship cups to elegant plaques, from sparkling crystal to timeless metal,
+                                <!-- <p>From championship cups to elegant plaques, from sparkling crystal to timeless metal,
                                     our trophies are a testament to your achievements and the recognition they deserve.
                                     Join us in celebrating success and let our trophies tell the story of your journey.
                                     At IMAX Trophies, we are more than just a trophy store; we are the keepers of your
-                                    proudest moments.</p>
-                               
+                                    proudest moments.</p> -->
+                                    <a class="btn btn-secondary explore-btn" href="aboutUs.php">Read more <i
+                                            class="icon anm anm-arw-right ms-2"></i></a>
                             </div>
                         </div>
                         <div class="col-12 col-sm-12 col-md-6">
@@ -118,6 +119,55 @@
                     </div>
                 </div>
             </div>
+
+            <br>
+            <section class="section collection-slider pt-0">
+                <div class="container">
+                    <div class="section-header style2 d-flex-center justify-content-sm-between">
+                        <div class="section-header-left text-start">
+                            <h2 class="text-dark">Shop By Category</h2>
+                            <p>Shop our new arrivals from established category</p>
+                        </div>
+                        
+                    </div>
+
+                    <div class="collection-slider-3items slick-arrow-dots gp15 arwOut5 hov-arrow circle-arrow">
+                        <div class="category-item zoomscal-hov overlay-content">
+                            <a href="shop_trophy.php?type=trophy" class="category-link clr-none">
+                                <div class="zoom-scal"><img class="blur-up lazyload" style="width:360px;height:360px"
+                                data-src="<?php echo $path ?>img/index/trop1.png" src="<?php echo $path ?>img/index/trop1.png" alt="collection"
+                                        title="" width="416" height="416" /></div>
+                                <div class="details whiteText text-center p-0">
+                                    <h4 class="category-title h2 text-uppercase mb-2 pb-1">Trophies</h4>
+                                    <span class="category-btn btn-brd fw-500 text-uppercase">Shop Now</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="category-item zoomscal-hov overlay-content">
+                            <a href="shop_medal.php?type=medal" class="category-link clr-none">
+                                <div class="zoom-scal"><img style="width:360px;height:360px" class="blur-up lazyload"
+                                data-src="<?php echo $path ?>assets/img/shields/shield 33.jpg" src="<?php echo $path ?>assets/img/shields/shield 33.jpg" alt="collection" title=""
+                                        width="416px" height="416px" /></div>
+                                <div class="details whiteText text-center p-0">
+                                    <h4 class="category-title h2 text-uppercase mb-2 pb-1">Medals</h4>
+                                    <span class="category-btn btn-brd fw-500 text-uppercase">Shop Now</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="category-item zoomscal-hov overlay-content">
+                            <a href="shop_sheild.php?type=sheild" class="category-link clr-none">
+                                <div class="zoom-scal"><img style="width:360px;height:360px" class="blur-up lazyload"
+                                data-src="<?php echo $path ?>assets/img/shields/medal 2.jpg" src="<?php echo $path ?>assets/img/shields/medal 2.jpg" alt="collection" title=""
+                                        width="416" height="416" /></div>
+                                <div class="details whiteText text-center p-0">
+                                    <h4 class="category-title h2 text-uppercase mb-2 pb-1">Sheilds</h4>
+                                    <span class="category-btn btn-brd fw-500 text-uppercase">Shop Now</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <!--Products Slider-->
             <section class="section product-banner-slider">
@@ -513,7 +563,10 @@
                 </div>
             </section>
             <!--End Shop By Category-->
-            <section class="section collection-slider section-text section-clr">
+
+
+            
+            <!-- <section class="section collection-slider section-text section-clr">
                     <div class="container">
                         <div class="image-text-slider3items gp15 arwOut5 hov-arrow">
                             <div class="category-item zoomscal-hov">
@@ -548,679 +601,9 @@
                             </div>                           
                         </div>
                     </div>
-                </section>
+                </section> -->
 
-            <section class="section product-slider tab-slider-product">
-                <div class="container container-1330">
-                    <div class="section-header">
-                        <h2 class='text-dark'>Our Best Selling Products</h2>
-                    </div>
-
-                    <div class="tabs-listing">
-                        <ul class="nav nav-tabs style1 justify-content-center" id="productTabs" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link text-uppercase active body-font" id="fruits-tab"
-                                    data-bs-toggle="tab" data-bs-target="#fruits" type="button" role="tab"
-                                    aria-controls="fruits" aria-selected="true">Trophies</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link text-uppercase body-font" id="vegetables-tab"
-                                    data-bs-toggle="tab" data-bs-target="#vegetables" type="button" role="tab"
-                                    aria-controls="vegetables" aria-selected="false">Shields</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link text-uppercase body-font" id="dryfruits-tab"
-                                    data-bs-toggle="tab" data-bs-target="#dryfruits" type="button" role="tab"
-                                    aria-controls="dryfruits" aria-selected="false">Medals</button>
-                            </li>
-                        </ul>
-
-                        <div class="tab-content" id="productTabsContent">
-                            <div class="tab-pane show active" id="fruits" role="tabpanel" aria-labelledby="fruits-tab">
-                                <!--Product Grid-->
-                                <div class="grid-view-items">
-                                    <div
-                                        class="grid-products pro-hover3 row col-row row-cols-lg-4 row-cols-md-3 row-cols-sm-3 row-cols-2">
-                                        <div class="item col-item">
-
-                                            <div class="product-box">
-                                                <!-- Start Product Image -->
-                                                <div class="product-image">
-                                                    <!-- Start Product Image -->
-                                                    <a href="shop" class="product-img">
-                                                        <!-- Image -->
-                                                        <img class="primary blur-up lazyload"
-                                                            data-src="<?php echo $path ?>assets/img/trophy/trophy 77.jpg"
-                                                            src="<?php echo $path ?>assets/img/trophy/trophy 77.jpg"
-                                                            alt="Product" title="Product" width="625" height="625" />
-                                                        <!-- End Image -->
-                                                        <!-- Hover Image -->
-                                                        <img class="hover blur-up lazyload"
-                                                            data-src="<?php echo $path ?>assets/img/trophy/trophy 77.jpg"
-                                                            src="<?php echo $path ?>assets/img/trophy/trophy 77.jpg"
-                                                            alt="Product" title="Product" width="625" height="625" />
-                                                        <!-- End Hover Image -->
-                                                    </a>
-                                                    <!-- End Product Image -->
-
-
-                                                </div>
-                                                <!-- End Product Image -->
-                                                <!-- Start Product Details -->
-                                                <div class="product-details text-left">
-                                                    <!--Product Vendor-->
-                                                    <div class="product-vendor">Cricket</div>
-                                                    <!--End Product Vendor-->
-                                                    <!-- Product Name -->
-                                                    <div class="product-name">
-                                                        <a href="shop">Cricket Grand Cup</a>
-                                                    </div>
-                                                    <!-- End Product Name -->
-                                                    <!-- Product Price -->
-                                                    <div class="product-price">
-                                                        <span class="price old-price">₹1099.00</span><span
-                                                            class="price">₹999.00</span>
-                                                    </div>
-                                                    <!-- End Product Price -->
-
-                                                    <!-- Product Button -->
-                                                 
-                                                    <!-- End Product Button -->
-                                                </div>
-                                                <!-- End product details -->
-                                            </div>
-                                        </div>
-
-                                        <div class="item col-item">
-                                            <div class="product-box">
-                                                <!-- Start Product Image -->
-                                                <div class="product-image">
-                                                    <!-- Start Product Image -->
-                                                    <a href="shop" class="product-img">
-                                                        <!-- Image -->
-                                                        <img class="primary blur-up lazyload"
-                                                            data-src="<?php echo $path ?>assets/img/trophy/trophy 44.jpg"
-                                                            src="<?php echo $path ?>assets/img/trophy/trophy 44.jpg"
-                                                            alt="Product" title="Product" width="625" height="625" />
-                                                        <!-- End Image -->
-                                                        <!-- Hover Image -->
-                                                        <img class="hover blur-up lazyload"
-                                                            data-src="<?php echo $path ?>assets/img/trophy/trophy 44.jpg"
-                                                            src="<?php echo $path ?>assets/img/trophy/trophy 44.jpg"
-                                                            alt="Product" title="Product" width="625" height="625" />
-                                                        <!-- End Hover Image -->
-                                                    </a>
-                                                    <!-- End Product Image -->
-
-
-                                                </div>
-                                                <!-- End Product Image -->
-                                                <!-- Start Product Details -->
-                                                <div class="product-details text-left">
-                                                    <!--Product Vendor-->
-                                                    <div class="product-vendor">Trophy</div>
-                                                    <!--End Product Vendor-->
-                                                    <!-- Product Name -->
-                                                    <div class="product-name">
-                                                        <a href="shop">King Grand Cup</a>
-                                                    </div>
-                                                    <!-- End Product Name -->
-                                                    <!-- Product Price -->
-                                                    <div class="product-price">
-                                                        <span class="price old-price">₹1099.00</span><span
-                                                            class="price">₹999.00</span>
-                                                    </div>
-                                                    <!-- End Product Price -->
-
-                                                    <!-- Product Button -->
-                                                   
-                                                    <!-- End Product Button -->
-                                                </div>
-                                                <!-- End product details -->
-                                            </div>
-                                        </div>
-                                        <div class="item col-item">
-                                            <div class="product-box">
-                                                <!-- Start Product Image -->
-                                                <div class="product-image">
-                                                    <!-- Start Product Image -->
-                                                    <a href="shop" class="product-img">
-                                                        <!-- Image -->
-                                                        <img class="primary blur-up lazyload"
-                                                            data-src="<?php echo $path ?>assets/img/trophy/trophy 66.jpg"
-                                                            src="<?php echo $path ?>assets/img/trophy/trophy 66.jpg"
-                                                            alt="Product" title="Product" width="625" height="625" />
-                                                        <!-- End Image -->
-                                                        <!-- Hover Image -->
-                                                        <img class="hover blur-up lazyload"
-                                                            data-src="<?php echo $path ?>assets/img/trophy/trophy 66.jpg"
-                                                            src="<?php echo $path ?>assets/img/trophy/trophy 66.jpg"
-                                                            alt="Product" title="Product" width="625" height="625" />
-                                                        <!-- End Hover Image -->
-                                                    </a>
-                                                    <!-- End Product Image -->
-                                                    <!-- Product label -->
-                                                    <div class="product-labels radius"><span
-                                                            class="lbl pr-label3">New</span>
-                                                    </div>
-                                                    <!-- End Product label -->
-
-                                                </div>
-                                                <!-- End Product Image -->
-                                                <!-- Start Product Details -->
-                                                <div class="product-details text-left">
-                                                    <!--Product Vendor-->
-                                                    <div class="product-vendor">Trophy</div>
-                                                    <!--End Product Vendor-->
-                                                    <!-- Product Name -->
-                                                    <div class="product-name">
-                                                        <a href="shop">All Star Cup</a>
-                                                    </div>
-                                                    <!-- End Product Name -->
-                                                    <!-- Product Price -->
-                                                    <div class="product-price">
-                                                        <span class="price old-price">$298.00</span><span
-                                                            class="price">$199.00</span>
-                                                    </div>
-                                                    <!-- End Product Price -->
-
-                                                    <!-- Product Button -->
-                                                   
-                                                    <!-- End Product Button -->
-                                                </div>
-                                                <!-- End product details -->
-                                            </div>
-                                        </div>
-
-                                        <div class="item col-item">
-                                            <div class="product-box">
-                                                <!-- Start Product Image -->
-                                                <div class="product-image">
-                                                    <!-- Start Product Image -->
-                                                    <a href="shop" class="product-img">
-                                                        <!-- Image -->
-                                                        <img class="primary blur-up lazyload"
-                                                            data-src="<?php echo $path ?>assets/img/trophy/trophy 33.jpg"
-                                                            src="<?php echo $path ?>assets/img/trophy/trophy 33.jpg"
-                                                            alt="Product" title="Product" width="625" height="625" />
-                                                        <!-- End Image -->
-                                                        <!-- Hover Image -->
-                                                        <img class="hover blur-up lazyload"
-                                                            data-src="<?php echo $path ?>assets/img/trophy/trophy 33.jpg"
-                                                            src="<?php echo $path ?>assets/img/trophy/trophy 33.jpg"
-                                                            alt="Product" title="Product" width="625" height="625" />
-                                                        <!-- End Hover Image -->
-                                                    </a>
-                                                    <!-- End Product Image -->
-                                                    <!-- Product label -->
-                                                    <div class="product-labels radius"><span
-                                                            class="lbl pr-label3">Sale</span>
-                                                    </div>
-                                                    <!-- End Product label -->
-
-                                                </div>
-                                                <!-- End Product Image -->
-                                                <!-- Start Product Details -->
-                                                <div class="product-details text-left">
-                                                    <!--Product Vendor-->
-                                                    <div class="product-vendor">Trophy</div>
-                                                    <!--End Product Vendor-->
-                                                    <!-- Product Name -->
-                                                    <div class="product-name">
-                                                        <a href="shop">King Crown Cup</a>
-                                                    </div>
-                                                    <!-- End Product Name -->
-                                                    <!-- Product Price -->
-                                                    <div class="product-price">
-                                                        <span class="price old-price">₹1099.00</span><span
-                                                            class="price">₹999.00</span>
-                                                    </div>
-                                                    <!-- End Product Price -->
-
-                                                    <!-- Product Button -->
-                                                    
-                                                    <!-- End Product Button -->
-                                                </div>
-                                                <!-- End product details -->
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-
-                                </div>
-                                <!--End Product Grid-->
-                            </div>
-
-                            <div class="tab-pane" id="vegetables" role="tabpanel" aria-labelledby="vegetables-tab">
-                                <!--Product Grid-->
-                                <div class="grid-view-items">
-                                    <div
-                                        class="grid-products pro-hover3 row col-row row-cols-lg-4 row-cols-md-3 row-cols-sm-3 row-cols-2">
-
-                                        <div class="item col-item">
-
-                                            <div class="product-box">
-                                                <!-- Start Product Image -->
-                                                <div class="product-image">
-                                                    <!-- Start Product Image -->
-                                                    <a href="shop" class="product-img">
-                                                        <!-- Image -->
-                                                        <img class="primary blur-up lazyload"
-                                                            data-src="<?php echo $path ?>assets/img/shields/shield 11.jpg"
-                                                            src="<?php echo $path ?>assets/img/shields/shield 11.jpg"
-                                                            alt="Product" title="Product" width="625" height="625" />
-                                                        <!-- End Image -->
-                                                        <!-- Hover Image -->
-                                                        <img class="hover blur-up lazyload"
-                                                            data-src="<?php echo $path ?>assets/img/shields/shield 11.jpg"
-                                                            src="<?php echo $path ?>assets/img/shields/shield 11.jpg"
-                                                            alt="Product" title="Product" width="625" height="625" />
-                                                        <!-- End Hover Image -->
-                                                    </a>
-                                                    <!-- End Product Image -->
-
-
-                                                </div>
-                                                <!-- End Product Image -->
-                                                <!-- Start Product Details -->
-                                                <div class="product-details text-left">
-                                                    <!--Product Vendor-->
-                                                    <div class="product-vendor">General</div>
-                                                    <!--End Product Vendor-->
-                                                    <!-- Product Name -->
-                                                    <div class="product-name">
-                                                        <a href="shop">Grand Shield</a>
-                                                    </div>
-                                                    <!-- End Product Name -->
-                                                    <!-- Product Price -->
-                                                    <div class="product-price">
-                                                        <span class="price old-price">₹1099.00</span><span
-                                                            class="price">₹999.00</span>
-                                                    </div>
-                                                    <!-- End Product Price -->
-
-                                                    <!-- Product Button -->
-                                                  
-                                                    <!-- End Product Button -->
-                                                </div>
-                                                <!-- End product details -->
-                                            </div>
-                                        </div>
-
-                                        <div class="item col-item">
-
-                                            <div class="product-box">
-                                                <!-- Start Product Image -->
-                                                <div class="product-image">
-                                                    <!-- Start Product Image -->
-                                                    <a href="shop" class="product-img">
-                                                        <!-- Image -->
-                                                        <img class="primary blur-up lazyload"
-                                                            data-src="<?php echo $path ?>assets/img/shields/shield 22.jpg"
-                                                            src="<?php echo $path ?>assets/img/shields/shield 22.jpg"
-                                                            alt="Product" title="Product" width="625" height="625" />
-                                                        <!-- End Image -->
-                                                        <!-- Hover Image -->
-                                                        <img class="hover blur-up lazyload"
-                                                            data-src="<?php echo $path ?>assets/img/shields/shield 22.jpg"
-                                                            src="<?php echo $path ?>assets/img/shields/shield 22.jpg"
-                                                            alt="Product" title="Product" width="625" height="625" />
-                                                        <!-- End Hover Image -->
-                                                    </a>
-                                                    <!-- End Product Image -->
-
-
-                                                </div>
-                                                <!-- End Product Image -->
-                                                <!-- Start Product Details -->
-                                                <div class="product-details text-left">
-                                                    <!--Product Vendor-->
-                                                    <div class="product-vendor">General</div>
-                                                    <!--End Product Vendor-->
-                                                    <!-- Product Name -->
-                                                    <div class="product-name">
-                                                        <a href="shop">Special Shield</a>
-                                                    </div>
-                                                    <!-- End Product Name -->
-                                                    <!-- Product Price -->
-                                                    <div class="product-price">
-                                                        <span class="price old-price">₹1099.00</span><span
-                                                            class="price">₹999.00</span>
-                                                    </div>
-                                                    <!-- End Product Price -->
-
-                                                    <!-- Product Button -->
-                                                  
-                                                    <!-- End Product Button -->
-                                                </div>
-                                                <!-- End product details -->
-                                            </div>
-                                        </div>
-
-                                        <div class="item col-item">
-
-                                            <div class="product-box">
-                                                <!-- Start Product Image -->
-                                                <div class="product-image">
-                                                    <!-- Start Product Image -->
-                                                    <a href="shop" class="product-img">
-                                                        <!-- Image -->
-                                                        <img class="primary blur-up lazyload"
-                                                            data-src="<?php echo $path ?>assets/img/shields/shield 33.jpg"
-                                                            src="<?php echo $path ?>assets/img/shields/shield 33.jpg"
-                                                            alt="Product" title="Product" width="625" height="625" />
-                                                        <!-- End Image -->
-                                                        <!-- Hover Image -->
-                                                        <img class="hover blur-up lazyload"
-                                                            data-src="<?php echo $path ?>assets/img/shields/shield 33.jpg"
-                                                            src="<?php echo $path ?>assets/img/shields/shield 33.jpg"
-                                                            alt="Product" title="Product" width="625" height="625" />
-                                                        <!-- End Hover Image -->
-                                                    </a>
-                                                    <!-- End Product Image -->
-
-
-                                                </div>
-                                                <!-- End Product Image -->
-                                                <!-- Start Product Details -->
-                                                <div class="product-details text-left">
-                                                    <!--Product Vendor-->
-                                                    <div class="product-vendor">General</div>
-                                                    <!--End Product Vendor-->
-                                                    <!-- Product Name -->
-                                                    <div class="product-name">
-                                                        <a href="shop">Grand Shield</a>
-                                                    </div>
-                                                    <!-- End Product Name -->
-                                                    <!-- Product Price -->
-                                                    <div class="product-price">
-                                                        <span class="price old-price">₹1099.00</span><span
-                                                            class="price">₹999.00</span>
-                                                    </div>
-                                                    <!-- End Product Price -->
-
-                                                    <!-- Product Button -->
-                                                
-                                                    <!-- End Product Button -->
-                                                </div>
-                                                <!-- End product details -->
-                                            </div>
-                                        </div>
-
-                                        <div class="item col-item">
-
-                                            <div class="product-box">
-                                                <!-- Start Product Image -->
-                                                <div class="product-image">
-                                                    <!-- Start Product Image -->
-                                                    <a href="shop" class="product-img">
-                                                        <!-- Image -->
-                                                        <img class="primary blur-up lazyload"
-                                                            data-src="<?php echo $path ?>assets/img/shields/shield 44.jpg"
-                                                            src="<?php echo $path ?>assets/img/shields/shield 44.jpg"
-                                                            alt="Product" title="Product" width="625" height="625" />
-                                                        <!-- End Image -->
-                                                        <!-- Hover Image -->
-                                                        <img class="hover blur-up lazyload"
-                                                            data-src="<?php echo $path ?>assets/img/shields/shield 44.jpg"
-                                                            src="<?php echo $path ?>assets/img/shields/shield 44.jpg"
-                                                            alt="Product" title="Product" width="625" height="625" />
-                                                        <!-- End Hover Image -->
-                                                    </a>
-                                                    <!-- End Product Image -->
-
-
-                                                </div>
-                                                <!-- End Product Image -->
-                                                <!-- Start Product Details -->
-                                                <div class="product-details text-left">
-                                                    <!--Product Vendor-->
-                                                    <div class="product-vendor">General</div>
-                                                    <!--End Product Vendor-->
-                                                    <!-- Product Name -->
-                                                    <div class="product-name">
-                                                        <a href="shop">General Event Shield</a>
-                                                    </div>
-                                                    <!-- End Product Name -->
-                                                    <!-- Product Price -->
-                                                    <div class="product-price">
-                                                        <span class="price old-price">₹1099.00</span><span
-                                                            class="price">₹999.00</span>
-                                                    </div>
-                                                    <!-- End Product Price -->
-
-                                                    <!-- Product Button -->
-                                                    
-                                                    <!-- End Product Button -->
-                                                </div>
-                                                <!-- End product details -->
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-
-                                </div>
-                                <!--End Product Grid-->
-                            </div>
-
-                            <div class="tab-pane" id="dryfruits" role="tabpanel" aria-labelledby="dryfruits-tab">
-                                <!--Product Grid-->
-                                <div class="grid-view-items">
-                                    <div
-                                        class="grid-products pro-hover3 row col-row row-cols-lg-4 row-cols-md-3 row-cols-sm-3 row-cols-2">
-
-                                        <div class="item col-item">
-
-                                            <div class="product-box">
-                                                <!-- Start Product Image -->
-                                                <div class="product-image">
-                                                    <!-- Start Product Image -->
-                                                    <a href="shop" class="product-img">
-                                                        <!-- Image -->
-                                                        <img style ="height:325px" class="primary blur-up lazyload"
-                                                            data-src="<?php echo $path ?>assets/img/shields/medal 1.jpg"
-                                                            src="<?php echo $path ?>assets/img/shields/medal 1.jpg"
-                                                            alt="Product" title="Product" width="625" height="625" />
-                                                        <!-- End Image -->
-                                                        <!-- Hover Image -->
-                                                        <img style ="height:325px" class="hover blur-up lazyload"
-                                                            data-src="<?php echo $path ?>assets/img/shields/medal 1.jpg"
-                                                            src="<?php echo $path ?>assets/img/shields/medal 1.jpg"
-                                                            alt="Product" title="Product" width="625" height="625" />
-                                                        <!-- End Hover Image -->
-                                                    </a>
-                                                    <!-- End Product Image -->
-
-
-                                                </div>
-                                                <!-- End Product Image -->
-                                                <!-- Start Product Details -->
-                                                <div class="product-details text-left">
-                                                    <!--Product Vendor-->
-                                                    <div class="product-vendor">Horse Riding</div>
-                                                    <!--End Product Vendor-->
-                                                    <!-- Product Name -->
-                                                    <div class="product-name">
-                                                        <a href="shop">Horse Show Medal</a>
-                                                    </div>
-                                                    <!-- End Product Name -->
-                                                    <!-- Product Price -->
-                                                    <div class="product-price">
-                                                        <span class="price old-price">₹1099.00</span><span
-                                                            class="price">₹999.00</span>
-                                                    </div>
-                                                    <!-- End Product Price -->
-
-                                                    <!-- Product Button -->
-                                                  
-                                                    <!-- End Product Button -->
-                                                </div>
-                                                <!-- End product details -->
-                                            </div>
-                                        </div>
-
-                                        <div class="item col-item">
-
-                                            <div class="product-box">
-                                                <!-- Start Product Image -->
-                                                <div class="product-image">
-                                                    <!-- Start Product Image -->
-                                                    <a href="shop" class="product-img">
-                                                        <!-- Image -->
-                                                        <img style ="height:325px" class="primary blur-up lazyload"
-                                                            data-src="<?php echo $path ?>assets/img/shields/medal 3.jpg"
-                                                            src="<?php echo $path ?>assets/img/shields/medal 3.jpg"
-                                                            alt="Product" title="Product" width="625" height="625" />
-                                                        <!-- End Image -->
-                                                        <!-- Hover Image -->
-                                                        <img style ="height:325px" class="hover blur-up lazyload"
-                                                            data-src="<?php echo $path ?>assets/img/shields/medal 3.jpg"
-                                                            src="<?php echo $path ?>assets/img/shields/medal 3.jpg"
-                                                            alt="Product" title="Product" width="625" height="625" />
-                                                        <!-- End Hover Image -->
-                                                    </a>
-                                                    <!-- End Product Image -->
-
-
-                                                </div>
-                                                <!-- End Product Image -->
-                                                <!-- Start Product Details -->
-                                                <div class="product-details text-left">
-                                                    <!--Product Vendor-->
-                                                    <div class="product-vendor">General</div>
-                                                    <!--End Product Vendor-->
-                                                    <!-- Product Name -->
-                                                    <div class="product-name">
-                                                        <a href="shop">Cusatomized Medal</a>
-                                                    </div>
-                                                    <!-- End Product Name -->
-                                                    <!-- Product Price -->
-                                                    <div class="product-price">
-                                                        <span class="price old-price">₹1099.00</span><span
-                                                            class="price">₹999.00</span>
-                                                    </div>
-                                                    <!-- End Product Price -->
-
-                                                    <!-- Product Button -->
-                                                   
-                                                    <!-- End Product Button -->
-                                                </div>
-                                                <!-- End product details -->
-                                            </div>
-                                        </div>
-
-                                        <div class="item col-item">
-
-                                            <div class="product-box">
-                                                <!-- Start Product Image -->
-                                                <div class="product-image">
-                                                    <!-- Start Product Image -->
-                                                    <a href="shop" class="product-img">
-                                                        <!-- Image -->
-                                                        <img style ="height:325px" class="primary blur-up lazyload"
-                                                            data-src="<?php echo $path ?>assets/img/shields/medal 4.jpg"
-                                                            src="<?php echo $path ?>assets/img/shields/medal 4.jpg"
-                                                            alt="Product" title="Product" width="625" height="725" />
-                                                        <!-- End Image -->
-                                                        <!-- Hover Image -->
-                                                        <img style ="height:325px" class="hover blur-up lazyload"
-                                                            data-src="<?php echo $path ?>assets/img/shields/medal 4.jpg"
-                                                            src="<?php echo $path ?>assets/img/shields/medal 4.jpg"
-                                                            alt="Product" title="Product" width="625" height="725" />
-                                                        <!-- End Hover Image -->
-                                                    </a>
-                                                    <!-- End Product Image -->
-
-
-                                                </div>
-                                                <!-- End Product Image -->
-                                                <!-- Start Product Details -->
-                                                <div class="product-details text-left">
-                                                    <!--Product Vendor-->
-                                                    <div class="product-vendor">General</div>
-                                                    <!--End Product Vendor-->
-                                                    <!-- Product Name -->
-                                                    <div class="product-name">
-                                                        <a href="shop">Marathon Medal</a>
-                                                    </div>
-                                                    <!-- End Product Name -->
-                                                    <!-- Product Price -->
-                                                    <div class="product-price">
-                                                        <span class="price old-price">₹1099.00</span><span
-                                                            class="price">₹999.00</span>
-                                                    </div>
-                                                    <!-- End Product Price -->
-
-                                                    <!-- Product Button -->
-                                                    
-                                                    <!-- End Product Button -->
-                                                </div>
-                                                <!-- End product details -->
-                                            </div>
-                                        </div>
-
-                                        <div class="item col-item">
-
-                                            <div class="product-box">
-                                                <!-- Start Product Image -->
-                                                <div class="product-image">
-                                                    <!-- Start Product Image -->
-                                                    <a href="shop" class="product-img">
-                                                        <!-- Image -->
-                                                        <img style ="height:325px" class="primary blur-up lazyload"
-                                                            data-src="<?php echo $path ?>assets/img/shields/medal 2.jpg"
-                                                            src="<?php echo $path ?>assets/img/shields/medal 2.jpg"
-                                                            alt="Product" title="Product" width="625" height="725" />
-                                                        <!-- End Image -->
-                                                        <!-- Hover Image -->
-                                                        <img style ="height:325px" class="hover blur-up lazyload"
-                                                            data-src="<?php echo $path ?>assets/img/shields/medal 2.jpg"
-                                                            src="<?php echo $path ?>assets/img/shields/medal 2.jpg"
-                                                            alt="Product" title="Product" width="625" height="725" />
-                                                        <!-- End Hover Image -->
-                                                    </a>
-                                                    <!-- End Product Image -->
-
-
-                                                </div>
-                                                <!-- End Product Image -->
-                                                <!-- Start Product Details -->
-                                                <div class="product-details text-left">
-                                                    <!--Product Vendor-->
-                                                    <div class="product-vendor">General</div>
-                                                    <!--End Product Vendor-->
-                                                    <!-- Product Name -->
-                                                    <div class="product-name">
-                                                        <a href="shop">Marathon Medal</a>
-                                                    </div>
-                                                    <!-- End Product Name -->
-                                                    <!-- Product Price -->
-                                                    <div class="product-price">
-                                                        <span class="price old-price">₹1099.00</span><span
-                                                            class="price">₹999.00</span>
-                                                    </div>
-                                                    <!-- End Product Price -->
-
-                                                    <!-- Product Button -->
-                                                   
-                                                    <!-- End Product Button -->
-                                                </div>
-                                                <!-- End product details -->
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-
-                                </div>
-                                <!--End Product Grid-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            
 
             <!--Products Slider-->
 
@@ -1232,8 +615,7 @@
                             <p>Shop our new arrivals from established brands</p>
                         </div>
                         <div class="section-header-right text-start text-sm-end mt-3 mt-sm-0">
-                            <a href="shop" class="btn btn-primary">View More <i
-                                    class="icon anm anm-arw-right ms-2"></i></a>
+                            
                         </div>
                     </div>
 
@@ -1277,17 +659,7 @@
                                                     class="price">₹999.00</span>
                                             </div>
                                            
-                                            <div class="button-action">
-                                                <div class="addtocart-btn">
-
-                                                    <a href="shop"
-                                                        class="btn btn-secondary addtocart add-to-cart-modal">
-                                                        <i class="icon anm anm-basket-l me-2"></i><span
-                                                            class="text">Shop Now</span>
-                                                    </a>
-
-                                                </div>
-                                            </div>
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -1318,17 +690,7 @@
                                                     class="price">₹999.00</span>
                                             </div>
 
-                                            <div class="button-action">
-                                                <div class="addtocart-btn">
-
-                                                    <a href="shop"
-                                                        class="btn btn-secondary addtocart add-to-cart-modal">
-                                                        <i class="icon anm anm-basket-l me-2"></i><span
-                                                            class="text">Shop Now</span>
-                                                    </a>
-
-                                                </div>
-                                            </div>
+                                          
                                         </div>
                                     </div>
                                 </div>
@@ -1358,17 +720,7 @@
                                                 <span class="price old-price">$298.00</span><span
                                                     class="price">$199.00</span>
                                             </div>
-                                            <div class="button-action">
-                                                <div class="addtocart-btn">
-
-                                                    <a href="shop"
-                                                        class="btn btn-secondary addtocart add-to-cart-modal">
-                                                        <i class="icon anm anm-basket-l me-2"></i><span
-                                                            class="text">Shop Now</span>
-                                                    </a>
-
-                                                </div>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1399,17 +751,7 @@
                                                 <span class="price">$199.00</span>
                                             </div>
 
-                                            <div class="button-action">
-                                                <div class="addtocart-btn">
-
-                                                    <a href="shop"
-                                                        class="btn btn-secondary addtocart add-to-cart-modal">
-                                                        <i class="icon anm anm-basket-l me-2"></i><span
-                                                            class="text">Shop Now</span>
-                                                    </a>
-
-                                                </div>
-                                            </div>
+                                        
                                         </div>
                                     </div>
                                 </div>
@@ -1426,7 +768,506 @@
                                         width="309" height="483" />
                                 </div>
                                 <div class="ctg-content text-white d-flex-justify-center flex-nowrap flex-column h-100">
-                                    <h2 class="ctg-title text-white m-0"><span class="d-block">Summer</span> Sale</h2>
+                                    <h2 class="ctg-title text-white m-0"><span class="d-block">Best Offers</span> </h2>
+                                    <p class="saleText text-uppercase mb-0">30% Off</p>
+                                    <p class="ctg-des mt-1 mb-4">On all new arrival product</p>
+                                    <a class="btn btn-secondary explore-btn" href="shop">Shop Now <i
+                                            class="icon anm anm-arw-right ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section product-banner-slider pt-0">
+                <div class="container">
+                    <div class="section-header style2 d-flex-center justify-content-sm-between">
+                        <div class="section-header-left text-start">
+                            <h2 class="text-dark">New Arrivals</h2>
+                            <p>Shop our new arrivals from established brands</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                     
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 mb-4 mb-lg-0">
+                            <div class="ctg-bnr-wrap one position-relative h-100">
+                                <div class="ctg-image ratio ratio-1x1 h-100">
+                                    <img class="blur-up lazyload"
+                                        data-src="<?php echo $path ?>assets/img/slider/cup44.jpg"
+                                        src="<?php echo $path ?>assets/img/slider/cup44.jpg" alt="collection"
+                                        width="390" height="483" />
+                                </div>
+                                <div class="ctg-content text-white d-flex-justify-center flex-nowrap flex-column h-100">
+                                    <h2 class="ctg-title text-white m-0">Medal collections</h2>
+                                    <p class="ctg-des mt-3 mb-4">Shop our weekly edit of what's new in online at IMAX
+                                        collections.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-9">
+                            <div
+                                class="grid-products product-slider-3items gp15 arwOut5 hov-arrow circle-arrow arrowlr-0">
+                               
+
+                                
+                                <div class="item col-item">
+
+<div class="product-box">
+    <!-- Start Product Image -->
+    <div class="product-image">
+        <!-- Start Product Image -->
+        <a href="shop" class="product-img">
+            <!-- Image -->
+            <img style ="height:325px" class="primary blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/medal 1.jpg"
+                src="<?php echo $path ?>assets/img/shields/medal 1.jpg"
+                alt="Product" title="Product" width="625" height="625" />
+            <!-- End Image -->
+            <!-- Hover Image -->
+            <img style ="height:325px" class="hover blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/medal 1.jpg"
+                src="<?php echo $path ?>assets/img/shields/medal 1.jpg"
+                alt="Product" title="Product" width="625" height="625" />
+            <!-- End Hover Image -->
+        </a>
+        <!-- End Product Image -->
+
+
+    </div>
+    <!-- End Product Image -->
+    <!-- Start Product Details -->
+    <div class="product-details text-left">
+        <!--Product Vendor-->
+        <div class="product-vendor">Horse Riding</div>
+        <!--End Product Vendor-->
+        <!-- Product Name -->
+        <div class="product-name">
+            <a href="shop">Horse Show Medal</a>
+        </div>
+        <!-- End Product Name -->
+        <!-- Product Price -->
+        <div class="product-price">
+            <span class="price old-price">₹1099.00</span><span
+                class="price">₹999.00</span>
+        </div>
+        <!-- End Product Price -->
+
+        <!-- Product Button -->
+      
+        <!-- End Product Button -->
+    </div>
+    <!-- End product details -->
+</div>
+</div>
+
+<div class="item col-item">
+
+<div class="product-box">
+    <!-- Start Product Image -->
+    <div class="product-image">
+        <!-- Start Product Image -->
+        <a href="shop" class="product-img">
+            <!-- Image -->
+            <img style ="height:325px" class="primary blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/medal 3.jpg"
+                src="<?php echo $path ?>assets/img/shields/medal 3.jpg"
+                alt="Product" title="Product" width="625" height="625" />
+            <!-- End Image -->
+            <!-- Hover Image -->
+            <img style ="height:325px" class="hover blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/medal 3.jpg"
+                src="<?php echo $path ?>assets/img/shields/medal 3.jpg"
+                alt="Product" title="Product" width="625" height="625" />
+            <!-- End Hover Image -->
+        </a>
+        <!-- End Product Image -->
+
+
+    </div>
+    <!-- End Product Image -->
+    <!-- Start Product Details -->
+    <div class="product-details text-left">
+        <!--Product Vendor-->
+        <div class="product-vendor">General</div>
+        <!--End Product Vendor-->
+        <!-- Product Name -->
+        <div class="product-name">
+            <a href="shop">Cusatomized Medal</a>
+        </div>
+        <!-- End Product Name -->
+        <!-- Product Price -->
+        <div class="product-price">
+            <span class="price old-price">₹1099.00</span><span
+                class="price">₹999.00</span>
+        </div>
+        <!-- End Product Price -->
+
+        <!-- Product Button -->
+       
+        <!-- End Product Button -->
+    </div>
+    <!-- End product details -->
+</div>
+</div>
+
+<div class="item col-item">
+
+<div class="product-box">
+    <!-- Start Product Image -->
+    <div class="product-image">
+        <!-- Start Product Image -->
+        <a href="shop" class="product-img">
+            <!-- Image -->
+            <img style ="height:325px" class="primary blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/medal 4.jpg"
+                src="<?php echo $path ?>assets/img/shields/medal 4.jpg"
+                alt="Product" title="Product" width="625" height="725" />
+            <!-- End Image -->
+            <!-- Hover Image -->
+            <img style ="height:325px" class="hover blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/medal 4.jpg"
+                src="<?php echo $path ?>assets/img/shields/medal 4.jpg"
+                alt="Product" title="Product" width="625" height="725" />
+            <!-- End Hover Image -->
+        </a>
+        <!-- End Product Image -->
+
+
+    </div>
+    <!-- End Product Image -->
+    <!-- Start Product Details -->
+    <div class="product-details text-left">
+        <!--Product Vendor-->
+        <div class="product-vendor">General</div>
+        <!--End Product Vendor-->
+        <!-- Product Name -->
+        <div class="product-name">
+            <a href="shop">Marathon Medal</a>
+        </div>
+        <!-- End Product Name -->
+        <!-- Product Price -->
+        <div class="product-price">
+            <span class="price old-price">₹1099.00</span><span
+                class="price">₹999.00</span>
+        </div>
+        <!-- End Product Price -->
+
+        <!-- Product Button -->
+        
+        <!-- End Product Button -->
+    </div>
+    <!-- End product details -->
+</div>
+</div>
+
+<div class="item col-item">
+
+<div class="product-box">
+    <!-- Start Product Image -->
+    <div class="product-image">
+        <!-- Start Product Image -->
+        <a href="shop" class="product-img">
+            <!-- Image -->
+            <img style ="height:325px" class="primary blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/medal 2.jpg"
+                src="<?php echo $path ?>assets/img/shields/medal 2.jpg"
+                alt="Product" title="Product" width="625" height="725" />
+            <!-- End Image -->
+            <!-- Hover Image -->
+            <img style ="height:325px" class="hover blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/medal 2.jpg"
+                src="<?php echo $path ?>assets/img/shields/medal 2.jpg"
+                alt="Product" title="Product" width="625" height="725" />
+            <!-- End Hover Image -->
+        </a>
+        <!-- End Product Image -->
+
+
+    </div>
+    <!-- End Product Image -->
+    <!-- Start Product Details -->
+    <div class="product-details text-left">
+        <!--Product Vendor-->
+        <div class="product-vendor">General</div>
+        <!--End Product Vendor-->
+        <!-- Product Name -->
+        <div class="product-name">
+            <a href="shop">Marathon Medal</a>
+        </div>
+        <!-- End Product Name -->
+        <!-- Product Price -->
+        <div class="product-price">
+            <span class="price old-price">₹1099.00</span><span
+                class="price">₹999.00</span>
+        </div>
+        <!-- End Product Price -->
+
+        <!-- Product Button -->
+       
+        <!-- End Product Button -->
+    </div>
+    <!-- End product details -->
+</div>
+</div>
+
+                            </div>
+                        </div>
+
+                        <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-3 mt-4 mt-lg-0">
+                            <div class="ctg-bnr-wrap two position-relative h-100">
+                                <div class="ctg-image ratio ratio-1x1 h-100">
+                                    <img class="blur-up lazyload"
+                                        data-src="<?php echo $path ?>assets/img/slider/cup44.jpg"
+                                        src="<?php echo $path ?>assets/img/slider/cup44.jpg" alt="collection"
+                                        width="309" height="483" />
+                                </div>
+                                <div class="ctg-content text-white d-flex-justify-center flex-nowrap flex-column h-100">
+                                    <h2 class="ctg-title text-white m-0"><span class="d-block">Best Offers</span> </h2>
+                                    <p class="saleText text-uppercase mb-0">30% Off</p>
+                                    <p class="ctg-des mt-1 mb-4">On all new arrival product</p>
+                                    <a class="btn btn-secondary explore-btn" href="shop">Shop Now <i
+                                            class="icon anm anm-arw-right ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section product-banner-slider pt-0">
+                <div class="container">
+                    <div class="section-header style2 d-flex-center justify-content-sm-between">
+                        <div class="section-header-left text-start">
+                            <h2 class="text-dark">New Arrivals</h2>
+                            <p>Shop our new arrivals from established brands</p>
+                        </div>
+                        <div class="section-header-right text-start text-sm-end mt-3 mt-sm-0">
+                            
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-9">
+                            <div
+                                class="grid-products product-slider-3items gp15 arwOut5 hov-arrow circle-arrow arrowlr-0">
+                                <div class="item col-item">
+
+<div class="product-box">
+    <!-- Start Product Image -->
+    <div class="product-image">
+        <!-- Start Product Image -->
+        <a href="shop" class="product-img">
+            <!-- Image -->
+            <img class="primary blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/shield 11.jpg"
+                src="<?php echo $path ?>assets/img/shields/shield 11.jpg"
+                alt="Product" title="Product" width="625" height="625" />
+            <!-- End Image -->
+            <!-- Hover Image -->
+            <img class="hover blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/shield 11.jpg"
+                src="<?php echo $path ?>assets/img/shields/shield 11.jpg"
+                alt="Product" title="Product" width="625" height="625" />
+            <!-- End Hover Image -->
+        </a>
+        <!-- End Product Image -->
+
+
+    </div>
+    <!-- End Product Image -->
+    <!-- Start Product Details -->
+    <div class="product-details text-left">
+        <!--Product Vendor-->
+        <div class="product-vendor">General</div>
+        <!--End Product Vendor-->
+        <!-- Product Name -->
+        <div class="product-name">
+            <a href="shop">Grand Shield</a>
+        </div>
+        <!-- End Product Name -->
+        <!-- Product Price -->
+        <div class="product-price">
+            <span class="price old-price">₹1099.00</span><span
+                class="price">₹999.00</span>
+        </div>
+        <!-- End Product Price -->
+
+        <!-- Product Button -->
+      
+        <!-- End Product Button -->
+    </div>
+    <!-- End product details -->
+</div>
+</div>
+
+<div class="item col-item">
+
+<div class="product-box">
+    <!-- Start Product Image -->
+    <div class="product-image">
+        <!-- Start Product Image -->
+        <a href="shop" class="product-img">
+            <!-- Image -->
+            <img class="primary blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/shield 22.jpg"
+                src="<?php echo $path ?>assets/img/shields/shield 22.jpg"
+                alt="Product" title="Product" width="625" height="625" />
+            <!-- End Image -->
+            <!-- Hover Image -->
+            <img class="hover blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/shield 22.jpg"
+                src="<?php echo $path ?>assets/img/shields/shield 22.jpg"
+                alt="Product" title="Product" width="625" height="625" />
+            <!-- End Hover Image -->
+        </a>
+        <!-- End Product Image -->
+
+
+    </div>
+    <!-- End Product Image -->
+    <!-- Start Product Details -->
+    <div class="product-details text-left">
+        <!--Product Vendor-->
+        <div class="product-vendor">General</div>
+        <!--End Product Vendor-->
+        <!-- Product Name -->
+        <div class="product-name">
+            <a href="shop">Special Shield</a>
+        </div>
+        <!-- End Product Name -->
+        <!-- Product Price -->
+        <div class="product-price">
+            <span class="price old-price">₹1099.00</span><span
+                class="price">₹999.00</span>
+        </div>
+        <!-- End Product Price -->
+
+        <!-- Product Button -->
+      
+        <!-- End Product Button -->
+    </div>
+    <!-- End product details -->
+</div>
+</div>
+
+<div class="item col-item">
+
+<div class="product-box">
+    <!-- Start Product Image -->
+    <div class="product-image">
+        <!-- Start Product Image -->
+        <a href="shop" class="product-img">
+            <!-- Image -->
+            <img class="primary blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/shield 33.jpg"
+                src="<?php echo $path ?>assets/img/shields/shield 33.jpg"
+                alt="Product" title="Product" width="625" height="625" />
+            <!-- End Image -->
+            <!-- Hover Image -->
+            <img class="hover blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/shield 33.jpg"
+                src="<?php echo $path ?>assets/img/shields/shield 33.jpg"
+                alt="Product" title="Product" width="625" height="625" />
+            <!-- End Hover Image -->
+        </a>
+        <!-- End Product Image -->
+
+
+    </div>
+    <!-- End Product Image -->
+    <!-- Start Product Details -->
+    <div class="product-details text-left">
+        <!--Product Vendor-->
+        <div class="product-vendor">General</div>
+        <!--End Product Vendor-->
+        <!-- Product Name -->
+        <div class="product-name">
+            <a href="shop">Grand Shield</a>
+        </div>
+        <!-- End Product Name -->
+        <!-- Product Price -->
+        <div class="product-price">
+            <span class="price old-price">₹1099.00</span><span
+                class="price">₹999.00</span>
+        </div>
+        <!-- End Product Price -->
+
+        <!-- Product Button -->
+    
+        <!-- End Product Button -->
+    </div>
+    <!-- End product details -->
+</div>
+</div>
+
+<div class="item col-item">
+
+<div class="product-box">
+    <!-- Start Product Image -->
+    <div class="product-image">
+        <!-- Start Product Image -->
+        <a href="shop" class="product-img">
+            <!-- Image -->
+            <img class="primary blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/shield40.jpg"
+                src="<?php echo $path ?>assets/img/shields/shield40.jpg"
+                alt="Product" title="Product" width="625" height="625" />
+            <!-- End Image -->
+            <!-- Hover Image -->
+            <img class="hover blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/shield40.jpg"
+                src="<?php echo $path ?>assets/img/shields/shield40.jpg"
+                alt="Product" title="Product" width="625" height="625" />
+            <!-- End Hover Image -->
+        </a>
+        <!-- End Product Image -->
+
+
+    </div>
+    <!-- End Product Image -->
+    <!-- Start Product Details -->
+    <div class="product-details text-left">
+        <!--Product Vendor-->
+        <div class="product-vendor">General</div>
+        <!--End Product Vendor-->
+        <!-- Product Name -->
+        <div class="product-name">
+            <a href="shop">General Event Shield</a>
+        </div>
+        <!-- End Product Name -->
+        <!-- Product Price -->
+        <div class="product-price">
+            <span class="price old-price">₹1099.00</span><span
+                class="price">₹999.00</span>
+        </div>
+        <!-- End Product Price -->
+
+        <!-- Product Button -->
+        
+        <!-- End Product Button -->
+    </div>
+    <!-- End product details -->
+</div>
+</div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 mt-4 mt-lg-0">
+                            <div class="ctg-bnr-wrap two position-relative h-100">
+                                <div class="ctg-image ratio ratio-1x1 h-100">
+                                    <img class="blur-up lazyload"
+                                        data-src="<?php echo $path ?>assets/img/slider/cup44.jpg"
+                                        src="<?php echo $path ?>assets/img/slider/cup44.jpg" alt="collection"
+                                        width="309" height="483" />
+                                </div>
+                                <div class="ctg-content text-white d-flex-justify-center flex-nowrap flex-column h-100">
+                                    <h2 class="ctg-title text-white m-0"><span class="d-block">Best Offers</span> </h2>
                                     <p class="saleText text-uppercase mb-0">30% Off</p>
                                     <p class="ctg-des mt-1 mb-4">On all new arrival product</p>
                                     <a class="btn btn-secondary explore-btn" href="shop">Shop Now <i
