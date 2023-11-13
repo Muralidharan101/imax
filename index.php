@@ -604,7 +604,6 @@
 
                 </section> -->
 
-
             
 
             <!--Products Slider-->
@@ -613,7 +612,7 @@
                 <div class="container">
                     <div class="section-header style2 d-flex-center justify-content-sm-between">
                         <div class="section-header-left text-start">
-                            <h2 class="text-dark">New Arrivals</h2>
+                            <h2 class="text-dark">New Arrivals of Trophies</h2>
                             <p>Shop our new arrivals from established brands</p>
                         </div>
                         <div class="section-header-right text-start text-sm-end mt-3 mt-sm-0">
@@ -786,7 +785,7 @@
                 <div class="container">
                     <div class="section-header style2 d-flex-center justify-content-sm-between">
                         <div class="section-header-left text-start">
-                            <h2 class="text-dark">New Arrivals</h2>
+                            <h2 class="text-dark">New Arrivals of medals</h2>
                             <p>Shop our new arrivals from established brands</p>
                         </div>
 
@@ -815,8 +814,6 @@
                             <div
                                 class="grid-products product-slider-3items gp15 arwOut5 hov-arrow circle-arrow arrowlr-0">
                                
-
-
 
                                 <div class="item col-item">
 
@@ -1041,8 +1038,7 @@
                             </div>
 
                         </div> -->
-
-                    </div>
+      </div>
                 </div>
             </section>
             
@@ -1050,12 +1046,10 @@
                 <div class="container">
                     <div class="section-header style2 d-flex-center justify-content-sm-between">
                         <div class="section-header-left text-start">
-                            <h2 class="text-dark">New Arrivals</h2>
+                            <h2 class="text-dark">New Arrivals of sheilds</h2>
                             <p>Shop our new arrivals from established brands</p>
                         </div>
                         <div class="section-header-right text-start text-sm-end mt-3 mt-sm-0">
-
-                            
 
                         </div>
                     </div>
