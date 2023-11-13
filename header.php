@@ -38,7 +38,7 @@
                             <ul class="dropdown">
                                 <li><a href="shop_trophy.php" class="site-nav lvl-2">Trophies</a></li>
                                 <li><a href="shop_medal.php" class="site-nav lvl-2">Medals</a></li>
-                                <li><a href="shop_sheild.php" class="site-nav lvl-2">Shields</a></li>
+                                <li><a href="shop_shield.php" class="site-nav lvl-2">Shields</a></li>
                             </ul>
                         </li>
                         <li class="lvl1"><a href="gallery.php">Gallery</a>

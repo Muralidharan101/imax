@@ -1,5 +1,21 @@
 <?php
     include 'datab.php'; 
+
+    function getTotalItems() {
+        global $conn; // Assuming $conn is your database connection variable
+
+        $result = mysqli_query($conn, "SELECT COUNT(id) AS total FROM product_data WHERE `status`='Active' AND `product_type`='trophy'");
+
+        if ($result) {
+            $row = mysqli_fetch_assoc($result);
+            return $row['total'];
+        }
+
+        return 0;
+    }
+
+    $totalItems = getTotalItems();
+
 ?>
 
 <!DOCTYPE html>
@@ -210,7 +226,7 @@ padding:5px 10px;
                                 <form class="widget-content price-filter filterDD" action="#" method="post">
                                     <div id="slider-range" class="mt-2"></div>
                                     <div class="row">
-                                        <div class="col-10"><input id="amount" type="text"
+                                        <div class="col-12"><input id="amount" type="text" style="width: 100%;"
                                                 placeholder="Ex : ₹1000 to ₹10000"/></div>
                                     </div>
                                 </form>
@@ -307,18 +323,6 @@ padding:5px 10px;
                             <form class="form minisearch" id="header-search" action="#" method="get">
                                 <!--Search Field-->
                                 <div class="d-flex searchField">
-                                    <div class="search-category">
-                                        <select class="rgsearch-category rounded-end-0">
-                                            <option value="0">All Categories</option>
-                                            <option value="1">- All</option>
-                                            <option value="2">- Football</option>
-                                            <option value="3">- Cricket</option>
-                                            <option value="3">- Cricket</option>
-                                            <option value="3">- Volleyball</option>
-                                            <option value="3">- Throwball</option>
-
-                                        </select>
-                                    </div>
                                     <div class="input-box d-flex fl-1">
                                         <input type="text" class="input-text rounded-0 border-start-0 border-end-0"
                                             placeholder="Search for products..." value="" />
@@ -341,11 +345,11 @@ padding:5px 10px;
                                 </div>
                                 <div
                                     class="col-12 col-sm-4 col-md-4 col-lg-4 text-center product-count order-0 order-md-1 mb-3 mb-sm-0">
-                                    <span class="toolbar-product-count">Showing: 15 products</span>
+                                    <span class="toolbar-product-count">Showing: <?php echo $totalItems; ?> products</span>
                                 </div>
                                 <div
                                     class="col-8 col-sm-6 col-md-4 col-lg-4 text-right filters-toolbar-item d-flex justify-content-end order-2 order-sm-2">
-                                    <div class="filters-item d-flex align-items-center">
+                                    <!-- <div class="filters-item d-flex align-items-center">
                                         <label for="ShowBy"
                                             class="mb-0 me-2 text-nowrap d-none d-sm-inline-flex">Show:</label>
                                         <select name="ShowBy" id="ShowBy" class="filters-toolbar-show">
@@ -355,7 +359,7 @@ padding:5px 10px;
                                             <option>25</option>
                                             <option>30</option>
                                         </select>
-                                    </div>
+                                    </div> -->
                                     <div class="filters-item d-flex align-items-center ms-2 ms-lg-3">
                                         <label for="SortBy" class="mb-0 me-2 text-nowrap d-none">Sort by:</label>
                                         <select name="SortBy" id="SortBy" class="filters-toolbar-sort">
@@ -376,26 +380,34 @@ padding:5px 10px;
 
                         <!--Product Grid-->
                         <div class="grid-products grid-view-items">
-                            <div class="row col-row product-options row-cols-lg-3 row-cols-md-3 row-cols-sm-3 row-cols-2"
-                                id="cart-product">
-
+                            <div class="row col-row product-options row-cols-lg-3 row-cols-md-3 row-cols-sm-3 row-cols-2" id="cart-product">
+                                <!-- Your product items go here -->
                             </div>
 
                             <!-- Pagination -->
                             <nav class="clearfix pagination-bottom">
                                 <ul class="pagination justify-content-center">
-                                    <li class="page-item disabled"><a class="page-link" href="#"><i
-                                                class="icon anm anm-angle-left-l"></i></a></li>
-                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link dot" href="#">...</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                    <li class="page-item"><a class="page-link" href="#"><i
-                                                class="icon anm anm-angle-right-l"></i></a></li>
+                                <?php
+                                    $itemsPerPage = 30;
+                                    $currentPage = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+
+                                    // Calculate total pages if total items are greater than 0
+                                    if ($totalItems > 0) {
+                                        $totalPages = ceil($totalItems / $itemsPerPage);
+
+                                        // Assuming $currentPage is the current page number
+                                        for ($i = 1; $i <= $totalPages; $i++) {
+                                            $activeClass = ($i == $currentPage) ? 'active' : '';
+                                            echo '<li class="page-item ' . $activeClass . '"><a class="page-link" href="?page=' . $i . '">' . $i . '</a></li>';
+                                        }
+                                    }
+                                ?>
+
                                 </ul>
                             </nav>
                             <!-- End Pagination -->
                         </div>
+
                         <!--End Product Grid-->
                     </div>
                     <!--End Products-->
@@ -436,13 +448,17 @@ padding:5px 10px;
         var selectedValues = [];
         var selectedValuesOutput;
         var categoryValue;
+        var startValue;
+        var endValue;
+        
 
+        
 
         $("#slider-range").slider({
             range: true,
-            min: 1000,
+            min: 100,
             max: 100000,
-            values: [1000, 10000],
+            values: [100, 10000],
             slide: function (event, ui) {
                 $("#amount").val("₹" + ui.values[0] + " - ₹" + ui.values[1]);
             }
@@ -453,10 +469,15 @@ padding:5px 10px;
         setpriceRange.addEventListener('click', function (e) {
             e.preventDefault();
             var inputElement = document.getElementById("amount");
-            priceInputValue = inputElement.value;
+            inputString = inputElement.value;
+            var priceInputVal = inputString.replace(/₹/g, '');
+            var priceInputValue = priceInputVal.split('-').map(value => value.trim());
 
-            // Process the input value as needed
-            console.log("Input Value: " + priceInputValue);
+            startValue = priceInputValue[0];
+            endValue = priceInputValue[1];  
+
+            // console.log("Start: " + startValue);
+            // console.log("End: " + endValue);
         });
 
 
@@ -519,78 +540,126 @@ padding:5px 10px;
             $('#filteration').click(function (e) {
                 e.preventDefault();
 
-                if (selectedCategory === null) {
+                if (selectedCategory === null && priceInputValue == '') {
                     toastr.error("Select a category to filter products.", "Error");
+                } else if(selectedCategory === null) {
+                    var fd = new FormData();
+
+                    fd.append("start", startValue);
+                    fd.append("end", endValue);
+
+                    fd.append('product_type', 'trophy');
+
+                    fetchingData(fd);
                 } else {
                     var fd = new FormData();
                     fd.append("Category", selectedCategory);
-                    fd.append("Price",priceInputValue)
-                    // Add other parameters if needed
+
+                    fd.append("start", startValue);
+                    fd.append("end", endValue);
+
+                    fd.append('product_type', 'trophy');
 
                     fetchingData(fd);
                 }
             });
 
-            // Function to handle AJAX call
-            function fetchingData(formData) {
-                $.ajax({
-                    url: 'your_backend_endpoint.php',
-                    type: 'POST',
-                    data: formData,
-                    contentType: false,
-                    processData: false,
-                    success: function (response) {
-                        var result = JSON.parse(response);
-                        if (result.status === "Success") {
-                            toastr.success("Products filtered successfully", "Success");
-                        } else {
-                            toastr.error("Failed to filter products", "Error");
-                        }
-                    },
-                    error: function (xhr, status, error) {
-                        toastr.error("Error occurred while filtering products", "Error");
-                    }
-                });
+            var param = new URLSearchParams(window.location.search);
+            var categoryParam = param.get('category');
+            var pageParam = param.get('page');
+        
+            if(pageParam !== null && pageParam !== '') {
+                var pages = pageParam;   
+                console.log(pageParam);
             }
-        });
-
-        $(document).ready(function () {
-            var product_id;
-
-            function colorList() {
-                $.ajax({
-                    url: 'dashboard/main/ajax/color/list_color.php',
-                    type: 'get',
-                    success: function (response) {
-                        var result = JSON.parse(response);
-
-                        if (result.status == "Success") {
-                            var data = result.data;
-                            var colorOptions = document.getElementById("colorOptions");
-
-                            data.map(obj => {
-                                var checkbox = document.createElement("input");
-                                checkbox.type = "checkbox";
-                                checkbox.name =
-                                    "productColor[]"; // You can set a name for the checkbox
-                                checkbox.value = obj.color;
-                                checkbox.style.marginRight = "5px";
-
-                                var label = document.createElement("label");
-                                label.style.marginRight = "10px"; // Add margin to the right
-
-                                label.appendChild(checkbox);
-                                label.appendChild(document.createTextNode(obj.color));
-
-                                // colorOptions.appendChild(label);
-                            });
-                        }
-                    }
-                });
+            
+            if(categoryParam !== null && categoryParam !== '') {
+                var category = categoryParam;
+                console.log(category);
+                categoryFilter()
+            } else {
+                fetchdata();
             }
-            colorList();
+            function categoryFilter() {
+                    console.log('1');
+
+                    var fd = new FormData();
+                    fd.append('Category', category);
+                    fd.append('product_type', 'trophy');
+
+
+                    $.ajax({
+                        url: 'ajax/products/filter_by_cat_a_pt.php',
+                        type: 'post',
+                        contentType:false,
+                        processData: false,
+                        data: fd,
+
+                        success:function(response){
+                            var result = JSON.parse(response);
+
+                            if(result.status == 'Success') {
+                               
+
+                                var cart = document.getElementById('cart-product');
+                                cart.innerHTML = "";
+                                
+                                var data = result.data;
+                                if (Array.isArray(data)) {
+                                    data.forEach(function(obj) {
+                                        var cartHtml = `
+
+                                                <div class="item col-item">
+                                                    <div class="product-box">
+                                                        <div class="product-image">
+                                                            <a href="product-desc.php?id=${obj.product_id}" class="product-img rounded-0">
+                                                                <img class="main-img"
+                                                                    data-src="product_images/${obj.product_id}/main/${obj.product_img}"
+                                                                    src="product_images/${obj.product_id}/main/${obj.product_img}"
+                                                                    alt="Product Main Image" title="Product Main Image" width="625" height="808" />
+                                                                </a>
+
+                                                        </div>
+                                                        <div class="product-details text-left">
+                                                            <span class="product-vendor">${obj.product_category}</span>
+                                                            <div class="product-name">
+                                                                <a href="product-desc.php?id=${obj.id}">${obj.product_name}</a>
+                                                            </div>
+                                                            <div class="product-price">
+                                                                <span class="price">₹${obj.product_price}</span>
+                                                            </div>
+                                                            <p class="sort-desc hidden">${obj.product_desc}</p>
+                                                            <div class="button-action hidden">
+                                                                <div class="addtocart-btn">
+                                                                    <div class="addtocart" action="#" method="post">
+                                                                        <a href="#addtocart-modal" class="btn btn-md add-to-cart-modal"
+                                                                            data-bs-toggle="modal" data-bs-target="#addtocart_modal">
+                                                                            <i class="icon anm anm-cart-l me-2"></i><span
+                                                                                class="text">Add to Cart</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            `;
+                                            cart.insertAdjacentHTML("beforeend", cartHtml);
+                                    })
+                                } else {
+                                    console.error("Data is not an array.");
+                                }
+                            }
+                        }
+                    })
+                }
 
             function fetchdata() {
+
+                var fd = new FormData();
+
+                fd.append('page', pages);
+
                 $.ajax({
                     url: 'ajax/trophy_list.php',
                     type: 'get',
@@ -662,7 +731,115 @@ padding:5px 10px;
                     }
                 })
             }
-            fetchdata();
+               
+            function fetchingData(formData) {
+                
+                $.ajax({
+                    url: 'ajax/products/filter_products.php',
+                    type: 'POST',
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                    success: function (response) {
+                        console.log(response);
+                        var result = JSON.parse(response);
+                        
+                        if (result.status === "Success") {
+                            
+                            var cart = document.getElementById('cart-product');
+                            cart.innerHTML = "";
+                            
+                            var data = result.data;
+                            if (Array.isArray(data)) {
+                                data.forEach(function(obj) {
+                                    var cartHtml = `
+
+                                            <div class="item col-item">
+                                                <div class="product-box">
+                                                    <div class="product-image">
+                                                        <a href="product-desc.php?id=${obj.product_id}" class="product-img rounded-0">
+                                                            <img class="main-img"
+                                                                data-src="product_images/${obj.product_id}/main/${obj.product_img}"
+                                                                src="product_images/${obj.product_id}/main/${obj.product_img}"
+                                                                alt="Product Main Image" title="Product Main Image" width="625" height="808" />
+                                                            </a>
+
+                                                    </div>
+                                                    <div class="product-details text-left">
+                                                        <span class="product-vendor">${obj.product_category}</span>
+                                                        <div class="product-name">
+                                                            <a href="product-desc.php?id=${obj.id}">${obj.product_name}</a>
+                                                        </div>
+                                                        <div class="product-price">
+                                                            <span class="price">₹${obj.product_price}</span>
+                                                        </div>
+                                                        <p class="sort-desc hidden">${obj.product_desc}</p>
+                                                        <div class="button-action hidden">
+                                                            <div class="addtocart-btn">
+                                                                <div class="addtocart" action="#" method="post">
+                                                                    <a href="#addtocart-modal" class="btn btn-md add-to-cart-modal"
+                                                                        data-bs-toggle="modal" data-bs-target="#addtocart_modal">
+                                                                        <i class="icon anm anm-cart-l me-2"></i><span
+                                                                            class="text">Add to Cart</span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        `;
+                                        cart.insertAdjacentHTML("beforeend", cartHtml);
+                                })
+                            }
+                        } else {
+                            fetchdata();
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        toastr.error("Error occurred while filtering products", "Error");
+                    }
+                });
+            }
+        });
+
+        $(document).ready(function () {
+            var product_id;
+
+            function colorList() {
+                $.ajax({
+                    url: 'dashboard/main/ajax/color/list_color.php',
+                    type: 'get',
+                    success: function (response) {
+                        var result = JSON.parse(response);
+
+                        if (result.status == "Success") {
+                            var data = result.data;
+                            var colorOptions = document.getElementById("colorOptions");
+
+                            data.map(obj => {
+                                var checkbox = document.createElement("input");
+                                checkbox.type = "checkbox";
+                                checkbox.name =
+                                    "productColor[]"; // You can set a name for the checkbox
+                                checkbox.value = obj.color;
+                                checkbox.style.marginRight = "5px";
+
+                                var label = document.createElement("label");
+                                label.style.marginRight = "10px"; // Add margin to the right
+
+                                label.appendChild(checkbox);
+                                label.appendChild(document.createTextNode(obj.color));
+
+                                // colorOptions.appendChild(label);
+                            });
+                        }
+                    }
+                });
+            }
+            colorList();
+
+            
             function fetchSidebarCategory() {
     $.ajax({
         url: 'ajax/category_list_sidebar.php',

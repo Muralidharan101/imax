@@ -1,5 +1,8 @@
 RewriteEngine on
 
 RewriteRule ^home index.php
+RewriteRule ^shop_trophy shop_trophy.php
+RewriteRule ^shop_sheild shop_sheild.php
+RewriteRule ^shop_medal shop_medal.php
 
 

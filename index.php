@@ -611,7 +611,7 @@
                 <div class="container">
                     <div class="section-header style2 d-flex-center justify-content-sm-between">
                         <div class="section-header-left text-start">
-                            <h2 class="text-dark">New Arrivals</h2>
+                            <h2 class="text-dark">New Arrivals of Trophies</h2>
                             <p>Shop our new arrivals from established brands</p>
                         </div>
                         <div class="section-header-right text-start text-sm-end mt-3 mt-sm-0">
@@ -784,7 +784,7 @@
                 <div class="container">
                     <div class="section-header style2 d-flex-center justify-content-sm-between">
                         <div class="section-header-left text-start">
-                            <h2 class="text-dark">New Arrivals</h2>
+                            <h2 class="text-dark">New Arrivals of medals</h2>
                             <p>Shop our new arrivals from established brands</p>
                         </div>
                     </div>
@@ -1042,7 +1042,7 @@
                 <div class="container">
                     <div class="section-header style2 d-flex-center justify-content-sm-between">
                         <div class="section-header-left text-start">
-                            <h2 class="text-dark">New Arrivals</h2>
+                            <h2 class="text-dark">New Arrivals of sheilds</h2>
                             <p>Shop our new arrivals from established brands</p>
                         </div>
                         <div class="section-header-right text-start text-sm-end mt-3 mt-sm-0">

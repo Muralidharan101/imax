@@ -1,2109 +1,2042 @@
 <?php
     require_once 'datab.php';
 ?>
+
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-    
-<!-- Mirrored from www.annimexweb.com/items/hema/shop-left-sidebar.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Sep 2023 19:35:01 GMT -->
+
+<!-- Mirrored from www.annimexweb.com/items/hema/index4-electronic.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Sep 2023 19:27:26 GMT -->
+
 <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="description" content="description">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Title Of Site -->
-        <title>IMAX TROPHIES | Home</title>
-        <!-- Favicon -->
-        <link rel="shortcut icon" href="<?php include('path.php');?>assets/images/favicon.png" />
-        <!-- Plugins CSS -->
-        <link rel="stylesheet" href="<?php echo $path ?>assets/css/plugins.css">
-        <!-- Main Style CSS -->
-        <link rel="stylesheet" href="<?php echo $path ?>assets/css/style-min.css">
-        <link rel="stylesheet" href="<?php echo $path ?>assets/css/responsive.css">
-    </head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Title Of Site -->
+    <title>IMAX Trophies | Home</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="<?php echo $path ?>assets/images/favicon.png" />
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="<?php echo $path ?>assets/css/plugins.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="<?php echo $path ?>assets/css/style-min.css">
+    <link rel="stylesheet" href="<?php echo $path ?>assets/css/responsive.css">
+</head>
 
-    <body class="shop-page shop-left-sidebar-page">
-        <!--Page Wrapper-->
-        <div class="page-wrapper">
-            <!--Top Header-->
-           
-            <!--End Top Header-->
-
+<body class="template-index index-demo4">
+    <!--Page Wrapper-->
+    <div class="page-wrapper">
             <!--Header-->
-            <header class="header d-flex align-items-center header-1 header-fixed">
-                <div class="container">        
-                    <div class="row">
-                        <!--Logo-->
-                        <div class="logo col-5 col-sm-3 col-md-3 col-lg-2 align-self-center">
-                            <a class="logoImg" href="javascript:void(0)"><img src="<?php echo $path ?>img/imax-footer.png" alt="Hema Multipurpose Html Template" title="Hema Multipurpose Html Template" style="width: 100px;"/></a>
-                        </div>
-                        <!--End Logo-->
-                        <!--Menu-->
-                        <div class="col-1 col-sm-1 col-md-1 col-lg-7 align-self-center d-menu-col">
-                            <nav class="navigation" id="AccessibleNav">
-                                <ul id="siteNav" class="site-nav medium center">
-                                    
-                                    <li class="lvl1"><a href="javascript:void(0)">About us</a>
-                                    </li>
-                                    <!-- <li class="lvl1"><a href="javascript:void(0)">Shop</a>
-                                    </li>
-                                    <li class="lvl1"><a href="javascript:void(0)">Gallery</a>
-                                    </li>  -->
-                                    <li class="lvl1"><a href="javascript:void(0)">Contact</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <!--End Menu-->
-                        <!--Right Icon-->
-                        <div class="col-7 col-sm-9 col-md-9 col-lg-3  align-self-center icons-col text-right">
-                            <!--Search-->
-                            <!-- <div class="account-parent iconset">
-                                <div class="select-wrap language-picker float-start ">
-                                    <ul class="default-option">
-                                        <li><div class="option english"><div class="icon"><img src="assets/images/flag/english.png" alt="english" width="24" height="24"></div><span>English</span></div></li>
-                                    </ul>
-                                    <ul class="select-ul">
-                                        <li><div class="option english"><div class="icon"><img src="assets/images/flag/english.png" alt="english" width="24" height="24"></div><span>English</span></div></li>
-                                        <li><div class="option arabic"><div class="icon"><img src="assets/images/flag/arabic.png" alt="arabic" width="24" height="24"></div><span>Arabic</span></div></li>
-                                        <li><div class="option english"><div class="icon"><img src="assets/images/flag/french.png" alt="french" width="24" height="24"></div><span>French</span></div></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            -->
-                             <div class="d-flex justify-content-end">
-                                <div class="select-wrap language-picker float-start" style="margin-right: 10px;">
-                                    <ul class="default-option">
-                                        <li><div class="option english"><div class="icon"><img src="<?php echo $path ?>assets/images/flag/english.png" alt="english" width="24" height="24"></div><span>English</span></div></li>
-                                    </ul>
-                                    <ul class="select-ul">
-                                        <li><div class="option english"><div class="icon"><img src="<?php echo $path ?>assets/images/flag/english.png" alt="english" width="24" height="24"></div><span>English</span></div></li>
-                                        <li><div class="option arabic"><div class="icon"><img src="<?php echo $path ?>assets/images/flag/india.png" alt="தமிழ்" width="24" height="24" style="height: 10px !important;"></div><span>தமிழ்</span></div></li>
-                                        <li><div class="option english"><div class="icon"><img src="<?php echo $path ?>assets/images/flag/india.png" alt="हिन्दी " width="24" height="24" style="height: 10px !important;"></div><span>हिन्दी </span></div></li>
-                                    </ul>
-                                </div>
-                                <div class="account-parent iconset">
-                                    <a href="tel:401234567890">
-                                        <i class="icon anm anm-phone-l me-2"></i>
-                                    </a>
-                                </div>
-                                <!--End Search-->
-                                <!--Account-->
-                                <div class="account-parent iconset">
-                                    <div class="account-link" title="Account"><i class="hdr-icon icon anm anm-user-al"></i></div>
-                                    <div id="accountBox">
-                                        <div class="customer-links">
-                                            <ul class="m-0">
-                                                <li><a href="javascript:void(0)"><i class="icon anm anm-sign-in-al"></i>Sign In</a></li>
-                                                <li><a href="javascript:void(0)"><i class="icon anm anm-user-al"></i>Register</a></li>
-                                                <li><a href="javascript:void(0)"><i class="icon anm anm-user-cil"></i>My Account</a></li>
-                                                <li><a href="javascript:void(0)"><i class="icon anm anm-heart-l"></i>Wishlist</a></li>
-                                                <li><a href="javascript:void(0)"><i class="icon anm anm-random-r"></i>Compare</a></li>
-                                                <li><a href="javascript:void(0)"><i class="icon anm anm-sign-out-al"></i>Sign out</a></li>
-                                            </ul>
+            <?php include('header.php'); ?>
+        <!-- Body Container -->
+        <div id="page-content" class="mb-0">
+            <!--Home Slideshow-->
+            <section class="slideshow slideshow-wrapper image-below-content-mobile">
+                    <div class="home-slideshow slick-arrow-dots circle-dots">
+                        <div class="slide">
+                            <div class="slideshow-wrap">
+                                <picture>
+                                    <source media="(max-width:767px)" srcset="<?php echo $path ?>main/img/banner1.jpg" width="1100" height="800">
+                                    <img class="blur-up lazyload" src="<?php echo $path ?>main/img/banner1.jpg" alt="slideshow" title="" width="1920" height="800"/>
+                                </picture> 
+                                <!-- <div class="container">
+                                    <div class="slideshow-content slideshow-overlay middle-right hidden-sm">
+                                        <div class="slideshow-content-in">
+                                            <div class="wrap-caption animation style1" style="background-color:gainsboro;">
+                                                <p class="ss-small-title">Precision, Quality & Longevity</p>
+                                                <h2 class="ss-mega-title">IMAX Trophies</h2>
+                                                <div class="ss-btnWrap">
+                                                    <a class="btn btn-primary" href="shop-grid-view.html">Explore now</a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!--End Account-->
-                                <!--Wishlist-->
-                                <!-- <div class="wishlist-link iconset" title="Wishlist"><a href="wishlist-style1.html"><i class="hdr-icon icon anm anm-heart-l"></i><span class="wishlist-count">0</span></a></div> -->
-                                <!--End Wishlist-->
-                                <!--Minicart-->
-                                <div class="header-cart iconset" title="Cart">
-                                    <a href="#;" class="header-cart btn-minicart clr-none" data-bs-toggle="offcanvas" data-bs-target="#minicart-drawer"><i class="hdr-icon icon anm anm-cart-l"></i><span class="cart-count">2</span></a>
-                                </div>
-                                <!--End Minicart-->
-                                <!--Mobile Toggle-->
-                                <button type="button" class="iconset pe-0 menu-icon js-mobile-nav-toggle mobile-nav--open d-lg-none" title="Menu"><i class="hdr-icon icon anm anm-times-l"></i><i class="hdr-icon icon anm anm-bars-r"></i></button>
-                                <!--End Mobile Toggle-->
-                            </div>
-                            
-                        </div>
-                        <!--End Right Icon-->
-                    </div>
-                </div>
-            </header>
-            <!--End Header-->
-            <!--Mobile Menu-->
-            <div class="mobile-nav-wrapper" role="navigation">
-                <div class="closemobileMenu">Close Menu <i class="icon anm anm-times-l"></i></div>
-                <ul id="MobileNav" class="mobile-nav">
-                    <li class="lvl1"><a href="javascript:void(0)">Home</a>
-                    </li>
-                    <!-- <li class="lvl1 parent megamenu"><a href="#">Shop</a>
-                    </li> -->
-                    <li class="lvl1 parent megamenu"><a href="javascript:void(0)">About us </a>
-                    </li>
-                    <!-- <li class="lvl1 parent megamenu"><a href="javascript:void(0)">Gallery </a>
-                    </li> -->
-                    <li class="lvl1 parent dropdown"><a href="#;">Contact </a>
-                    </li>
-                    <li class="mobile-menu-bottom">
-                        <div class="mobile-links"> 
-                            <ul class="list-inline d-inline-flex flex-column w-100">
-                                <li><a href="javascript:void(0)" class="d-flex align-items-center"><i class="icon anm anm-sign-in-al"></i>Sign In</a></li>
-                                <li><a href="javascript:void(0)" class="d-flex align-items-center"><i class="icon anm anm-user-al"></i>Register</a></li>
-                                <li><a href="javascript:void(0)" class="d-flex align-items-center"><i class="icon anm anm-user-cil"></i>My Account</a></li>
-                                <li class="title h5">Need Help?</li>
-                                <li><a href="tel:401234567890" class="d-flex align-items-center"><i class="icon anm anm-phone-l"></i> +91 9876543210</a></li>
-                                <li><a href="mailto:info@example.com" class="d-flex align-items-center"><i class="icon anm anm-envelope-l"></i> imax@gmail.com</a></li>
-                            </ul>
-                        </div>
-                        <div class="mobile-follow mt-2">  
-                            <h5 class="title">Follow Us</h5>
-                            <ul class="list-inline social-icons d-inline-flex mt-1">
-                                <li class="list-inline-item"><a href="#" title="Facebook"><i class="icon anm anm-facebook-f"></i></a></li>
-                                <li class="list-inline-item"><a href="#" title="Twitter"><i class="icon anm anm-twitter"></i></a></li>
-                                <li class="list-inline-item"><a href="#" title="Pinterest"><i class="icon anm anm-pinterest-p"></i></a></li>
-                                <li class="list-inline-item"><a href="#" title="Linkedin"><i class="icon anm anm-linkedin-in"></i></a></li>
-                                <li class="list-inline-item"><a href="#" title="Instagram"><i class="icon anm anm-instagram"></i></a></li>
-                                <li class="list-inline-item"><a href="#" title="Youtube"><i class="icon anm anm-youtube"></i></a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <!--End Mobile Menu-->
-
-            <!-- Body Container -->
-            <div id="page-content"> 
-                <!--Page Header-->
-                
-                <!--End Page Header-->
-
-                <!--Main Content-->
-                <div class="container mt-5">
-                    <!--Category Slider-->
-                    <div class="collection-slider-6items gp10 slick-arrow-dots sub-collection section pt-0 slick-initialized slick-slider"><button class="slick-prev slick-arrow" aria-label="Previous" type="button" style="">Previous</button><div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 4300px; transform: translate3d(-2580px, 0px, 0px);"><div class="slick-slide slick-cloned" data-slick-index="-6" id="" aria-hidden="true" style="width: 215px;" tabindex="-1"><div><div class="category-item zoomscal-hov" style="width: 100%; display: inline-block;">
-                            <a href="shop-left-sidebar.html" class="category-link clr-none" tabindex="-1">
-                                <div class="zoom-scal zoom-scal-nopb rounded-0"><img class="rounded-0 blur-up lazyload" data-src="assets/images/collection/sub-collection2.jpg" src="assets/images/collection/sub-collection2.jpg" alt="Women's" title="Women's" width="365" height="365"></div>
-                                <div class="details text-center">
-                                    <h4 class="category-title mb-0">Women's</h4>
-                                    <p class="counts">24 Items</p>
-                                </div>
-                            </a>
-                        </div></div></div><div class="slick-slide slick-cloned" data-slick-index="-5" id="" aria-hidden="true" style="width: 215px;" tabindex="-1"><div><div class="category-item zoomscal-hov" style="width: 100%; display: inline-block;">
-                            <a href="shop-left-sidebar.html" class="category-link clr-none" tabindex="-1">
-                                <div class="zoom-scal zoom-scal-nopb rounded-0"><img class="rounded-0 blur-up lazyload" data-src="assets/images/collection/sub-collection3.jpg" src="assets/images/collection/sub-collection3.jpg" alt="Top" title="Top" width="365" height="365"></div>
-                                <div class="details text-center">
-                                    <h4 class="category-title mb-0">Top</h4>
-                                    <p class="counts">13 Items</p>
-                                </div>
-                            </a>
-                        </div></div></div><div class="slick-slide slick-cloned" data-slick-index="-4" id="" aria-hidden="true" style="width: 215px;" tabindex="-1"><div><div class="category-item zoomscal-hov" style="width: 100%; display: inline-block;">
-                            <a href="shop-left-sidebar.html" class="category-link clr-none" tabindex="-1">
-                                <div class="zoom-scal zoom-scal-nopb rounded-0"><img class="rounded-0 blur-up lazyloaded" data-src="assets/images/collection/sub-collection4.jpg" src="assets/images/collection/sub-collection4.jpg" alt="Bottom" title="Bottom" width="365" height="365"></div>
-                                <div class="details text-center">
-                                    <h4 class="category-title mb-0">Bottom</h4>
-                                    <p class="counts">26 Items</p>
-                                </div>
-                            </a>
-                        </div></div></div><div class="slick-slide slick-cloned" data-slick-index="-3" id="" aria-hidden="true" style="width: 215px;" tabindex="-1"><div><div class="category-item zoomscal-hov" style="width: 100%; display: inline-block;">
-                            <a href="shop-left-sidebar.html" class="category-link clr-none" tabindex="-1">
-                                <div class="zoom-scal zoom-scal-nopb rounded-0"><img class="rounded-0 blur-up lazyloaded" data-src="assets/images/collection/sub-collection5.jpg" src="assets/images/collection/sub-collection5.jpg" alt="T-Shirts" title="T-Shirts" width="365" height="365"></div>
-                                <div class="details text-center">
-                                    <h4 class="category-title mb-0">T-Shirts</h4>
-                                    <p class="counts">18 Items</p>
-                                </div>
-                            </a>
-                        </div></div></div><div class="slick-slide slick-cloned" data-slick-index="-2" id="" aria-hidden="true" style="width: 215px;" tabindex="-1"><div><div class="category-item zoomscal-hov" style="width: 100%; display: inline-block;">
-                            <a href="shop-left-sidebar.html" class="category-link clr-none" tabindex="-1">
-                                <div class="zoom-scal zoom-scal-nopb rounded-0"><img class="rounded-0 blur-up lazyloaded" data-src="assets/images/collection/sub-collection6.jpg" src="assets/images/collection/sub-collection6.jpg" alt="Shirts" title="Shirts" width="365" height="365"></div>
-                                <div class="details text-center">
-                                    <h4 class="category-title mb-0">Shirts</h4>
-                                    <p class="counts">11 Items</p>
-                                </div>
-                            </a>
-                        </div></div></div><div class="slick-slide slick-cloned" data-slick-index="-1" id="" aria-hidden="true" style="width: 215px;" tabindex="-1"><div><div class="category-item zoomscal-hov" style="width: 100%; display: inline-block;">
-                            <a href="shop-left-sidebar.html" class="category-link clr-none" tabindex="-1">
-                                <div class="zoom-scal zoom-scal-nopb rounded-0"><img class="rounded-0 blur-up lazyloaded" data-src="assets/images/collection/sub-collection24.jpg" src="assets/images/collection/sub-collection24.jpg" alt="Jeans" title="Jeans" width="365" height="365"></div>
-                                <div class="details text-center">
-                                    <h4 class="category-title mb-0">Jeans</h4>
-                                    <p class="counts">28 Items</p>
-                                </div>
-                            </a>
-                        </div></div></div><div class="slick-slide" data-slick-index="0" aria-hidden="true" style="width: 215px;" tabindex="-1"><div><div class="category-item zoomscal-hov" style="width: 100%; display: inline-block;">
-                            <a href="shop-left-sidebar.html" class="category-link clr-none" tabindex="-1">
-                                <div class="zoom-scal zoom-scal-nopb rounded-0"><img class="rounded-0 blur-up lazyloaded" data-src="assets/images/collection/sub-collection1.jpg" src="assets/images/collection/sub-collection1.jpg" alt="Men's" title="Men's" width="365" height="365"></div>
-                                <div class="details text-center">
-                                    <h4 class="category-title mb-0">Men's</h4>
-                                    <p class="counts">20 Items</p>
-                                </div>
-                            </a>
-                        </div></div></div><div class="slick-slide" data-slick-index="1" aria-hidden="true" style="width: 215px;" tabindex="-1"><div><div class="category-item zoomscal-hov" style="width: 100%; display: inline-block;">
-                            <a href="shop-left-sidebar.html" class="category-link clr-none" tabindex="-1">
-                                <div class="zoom-scal zoom-scal-nopb rounded-0"><img class="rounded-0 blur-up lazyloaded" data-src="assets/images/collection/sub-collection2.jpg" src="assets/images/collection/sub-collection2.jpg" alt="Women's" title="Women's" width="365" height="365"></div>
-                                <div class="details text-center">
-                                    <h4 class="category-title mb-0">Women's</h4>
-                                    <p class="counts">24 Items</p>
-                                </div>
-                            </a>
-                        </div></div></div><div class="slick-slide" data-slick-index="2" aria-hidden="true" style="width: 215px;" tabindex="-1"><div><div class="category-item zoomscal-hov" style="width: 100%; display: inline-block;">
-                            <a href="shop-left-sidebar.html" class="category-link clr-none" tabindex="-1">
-                                <div class="zoom-scal zoom-scal-nopb rounded-0"><img class="rounded-0 blur-up lazyloaded" data-src="assets/images/collection/sub-collection3.jpg" src="assets/images/collection/sub-collection3.jpg" alt="Top" title="Top" width="365" height="365"></div>
-                                <div class="details text-center">
-                                    <h4 class="category-title mb-0">Top</h4>
-                                    <p class="counts">13 Items</p>
-                                </div>
-                            </a>
-                        </div></div></div><div class="slick-slide" data-slick-index="3" aria-hidden="true" style="width: 215px;" tabindex="-1"><div><div class="category-item zoomscal-hov" style="width: 100%; display: inline-block;">
-                            <a href="shop-left-sidebar.html" class="category-link clr-none" tabindex="-1">
-                                <div class="zoom-scal zoom-scal-nopb rounded-0"><img class="rounded-0 blur-up lazyloaded" data-src="assets/images/collection/sub-collection4.jpg" src="assets/images/collection/sub-collection4.jpg" alt="Bottom" title="Bottom" width="365" height="365"></div>
-                                <div class="details text-center">
-                                    <h4 class="category-title mb-0">Bottom</h4>
-                                    <p class="counts">26 Items</p>
-                                </div>
-                            </a>
-                        </div></div></div><div class="slick-slide" data-slick-index="4" aria-hidden="true" style="width: 215px;" tabindex="-1"><div><div class="category-item zoomscal-hov" style="width: 100%; display: inline-block;">
-                            <a href="shop-left-sidebar.html" class="category-link clr-none" tabindex="-1">
-                                <div class="zoom-scal zoom-scal-nopb rounded-0"><img class="rounded-0 blur-up lazyloaded" data-src="assets/images/collection/sub-collection5.jpg" src="assets/images/collection/sub-collection5.jpg" alt="T-Shirts" title="T-Shirts" width="365" height="365"></div>
-                                <div class="details text-center">
-                                    <h4 class="category-title mb-0">T-Shirts</h4>
-                                    <p class="counts">18 Items</p>
-                                </div>
-                            </a>
-                        </div></div></div><div class="slick-slide" data-slick-index="5" aria-hidden="true" style="width: 215px;" tabindex="-1"><div><div class="category-item zoomscal-hov" style="width: 100%; display: inline-block;">
-                            <a href="shop-left-sidebar.html" class="category-link clr-none" tabindex="-1">
-                                <div class="zoom-scal zoom-scal-nopb rounded-0"><img class="rounded-0 blur-up lazyloaded" data-src="assets/images/collection/sub-collection6.jpg" src="assets/images/collection/sub-collection6.jpg" alt="Shirts" title="Shirts" width="365" height="365"></div>
-                                <div class="details text-center">
-                                    <h4 class="category-title mb-0">Shirts</h4>
-                                    <p class="counts">11 Items</p>
-                                </div>
-                            </a>
-                        </div></div></div><div class="slick-slide slick-current slick-active" data-slick-index="6" aria-hidden="false" style="width: 215px;"><div><div class="category-item zoomscal-hov" style="width: 100%; display: inline-block;">
-                            <a href="shop-left-sidebar.html" class="category-link clr-none" tabindex="0">
-                                <div class="zoom-scal zoom-scal-nopb rounded-0"><img class="rounded-0 blur-up lazyloaded" data-src="assets/images/collection/sub-collection24.jpg" src="assets/images/collection/sub-collection24.jpg" alt="Jeans" title="Jeans" width="365" height="365"></div>
-                                <div class="details text-center">
-                                    <h4 class="category-title mb-0">Jeans</h4>
-                                    <p class="counts">28 Items</p>
-                                </div>
-                            </a>
-                        </div></div></div><div class="slick-slide slick-cloned slick-active" data-slick-index="7" id="" aria-hidden="false" style="width: 215px;" tabindex="-1"><div><div class="category-item zoomscal-hov" style="width: 100%; display: inline-block;">
-                            <a href="shop-left-sidebar.html" class="category-link clr-none" tabindex="0">
-                                <div class="zoom-scal zoom-scal-nopb rounded-0"><img class="rounded-0 blur-up lazyloaded" data-src="assets/images/collection/sub-collection1.jpg" src="assets/images/collection/sub-collection1.jpg" alt="Men's" title="Men's" width="365" height="365"></div>
-                                <div class="details text-center">
-                                    <h4 class="category-title mb-0">Men's</h4>
-                                    <p class="counts">20 Items</p>
-                                </div>
-                            </a>
-                        </div></div></div><div class="slick-slide slick-cloned slick-active" data-slick-index="8" id="" aria-hidden="false" style="width: 215px;" tabindex="-1"><div><div class="category-item zoomscal-hov" style="width: 100%; display: inline-block;">
-                            <a href="shop-left-sidebar.html" class="category-link clr-none" tabindex="0">
-                                <div class="zoom-scal zoom-scal-nopb rounded-0"><img class="rounded-0 blur-up lazyloaded" data-src="assets/images/collection/sub-collection2.jpg" src="assets/images/collection/sub-collection2.jpg" alt="Women's" title="Women's" width="365" height="365"></div>
-                                <div class="details text-center">
-                                    <h4 class="category-title mb-0">Women's</h4>
-                                    <p class="counts">24 Items</p>
-                                </div>
-                            </a>
-                        </div></div></div><div class="slick-slide slick-cloned slick-active" data-slick-index="9" id="" aria-hidden="false" style="width: 215px;" tabindex="-1"><div><div class="category-item zoomscal-hov" style="width: 100%; display: inline-block;">
-                            <a href="shop-left-sidebar.html" class="category-link clr-none" tabindex="0">
-                                <div class="zoom-scal zoom-scal-nopb rounded-0"><img class="rounded-0 blur-up lazyloaded" data-src="assets/images/collection/sub-collection3.jpg" src="assets/images/collection/sub-collection3.jpg" alt="Top" title="Top" width="365" height="365"></div>
-                                <div class="details text-center">
-                                    <h4 class="category-title mb-0">Top</h4>
-                                    <p class="counts">13 Items</p>
-                                </div>
-                            </a>
-                        </div></div></div><div class="slick-slide slick-cloned slick-active" data-slick-index="10" id="" aria-hidden="false" style="width: 215px;" tabindex="-1"><div><div class="category-item zoomscal-hov" style="width: 100%; display: inline-block;">
-                            <a href="shop-left-sidebar.html" class="category-link clr-none" tabindex="0">
-                                <div class="zoom-scal zoom-scal-nopb rounded-0"><img class="rounded-0 blur-up lazyloaded" data-src="assets/images/collection/sub-collection4.jpg" src="assets/images/collection/sub-collection4.jpg" alt="Bottom" title="Bottom" width="365" height="365"></div>
-                                <div class="details text-center">
-                                    <h4 class="category-title mb-0">Bottom</h4>
-                                    <p class="counts">26 Items</p>
-                                </div>
-                            </a>
-                        </div></div></div><div class="slick-slide slick-cloned slick-active" data-slick-index="11" id="" aria-hidden="false" style="width: 215px;" tabindex="-1"><div><div class="category-item zoomscal-hov" style="width: 100%; display: inline-block;">
-                            <a href="shop-left-sidebar.html" class="category-link clr-none" tabindex="0">
-                                <div class="zoom-scal zoom-scal-nopb rounded-0"><img class="rounded-0 blur-up lazyloaded" data-src="assets/images/collection/sub-collection5.jpg" src="assets/images/collection/sub-collection5.jpg" alt="T-Shirts" title="T-Shirts" width="365" height="365"></div>
-                                <div class="details text-center">
-                                    <h4 class="category-title mb-0">T-Shirts</h4>
-                                    <p class="counts">18 Items</p>
-                                </div>
-                            </a>
-                        </div></div></div><div class="slick-slide slick-cloned" data-slick-index="12" id="" aria-hidden="true" style="width: 215px;" tabindex="-1"><div><div class="category-item zoomscal-hov" style="width: 100%; display: inline-block;">
-                            <a href="shop-left-sidebar.html" class="category-link clr-none" tabindex="-1">
-                                <div class="zoom-scal zoom-scal-nopb rounded-0"><img class="rounded-0 blur-up lazyloaded" data-src="assets/images/collection/sub-collection6.jpg" src="assets/images/collection/sub-collection6.jpg" alt="Shirts" title="Shirts" width="365" height="365"></div>
-                                <div class="details text-center">
-                                    <h4 class="category-title mb-0">Shirts</h4>
-                                    <p class="counts">11 Items</p>
-                                </div>
-                            </a>
-                        </div></div></div><div class="slick-slide slick-cloned" data-slick-index="13" id="" aria-hidden="true" style="width: 215px;" tabindex="-1"><div><div class="category-item zoomscal-hov" style="width: 100%; display: inline-block;">
-                            <a href="shop-left-sidebar.html" class="category-link clr-none" tabindex="-1">
-                                <div class="zoom-scal zoom-scal-nopb rounded-0"><img class="rounded-0 blur-up lazyloaded" data-src="assets/images/collection/sub-collection24.jpg" src="assets/images/collection/sub-collection24.jpg" alt="Jeans" title="Jeans" width="365" height="365"></div>
-                                <div class="details text-center">
-                                    <h4 class="category-title mb-0">Jeans</h4>
-                                    <p class="counts">28 Items</p>
-                                </div>
-                            </a>
-                        </div></div></div></div></div><button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Next</button></div>
-                    <!--End Category Slider-->
-                    <div class="row">
-                        <!--Sidebar-->
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 sidebar sidebar-bg filterbar">
-                            <div class="closeFilter d-block d-lg-none"><i class="icon anm anm-times-r"></i></div>
-                            <div class="sidebar-tags sidebar-sticky clearfix">
-                                <!--Filter By-->
-                                <div class="sidebar-widget filterBox filter-widget">
-                                    <div class="widget-title"><h2>Filter By</h2></div>
-                                    <div class="widget-content filterby filterDD">
-                                        <ul class="items tags-list d-flex-wrap">
-                                            <li class="item"><a href="#;" class="rounded-5"><span class="filter-value">Glass</span><i class="icon anm anm-times-r"></i></a></li>
-                                            <li class="item"><a href="#;" class="rounded-5"><span class="filter-value">6 feet</span><i class="icon anm anm-times-r"></i></a></li>
-                                            <li class="item"><a href="#;" class="rounded-5"><span class="filter-value">Winner</span><i class="icon anm anm-times-r"></i></a></li>
-                                            <li class="item"><a href="#;" class="rounded-5"><span class="filter-value">Set</span><i class="icon anm anm-times-r"></i></a></li>
-                                            <li class="item"><a href="#;" class="rounded-5"><span class="filter-value">Solo</span><i class="icon anm anm-times-r"></i></a></li>
-                                        </ul>
-                                        <a href="#;" class="btn btn-sm brd-link">Clear All</a>
-                                    </div>
-                                </div>
-                                <!--End Filter By-->
-                                <!--Categories-->
-                                <div class="sidebar-widget clearfix categories filterBox filter-widget">
-                                    <div class="widget-title"><h2>Categories</h2></div>
-                                    <div class="widget-content filterDD">
-                                        <ul class="sidebar-categories scrollspy morelist clearfix">
-                                            <li class="lvl1 more-item"><a href="#" class="site-nav">Football Trophies <span class="count">(14)</span></a></li>
-                                            <li class="lvl1 more-item"><a href="#" class="site-nav">Cricket Trophies <span class="count">(18)</span></a></li>
-                                            <li class="lvl1 more-item"><a href="#" class="site-nav">Kabaadi Trophies <span class="count">(22)</span></a></li>
-                                            <li class="lvl1 more-item"><a href="#" class="site-nav">Volleyball Trophies <span class="count">(27)</span></a></li>
-                                            <li class="lvl1 more-item"><a href="#" class="site-nav">Throw ball Trophies <span class="count">(27)</span></a></li>
-                                            <li class="lvl1 more-item"><a href="#" class="site-nav">Kho-kho Trophies <span class="count">(27)</span></a></li>
-                                            <li class="lvl1 more-item"><a href="#" class="site-nav">Silambam Trophies <span class="count">(27)</span></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--Categories-->
-                                <!--Price Filter-->
-                                <div class="sidebar-widget filterBox filter-widget">
-                                    <div class="widget-title"><h2>Price</h2></div>
-                                    <form class="widget-content price-filter filterDD" action="#" method="post">
-                                        <div id="slider-range" class="mt-2"></div>
-                                        <div class="row">
-                                            <div class="col-8"><input id="amount" type="text" /></div>
-                                            <div class="col-4 text-right"><button class="btn btn-sm">filter</button></div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <!--End Price Filter-->
-                                <!--Color Swatches-->
-                                
-                                <!--End Color Swatches-->
-                                <!--Size Swatches-->
-                                <div class="sidebar-widget filterBox filter-widget">
-                                    <div class="widget-title"><h2>Size</h2></div>
-                                    <div class="widget-content filter-size filterDD">
-                                        <ul class="swacth-list size-swatches d-flex-center clearfix">
-                                            <li class="swatch large radius soldout"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="XS">6"</span></li>
-                                            <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="S">5"</span></li>
-                                            <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="M">4"</span></li>
-                                            <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="L">3"</span></li>
-                                            <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="X">custom</span></li>
-                                            <!-- <li class="swatch large radius available active"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="XL">XL</span></li>
-                                            <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="XLL">XLL</span></li>
-                                            <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="XXL">XXL</span></li>
-                                            <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="25">25</span></li>
-                                            <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="35">35</span></li>
-                                            <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="40">40</span></li> -->
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--End Size Swatches-->
-                                <!--Product Brands-->
-                               
-                                <!--End Product Brands-->
-                                <!--Product Tags-->
-                                
-                                <!--End Product Tags-->
-                                <!--Banner-->
-                                <!-- <div class="sidebar-widget static-banner p-0">
-                                    <a href="shop-left-sidebar.html"><img class="rounded-0 blur-up lazyload" data-src="<?php echo $path ?>assets/images/banners/shop-banner.jpg" src="<?php echo $path ?>assets/images/banners/shop-banner.jpg" alt="image" width="274" height="367"></a>
                                 </div> -->
-                                <!--End Banner-->
                             </div>
                         </div>
-                        <!--End Sidebar-->
+                        <div class="slide">
+                            <div class="slideshow-wrap">
+                                <picture>
 
-                        <!--Products-->
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-9 main-col">
-                            <!--Toolbar-->
-                            <div class="search-body mb-5">
-                                <form class="form minisearch" id="header-search" action="#" method="get">
-                                    <!--Search Field-->
-                                    <div class="d-flex searchField">
-                                        <div class="search-category">
-                                            <select class="rgsearch-category rounded-end-0">
-                                                <option value="0">All Categories</option>
-                                                <option value="1">- All</option>
-                                                <option value="2">- Football</option>
-                                                <option value="3">- Cricket</option>
-                                                <option value="3">- Cricket</option>
-                                                <option value="3">- Volleyball</option>
-                                                <option value="3">- Throwball</option>
+                                    <source media="(max-width:767px)" srcset="<?php echo $path ?>main/img/banner2.jpg" width="1100" height="800">
 
-                                            </select>
-                                        </div>
-                                        <div class="input-box d-flex fl-1">
-                                            <input type="text" class="input-text rounded-0 border-start-0 border-end-0" placeholder="Search for products..." value="" />
-                                            <button type="submit" class="action search d-flex-justify-center btn rounded-start-0"><i class="icon anm anm-search-l"></i></button>
+                                    <img class="blur-up lazyload" src="<?php echo $path ?>main/img/banner2.jpg" alt="slideshow" title="" width="1920" height="800"/>
+                                </picture>
+                                <!-- <div class="container">
+                                    <div class="slideshow-content slideshow-overlay middle-left">
+                                        <div class="slideshow-content-in">
+                                            <div class="wrap-caption animation style1" style="background-color:gainsboro;">
+                                                <h2 class="ss-mega-title">The New Era of <br>Trophies</h2>
+                                                <p class="ss-sub-title xs-hide text-large">Celebrate your victory !</p>
+                                                <div class="ss-btnWrap">
+                                                    <a class="btn btn-primary" href="shop-grid-view.html">Explore now</a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </form>
+                                </div> -->
                             </div>
-                            <div class="toolbar toolbar-wrapper shop-toolbar">
-                                <div class="row align-items-center">
-                                    <div class="col-4 col-sm-2 col-md-4 col-lg-4 text-left filters-toolbar-item d-flex order-1 order-sm-0">
-                                        <span class="toolbar-product-count">Showing: 15 products of 100</span>
-                                    </div>
-                                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center product-count order-0 order-md-1 mb-3 mb-sm-0">
-                                        <!-- <span class="toolbar-product-count">Showing: 15 products</span> -->
-                                    </div>
-                                    <div class="col-8 col-sm-6 col-md-4 col-lg-4 text-right filters-toolbar-item d-flex justify-content-end order-2 order-sm-2">
-                                       
-                                        <div class="filters-item d-flex align-items-center ms-2 ms-lg-3">
-                                            <label for="SortBy" class="mb-0 me-2 text-nowrap d-none">Sort by:</label>
-                                            <!-- <span class="toolbar-product-count">Sort by:</span> -->
-                                            <select name="SortBy" id="SortBy" class="filters-toolbar-sort">
-                                                <!-- <option value="featured" selected="selected">Featured</option> -->
-                                                <!-- <option value="best-selling">Best selling</option> -->
-                                                <!-- <option value="title-ascending">Alphabetically, A-Z</option> -->
-                                                <!-- <option value="title-descending">Alphabetically, Z-A</option> -->
-                                                <option value="price-ascending">Price, low to high</option>
-                                                <option value="price-descending">Price, high to low</option>
-                                                <!-- <option value="created-ascending">Date, old to new</option> -->
-                                                <!-- <option value="created-descending">Date, new to old</option> -->
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End Toolbar-->
-                            <style>
-                                .product-img img
-                                {
-                                    height: 300px;
-                                }
-                                @media screen and (max-width: 567.67px)
-                                {
-                                    .product-img img
-                                    {
-                                        height: 200px !important;
-                                    }
-                                }
-                            </style>
-
-                            <!--Product Grid-->
-                            <div class="grid-products grid-view-items">
-                                <div class="row col-row product-options row-cols-lg-4 row-cols-md-3 row-cols-sm-3 row-cols-2">
-                                   
-                                    <div class="item col-item">
-                                        <div class="product-box">
-                                            <!-- Start Product Image -->
-                                            <div class="product-image">
-                                                <!-- Start Product Image -->
-                                                <a href="javascript:void(0)" class="product-img rounded-0">
-                                                    <!-- Image -->
-                                                    <img class="primary rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/index\th-3610389770.jpg" src="<?php echo $path ?>img/index\th-3610389770.jpg" alt="Product" title="Product" width="625" height="808"/>
-                                                    <!-- End Image -->
-                                                    <!-- Hover Image -->
-                                                    <img class="hover rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/index\th-61153702.jpg" src="<?php echo $path ?>img/index\th-61153702.jpg" alt="Product" title="Product" width="625" height="808"/>
-                                                    <!-- End Hover Image -->
-                                                </a>
-                                                <!-- End Product Image -->
-                                                <!--Product Button-->
-                                                <div class="button-set style1">
-                                                    <!--Cart Button-->
-                                                    <a href="#addtocart-modal" class="btn-icon addtocart quick-shop-modal" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Select Options"><i class="icon anm anm-cart-l"></i><span class="text">Select Options</span></span>
-                                                    </a>
-                                                    <!--End Cart Button-->
-                                                    <!--Quick View Button-->
-                                                    <a href="#quickview-modal" class="btn-icon quickview quick-view-modal" data-bs-toggle="modal" data-bs-target="#quickview_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="icon anm anm-search-plus-l"></i><span class="text">Quick View</span></span>
-                                                    </a>
-                                                    <!--End Quick View Button-->
-                                                    <!--Wishlist Button-->
-                                                    <a href="javascript:void(0)" class="btn-icon wishlist" data-bs-toggle="tooltip" data-bs-placement="left" title="Add To Wishlist"><i class="icon anm anm-heart-l"></i><span class="text">Add To Wishlist</span></a>
-                                                    <!--End Wishlist Button-->
-                                                    <!--Compare Button-->
-                                                    <!-- <a href="compare-style2.html" class="btn-icon compare" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="icon anm anm-random-r"></i><span class="text">Add to Compare</span></a> -->
-                                                    <!--End Compare Button-->
-                                                </div>
-                                                <!--End Product Button-->
-                                            </div>
-                                            <!-- End Product Image -->
-                                            <!-- Start Product Details -->
-                                            <div class="product-details text-center">
-                                                <!--Product Vendor-->
-                                                <div class="product-vendor">Football Trophies</div>
-                                                <!--End Product Vendor-->
-                                                <!-- Product Name -->
-                                                <div class="product-name">
-                                                    <a href="javascript:void(0)">Golden trophy</a>
-                                                </div>
-                                                <!-- End Product Name -->
-                                                <!-- Product Price -->
-                                                <div class="product-price">
-                                                    <span class="price">₹1200.00</span>
-                                                </div>
-                                                <!-- End Product Price -->
-                                                <!-- Product Review -->
-                                                <div class="product-review">
-                                                    <!-- <i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star"></i> -->
-                                                    <span class="caption hidden ms-1">8 Reviews</span>
-                                                </div>
-                                                <!-- End Product Review -->
-                                                <!--Sort Description-->
-                                                <p class="sort-desc hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage...</p>
-                                                <!--End Sort Description-->
-                                                <!--Color Variant -->
-                                                <!-- <ul class="variants-clr swatches">
-                                                    <li class="swatch medium radius"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="Navy"><img src="assets/images/products/product2.jpg" alt="img" width="625" height="808"></span></li>
-                                                    <li class="swatch medium radius"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="Green"><img src="assets/images/products/product2-1.jpg" alt="img" width="625" height="808"></span></li>
-                                                    <li class="swatch medium radius"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="Gray"><img src="assets/images/products/product2-2.jpg" alt="img" width="625" height="808"></span></li>
-                                                    <li class="swatch medium radius"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="Orange"><img src="assets/images/products/product2-3.jpg" alt="img" width="625" height="808"></span></li>
-                                                    <li class="swatch medium radius"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="Yellow"><img src="assets/images/products/product2-4.jpg" alt="img" width="625" height="808"></span></li>
-                                                    <li class="swatch medium radius"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="Blue"><img src="assets/images/products/product2-5.jpg" alt="img" width="625" height="808"></span></li>
-                                                </ul> -->
-                                                <!-- End Variant -->
-                                                <!-- Product Button -->
-                                                <div class="button-action hidden">
-                                                    <div class="addtocart-btn">
-                                                        <form class="addtocart" action="#" method="post">
-                                                            <a href="#quickshop-modal" class="btn btn-md quick-shop quick-shop-modal" data-bs-toggle="modal" data-bs-target="#quickshop_modal">
-                                                                <i class="icon anm anm-cart-l me-2"></i><span class="text">Select Options</span>
-                                                            </a>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <!-- End Product Button -->
-                                            </div>
-                                            <!-- End product details -->
-                                        </div>
-                                    </div>
-                                    <div class="item col-item">
-                                        <div class="product-box">
-                                            <!-- Start Product Image -->
-                                            <div class="product-image">
-                                                <!-- Start Product Image -->
-                                                <a href="javascript:void(0)" class="product-img rounded-0">
-                                                    <!-- Image -->
-                                                    <img class="primary rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/index\cup1.jpg" src="<?php echo $path ?>img/index\cup1.jpg" alt="Product" title="Product" width="625" height="808" />
-                                                    <!-- End Image -->
-                                                    <!-- Hover Image -->
-                                                    <img class="hover rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/index\cup3.jpg" src="<?php echo $path ?>img/index\cup3.jpg" alt="Product" title="Product" width="625" height="808" />
-                                                    <!-- End Hover Image -->
-                                                </a>
-                                                <!-- End Product Image -->
-                                                <!-- Product label -->
-                                                <!-- <div class="product-labels"><span class="lbl pr-label3">Trending</span></div> -->
-                                                <!-- End Product label -->
-                                                <!--Product Button-->
-                                                <div class="button-set style1">
-                                                    <!--Cart Button-->
-                                                    <a href="#addtocart-modal" class="btn-icon addtocart add-to-cart-modal" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Cart"><i class="icon anm anm-cart-l"></i><span class="text">Add to Cart</span></span>
-                                                    </a>
-                                                    <!--End Cart Button-->
-                                                    <!--Quick View Button-->
-                                                    <a href="#quickview-modal" class="btn-icon quickview quick-view-modal" data-bs-toggle="modal" data-bs-target="#quickview_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="icon anm anm-search-plus-l"></i><span class="text">Quick View</span></span>
-                                                    </a>
-                                                    <!--End Quick View Button-->
-                                                    <!--Wishlist Button-->
-                                                    <a href="javascript:void(0)" class="btn-icon wishlist" data-bs-toggle="tooltip" data-bs-placement="left" title="Add To Wishlist"><i class="icon anm anm-heart-l"></i><span class="text">Add To Wishlist</span></a>
-                                                    <!--End Wishlist Button-->
-                                                    <!--Compare Button-->
-                                                    <!-- <a href="compare-style2.html" class="btn-icon compare" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="icon anm anm-random-r"></i><span class="text">Add to Compare</span></a> -->
-                                                    <!--End Compare Button-->
-                                                </div>
-                                                <!--End Product Button-->
-                                            </div>
-                                            <!-- End Product Image -->
-                                            <!-- Start Product Details -->
-                                            <div class="product-details text-center">
-                                                <!--Product Vendor-->
-                                                <div class="product-vendor">Kabaadi Trophies</div>
-                                                <!--End Product Vendor-->
-                                                <!-- Product Name -->
-                                                <div class="product-name">
-                                                    <a href="javascript:void(0)">Star Crest</a>
-                                                </div>
-                                                <!-- End Product Name -->
-                                                <!-- Product Price -->
-                                                <div class="product-price">
-                                                    <span class="price">₹999.00</span>
-                                                </div>
-                                                <!-- End Product Price -->
-                                                <!-- Product Review -->
-                                                <div class="product-review">
-                                                    <!-- <i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star-o"></i><i class="icon anm anm-star-o"></i><i class="icon anm anm-star-o"></i> -->
-                                                    <span class="caption hidden ms-1">10 Reviews</span>
-                                                </div>
-                                                <!-- End Product Review -->
-                                                <!--Sort Description-->
-                                                <p class="sort-desc hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage...</p>
-                                                <!--End Sort Description-->
-                                                <!-- Variant -->
-                                                <!-- <ul class="variants-clr swatches">
-                                                    <li class="swatch medium radius red"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="red"></span></li>
-                                                    <li class="swatch medium radius orange"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="orange"></span></li>
-                                                    <li class="swatch medium radius yellow"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="yellow"></span></li>
-                                                </ul> -->
-                                                <!-- End Variant -->
-                                                <!-- Product Button -->
-                                                <div class="button-action hidden">
-                                                    <div class="addtocart-btn">
-                                                        <form class="addtocart" action="#" method="post">
-                                                            <a href="#addtocart-modal" class="btn btn-md add-to-cart-modal" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                                <i class="icon anm anm-cart-l me-2"></i><span class="text">Add to Cart</span>
-                                                            </a>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <!-- End Product Button -->
-                                            </div>
-                                            <!-- End product details -->
-                                        </div>
-                                    </div>
-                                    <div class="item col-item">
-                                        <div class="product-box">
-                                            <!-- Start Product Image -->
-                                            <div class="product-image">
-                                                <!-- Start Product Image -->
-                                                <a href="javascript:void(0)" class="product-img rounded-0">
-                                                    <!-- Image -->
-                                                    <img class="primary rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/index\th-81932006.jpg" src="<?php echo $path ?>img/index\th-81932006.jpg" alt="Product" title="Product" width="625" height="808" />
-                                                    <!-- End Image -->
-                                                    <!-- Hover Image -->
-                                                    <img class="hover rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/index\th-61153702.jpg" src="<?php echo $path ?>img/index\th-61153702.jpg" alt="Product" title="Product" width="625" height="808" />
-                                                    <!-- End Hover Image -->
-                                                </a>
-                                                <!-- End Product Image -->
-                                                <!-- Product label -->
-                                                <!-- <div class="product-labels"><span class="lbl on-sale">50% Off</span></div> -->
-                                                <!-- End Product label -->
-                                                <!--Product Button-->
-                                                <div class="button-set style1">
-                                                    <!--Cart Button-->
-                                                    <a href="#addtocart-modal" class="btn-icon addtocart add-to-cart-modal" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Cart"><i class="icon anm anm-cart-l"></i><span class="text">Add to Cart</span></span>
-                                                    </a>
-                                                    <!--End Cart Button-->
-                                                    <!--Quick View Button-->
-                                                    <a href="#quickview-modal" class="btn-icon quickview quick-view-modal" data-bs-toggle="modal" data-bs-target="#quickview_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="icon anm anm-search-plus-l"></i><span class="text">Quick View</span></span>
-                                                    </a>
-                                                    <!--End Quick View Button-->
-                                                    <!--Wishlist Button-->
-                                                    <a href="javascript:void(0)" class="btn-icon wishlist" data-bs-toggle="tooltip" data-bs-placement="left" title="Add To Wishlist"><i class="icon anm anm-heart-l"></i><span class="text">Add To Wishlist</span></a>
-                                                    <!--End Wishlist Button-->
-                                                    <!--Compare Button-->
-                                                    <!-- <a href="compare-style2.html" class="btn-icon compare" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="icon anm anm-random-r"></i><span class="text">Add to Compare</span></a> -->
-                                                    <!--End Compare Button-->
-                                                </div>
-                                                <!--End Product Button-->
-                                                <!--Product Availability-->
-                                                <!-- <div class="product-availability rounded-5">
-                                                    <div class="lh-1 d-flex justify-content-between">
-                                                        <div class="text-sold">Sold:<strong class="text-primary ms-1">34</strong></div>
-                                                        <div class="text-available">Available:<strong class="text-primary ms-1">16</strong></div>
-                                                    </div>
-                                                    <div class="progress"><div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div></div>
-                                                </div> -->
-                                                <!--End Product Availability-->
-                                            </div>
-                                            <!-- End Product Image -->
-                                            <!-- Start Product Details -->
-                                            <div class="product-details text-center">
-                                                <!--Product Vendor-->
-                                                <div class="product-vendor">Football Trophies</div>
-                                                <!--End Product Vendor-->
-                                                <!-- Product Name -->
-                                                <div class="product-name">
-                                                    <a href="javascript:void(0)">Globe Top</a>
-                                                </div>
-                                                <!-- End Product Name -->
-                                                <!-- Product Price -->
-                                                <div class="product-price">
-                                                    <span class="price old-price">₹2000.00</span><span class="price">₹1599.00</span>
-                                                </div>
-                                                <!-- End Product Price -->
-                                                <!-- Product Review -->
-                                                <div class="product-review">
-                                                    <!-- <i class="icon anm anm-star-o"></i><i class="icon anm anm-star-o"></i><i class="icon anm anm-star-o"></i><i class="icon anm anm-star-o"></i><i class="icon anm anm-star-o"></i> -->
-                                                    <span class="caption hidden ms-1">0 Reviews</span>
-                                                </div>
-                                                <!-- End Product Review -->
-                                                <!--Sort Description-->
-                                                <p class="sort-desc hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage...</p>
-                                                <!--End Sort Description-->
-                                                <!-- Variant -->
-                                                <!-- <ul class="variants-clr swatches">
-                                                    <li class="swatch medium radius black"><img src="assets/images/products/swatches/blue-red.jpg" alt="image" width="70" height="70" data-bs-toggle="tooltip" data-bs-placement="top" title="black" /></li>
-                                                    <li class="swatch medium radius navy"><img src="assets/images/products/swatches/blue-red.jpg" alt="image" width="70" height="70" data-bs-toggle="tooltip" data-bs-placement="top" title="navy" /></li>
-                                                    <li class="swatch medium radius darkgreen"><img src="assets/images/products/swatches/blue-red.jpg" alt="image" width="70" height="70" data-bs-toggle="tooltip" data-bs-placement="top" title="darkgreen" /></li>
-                                                </ul> -->
-                                                <!-- End Variant -->
-                                                <!-- Product Button -->
-                                                <div class="button-action hidden">
-                                                    <div class="addtocart-btn">
-                                                        <form class="addtocart" action="#" method="post">
-                                                            <a href="#addtocart-modal" class="btn btn-md add-to-cart-modal" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                                <i class="icon anm anm-cart-l me-2"></i><span class="text">Add to Cart</span>
-                                                            </a>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <!-- End Product Button -->
-                                            </div>
-                                            <!-- End product details -->
-                                        </div>
-                                    </div>
-                                    <div class="item col-item">
-                                        <div class="product-box">
-                                            <!-- Start Product Image -->
-                                            <div class="product-image">
-                                                <!-- Start Product Image -->
-                                                <a href="javascript:void(0)" class="product-img rounded-0">
-                                                    <!-- Image -->
-                                                    <img class="primary rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup9.jpg" src="<?php echo $path ?>img/used\cup9.jpg" alt="Product" title="Product" width="625" height="808" />
-                                                    <!-- End Image -->
-                                                    <!-- Hover Image -->
-                                                    <img class="hover rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/index\th-2839210236.jpg" src="<?php echo $path ?>img/index\th-2839210236.jpg" alt="Product" title="Product" width="625" height="808" />
-                                                    <!-- End Hover Image -->
-                                                </a>
-                                                <!-- End Product Image -->
-                                                <!-- Product label -->
-                                                <!-- <div class="product-labels"><span class="lbl pr-label2">Hot</span></div> -->
-                                                <!-- End Product label -->
-                                                <!--Product Button-->
-                                                <div class="button-set style1">
-                                                    <!--Cart Button-->
-                                                    <a href="#addtocart-modal" class="btn-icon addtocart add-to-cart-modal" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Cart"><i class="icon anm anm-cart-l"></i><span class="text">Add to Cart</span></span>
-                                                    </a>
-                                                    <!--End Cart Button-->
-                                                    <!--Quick View Button-->
-                                                    <a href="#quickview-modal" class="btn-icon quickview quick-view-modal" data-bs-toggle="modal" data-bs-target="#quickview_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="icon anm anm-search-plus-l"></i><span class="text">Quick View</span></span>
-                                                    </a>
-                                                    <!--End Quick View Button-->
-                                                    <!--Wishlist Button-->
-                                                    <a href="javascript:void(0)" class="btn-icon wishlist" data-bs-toggle="tooltip" data-bs-placement="left" title="Add To Wishlist"><i class="icon anm anm-heart-l"></i><span class="text">Add To Wishlist</span></a>
-                                                    <!--End Wishlist Button-->
-                                                    <!--Compare Button-->
-                                                    <!-- <a href="compare-style2.html" class="btn-icon compare" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="icon anm anm-random-r"></i><span class="text">Add to Compare</span></a> -->
-                                                    <!--End Compare Button-->
-                                                </div>
-                                                <!--End Product Button-->
-                                            </div>
-                                            <!-- End Product Image -->
-                                            <!-- Start Product Details -->
-                                            <div class="product-details text-center">
-                                                <!--Product Vendor-->
-                                                <div class="product-vendor">Cricket Trophies</div>
-                                                <!--End Product Vendor-->
-                                                <!-- Product Name -->
-                                                <div class="product-name">
-                                                    <a href="javascript:void(0)">Gold Individual</a>
-                                                </div>
-                                                <!-- End Product Name -->
-                                                <!-- Product Price -->
-                                                <div class="product-price">
-                                                    <span class="price">₹399.00</span>
-                                                </div>
-                                                <!-- End Product Price -->
-                                                <!-- Product Review -->
-                                                <div class="product-review">
-                                                    <!-- <i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star-o"></i><i class="icon anm anm-star-o"></i><i class="icon anm anm-star-o"></i> -->
-                                                    <span class="caption hidden ms-1">3 Reviews</span>
-                                                </div>
-                                                <!-- End Product Review -->
-                                                <!--Sort Description-->
-                                                <p class="sort-desc hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage...</p>
-                                                <!--End Sort Description-->
-                                                <!-- Variant -->
-                                                <!-- <ul class="variants-clr swatches">
-                                                    <li class="swatch medium radius black"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="black"></span></li>
-                                                    <li class="swatch medium radius maroon"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="maroon"></span></li>
-                                                </ul> -->
-                                                <!-- End Variant -->
-                                                <!-- Product Button -->
-                                                <div class="button-action hidden">
-                                                    <div class="addtocart-btn">
-                                                        <form class="addtocart" action="#" method="post">
-                                                            <a href="#addtocart-modal" class="btn btn-md add-to-cart-modal" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                                <i class="icon anm anm-cart-l me-2"></i><span class="text">Add to Cart</span>
-                                                            </a>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <!-- End Product Button -->
-                                            </div>
-                                            <!-- End product details -->
-                                        </div>
-                                    </div>
-                                    <div class="item col-item">
-                                        <div class="product-box">
-                                            <!-- Start Product Image -->
-                                            <div class="product-image">
-                                                <!-- Start Product Image -->
-                                                <a href="javascript:void(0)" class="product-img rounded-0">
-                                                    <!-- Image -->
-                                                    <img class="primary rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup1.jpg" src="<?php echo $path ?>img/used\cup1.jpg" alt="Product" title="Product" width="625" height="808" />
-                                                    <!-- End Image -->
-                                                    <!-- Hover Image -->
-                                                    <img class="hover rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup2.jpg" src="<?php echo $path ?>img/used\cup2.jpg" alt="Product" title="Product" width="625" height="808" />
-                                                    <!-- End Hover Image -->
-                                                </a>
-                                                <!-- End Product Image -->
-                                                <!-- Product label -->
-                                                <!-- <div class="product-labels"><span class="lbl on-sale">Sold out</span></div> -->
-                                                <!-- End Product label -->
-                                                <!--Product Button-->
-                                                <div class="button-set style1">
-                                                    <!--Cart Button-->
-                                                    <a href="#addtocart-modal" class="btn-icon addtocart add-to-cart-modal" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Cart"><i class="icon anm anm-cart-l"></i><span class="text">Add to Cart</span></span>
-                                                    </a>
-                                                    <!--End Cart Button-->
-                                                    <!--Quick View Button-->
-                                                    <a href="#quickview-modal" class="btn-icon quickview quick-view-modal" data-bs-toggle="modal" data-bs-target="#quickview_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="icon anm anm-search-plus-l"></i><span class="text">Quick View</span></span>
-                                                    </a>
-                                                    <!--End Quick View Button-->
-                                                    <!--Wishlist Button-->
-                                                    <a href="javascript:void(0)" class="btn-icon wishlist" data-bs-toggle="tooltip" data-bs-placement="left" title="Add To Wishlist"><i class="icon anm anm-heart-l"></i><span class="text">Add To Wishlist</span></a>
-                                                    <!--End Wishlist Button-->
-                                                    <!--Compare Button-->
-                                                    <!-- <a href="compare-style2.html" class="btn-icon compare" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="icon anm anm-random-r"></i><span class="text">Add to Compare</span></a> -->
-                                                    <!--End Compare Button-->
-                                                </div>
-                                                <!--End Product Button-->
-                                            </div>
-                                            <!-- End Product Image -->
-                                            <!-- Start Product Details -->
-                                            <div class="product-details text-center">
-                                                <!--Product Vendor-->
-                                                <div class="product-vendor">Cricket Trophies</div>
-                                                <!--End Product Vendor-->
-                                                <!-- Product Name -->
-                                                <div class="product-name">
-                                                    <a href="javascript:void(0)">Individual Gold</a>
-                                                </div>
-                                                <!-- End Product Name -->
-                                                <!-- Product Price -->
-                                                <div class="product-price">
-                                                    <span class="price">₹2999.00</span>
-                                                </div>
-                                                <!-- End Product Price -->
-                                                <!-- Product Review -->
-                                                <div class="product-review">
-                                                    <!-- <i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star-o"></i><i class="icon anm anm-star-o"></i> -->
-                                                    <span class="caption hidden ms-1">15 Reviews</span>
-                                                </div>
-                                                <!-- End Product Review -->
-                                                <!--Sort Description-->
-                                                <p class="sort-desc hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage...</p>
-                                                <!--End Sort Description-->
-                                                <!-- Variant -->
-                                                <!-- <ul class="variants-clr swatches">
-                                                    <li class="swatch medium radius gray"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="gray"></span></li>
-                                                    <li class="swatch medium radius red"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="red"></span></li>
-                                                    <li class="swatch medium radius orange"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="orange"></span></li>
-                                                    <li class="swatch medium radius yellow"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="yellow"></span></li>
-                                                </ul> -->
-                                                <!-- End Variant -->
-                                                <!-- Product Button -->
-                                                <div class="button-action hidden">
-                                                    <div class="addtocart-btn">
-                                                        <form class="addtocart" action="#" method="post">
-                                                            <a href="#addtocart-modal" class="btn btn-md add-to-cart-modal soldOutBtn disabled" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                                <i class="icon anm anm-cart-l me-2"></i><span class="text">Out Of stock</span>
-                                                            </a>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <!-- End Product Button -->
-                                            </div>
-                                            <!-- End product details -->
-                                        </div>
-                                    </div>
-                                    <div class="item col-item">
-                                        <div class="product-box">
-                                            <!-- Start Product Image -->
-                                            <div class="product-image">
-                                                <!-- Start Product Image -->
-                                                <a href="javascript:void(0)" class="product-img rounded-0">
-                                                    <!-- Image -->
-                                                    <img class="primary rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup3.jpg" src="<?php echo $path ?>img/used\cup3.jpg" alt="Product" title="Product" width="625" height="808" />
-                                                    <!-- End Image -->
-                                                    <!-- Hover Image -->
-                                                    <img class="hover rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup4.jpg" src="<?php echo $path ?>img/used\cup4.jpg" alt="Product" title="Product" width="625" height="808" />
-                                                    <!-- End Hover Image -->
-                                                </a>
-                                                <!-- End Product Image -->
-                                                <!-- Product label -->
-                                                <!-- <div class="product-labels"><span class="lbl pr-label1">Best seller</span></div> -->
-                                                <!-- End Product label -->
-                                                <!--Product Button-->
-                                                <div class="button-set style1">
-                                                    <!--Cart Button-->
-                                                    <a href="#addtocart-modal" class="btn-icon addtocart add-to-cart-modal" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Cart"><i class="icon anm anm-cart-l"></i><span class="text">Add to Cart</span></span>
-                                                    </a>
-                                                    <!--End Cart Button-->
-                                                    <!--Quick View Button-->
-                                                    <a href="#quickview-modal" class="btn-icon quickview quick-view-modal" data-bs-toggle="modal" data-bs-target="#quickview_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="icon anm anm-search-plus-l"></i><span class="text">Quick View</span></span>
-                                                    </a>
-                                                    <!--End Quick View Button-->
-                                                    <!--Wishlist Button-->
-                                                    <a href="javascript:void(0)" class="btn-icon wishlist" data-bs-toggle="tooltip" data-bs-placement="left" title="Add To Wishlist"><i class="icon anm anm-heart-l"></i><span class="text">Add To Wishlist</span></a>
-                                                    <!--End Wishlist Button-->
-                                                    <!--Compare Button-->
-                                                    <!-- <a href="compare-style2.html" class="btn-icon compare" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="icon anm anm-random-r"></i><span class="text">Add to Compare</span></a> -->
-                                                    <!--End Compare Button-->
-                                                </div>
-                                                <!--End Product Button-->
-                                            </div>
-                                            <!-- End Product Image -->
-                                            <!-- Start Product Details -->
-                                            <div class="product-details text-center">
-                                                <!--Product Vendor-->
-                                                <div class="product-vendor">Volleyball Trophies</div>
-                                                <!--End Product Vendor-->
-                                                <!-- Product Name -->
-                                                <div class="product-name">
-                                                    <a href="javascript:void(0)">Individual Gold</a>
-                                                </div>
-                                                <!-- End Product Name -->
-                                                <!-- Product Price -->
-                                                <div class="product-price">
-                                                    <span class="price">₹1399.00</span>
-                                                </div>
-                                                <!-- End Product Price -->
-                                                <!-- Product Review -->
-                                                <div class="product-review">
-                                                    <!-- <i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star-o"></i><i class="icon anm anm-star-o"></i><i class="icon anm anm-star-o"></i> -->
-                                                    <span class="caption hidden ms-1">11 Reviews</span>
-                                                </div>
-                                                <!-- End Product Review -->
-                                                <!--Sort Description-->
-                                                <p class="sort-desc hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage...</p>
-                                                <!--End Sort Description-->
-                                                <!-- Variant -->
-                                                <!-- <ul class="variants-clr swatches">
-                                                    <li class="swatch medium radius black"><img src="assets/images/products/swatches/blue-red.jpg" alt="image" width="70" height="70" data-bs-toggle="tooltip" data-bs-placement="top" title="black" /></li>
-                                                    <li class="swatch medium radius maroon"><img src="assets/images/products/swatches/blue-red.jpg" alt="image" width="70" height="70" data-bs-toggle="tooltip" data-bs-placement="top" title="maroon" /></li>
-                                                </ul> -->
-                                                <!-- End Variant -->
-                                                <!-- Product Button -->
-                                                <div class="button-action hidden">
-                                                    <div class="addtocart-btn">
-                                                        <form class="addtocart" action="#" method="post">
-                                                            <a href="#addtocart-modal" class="btn btn-md add-to-cart-modal" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                                <i class="icon anm anm-cart-l me-2"></i><span class="text">Add to Cart</span>
-                                                            </a>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <!-- End Product Button -->
-                                            </div>
-                                            <!-- End product details -->
-                                        </div>
-                                    </div>
-                                    <div class="item col-item">
-                                        <div class="product-box">
-                                            <!-- Start Product Image -->
-                                            <div class="product-image">
-                                                <!-- Start Product Image -->
-                                                <a href="javascript:void(0)" class="product-img rounded-0">
-                                                    <!-- Image -->
-                                                    <img class="primary rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup5.jpg" src="<?php echo $path ?>img/used\cup5.jpg" alt="Product" title="Product" width="625" height="808" />
-                                                    <!-- End Image -->
-                                                    <!-- Hover Image -->
-                                                    <img class="hover rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup6.jpg" src="<?php echo $path ?>img/used\cup6.jpg" alt="Product" title="Product" width="625" height="808" />
-                                                    <!-- End Hover Image -->
-                                                </a>
-                                                <!-- End Product Image -->
-                                                <!--Product Button-->
-                                                <div class="button-set style1">
-                                                    <!--Cart Button-->
-                                                    <a href="#addtocart-modal" class="btn-icon addtocart add-to-cart-modal" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Cart"><i class="icon anm anm-cart-l"></i><span class="text">Add to Cart</span></span>
-                                                    </a>
-                                                    <!--End Cart Button-->
-                                                    <!--Quick View Button-->
-                                                    <a href="#quickview-modal" class="btn-icon quickview quick-view-modal" data-bs-toggle="modal" data-bs-target="#quickview_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="icon anm anm-search-plus-l"></i><span class="text">Quick View</span></span>
-                                                    </a>
-                                                    <!--End Quick View Button-->
-                                                    <!--Wishlist Button-->
-                                                    <a href="javascript:void(0)" class="btn-icon wishlist" data-bs-toggle="tooltip" data-bs-placement="left" title="Add To Wishlist"><i class="icon anm anm-heart-l"></i><span class="text">Add To Wishlist</span></a>
-                                                    <!--End Wishlist Button-->
-                                                    <!--Compare Button-->
-                                                    <!-- <a href="compare-style2.html" class="btn-icon compare" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="icon anm anm-random-r"></i><span class="text">Add to Compare</span></a> -->
-                                                    <!--End Compare Button-->
-                                                </div>
-                                                <!--End Product Button-->
-                                            </div>
-                                            <!-- End Product Image -->
-                                            <!-- Start Product Details -->
-                                            <div class="product-details text-center">
-                                                <!--Product Vendor-->
-                                                <div class="product-vendor">Football Trophies</div>
-                                                <!--End Product Vendor-->
-                                                <!-- Product Name -->
-                                                <div class="product-name">
-                                                    <a href="javascript:void(0)">Glass trophy</a>
-                                                </div>
-                                                <!-- End Product Name -->
-                                                <!-- Product Price -->
-                                                <div class="product-price">
-                                                    <span class="price">₹1399.00</span>
-                                                </div>
-                                                <!-- End Product Price -->
-                                                <!-- Product Review -->
-                                                <div class="product-review">
-                                                    <!-- <i class="icon anm anm-star-o"></i><i class="icon anm anm-star-o"></i><i class="icon anm anm-star-o"></i><i class="icon anm anm-star-o"></i><i class="icon anm anm-star-o"></i> -->
-                                                    <span class="caption hidden ms-1">0 Reviews</span>
-                                                </div>
-                                                <!-- End Product Review -->
-                                                <!--Sort Description-->
-                                                <p class="sort-desc hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage...</p>
-                                                <!--End Sort Description-->
-                                                <!-- Variant -->
-                                                <!-- <ul class="variants-clr swatches">
-                                                    <li class="swatch medium radius black"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="black"></span></li>
-                                                    <li class="swatch medium radius navy"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="navy"></span></li>
-                                                    <li class="swatch medium radius darkgreen"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="darkgreen"></span></li>
-                                                </ul> -->
-                                                <!-- End Variant -->
-                                                <!-- Product Button -->
-                                                <div class="button-action hidden">
-                                                    <div class="addtocart-btn">
-                                                        <form class="addtocart" action="#" method="post">
-                                                            <a href="#addtocart-modal" class="btn btn-md add-to-cart-modal" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                                <i class="icon anm anm-cart-l me-2"></i><span class="text">Add to Cart</span>
-                                                            </a>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <!-- End Product Button -->
-                                            </div>
-                                            <!-- End product details -->
-                                        </div>
-                                    </div>
-                                    <div class="item col-item">
-                                        <div class="product-box">
-                                            <!-- Start Product Image -->
-                                            <div class="product-image">
-                                                <!-- Start Product Image -->
-                                                <a href="javascript:void(0)" class="product-img rounded-0">
-                                                    <!-- Image -->
-                                                    <img class="primary rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup7.jpg" src="<?php echo $path ?>img/used\cup7.jpg" alt="Product" title="Product" width="625" height="808" />
-                                                    <!-- End Image -->
-                                                    <!-- Hover Image -->
-                                                    <img class="hover rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup8.jpg" src="<?php echo $path ?>img/used\cup8.jpg" alt="Product" title="Product" width="625" height="808" />
-                                                    <!-- End Hover Image -->
-                                                </a>
-                                                <!-- End Product Image -->
-                                                <!-- Product label -->
-                                                <!-- <div class="product-labels"><span class="lbl pr-label4">Popular</span></div> -->
-                                                <!-- End Product label -->
-                                                <!--Product Button-->
-                                                <div class="button-set style1">
-                                                    <!--Cart Button-->
-                                                    <a href="#addtocart-modal" class="btn-icon addtocart add-to-cart-modal" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Cart"><i class="icon anm anm-cart-l"></i><span class="text">Add to Cart</span></span>
-                                                    </a>
-                                                    <!--End Cart Button-->
-                                                    <!--Quick View Button-->
-                                                    <a href="#quickview-modal" class="btn-icon quickview quick-view-modal" data-bs-toggle="modal" data-bs-target="#quickview_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="icon anm anm-search-plus-l"></i><span class="text">Quick View</span></span>
-                                                    </a>
-                                                    <!--End Quick View Button-->
-                                                    <!--Wishlist Button-->
-                                                    <a href="javascript:void(0)" class="btn-icon wishlist" data-bs-toggle="tooltip" data-bs-placement="left" title="Add To Wishlist"><i class="icon anm anm-heart-l"></i><span class="text">Add To Wishlist</span></a>
-                                                    <!--End Wishlist Button-->
-                                                    <!--Compare Button-->
-                                                    <!-- <a href="compare-style2.html" class="btn-icon compare" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="icon anm anm-random-r"></i><span class="text">Add to Compare</span></a> -->
-                                                    <!--End Compare Button-->
-                                                </div>
-                                                <!--End Product Button-->
-                                            </div>
-                                            <!-- End Product Image -->
-                                            <!-- Start Product Details -->
-                                            <div class="product-details text-center">
-                                                <!--Product Vendor-->
-                                                <div class="product-vendor">Volleyball Trophies</div>
-                                                <!--End Product Vendor-->
-                                                <!-- Product Name -->
-                                                <div class="product-name">
-                                                    <a href="javascript:void(0)">Silver Trophy</a>
-                                                </div>
-                                                <!-- End Product Name -->
-                                                <!-- Product Price -->
-                                                <div class="product-price">
-                                                    <span class="price">₹999.00</span>
-                                                </div>
-                                                <!-- End Product Price -->
-                                                <!--Sort Description-->
-                                                <p class="sort-desc hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage...</p>
-                                                <!--End Sort Description-->
-                                                <!-- Product Review -->
-                                                <div class="product-review">
-                                                    <!-- <i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star-o"></i><i class="icon anm anm-star-o"></i> -->
-                                                    <span class="caption hidden ms-1">19 Reviews</span>
-                                                </div>
-                                                <!-- End Product Review -->
-                                                <!-- Product Button -->
-                                                <div class="button-action hidden">
-                                                    <div class="addtocart-btn">
-                                                        <form class="addtocart" action="#" method="post">
-                                                            <a href="#addtocart-modal" class="btn btn-md add-to-cart-modal" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                                <i class="icon anm anm-cart-l me-2"></i><span class="text">Add to Cart</span>
-                                                            </a>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <!-- End Product Button -->
-                                            </div>
-                                            <!-- End product details -->
-                                        </div>
-                                    </div>
-                                    <div class="item col-item">
-                                        <div class="product-box">
-                                            <!-- Start Product Image -->
-                                            <div class="product-image">
-                                                <!-- Start Product Image -->
-                                                <a href="javascript:void(0)" class="product-img rounded-0">
-                                                    <!-- Image -->
-                                                    <img class="primary rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup9.jpg" src="<?php echo $path ?>img/used\cup9.jpg" alt="Product" title="Product" width="625" height="808" />
-                                                    <!-- End Image -->
-                                                    <!-- Hover Image -->
-                                                    <img class="hover rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup10.jpg" src="<?php echo $path ?>img/used\cup10.jpg" alt="Product" title="Product" width="625" height="808" />
-                                                    <!-- End Hover Image -->
-                                                </a>
-                                                <!-- End Product Image -->
-                                                <!--Product Button-->
-                                                <div class="button-set style1">
-                                                    <!--Cart Button-->
-                                                    <a href="#addtocart-modal" class="btn-icon addtocart add-to-cart-modal" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Cart"><i class="icon anm anm-cart-l"></i><span class="text">Add to Cart</span></span>
-                                                    </a>
-                                                    <!--End Cart Button-->
-                                                    <!--Quick View Button-->
-                                                    <a href="#quickview-modal" class="btn-icon quickview quick-view-modal" data-bs-toggle="modal" data-bs-target="#quickview_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="icon anm anm-search-plus-l"></i><span class="text">Quick View</span></span>
-                                                    </a>
-                                                    <!--End Quick View Button-->
-                                                    <!--Wishlist Button-->
-                                                    <a href="javascript:void(0)" class="btn-icon wishlist" data-bs-toggle="tooltip" data-bs-placement="left" title="Add To Wishlist"><i class="icon anm anm-heart-l"></i><span class="text">Add To Wishlist</span></a>
-                                                    <!--End Wishlist Button-->
-                                                    <!--Compare Button-->
-                                                    <!-- <a href="compare-style2.html" class="btn-icon compare" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="icon anm anm-random-r"></i><span class="text">Add to Compare</span></a> -->
-                                                    <!--End Compare Button-->
-                                                </div>
-                                                <!--End Product Button-->
-                                            </div>
-                                            <!-- End Product Image -->
-                                            <!-- Start Product Details -->
-                                            <div class="product-details text-center">
-                                                <!--Product Vendor-->
-                                                <div class="product-vendor">Cricket Trophies</div>
-                                                <!--End Product Vendor-->
-                                                <!-- Product Name -->
-                                                <div class="product-name">
-                                                    <a href="javascript:void(0)">Spiral Trophy</a>
-                                                </div>
-                                                <!-- End Product Name -->
-                                                <!-- Product Price -->
-                                                <div class="product-price">
-                                                    <span class="price">₹1699.00</span>
-                                                </div>
-                                                <!-- End Product Price -->
-                                                <!--Sort Description-->
-                                                <p class="sort-desc hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage...</p>
-                                                <!--End Sort Description-->
-                                                <!-- Product Review -->
-                                                <div class="product-review">
-                                                    <!-- <i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star"></i> -->
-                                                    <span class="caption hidden ms-1">7 Reviews</span>
-                                                </div>
-                                                <!-- End Product Review -->
-                                                <!-- Product Button -->
-                                                <div class="button-action hidden">
-                                                    <div class="addtocart-btn">
-                                                        <form class="addtocart" action="#" method="post">
-                                                            <a href="#addtocart-modal" class="btn btn-md add-to-cart-modal" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                                <i class="icon anm anm-cart-l me-2"></i><span class="text">Add to Cart</span>
-                                                            </a>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <!-- End Product Button -->
-                                            </div>
-                                            <!-- End product details -->
-                                        </div>
-                                    </div>
-                                    <div class="item col-item">
-                                        <div class="product-box">
-                                            <!-- Start Product Image -->
-                                            <div class="product-image">
-                                                <!-- Start Product Image -->
-                                                <a href="javascript:void(0)" class="product-img rounded-0">
-                                                    <!-- Image -->
-                                                    <img class="primary rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup11.jpg" src="<?php echo $path ?>img/used\cup11.jpg" alt="Product" title="Product" width="625" height="808" />
-                                                    <!-- End Image -->
-                                                    <!-- Hover Image -->
-                                                    <img class="hover rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup12.jpg" src="<?php echo $path ?>img/used\cup12.jpg" alt="Product" title="Product" width="625" height="808" />
-                                                    <!-- End Hover Image -->
-                                                </a>
-                                                <!-- End Product Image -->
-                                                <!--Product Button-->
-                                                <div class="button-set style1">
-                                                    <!--Cart Button-->
-                                                    <a href="#addtocart-modal" class="btn-icon addtocart add-to-cart-modal" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Cart"><i class="icon anm anm-cart-l"></i><span class="text">Add to Cart</span></span>
-                                                    </a>
-                                                    <!--End Cart Button-->
-                                                    <!--Quick View Button-->
-                                                    <a href="#quickview-modal" class="btn-icon quickview quick-view-modal" data-bs-toggle="modal" data-bs-target="#quickview_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="icon anm anm-search-plus-l"></i><span class="text">Quick View</span></span>
-                                                    </a>
-                                                    <!--End Quick View Button-->
-                                                    <!--Wishlist Button-->
-                                                    <a href="javascript:void(0)" class="btn-icon wishlist" data-bs-toggle="tooltip" data-bs-placement="left" title="Add To Wishlist"><i class="icon anm anm-heart-l"></i><span class="text">Add To Wishlist</span></a>
-                                                    <!--End Wishlist Button-->
-                                                    <!--Compare Button-->
-                                                    <!-- <a href="compare-style2.html" class="btn-icon compare" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="icon anm anm-random-r"></i><span class="text">Add to Compare</span></a> -->
-                                                    <!--End Compare Button-->
-                                                </div>
-                                                <!--End Product Button-->
-                                            </div>
-                                            <!-- End Product Image -->
-                                            <!-- Start Product Details -->
-                                            <div class="product-details text-center">
-                                                <!--Product Vendor-->
-                                                <div class="product-vendor">Football Trophies</div>
-                                                <!--End Product Vendor-->
-                                                <!-- Product Name -->
-                                                <div class="product-name">
-                                                    <a href="javascript:void(0)">Bowl Shaped</a>
-                                                </div>
-                                                <!-- End Product Name -->
-                                                <!-- Product Price -->
-                                                <div class="product-price">
-                                                    <span class="price">₹1599.00</span>
-                                                </div>
-                                                <!-- End Product Price -->
-                                                <!--Sort Description-->
-                                                <p class="sort-desc hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage...</p>
-                                                <!--End Sort Description-->
-                                                <!-- Product Review -->
-                                                <div class="product-review">
-                                                    <!-- <i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star-o"></i> -->
-                                                    <span class="caption hidden ms-1">19 Reviews</span>
-                                                </div>
-                                                <!-- End Product Review -->
-                                                <!-- Product Button -->
-                                                <div class="button-action hidden">
-                                                    <div class="addtocart-btn">
-                                                        <form class="addtocart" action="#" method="post">
-                                                            <a href="#addtocart-modal" class="btn btn-md add-to-cart-modal" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                                <i class="icon anm anm-cart-l me-2"></i><span class="text">Add to Cart</span>
-                                                            </a>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <!-- End Product Button -->
-                                            </div>
-                                            <!-- End product details -->
-                                        </div>
-                                    </div>
-                                    <div class="item col-item">
-                                        <div class="product-box">
-                                            <!-- Start Product Image -->
-                                            <div class="product-image">
-                                                <!-- Start Product Image -->
-                                                <a href="javascript:void(0)" class="product-img rounded-0">
-                                                    <!-- Image -->
-                                                    <img class="primary rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup17.jpg" src="<?php echo $path ?>img/used\cup17.jpg" alt="Product" title="Product" width="625" height="808" />
-                                                    <!-- End Image -->
-                                                    <!-- Hover Image -->
-                                                    <img class="hover rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup4.jpg" src="<?php echo $path ?>img/used\cup4.jpg" alt="Product" title="Product" width="625" height="808" />
-                                                    <!-- End Hover Image -->
-                                                </a>
-                                                <!-- End Product Image -->
-                                                <!--Product Button-->
-                                                <div class="button-set style1">
-                                                    <!--Cart Button-->
-                                                    <a href="#addtocart-modal" class="btn-icon addtocart add-to-cart-modal" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Cart"><i class="icon anm anm-cart-l"></i><span class="text">Add to Cart</span></span>
-                                                    </a>
-                                                    <!--End Cart Button-->
-                                                    <!--Quick View Button-->
-                                                    <a href="#quickview-modal" class="btn-icon quickview quick-view-modal" data-bs-toggle="modal" data-bs-target="#quickview_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="icon anm anm-search-plus-l"></i><span class="text">Quick View</span></span>
-                                                    </a>
-                                                    <!--End Quick View Button-->
-                                                    <!--Wishlist Button-->
-                                                    <a href="javascript:void(0)" class="btn-icon wishlist" data-bs-toggle="tooltip" data-bs-placement="left" title="Add To Wishlist"><i class="icon anm anm-heart-l"></i><span class="text">Add To Wishlist</span></a>
-                                                    <!--End Wishlist Button-->
-                                                    <!--Compare Button-->
-                                                    <!-- <a href="compare-style2.html" class="btn-icon compare" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="icon anm anm-random-r"></i><span class="text">Add to Compare</span></a> -->
-                                                    <!--End Compare Button-->
-                                                </div>
-                                                <!--End Product Button-->
-                                            </div>
-                                            <!-- End Product Image -->
-                                            <!-- Start Product Details -->
-                                            <div class="product-details text-center">
-                                                <!--Product Vendor-->
-                                                <div class="product-vendor">Football Trophies</div>
-                                                <!--End Product Vendor-->
-                                                <!-- Product Name -->
-                                                <div class="product-name">
-                                                    <a href="javascript:void(0)">Spiral Trophy</a>
-                                                </div>
-                                                <!-- End Product Name -->
-                                                <!-- Product Price -->
-                                                <div class="product-price">
-                                                    <span class="price">₹1299.00</span>
-                                                </div>
-                                                <!-- End Product Price -->
-                                                <!--Sort Description-->
-                                                <p class="sort-desc hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage...</p>
-                                                <!--End Sort Description-->
-                                                <!-- Product Review -->
-                                                <div class="product-review">
-                                                    <!-- <i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star-o"></i><i class="icon anm anm-star-o"></i> -->
-                                                    <span class="caption hidden ms-1">6 Reviews</span>
-                                                </div>
-                                                <!-- End Product Review -->
-                                                <!-- Product Button -->
-                                                <div class="button-action hidden">
-                                                    <div class="addtocart-btn">
-                                                        <form class="addtocart" action="#" method="post">
-                                                            <a href="#addtocart-modal" class="btn btn-md add-to-cart-modal" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                                <i class="icon anm anm-cart-l me-2"></i><span class="text">Add to Cart</span>
-                                                            </a>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <!-- End Product Button -->
-                                            </div>
-                                            <!-- End product details -->
-                                        </div>
-                                    </div>
-                                    <div class="item col-item">
-                                        <div class="product-box">
-                                            <!-- Start Product Image -->
-                                            <div class="product-image">
-                                                <!-- Start Product Image -->
-                                                <a href="javascript:void(0)" class="product-img rounded-0">
-                                                    <!-- Image -->
-                                                    <img class="primary rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup13.jpg" src="<?php echo $path ?>img/used\cup13.jpg" alt="Product" title="Product" width="625" height="808" />
-                                                    <!-- End Image -->
-                                                    <!-- Hover Image -->
-                                                    <img class="hover rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup14.jpg" src="<?php echo $path ?>img/used\cup14.jpg" alt="Product" title="Product" width="625" height="808" />
-                                                    <!-- End Hover Image -->
-                                                </a>
-                                                <!-- End Product Image -->
-                                                <!--Product Button-->
-                                                <div class="button-set style1">
-                                                    <!--Cart Button-->
-                                                    <a href="#addtocart-modal" class="btn-icon addtocart add-to-cart-modal" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Cart"><i class="icon anm anm-cart-l"></i><span class="text">Add to Cart</span></span>
-                                                    </a>
-                                                    <!--End Cart Button-->
-                                                    <!--Quick View Button-->
-                                                    <a href="#quickview-modal" class="btn-icon quickview quick-view-modal" data-bs-toggle="modal" data-bs-target="#quickview_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="icon anm anm-search-plus-l"></i><span class="text">Quick View</span></span>
-                                                    </a>
-                                                    <!--End Quick View Button-->
-                                                    <!--Wishlist Button-->
-                                                    <a href="javascript:void(0)" class="btn-icon wishlist" data-bs-toggle="tooltip" data-bs-placement="left" title="Add To Wishlist"><i class="icon anm anm-heart-l"></i><span class="text">Add To Wishlist</span></a>
-                                                    <!--End Wishlist Button-->
-                                                    <!--Compare Button-->
-                                                    <!-- <a href="compare-style2.html" class="btn-icon compare" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="icon anm anm-random-r"></i><span class="text">Add to Compare</span></a> -->
-                                                    <!--End Compare Button-->
-                                                </div>
-                                                <!--End Product Button-->
-                                            </div>
-                                            <!-- End Product Image -->
-                                            <!-- Start Product Details -->
-                                            <div class="product-details text-center">
-                                                <!--Product Vendor-->
-                                                <div class="product-vendor">Kabaadi Trophies</div>
-                                                <!--End Product Vendor-->
-                                                <!-- Product Name -->
-                                                <div class="product-name">
-                                                    <a href="javascript:void(0)">Gold Individual</a>
-                                                </div>
-                                                <!-- End Product Name -->
-                                                <!-- Product Price -->
-                                                <div class="product-price">
-                                                    <span class="price">₹1699.00</span>
-                                                </div>
-                                                <!-- End Product Price -->
-                                                <!--Sort Description-->
-                                                <p class="sort-desc hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage...</p>
-                                                <!--End Sort Description-->
-                                                <!-- Product Review -->
-                                                <div class="product-review">
-                                                    <!-- <i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star-o"></i><i class="icon anm anm-star-o"></i><i class="icon anm anm-star-o"></i> -->
-                                                    <span class="caption hidden ms-1">13 Reviews</span>
-                                                </div>
-                                                <!-- End Product Review -->
-                                                <!-- Product Button -->
-                                                <div class="button-action hidden">
-                                                    <div class="addtocart-btn">
-                                                        <form class="addtocart" action="#" method="post">
-                                                            <a href="#addtocart-modal" class="btn btn-md add-to-cart-modal" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                                <i class="icon anm anm-cart-l me-2"></i><span class="text">Add to Cart</span>
-                                                            </a>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <!-- End Product Button -->
-                                            </div>
-                                            <!-- End product details -->
-                                        </div>
-                                    </div>
-                                    <div class="item col-item">
-                                        <div class="product-box">
-                                            <!-- Start Product Image -->
-                                            <div class="product-image">
-                                                <!-- Start Product Image -->
-                                                <a href="javascript:void(0)" class="product-img rounded-0">
-                                                    <!-- Image -->
-                                                    <img class="primary rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup13.jpg" src="<?php echo $path ?>img/used\cup13.jpg" alt="Product" title="Product" width="625" height="808" />
-                                                    <!-- End Image -->
-                                                    <!-- Hover Image -->
-                                                    <img class="hover rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup3.jpg" src="<?php echo $path ?>img/used\cup3.jpg" alt="Product" title="Product" width="625" height="808" />
-                                                    <!-- End Hover Image -->
-                                                </a>
-                                                <!-- End Product Image -->
-                                                <!--Product Button-->
-                                                <div class="button-set style1">
-                                                    <!--Cart Button-->
-                                                    <a href="#addtocart-modal" class="btn-icon addtocart add-to-cart-modal" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Cart"><i class="icon anm anm-cart-l"></i><span class="text">Add to Cart</span></span>
-                                                    </a>
-                                                    <!--End Cart Button-->
-                                                    <!--Quick View Button-->
-                                                    <a href="#quickview-modal" class="btn-icon quickview quick-view-modal" data-bs-toggle="modal" data-bs-target="#quickview_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="icon anm anm-search-plus-l"></i><span class="text">Quick View</span></span>
-                                                    </a>
-                                                    <!--End Quick View Button-->
-                                                    <!--Wishlist Button-->
-                                                    <a href="javascript:void(0)" class="btn-icon wishlist" data-bs-toggle="tooltip" data-bs-placement="left" title="Add To Wishlist"><i class="icon anm anm-heart-l"></i><span class="text">Add To Wishlist</span></a>
-                                                    <!--End Wishlist Button-->
-                                                    <!--Compare Button-->
-                                                    <!-- <a href="compare-style2.html" class="btn-icon compare" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="icon anm anm-random-r"></i><span class="text">Add to Compare</span></a> -->
-                                                    <!--End Compare Button-->
-                                                </div>
-                                                <!--End Product Button-->
-                                            </div>
-                                            <!-- End Product Image -->
-                                            <!-- Start Product Details -->
-                                            <div class="product-details text-center">
-                                                <!--Product Vendor-->
-                                                <div class="product-vendor">Kabaadi Trophies</div>
-                                                <!--End Product Vendor-->
-                                                <!-- Product Name -->
-                                                <div class="product-name">
-                                                    <a href="javascript:void(0)">Gold Individual Trophy</a>
-                                                </div>
-                                                <!-- End Product Name -->
-                                                <!-- Product Price -->
-                                                <div class="product-price">
-                                                    <span class="price">₹1299.00</span>
-                                                </div>
-                                                <!-- End Product Price -->
-                                                <!--Sort Description-->
-                                                <p class="sort-desc hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage...</p>
-                                                <!--End Sort Description-->
-                                                <!-- Product Review -->
-                                                <div class="product-review">
-                                                    <!-- <i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star-o"></i> -->
-                                                    <span class="caption hidden ms-1">20 Reviews</span>
-                                                </div>
-                                                <!-- End Product Review -->
-                                                <!-- Product Button -->
-                                                <div class="button-action hidden">
-                                                    <div class="addtocart-btn">
-                                                        <form class="addtocart" action="#" method="post">
-                                                            <a href="#addtocart-modal" class="btn btn-md add-to-cart-modal" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                                <i class="icon anm anm-cart-l me-2"></i><span class="text">Add to Cart</span>
-                                                            </a>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <!-- End Product Button -->
-                                            </div>
-                                            <!-- End product details -->
-                                        </div>
-                                    </div>
-                                    <div class="item col-item">
-                                        <div class="product-box">
-                                            <!-- Start Product Image -->
-                                            <div class="product-image">
-                                                <!-- Start Product Image -->
-                                                <a href="javascript:void(0)" class="product-img rounded-0">
-                                                    <!-- Image -->
-                                                    <img class="primary rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup3.jpg" src="<?php echo $path ?>img/used\cup3.jpg" alt="Product" title="Product" width="625" height="808" />
-                                                    <!-- End Image -->
-                                                    <!-- Hover Image -->
-                                                    <img class="hover rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup16.jpg" src="<?php echo $path ?>img/used\cup16.jpg" alt="Product" title="Product" width="625" height="808" />
-                                                    <!-- End Hover Image -->
-                                                </a>
-                                                <!-- End Product Image -->
-                                                <!--Product Button-->
-                                                <div class="button-set style1">
-                                                    <!--Cart Button-->
-                                                    <a href="#addtocart-modal" class="btn-icon addtocart add-to-cart-modal" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Cart"><i class="icon anm anm-cart-l"></i><span class="text">Add to Cart</span></span>
-                                                    </a>
-                                                    <!--End Cart Button-->
-                                                    <!--Quick View Button-->
-                                                    <a href="#quickview-modal" class="btn-icon quickview quick-view-modal" data-bs-toggle="modal" data-bs-target="#quickview_modal">
-                                                        <span class="icon-wrap d-flex-justify-center h-100 w-100" data-bs-toggle="tooltip" data-bs-placement="left" title="Quick View"><i class="icon anm anm-search-plus-l"></i><span class="text">Quick View</span></span>
-                                                    </a>
-                                                    <!--End Quick View Button-->
-                                                    <!--Wishlist Button-->
-                                                    <a href="javascript:void(0)" class="btn-icon wishlist" data-bs-toggle="tooltip" data-bs-placement="left" title="Add To Wishlist"><i class="icon anm anm-heart-l"></i><span class="text">Add To Wishlist</span></a>
-                                                    <!--End Wishlist Button-->
-                                                    <!--Compare Button-->
-                                                    <!-- <a href="compare-style2.html" class="btn-icon compare" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Compare"><i class="icon anm anm-random-r"></i><span class="text">Add to Compare</span></a> -->
-                                                    <!--End Compare Button-->
-                                                </div>
-                                                <!--End Product Button-->
-                                            </div>
-                                            <!-- End Product Image -->
-                                            <!-- Start Product Details -->
-                                            <div class="product-details text-center">
-                                                <!--Product Vendor-->
-                                                <div class="product-vendor">Cricket Trophies</div>
-                                                <!--End Product Vendor-->
-                                                <!-- Product Name -->
-                                                <div class="product-name">
-                                                    <a href="javascript:void(0)">Globe Trophy</a>
-                                                </div>
-                                                <!-- End Product Name -->
-                                                <!-- Product Price -->
-                                                <div class="product-price">
-                                                    <span class="price">₹1999.00</span>
-                                                </div>
-                                                <!-- End Product Price -->
-                                                <!--Sort Description-->
-                                                <p class="sort-desc hidden">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage...</p>
-                                                <!--End Sort Description-->
-                                                <!-- Product Review -->
-                                                <div class="product-review">
-                                                    <!-- <i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star-o"></i><i class="icon anm anm-star-o"></i> -->
-                                                    <span class="caption hidden ms-1">11 Reviews</span>
-                                                </div>
-                                                <!-- End Product Review -->
-                                                <!-- Product Button -->
-                                                <div class="button-action hidden">
-                                                    <div class="addtocart-btn">
-                                                        <form class="addtocart" action="#" method="post">
-                                                            <a href="#addtocart-modal" class="btn btn-md add-to-cart-modal" data-bs-toggle="modal" data-bs-target="#addtocart_modal">
-                                                                <i class="icon anm anm-cart-l me-2"></i><span class="text">Add to Cart</span>
-                                                            </a>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <!-- End Product Button -->
-                                            </div>
-                                            <!-- End product details -->
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Pagination -->
-                                <nav class="clearfix pagination-bottom">
-                                    <ul class="pagination justify-content-center">
-                                        <li class="page-item disabled"><a class="page-link" href="#"><i class="icon anm anm-angle-left-l"></i></a></li>
-                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item"><a class="page-link dot" href="#">...</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                        <li class="page-item"><a class="page-link" href="#"><i class="icon anm anm-angle-right-l"></i></a></li>
-                                    </ul>
-                                </nav>
-                                <!-- End Pagination -->
-                            </div>
-                            <!--End Product Grid-->
                         </div>
-                        <!--End Products-->
+                      
+                    </div>
+                </section>
+            <!--End Home Slideshow-->
+
+            <!-- <video controls muted autoplay loop>
+                <source src="../assets/img/imax_trophies.mp4" type="video/mp4">
+            </video> -->
+
+            <div class="destination-section section pb-0">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-sm-12 col-md-6">
+                            <div class="about-details px-50 py-5">
+                                <h2 class="fs-4 mb-3">Discover the Excellence of Our Trophies.</h2>
+                                <p>At IMAX Trophies, we take immense pride in the art of recognition. Our trophy
+                                    collection represents the epitome of craftsmanship, designed to honor achievements,
+                                    celebrate victories, and etch moments in time. With a wide array of options for
+                                    every occasion, we invite you to explore the essence of our trophies:</p>
+
+                                <!-- <p>From championship cups to elegant plaques, from sparkling crystal to timeless metal,
+                                    our trophies are a testament to your achievements and the recognition they deserve.
+                                    Join us in celebrating success and let our trophies tell the story of your journey.
+                                    At IMAX Trophies, we are more than just a trophy store; we are the keepers of your
+                                    proudest moments.</p> -->
+                                    <a class="btn btn-secondary explore-btn" href="aboutUs.php">Read more <i
+                                            class="icon anm anm-arw-right ms-2"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6">
+                            <div class="about-images mt-4 mt-md-0">
+                                <div class="row g-3">
+                                        <video class="rounded-0 blur-up lazyload" controls muted autoplay loop width="700" height="827">
+                                        <source src="../assets/img/imax_trophies.mp4" type="video/mp4">
+                                        </video> 
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!--End Main Content-->
             </div>
-            <!-- End Body Container -->
 
-            <!--Footer-->
-            <div class="footer">
-                <!-- <div class="newsletterbg clearfix">
-                    <div class="container">
-                        <form action="#" method="post" class="footer-newsletter">
-                            <div class="row align-items-center">
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-3 mb-md-0">
-                                    <label class="h3 mb-1 clr-none">Sign Up Our Newsletter & Get 10% OFF</label>
-                                    <p>Sign up to stay in the loop. Receive updates, access to exclusive deals, and more.</p>
+            <!--Products Slider-->
+            <section class="section product-banner-slider">
+                <div class="container">
+                    <div class="section-header style2 d-flex-center justify-content-sm-between">
+                        <div class="section-header-left text-start">
+                            <h2 class='text-dark'>Our Best collections</h2>
+                            <p>Shop our best sellers from established trophies</p>
+                        </div>
+                       
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 mb-4 mb-lg-0">
+                            <div class="ctg-bnr-wrap one position-relative h-100">
+                                <div class="ctg-image ratio ratio-1x1 h-100">
+                                    <img class="blur-up lazyload"
+                                        data-src="<?php echo $path ?>assets/img/slider/cup22.jpg"
+                                        src="<?php echo $path ?>assets/img/slider/cup22.jpg" alt="collection"
+                                        width="390" height="483" />
                                 </div>
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                                    <div class="input-group">
-                                        <input type="email" class="form-control input-group-field newsletter-input" name="email" value="" placeholder="Enter your email address..." required />
-                                        <button type="submit" class="input-group-btn btn btn-secondary newsletter-submit" name="commit">Subscribe</button>
+                                <div class="ctg-content text-white d-flex-justify-center flex-nowrap flex-column h-100">
+                                    <h2 class="ctg-title text-white m-0"><span class="d-block">Trophies</span>
+                                        Collections</h2>
+                                    <p class="ctg-des mt-3 mb-4">Shop our weekly edit of what's new in online at IMAX
+                                        collections.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-9">
+                            <div
+                                class="grid-products product-slider-3items gp15 arwOut5 hov-arrow circle-arrow arrowlr-0">
+                                <div class="item col-item">
+                                    <div class="product-box">
+                                        <!-- Start Product Image -->
+                                        <div class="product-image">
+                                            <!-- Start Product Image -->
+                                            <a href="shop_trophy" class="product-img">
+                                                <!-- Image -->
+                                                <img class="primary blur-up lazyload"
+                                                    data-src="<?php echo $path ?>assets/img/trophy/trophy 11.jpg"
+                                                    src="<?php echo $path ?>assets/img/trophy/trophy 11.jpg"
+                                                    alt="Product" title="Product" width="625" height="625" />
+                                                <!-- End Image -->
+                                                <!-- Hover Image -->
+                                                <img class="hover blur-up lazyload"
+                                                    data-src="<?php echo $path ?>assets/img//trophy/trophy 11.jpg"
+                                                    src="<?php echo $path ?>assets/img/trophy/trophy 11.jpg"
+                                                    alt="Product" title="Product" width="625" height="625" />
+                                                <!-- End Hover Image -->
+                                            </a>
+                                            <!-- End Product Image -->
+
+                                        </div>
+                                        <!-- End Product Image -->
+                                        <!-- Start Product Details -->
+                                        <div class="product-details text-left">
+                                            <!--Product Vendor-->
+                                            <div class="product-vendor">Crikcet Collection</div>
+                                            <!--End Product Vendor-->
+                                            <!-- Product Name -->
+                                            <div class="product-name">
+                                                <a href="shop_trophy">Cricket Stump Trophy</a>
+                                            </div>
+                                            <!-- End Product Name -->
+                                            <!-- Product Price -->
+                                              <!-- Product Price -->
+                                              <div class="product-price">
+                                                <span class="price old-price">₹1099.00</span><span
+                                                    class="price">₹999.00</span>
+                                            </div>
+                                            <!-- End Product Price -->
+                                            <!-- End Product Price -->
+
+                                        </div>
+                                        <!-- End product details -->
                                     </div>
+                                </div>
+                                <div class="item col-item">
+                                    <div class="product-box">
+                                        <!-- Start Product Image -->
+                                        <div class="product-image">
+                                            <!-- Start Product Image -->
+                                            <a href="shop_trophy" class="product-img">
+                                                <!-- Image -->
+                                                <img class="primary blur-up lazyload"
+                                                    data-src="<?php echo $path ?>assets/img/trophy/trophy 22.jpg"
+                                                    src="<?php echo $path ?>assets/img/trophy/trophy 22.jpg"
+                                                    alt="Product" title="Product" width="625" height="625" />
+                                                <!-- End Image -->
+                                                <!-- Hover Image -->
+                                                <img class="hover blur-up lazyload"
+                                                    data-src="<?php echo $path ?>assets/img/trophy/trophy 22.jpg"
+                                                    src="<?php echo $path ?>assets/img/trophy/trophy 22.jpg"
+                                                    alt="Product" title="Product" width="625" height="625" />
+                                                <!-- End Hover Image -->
+                                            </a>
+                                            <!-- End Product Image -->
+                                            <!-- Product label -->
+                                            <div class="product-labels radius"><span class="lbl on-sale">Sale</span>
+                                            </div>
+                                            <!-- End Product label -->
+
+                                        </div>
+                                        <!-- End Product Image -->
+                                        <!-- Start Product Details -->
+                                        <div class="product-details text-left">
+                                            <!--Product Vendor-->
+                                            <div class="product-vendor">Cricket Collection</div>
+                                            <!--End Product Vendor-->
+                                            <!-- Product Name -->
+                                            <div class="product-name">
+                                                <a href="shop_trophy">Double Pillar Edition</a>
+                                            </div>
+                                            <!-- End Product Name -->
+                                            <!-- Product Price -->
+                                            <div class="product-price">
+                                                <span class="price old-price">₹1099.00</span><span
+                                                    class="price">₹999.00</span>
+                                            </div>
+                                            <!-- End Product Price -->
+
+                                        </div>
+                                        <!-- End product details -->
+                                    </div>
+                                </div>
+                                <div class="item col-item">
+                                    <div class="product-box">
+                                        <!-- Start Product Image -->
+                                        <div class="product-image">
+                                            <!-- Start Product Image -->
+                                            <a href="shop_trophy" class="product-img">
+                                                <!-- Image -->
+                                                <img class="primary blur-up lazyload"
+                                                    data-src="<?php echo $path ?>assets/img/trophy/trophy 33.jpg"
+                                                    src="<?php echo $path ?>assets/img/trophy/trophy 33.jpg"
+                                                    alt="Product" title="Product" width="625" height="625" />
+                                                <!-- End Image -->
+                                                <!-- Hover Image -->
+                                                <img class="hover blur-up lazyload"
+                                                    data-src="<?php echo $path ?>assets/img/trophy/trophy 33.jpg"
+                                                    src="<?php echo $path ?>assets/img/trophy/trophy 33.jpg"
+                                                    alt="Product" title="Product" width="625" height="625" />
+                                                <!-- End Hover Image -->
+                                            </a>
+                                            <!-- End Product Image -->
+                                            <!-- Product label -->
+                                            <div class="product-labels radius"><span class="lbl pr-label3">New</span>
+                                            </div>
+                                            <!-- End Product label -->
+
+                                        </div>
+                                        <!-- End Product Image -->
+                                        <!-- Start Product Details -->
+                                        <div class="product-details text-left">
+                                            <!--Product Vendor-->
+                                            <div class="product-vendor">Cricket Collection</div>
+                                            <!--End Product Vendor-->
+                                            <!-- Product Name -->
+                                            <div class="product-name">
+                                                <a href="shop_trophy">King Crown Cup</a>
+                                            </div>
+                                            <!-- End Product Name -->
+                                            <!-- Product Price -->
+                                            <div class="product-price">
+                                                <span class="price old-price">₹1099.00</span><span
+                                                    class="price">₹999.00</span>
+                                            </div>
+                                            <!-- End Product Price -->
+                                        </div>
+                                        <!-- End product details -->
+                                    </div>
+                                </div>
+
+                                <div class="item col-item">
+                                    <div class="product-box">
+                                        <!-- Start Product Image -->
+                                        <div class="product-image">
+                                            <!-- Start Product Image -->
+                                            <a href="shop_trophy" class="product-img">
+                                                <!-- Image -->
+                                                <img class="primary blur-up lazyload"
+                                                    data-src="<?php echo $path ?>assets/img/trophy/trophy 44.jpg"
+                                                    src="<?php echo $path ?>assets/img/trophy/trophy 44.jpg"
+                                                    alt="Product" title="Product" width="625" height="625" />
+                                                <!-- End Image -->
+                                                <!-- Hover Image -->
+                                                <img class="hover blur-up lazyload"
+                                                    data-src="<?php echo $path ?>assets/img/trophy/trophy 44.jpg"
+                                                    src="<?php echo $path ?>assets/img/trophy/trophy 44.jpg"
+                                                    alt="Product" title="Product" width="625" height="625" />
+                                                <!-- End Hover Image -->
+                                            </a>
+                                            <!-- End Product Image -->
+                                            <!-- Product label -->
+                                            <div class="product-labels radius"><span class="lbl pr-label2">Hot</span>
+                                            </div>
+                                            <!-- End Product label -->
+
+                                        </div>
+                                        <!-- End Product Image -->
+                                        <!-- Start Product Details -->
+                                        <div class="product-details text-left">
+                                            <!--Product Vendor-->
+                                            <div class="product-vendor">Kabaddi Collection</div>
+                                            <!--End Product Vendor-->
+                                            <!-- Product Name -->
+                                            <div class="product-name">
+                                                <a href="shop_trophy">Hero Cup</a>
+                                            </div>
+                                            <!-- End Product Name -->
+                                            <!-- Product Price -->
+                                            <div class="product-price">
+                                                <span class="price old-price">₹1099.00</span><span
+                                                    class="price">₹999.00</span>
+                                            </div>
+                                            <!-- End Product Price -->
+
+                                           
+                                        </div>
+                                        <!-- End product details -->
+                                    </div>
+                                </div>
+
+                                <div class="item col-item">
+                                    <div class="product-box">
+                                        <!-- Start Product Image -->
+                                        <div class="product-image">
+                                            <!-- Start Product Image -->
+                                            <a href="shop_trophy" class="product-img">
+                                                <!-- Image -->
+                                                <img class="primary blur-up lazyload"
+                                                    data-src="<?php echo $path ?>assets/img/trophy/trophy 55.jpg"
+                                                    src="<?php echo $path ?>assets/img/trophy/trophy 55.jpg"
+                                                    alt="Product" title="Product" width="625" height="625" />
+                                                <!-- End Image -->
+                                                <!-- Hover Image -->
+                                                <img class="hover blur-up lazyload"
+                                                    data-src="<?php echo $path ?>assets/img/trophy/trophy 55.jpg"
+                                                    src="<?php echo $path ?>assets/img/trophy/trophy 55.jpg"
+                                                    alt="Product" title="Product" width="625" height="625" />
+                                                <!-- End Hover Image -->
+                                            </a>
+                                            <!-- End Product Image -->
+                                            <!-- Product label -->
+                                            <div class="product-labels radius"><span class="lbl pr-label4">Sale</span>
+                                            </div>
+                                            <!-- End Product label -->
+
+                                        </div>
+                                        <!-- End Product Image -->
+                                        <!-- Start Product Details -->
+                                        <div class="product-details text-left">
+                                            <!--Product Vendor-->
+                                            <div class="product-vendor">Trophy Collection</div>
+                                            <!--End Product Vendor-->
+                                            <!-- Product Name -->
+                                            <div class="product-name">
+                                                <a href="shop_trophy">Crown Cup</a>
+                                            </div>
+                                            <!-- End Product Name -->
+                                            <!-- Product Price -->
+                                            <div class="product-price">
+                                                <span class="price old-price">₹1099.00</span><span
+                                                    class="price">₹999.00</span>
+                                            </div>
+                                            <!-- End Product Price -->
+
+                                        
+                                        </div>
+                                        <!-- End product details -->
+                                    </div>
+                                </div>
+
+                                <div class="item col-item">
+                                    <div class="product-box">
+                                        <!-- Start Product Image -->
+                                        <div class="product-image">
+                                            <!-- Start Product Image -->
+                                            <a href="" class="product-img">
+                                                <!-- Image -->
+                                                <img class="primary blur-up lazyload"
+                                                    data-src="<?php echo $path ?>assets/img/trophy/trophy 66.jpg"
+                                                    src="<?php echo $path ?>assets/img/trophy/trophy 66.jpg"
+                                                    alt="Product" title="Product" width="625" height="625" />
+                                                <!-- End Image -->
+                                                <!-- Hover Image -->
+                                                <img class="hover blur-up lazyload"
+                                                    data-src="<?php echo $path ?>assets/img/trophy/trophy 66.jpg"
+                                                    src="<?php echo $path ?>assets/img/trophy/trophy 66.jpg"
+                                                    alt="Product" title="Product" width="625" height="625" />
+                                                <!-- End Hover Image -->
+                                            </a>
+                                            <!-- End Product Image -->
+                                            <!-- Product label -->
+                                            <div class="product-labels radius"><span class="lbl pr-label3">New</span>
+                                            </div>
+                                            <!-- End Product label -->
+
+                                        </div>
+                                        <!-- End Product Image -->
+                                        <!-- Start Product Details -->
+                                        <div class="product-details text-left">
+                                            <!--Product Vendor-->
+                                            <div class="product-vendor">Cricket Collection</div>
+                                            <!--End Product Vendor-->
+                                            <!-- Product Name -->
+                                            <div class="product-name">
+                                                <a href="shop_trophy">All Star Cup</a>
+                                            </div>
+                                            <!-- End Product Name -->
+                                            <!-- Product Price -->
+                                             <div class="product-price">
+                                                <span class="price old-price">₹1099.00</span><span
+                                                    class="price">₹999.00</span>
+                                            </div>
+                                            <!-- End Product Price -->
+                                        </div>
+                                        <!-- End product details -->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--End Products Slider-->
+
+            <!--Shop By Category-->
+            <section class="section collection-slider pt-0">
+                <div class="container">
+                    <div class="section-header style2 d-flex-center justify-content-sm-between">
+                        <div class="section-header-left text-start">
+                            <h2 class="text-dark">Shop By Category</h2>
+                            <p>Shop our new arrivals from established category</p>
+                        </div>
+                        
+                    </div>
+
+                    <div class="collection-slider-3items slick-arrow-dots gp15 arwOut5 hov-arrow circle-arrow">
+                        <div class="category-item zoomscal-hov overlay-content">
+                            <a href="shop_trophy.php?category=football" class="category-link clr-none">
+                                <div class="zoom-scal"><img class="blur-up lazyload" style="width:416px;height:416px"
+                                        data-src="<?php echo $path ?>assets/img/trophy/football.jpeg"
+                                        src="<?php echo $path ?>assets/img/trophy/football.jpeg" alt="collection"
+                                        title="" width="416" height="416" /></div>
+                                <div class="details whiteText text-center p-0">
+                                    <h4 class="category-title h2 text-uppercase mb-2 pb-1">Football</h4>
+                                    <span class="category-btn btn-brd fw-500 text-uppercase">Shop Now</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="category-item zoomscal-hov overlay-content">
+                            <a href="shop_trophy.php?category=cricket" class="category-link clr-none">
+                                <div class="zoom-scal"><img style="width:416px;height:416px" class="blur-up lazyload"
+                                        data-src="<?php echo $path ?>assets/img/trophy/cricket.jpg"
+                                        src="<?php echo $path ?>assets/img/trophy/cricket.jpg" alt="collection" title=""
+                                        width="416px" height="416px" /></div>
+                                <div class="details whiteText text-center p-0">
+                                    <h4 class="category-title h2 text-uppercase mb-2 pb-1">Cricket</h4>
+                                    <span class="category-btn btn-brd fw-500 text-uppercase">Shop Now</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="category-item zoomscal-hov overlay-content">
+                            <a href="shop_trophy.php?category=kabaddi" class="category-link clr-none">
+                                <div class="zoom-scal"><img style="width:416px;height:416px" class="blur-up lazyload"
+                                        data-src="<?php echo $path ?>assets/img/trophy/kabaddi.jpg"
+                                        src="<?php echo $path ?>assets/img/trophy/kabaddi.jpg" alt="collection" title=""
+                                        width="416" height="416" /></div>
+                                <div class="details whiteText text-center p-0">
+                                    <h4 class="category-title h2 text-uppercase mb-2 pb-1">Kabaddi</h4>
+                                    <span class="category-btn btn-brd fw-500 text-uppercase">Shop Now</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="category-item zoomscal-hov overlay-content">
+                            <a href="shop_trophy.php?category=batmiton" class="category-link clr-none">
+                                <div class="zoom-scal"><img style="width:416px;height:416px" class="blur-up lazyload"
+                                        data-src="<?php echo $path ?>assets/img/trophy/badminton.jpg"
+                                        src="<?php echo $path ?>assets/img/trophy/badminton.jpg" alt="collection"
+                                        title="" width="416" height="416" /></div>
+                                <div class="details whiteText text-center p-0">
+                                    <h4 class="category-title h2 text-uppercase mb-2 pb-1">Badminton </h4>
+                                    <span class="category-btn btn-brd fw-500 text-uppercase">Shop Now</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--End Shop By Category-->
+            <section class="section collection-slider section-text section-clr">
+                    <div class="container">
+                        <div class="image-text-slider3items gp15 arwOut5 hov-arrow">
+                            <div class="category-item zoomscal-hov">
+                                <a href="shop_trophy.php?type=trophy" class="category-link clr-none">
+                                    <div class="zoom-scal zoom-scal-nopb"><img class="blur-up lazyload" data-src="<?php echo $path ?>img/index/trop1.png" src="<?php echo $path ?>img/index/trop1.png" alt="collection" title="" width="220" height="260" /></div>
+                                    <div class="details mt-4 text-left">
+                                        <h4 class="category-title">Trophies</h4>
+                                        <p class="dec">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.</p>
+                                        <span class="btn btn-secondary">Shop Now</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="category-item zoomscal-hov">
+                                <a href="shop_medal.php?type=medal" class="category-link clr-none">
+                                    <div class="zoom-scal zoom-scal-nopb"><img class="blur-up lazyload" data-src="<?php echo $path ?>assets/img/shields/shield 44.jpg" src="<?php echo $path ?>assets/img/shields/shield 44.jpg" alt="collection" title="" width="220" height="260" /></div>
+                                    <div class="details mt-4 text-left">
+                                        <h4 class="category-title">Medals</h4>
+                                        <p class="dec">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.</p>
+                                        <span class="btn btn-secondary">Shop Now</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="category-item zoomscal-hov">
+                                <a href="shop_sheild.php/type=sheild" class="category-link clr-none">
+                                    <div class="zoom-scal zoom-scal-nopb"><img class="blur-up lazyload" data-src="<?php echo $path ?>assets/img/shields/medal 2.png" src="<?php echo $path ?>assets/img/shields/medal 2.png" alt="collection" title="" width="220" height="260" /></div>
+                                    <div class="details mt-4 text-left">
+                                        <h4 class="category-title">Sheilds</h4>
+                                        <p class="dec">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.</p>
+                                        <span class="btn btn-secondary">Shop Now</span>
+                                    </div>
+                                </a>
+                            </div>                           
+                        </div>
+                    </div>
+                </section>
+
+            
+
+            <!--Products Slider-->
+
+            <section class="section product-banner-slider pt-0">
+                <div class="container">
+                    <div class="section-header style2 d-flex-center justify-content-sm-between">
+                        <div class="section-header-left text-start">
+                            <h2 class="text-dark">New Arrivals</h2>
+                            <p>Shop our new arrivals from established brands</p>
+                        </div>
+                        <div class="section-header-right text-start text-sm-end mt-3 mt-sm-0">
+                            <a href="shop_trophy" class="btn btn-primary">View More <i
+                                    class="icon anm anm-arw-right ms-2"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-9">
+                            <div
+                                class="grid-products product-slider-3items gp15 arwOut5 hov-arrow circle-arrow arrowlr-0">
+                                <div class="item col-item">
+                                    <div class="product-box">
+                                        
+                                        <div class="product-image">
+                                           
+                                            <a href="shop_trophy" class="product-img">
+                                                
+                                                <img class="primary blur-up lazyload"
+                                                    data-src="<?php echo $path ?>assets/img/trophy/trophy 77.jpg"
+                                                    src="<?php echo $path ?>assets/img/trophy/trophy 77.jpg"
+                                                    alt="Product" title="Product" width="625" height="625" />
+                                                
+                                                <img class="hover blur-up lazyload"
+                                                    data-src="<?php echo $path ?>assets/img/trophy/trophy 77.jpg"
+                                                    src="<?php echo $path ?>assets/img/trophy/trophy 77.jpg"
+                                                    alt="Product" title="Product" width="625" height="625" />
+
+                                            </a>
+
+
+
+                                        </div>
+                                       
+                                        <div class="product-details text-left">
+                                            
+                                            <div class="product-vendor">Cricket</div>
+  
+                                            <div class="product-name">
+                                                <a href="shop_trophy">Cricket Grand Cup</a>
+                                            </div>
+                                        
+                                            <div class="product-price">
+                                                <span class="price old-price">₹1099.00</span><span
+                                                    class="price">₹999.00</span>
+                                            </div>
+                                           
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item col-item">
+                                    <div class="product-box">
+                                        <div class="product-image">
+                                            <a href="shop_trophy" class="product-img">
+                                                <img class="primary blur-up lazyload"
+                                                    data-src="<?php echo $path ?>assets/img/trophy/trophy 44.jpg"
+                                                    src="<?php echo $path ?>assets/img/trophy/trophy 44.jpg"
+                                                    alt="Product" title="Product" width="625" height="625" />
+                                                <img class="hover blur-up lazyload"
+                                                    data-src="<?php echo $path ?>assets/img/trophy/trophy 44.jpg"
+                                                    src="<?php echo $path ?>assets/img/trophy/trophy 44.jpg"
+                                                    alt="Product" title="Product" width="625" height="625" />
+                                            </a>
+
+
+                                        </div>
+                                        <div class="product-details text-left">
+                                            <div class="product-vendor">Trophy</div>
+                                            <div class="product-name">
+                                                <a href="shop_trophy">King Grand Cup</a>
+                                            </div>
+                                            <div class="product-price">
+                                                <span class="price old-price">₹1099.00</span><span
+                                                    class="price">₹999.00</span>
+                                            </div>
+
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item col-item">
+                                    <div class="product-box">
+                                        <div class="product-image">
+                                            <a href="shop_trophy" class="product-img">
+                                                <img class="primary blur-up lazyload"
+                                                    data-src="<?php echo $path ?>assets/img/trophy/trophy 66.jpg"
+                                                    src="<?php echo $path ?>assets/img/trophy/trophy 66.jpg"
+                                                    alt="Product" title="Product" width="625" height="625" />
+                                                <img class="hover blur-up lazyload"
+                                                    data-src="<?php echo $path ?>assets/img/trophy/trophy 66.jpg"
+                                                    src="<?php echo $path ?>assets/img/trophy/trophy 66.jpg"
+                                                    alt="Product" title="Product" width="625" height="625" />
+                                            </a>
+                                            <div class="product-labels radius"><span class="lbl pr-label3">New</span>
+                                            </div>
+
+                                        </div>
+                                        <div class="product-details text-left">
+                                            <div class="product-vendor">Trophy</div>
+                                            <div class="product-name">
+                                                <a href="shop_trophy">All Star Cup</a>
+                                            </div>
+                                            <div class="product-price">
+                                                <span class="price old-price">$298.00</span><span
+                                                    class="price">$199.00</span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item col-item">
+                                    <div class="product-box">
+                                        <div class="product-image">
+                                            <a href="shop_trophy" class="product-img">
+                                                <img class="primary blur-up lazyload"
+                                                    data-src="<?php echo $path ?>assets/img/trophy/trophy 33.jpg"
+                                                    src="<?php echo $path ?>assets/img/trophy/trophy 33.jpg"
+                                                    alt="Product" title="Product" width="625" height="625" />
+                                                <img class="hover blur-up lazyload"
+                                                    data-src="<?php echo $path ?>assets/img/trophy/trophy 33.jpg"
+                                                    src="<?php echo $path ?>assets/img/trophy/trophy 33.jpg"
+                                                    alt="Product" title="Product" width="625" height="625" />
+                                            </a>
+                                            <div class="product-labels radius"><span class="lbl pr-label3">Sale</span>
+                                            </div>
+
+                                        </div>
+                                        <div class="product-details text-left">
+                                            <div class="product-vendor">Trophy</div>
+                                            <div class="product-name">
+                                                <a href="shop_trophy">King Crown Cup</a>
+                                            </div>
+                                            <div class="product-price">
+                                                <span class="price">$199.00</span>
+                                            </div>
+
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 mt-4 mt-lg-0">
+                            <div class="ctg-bnr-wrap two position-relative h-100">
+                                <div class="ctg-image ratio ratio-1x1 h-100">
+                                    <img class="blur-up lazyload"
+                                        data-src="<?php echo $path ?>assets/img/slider/cup44.jpg"
+                                        src="<?php echo $path ?>assets/img/slider/cup44.jpg" alt="collection"
+                                        width="309" height="483" />
+                                </div>
+                                <div class="ctg-content text-white d-flex-justify-center flex-nowrap flex-column h-100">
+                                    <h2 class="ctg-title text-white m-0"><span class="d-block">Best Offers</span> </h2>
+                                    <p class="saleText text-uppercase mb-0">30% Off</p>
+                                    <p class="ctg-des mt-1 mb-4">On all new arrival product</p>
+                                    <a class="btn btn-secondary explore-btn" href="shop_trophy">Shop Now <i
+                                            class="icon anm anm-arw-right ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section product-banner-slider pt-0">
+                <div class="container">
+                    <div class="section-header style2 d-flex-center justify-content-sm-between">
+                        <div class="section-header-left text-start">
+                            <h2 class="text-dark">New Arrivals</h2>
+                            <p>Shop our new arrivals from established brands</p>
+                        </div>
+                        <div class="section-header-right text-start text-sm-end mt-3 mt-sm-0">
+                            <a href="shop_medal" class="btn btn-primary">View More <i
+                                    class="icon anm anm-arw-right ms-2"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-9">
+                            <div
+                                class="grid-products product-slider-3items gp15 arwOut5 hov-arrow circle-arrow arrowlr-0">
+                               
+                                <div class="item col-item">
+
+<div class="product-box">
+    <!-- Start Product Image -->
+    <div class="product-image">
+        <!-- Start Product Image -->
+        <a href="shop_medal" class="product-img">
+            <!-- Image -->
+            <img style ="height:325px" class="primary blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/medal 1.jpg"
+                src="<?php echo $path ?>assets/img/shields/medal 1.jpg"
+                alt="Product" title="Product" width="625" height="625" />
+            <!-- End Image -->
+            <!-- Hover Image -->
+            <img style ="height:325px" class="hover blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/medal 1.jpg"
+                src="<?php echo $path ?>assets/img/shields/medal 1.jpg"
+                alt="Product" title="Product" width="625" height="625" />
+            <!-- End Hover Image -->
+        </a>
+        <!-- End Product Image -->
+
+
+    </div>
+    <!-- End Product Image -->
+    <!-- Start Product Details -->
+    <div class="product-details text-left">
+        <!--Product Vendor-->
+        <div class="product-vendor">Horse Riding</div>
+        <!--End Product Vendor-->
+        <!-- Product Name -->
+        <div class="product-name">
+            <a href="shop_medal">Horse Show Medal</a>
+        </div>
+        <!-- End Product Name -->
+        <!-- Product Price -->
+        <div class="product-price">
+            <span class="price old-price">₹1099.00</span><span
+                class="price">₹999.00</span>
+        </div>
+        <!-- End Product Price -->
+
+        <!-- Product Button -->
+      
+        <!-- End Product Button -->
+    </div>
+    <!-- End product details -->
+</div>
+</div>
+
+<div class="item col-item">
+
+<div class="product-box">
+    <!-- Start Product Image -->
+    <div class="product-image">
+        <!-- Start Product Image -->
+        <a href="shop_medal" class="product-img">
+            <!-- Image -->
+            <img style ="height:325px" class="primary blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/medal 3.jpg"
+                src="<?php echo $path ?>assets/img/shields/medal 3.jpg"
+                alt="Product" title="Product" width="625" height="625" />
+            <!-- End Image -->
+            <!-- Hover Image -->
+            <img style ="height:325px" class="hover blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/medal 3.jpg"
+                src="<?php echo $path ?>assets/img/shields/medal 3.jpg"
+                alt="Product" title="Product" width="625" height="625" />
+            <!-- End Hover Image -->
+        </a>
+        <!-- End Product Image -->
+
+
+    </div>
+    <!-- End Product Image -->
+    <!-- Start Product Details -->
+    <div class="product-details text-left">
+        <!--Product Vendor-->
+        <div class="product-vendor">General</div>
+        <!--End Product Vendor-->
+        <!-- Product Name -->
+        <div class="product-name">
+            <a href="shop_medal">Cusatomized Medal</a>
+        </div>
+        <!-- End Product Name -->
+        <!-- Product Price -->
+        <div class="product-price">
+            <span class="price old-price">₹1099.00</span><span
+                class="price">₹999.00</span>
+        </div>
+        <!-- End Product Price -->
+
+        <!-- Product Button -->
+       
+        <!-- End Product Button -->
+    </div>
+    <!-- End product details -->
+</div>
+</div>
+
+<div class="item col-item">
+
+<div class="product-box">
+    <!-- Start Product Image -->
+    <div class="product-image">
+        <!-- Start Product Image -->
+        <a href="shop_medal" class="product-img">
+            <!-- Image -->
+            <img style ="height:325px" class="primary blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/medal 4.jpg"
+                src="<?php echo $path ?>assets/img/shields/medal 4.jpg"
+                alt="Product" title="Product" width="625" height="725" />
+            <!-- End Image -->
+            <!-- Hover Image -->
+            <img style ="height:325px" class="hover blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/medal 4.jpg"
+                src="<?php echo $path ?>assets/img/shields/medal 4.jpg"
+                alt="Product" title="Product" width="625" height="725" />
+            <!-- End Hover Image -->
+        </a>
+        <!-- End Product Image -->
+
+
+    </div>
+    <!-- End Product Image -->
+    <!-- Start Product Details -->
+    <div class="product-details text-left">
+        <!--Product Vendor-->
+        <div class="product-vendor">General</div>
+        <!--End Product Vendor-->
+        <!-- Product Name -->
+        <div class="product-name">
+            <a href="shop_medal">Marathon Medal</a>
+        </div>
+        <!-- End Product Name -->
+        <!-- Product Price -->
+        <div class="product-price">
+            <span class="price old-price">₹1099.00</span><span
+                class="price">₹999.00</span>
+        </div>
+        <!-- End Product Price -->
+
+        <!-- Product Button -->
+        
+        <!-- End Product Button -->
+    </div>
+    <!-- End product details -->
+</div>
+</div>
+
+<div class="item col-item">
+
+<div class="product-box">
+    <!-- Start Product Image -->
+    <div class="product-image">
+        <!-- Start Product Image -->
+        <a href="shop_medal" class="product-img">
+            <!-- Image -->
+            <img style ="height:325px" class="primary blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/medal 2.jpg"
+                src="<?php echo $path ?>assets/img/shields/medal 2.jpg"
+                alt="Product" title="Product" width="625" height="725" />
+            <!-- End Image -->
+            <!-- Hover Image -->
+            <img style ="height:325px" class="hover blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/medal 2.jpg"
+                src="<?php echo $path ?>assets/img/shields/medal 2.jpg"
+                alt="Product" title="Product" width="625" height="725" />
+            <!-- End Hover Image -->
+        </a>
+        <!-- End Product Image -->
+
+
+    </div>
+    <!-- End Product Image -->
+    <!-- Start Product Details -->
+    <div class="product-details text-left">
+        <!--Product Vendor-->
+        <div class="product-vendor">General</div>
+        <!--End Product Vendor-->
+        <!-- Product Name -->
+        <div class="product-name">
+            <a href="shop_medal">Marathon Medal</a>
+        </div>
+        <!-- End Product Name -->
+        <!-- Product Price -->
+        <div class="product-price">
+            <span class="price old-price">₹1099.00</span><span
+                class="price">₹999.00</span>
+        </div>
+        <!-- End Product Price -->
+
+        <!-- Product Button -->
+       
+        <!-- End Product Button -->
+    </div>
+    <!-- End product details -->
+</div>
+</div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 mt-4 mt-lg-0">
+                            <div class="ctg-bnr-wrap two position-relative h-100">
+                                <div class="ctg-image ratio ratio-1x1 h-100">
+                                    <img class="blur-up lazyload"
+                                        data-src="<?php echo $path ?>assets/img/slider/cup44.jpg"
+                                        src="<?php echo $path ?>assets/img/slider/cup44.jpg" alt="collection"
+                                        width="309" height="483" />
+                                </div>
+                                <div class="ctg-content text-white d-flex-justify-center flex-nowrap flex-column h-100">
+                                    <h2 class="ctg-title text-white m-0"><span class="d-block">Best Offers</span> </h2>
+                                    <p class="saleText text-uppercase mb-0">30% Off</p>
+                                    <p class="ctg-des mt-1 mb-4">On all new arrival product</p>
+                                    <a class="btn btn-secondary explore-btn" href="shop_medal">Shop Now <i
+                                            class="icon anm anm-arw-right ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section product-banner-slider pt-0">
+                <div class="container">
+                    <div class="section-header style2 d-flex-center justify-content-sm-between">
+                        <div class="section-header-left text-start">
+                            <h2 class="text-dark">New Arrivals</h2>
+                            <p>Shop our new arrivals from established brands</p>
+                        </div>
+                        <div class="section-header-right text-start text-sm-end mt-3 mt-sm-0">
+                            <a href="shop_shield" class="btn btn-primary">View More <i
+                                    class="icon anm anm-arw-right ms-2"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-9">
+                            <div
+                                class="grid-products product-slider-3items gp15 arwOut5 hov-arrow circle-arrow arrowlr-0">
+                                <div class="item col-item">
+
+<div class="product-box">
+    <!-- Start Product Image -->
+    <div class="product-image">
+        <!-- Start Product Image -->
+        <a href="shop_shield" class="product-img">
+            <!-- Image -->
+            <img class="primary blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/shield 11.jpg"
+                src="<?php echo $path ?>assets/img/shields/shield 11.jpg"
+                alt="Product" title="Product" width="625" height="625" />
+            <!-- End Image -->
+            <!-- Hover Image -->
+            <img class="hover blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/shield 11.jpg"
+                src="<?php echo $path ?>assets/img/shields/shield 11.jpg"
+                alt="Product" title="Product" width="625" height="625" />
+            <!-- End Hover Image -->
+        </a>
+        <!-- End Product Image -->
+
+
+    </div>
+    <!-- End Product Image -->
+    <!-- Start Product Details -->
+    <div class="product-details text-left">
+        <!--Product Vendor-->
+        <div class="product-vendor">General</div>
+        <!--End Product Vendor-->
+        <!-- Product Name -->
+        <div class="product-name">
+            <a href="shop_shield">Grand Shield</a>
+        </div>
+        <!-- End Product Name -->
+        <!-- Product Price -->
+        <div class="product-price">
+            <span class="price old-price">₹1099.00</span><span
+                class="price">₹999.00</span>
+        </div>
+        <!-- End Product Price -->
+
+        <!-- Product Button -->
+      
+        <!-- End Product Button -->
+    </div>
+    <!-- End product details -->
+</div>
+</div>
+
+<div class="item col-item">
+
+<div class="product-box">
+    <!-- Start Product Image -->
+    <div class="product-image">
+        <!-- Start Product Image -->
+        <a href="shop_shield" class="product-img">
+            <!-- Image -->
+            <img class="primary blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/shield 22.jpg"
+                src="<?php echo $path ?>assets/img/shields/shield 22.jpg"
+                alt="Product" title="Product" width="625" height="625" />
+            <!-- End Image -->
+            <!-- Hover Image -->
+            <img class="hover blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/shield 22.jpg"
+                src="<?php echo $path ?>assets/img/shields/shield 22.jpg"
+                alt="Product" title="Product" width="625" height="625" />
+            <!-- End Hover Image -->
+        </a>
+        <!-- End Product Image -->
+
+
+    </div>
+    <!-- End Product Image -->
+    <!-- Start Product Details -->
+    <div class="product-details text-left">
+        <!--Product Vendor-->
+        <div class="product-vendor">General</div>
+        <!--End Product Vendor-->
+        <!-- Product Name -->
+        <div class="product-name">
+            <a href="shop_shield">Special Shield</a>
+        </div>
+        <!-- End Product Name -->
+        <!-- Product Price -->
+        <div class="product-price">
+            <span class="price old-price">₹1099.00</span><span
+                class="price">₹999.00</span>
+        </div>
+        <!-- End Product Price -->
+
+        <!-- Product Button -->
+      
+        <!-- End Product Button -->
+    </div>
+    <!-- End product details -->
+</div>
+</div>
+
+<div class="item col-item">
+
+<div class="product-box">
+    <!-- Start Product Image -->
+    <div class="product-image">
+        <!-- Start Product Image -->
+        <a href="shop_shield" class="product-img">
+            <!-- Image -->
+            <img class="primary blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/shield 33.jpg"
+                src="<?php echo $path ?>assets/img/shields/shield 33.jpg"
+                alt="Product" title="Product" width="625" height="625" />
+            <!-- End Image -->
+            <!-- Hover Image -->
+            <img class="hover blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/shield 33.jpg"
+                src="<?php echo $path ?>assets/img/shields/shield 33.jpg"
+                alt="Product" title="Product" width="625" height="625" />
+            <!-- End Hover Image -->
+        </a>
+        <!-- End Product Image -->
+
+
+    </div>
+    <!-- End Product Image -->
+    <!-- Start Product Details -->
+    <div class="product-details text-left">
+        <!--Product Vendor-->
+        <div class="product-vendor">General</div>
+        <!--End Product Vendor-->
+        <!-- Product Name -->
+        <div class="product-name">
+            <a href="shop_shield">Grand Shield</a>
+        </div>
+        <!-- End Product Name -->
+        <!-- Product Price -->
+        <div class="product-price">
+            <span class="price old-price">₹1099.00</span><span
+                class="price">₹999.00</span>
+        </div>
+        <!-- End Product Price -->
+
+        <!-- Product Button -->
+    
+        <!-- End Product Button -->
+    </div>
+    <!-- End product details -->
+</div>
+</div>
+
+<div class="item col-item">
+
+<div class="product-box">
+    <!-- Start Product Image -->
+    <div class="product-image">
+        <!-- Start Product Image -->
+        <a href="shop_shield" class="product-img">
+            <!-- Image -->
+            <img class="primary blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/shield40.jpg"
+                src="<?php echo $path ?>assets/img/shields/shield40.jpg"
+                alt="Product" title="Product" width="625" height="625" />
+            <!-- End Image -->
+            <!-- Hover Image -->
+            <img class="hover blur-up lazyload"
+                data-src="<?php echo $path ?>assets/img/shields/shield40.jpg"
+                src="<?php echo $path ?>assets/img/shields/shield40.jpg"
+                alt="Product" title="Product" width="625" height="625" />
+            <!-- End Hover Image -->
+        </a>
+        <!-- End Product Image -->
+
+
+    </div>
+    <!-- End Product Image -->
+    <!-- Start Product Details -->
+    <div class="product-details text-left">
+        <!--Product Vendor-->
+        <div class="product-vendor">General</div>
+        <!--End Product Vendor-->
+        <!-- Product Name -->
+        <div class="product-name">
+            <a href="shop_shield">General Event Shield</a>
+        </div>
+        <!-- End Product Name -->
+        <!-- Product Price -->
+        <div class="product-price">
+            <span class="price old-price">₹1099.00</span><span
+                class="price">₹999.00</span>
+        </div>
+        <!-- End Product Price -->
+
+        <!-- Product Button -->
+        
+        <!-- End Product Button -->
+    </div>
+    <!-- End product details -->
+</div>
+</div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 mt-4 mt-lg-0">
+                            <div class="ctg-bnr-wrap two position-relative h-100">
+                                <div class="ctg-image ratio ratio-1x1 h-100">
+                                    <img class="blur-up lazyload"
+                                        data-src="<?php echo $path ?>assets/img/slider/cup44.jpg"
+                                        src="<?php echo $path ?>assets/img/slider/cup44.jpg" alt="collection"
+                                        width="309" height="483" />
+                                </div>
+                                <div class="ctg-content text-white d-flex-justify-center flex-nowrap flex-column h-100">
+                                    <h2 class="ctg-title text-white m-0"><span class="d-block">Best Offers</span> </h2>
+                                    <p class="saleText text-uppercase mb-0">30% Off</p>
+                                    <p class="ctg-des mt-1 mb-4">On all new arrival product</p>
+                                    <a class="btn btn-secondary explore-btn" href="shop_shield">Shop Now <i
+                                            class="icon anm anm-arw-right ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+            <!--End Products Slider-->
+
+            <!--Collection banner
+            <section class="section collection-banners two-one-bnr py-0">
+                <div class="container">
+                    <div class="collection-banner-grid two-bnr">
+                        <div class="row sp-row">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 collection-banner-item">
+                                <div class="collection-item sp-col">
+
+                                    <div class="img">
+                                        <iframe width="560" height="455"
+                                            src="https://www.youtube.com/embed/1sLGPZcgrlc?si=gUpjPnPwAnv8DNae"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 collection-banner-item">
+                                <div class="collection-item sp-col">
+                                    <div class="img">
+                                        <iframe width="560" height="455"
+                                            src="https://www.youtube.com/embed/jNwKXGWtEbA?si=M0JfzrP8y2YyUiDe"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            End Collection banner-->
+
+            <!--Testimonial Section-->
+            <section class="section testimonial-slider style1 pb-0">
+                <div class="container">
+                    <div class="section-header">
+                        <p class="mb-2 mt-0">Happy Customer</p>
+                        <h2 class="text-dark">Reviews</h2>
+                    </div>
+
+                    <div class="testimonial-wraper">
+                        <!--Testimonial Slider Items-->
+                        <div class="testimonial-slider-3items gp15 slick-arrow-dots arwOut5">
+                            <div class="testimonial-slide rounded-3">
+                                <div class="testimonial-content text-center">
+                                    <div class="quote-icon mb-3 mb-lg-4"><img class="blur-up lazyload mx-auto"
+                                            data-src="<?php echo $path ?>assets/images/icons/demo1-quote-icon.png"
+                                            src="<?php echo $path ?>assets/images/icons/demo1-quote-icon.png" alt="icon"
+                                            width="40" height="40" /></div>
+                                    <div class="content">
+                                        <div class="text mb-2">
+                                            <p>Fantastic customer service! From helping us choose the perfect trophies
+                                                to accommodating our tight deadlines , the staff at this trophy shop
+                                                wend above and beyond. The personalized service made the entire process
+                                                enjoyable.
+                                            </p>
+                                        </div>
+                                        <div class="product-review my-3">
+                                            <i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i
+                                                class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i
+                                                class="icon anm anm-star"></i>
+                                            <span class="caption hidden ms-1">24 Reviews</span>
+                                        </div>
+                                    </div>
+                                    <div class="auhimg d-flex-justify-center text-left">
+
+                                        <div class="auhtext ms-3">
+                                            <h5 class="authour mb-1 text-dark">Ankur yadav yadav </h5>
+                                            <p class="text-muted">Google</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-slide rounded-3">
+                                <div class="testimonial-content text-center">
+                                    <div class="quote-icon mb-3 mb-lg-4"><img class="blur-up lazyload mx-auto"
+                                            data-src="<?php echo $path ?>assets/images/icons/demo1-quote-icon.png"
+                                            src="<?php echo $path ?>assets/images/icons/demo1-quote-icon.png" alt="icon"
+                                            width="40" height="40" /></div>
+                                    <div class="content">
+                                        <div class="text mb-2">
+                                            <p>Great experience Repeat customer for life! After the amazing experience
+                                                with this trophy shop, we're definitely coming back for all our future
+                                                trophy and award needs. Highly recommended for anyone seeking quality
+                                                and professionalism
+
+                                            </p>
+                                        </div>
+                                        <div class="product-review my-3">
+                                            <i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i
+                                                class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i
+                                                class="icon anm anm-star"></i>
+                                            <span class="caption hidden ms-1">15 Reviews</span>
+                                        </div>
+                                    </div>
+                                    <div class="auhimg d-flex-justify-center text-left">
+
+                                        <div class="auhtext ms-3">
+                                            <h5 class="authour mb-1 text-dark">Sumit Kharub
+                                            </h5>
+                                            <p class="text-muted">Google</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-slide rounded-3">
+                                <div class="testimonial-content text-center">
+                                    <div class="quote-icon mb-3 mb-lg-4"><img class="blur-up lazyload mx-auto"
+                                            data-src="<?php echo $path ?>assets/images/icons/demo1-quote-icon.png"
+                                            src="<?php echo $path ?>assets/images/icons/demo1-quote-icon.png" alt="icon"
+                                            width="40" height="40" /></div>
+                                    <div class="content">
+                                        <div class="text mb-2">
+                                            <p>Exceptional craftsmanship! The trophies we ordered for our company awards
+                                                ceremony were beautifully designed and expertly engraved. The attention
+                                                to detail truly sets this trophy shop apart.
+                                            </p>
+                                        </div>
+                                        <div class="product-review my-3">
+                                            <i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i
+                                                class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i
+                                                class="icon anm anm-star"></i>
+                                            <span class="caption hidden ms-1">17 Reviews</span>
+                                        </div>
+                                    </div>
+                                    <div class="auhimg d-flex-justify-center text-left">
+
+                                        <div class="auhtext ms-3">
+                                            <h5 class="authour mb-1 text-dark">Manas bagga</h5>
+                                            <p class="text-muted">Google</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-slide rounded-3">
+                                <div class="testimonial-content text-center">
+                                    <div class="quote-icon mb-3 mb-lg-4"><img class="blur-up lazyload mx-auto"
+                                            data-src="<?php echo $path ?>assets/images/icons/demo1-quote-icon.png"
+                                            src="<?php echo $path ?>assets/images/icons/demo1-quote-icon.png" alt="icon"
+                                            width="40" height="40" /></div>
+                                    <div class="content">
+                                        <div class="text mb-2">
+                                            <p>Sir your products are very attractive and effective and your quality are
+                                                very impresive....I simply suggest to everyone pls don't go any other
+                                                place buy from here quality products and very nice customer
+                                                service.
+                                                Highly recommend.
+                                            </p>
+                                        </div>
+                                        <div class="product-review my-3">
+                                            <i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i
+                                                class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i
+                                                class="icon anm anm-star"></i>
+                                            <span class="caption hidden ms-1">29 Reviews</span>
+                                        </div>
+                                    </div>
+                                    <div class="auhimg d-flex-justify-center text-left">
+
+                                        <div class="auhtext ms-3">
+                                            <h5 class="authour mb-1 text-dark">Junaid Saifi
+                                            </h5>
+                                            <p class="text-muted">Google</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Testimonial Slider Items-->
+                    </div>
+                </div>
+            </section>
+            <!--End Testimonial section-->
+            <br><br>
+
+            <hr class="m-0">
+
+
+
+        </div>
+        <!-- End Body Container -->
+        <?php include "footer.php"; ?>
+        <!--Footer-->
+
+        <!--End Footer-->
+
+        <!--Scoll Top-->
+        <div id="site-scroll" class="rounded-circle"><i class="icon anm anm-angle-up-r"></i></div>
+        <!--End Scoll Top-->
+
+        <!--MiniCart Drawer-->
+        <div id="minicart-drawer" class="minicart-right-drawer offcanvas offcanvas-end" tabindex="-1">
+            <!--MiniCart Empty-->
+            <div id="cartEmpty" class="cartEmpty d-flex-justify-center flex-column text-center p-3 text-muted d-none">
+                <div class="minicart-header d-flex-center justify-content-between w-100">
+                    <h4 class="fs-6 body-font">Your cart (0 Items)</h4>
+                    <button class="close-cart border-0" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                            class="icon anm anm-times-r" data-bs-toggle="tooltip" data-bs-placement="left"
+                            title="Close"></i></button>
+                </div>
+                <div class="cartEmpty-content mt-4">
+                    <i class="icon anm anm-basket-l fs-1 text-muted"></i>
+                    <p class="my-3">No Products in the Cart</p>
+                    <a href="index.html" class="btn btn-primary cart-btn">Continue shopping</a>
+                </div>
+            </div>
+            <!--End MiniCart Empty-->
+
+            <!--MiniCart Content-->
+            <div id="cart-drawer" class="block block-cart">
+                <div class="minicart-header">
+                    <button class="close-cart border-0" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                            class="icon anm anm-times-r" data-bs-toggle="tooltip" data-bs-placement="left"
+                            title="Close"></i></button>
+                    <h4 class="fs-6 body-font">Your cart (2 Items)</h4>
+                </div>
+                <div class="minicart-content">
+                    <ul class="m-0 clearfix">
+                        <li class="item d-flex justify-content-center align-items-center">
+                            <a class="product-image" href="product-layout1.html">
+                                <img class="blur-up lazyload"
+                                    data-src="<?php echo $path ?>assets/images/products/cart-electronic-product-img1.jpg"
+                                    src="<?php echo $path ?>assets/images/products/cart-electronic-product-img1.jpg"
+                                    alt="product" title="Product" width="120" height="170" />
+                            </a>
+                            <div class="product-details">
+                                <a class="product-title" href="product-layout1.html">IdeaPad Intel</a>
+                                <div class="variant-cart my-2">Black / XL</div>
+                                <div class="priceRow">
+                                    <div class="product-price">
+                                        <span class="price">$54.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="qtyDetail text-center">
+                                <div class="qtyField">
+                                    <a class="qtyBtn minus" href="#;"><i class="icon anm anm-minus-r"></i></a>
+                                    <input type="text" name="quantity" value="1" class="qty">
+                                    <a class="qtyBtn plus" href="#;"><i class="icon anm anm-plus-r"></i></a>
+                                </div>
+                                <a href="#" class="edit-i remove"><i class="icon anm anm-pencil-ar"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"></i></a>
+                                <a href="#" class="remove"><i class="icon anm anm-times-r" data-bs-toggle="tooltip"
+                                        data-bs-placement="top" title="Remove"></i></a>
+                            </div>
+                        </li>
+                        <li class="item d-flex justify-content-center align-items-center">
+                            <a class="product-image" href="product-layout1.html">
+                                <img class="blur-up lazyload"
+                                    data-src="<?php echo $path ?>assets/images/products/cart-electronic-product-img2.jpg"
+                                    src="<?php echo $path ?>assets/images/products/cart-electronic-product-img2.jpg"
+                                    alt="product" title="Product" width="120" height="170" />
+                            </a>
+                            <div class="product-details">
+                                <a class="product-title" href="product-layout1.html">Extensa Laptop</a>
+                                <div class="variant-cart my-2">Yellow / M</div>
+                                <div class="priceRow">
+                                    <div class="product-price">
+                                        <span class="price old-price">₹1099.00</span><span class="price">₹999.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="qtyDetail text-center">
+                                <div class="qtyField">
+                                    <a class="qtyBtn minus" href="#;"><i class="icon anm anm-minus-r"></i></a>
+                                    <input type="text" name="quantity" value="1" class="qty">
+                                    <a class="qtyBtn plus" href="#;"><i class="icon anm anm-plus-r"></i></a>
+                                </div>
+                                <a href="#" class="edit-i remove"><i class="icon anm anm-pencil-ar"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"></i></a>
+                                <a href="#" class="remove"><i class="icon anm anm-times-r" data-bs-toggle="tooltip"
+                                        data-bs-placement="top" title="Remove"></i></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="minicart-bottom">
+                    <div class="shipinfo">
+                        <div class="progress mb-2">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                        </div>
+                        <div class="freeShipMsg"><i class="icon anm anm-truck-l fs-6 me-2 align-middle"></i>Only <span
+                                class="money" data-currency-usd="$199.00" data-currency="USD">$199.00</span> away from
+                            <b>Free Shipping</b></div>
+                        <div class="freeShipMsg d-none"><i
+                                class="icon anm anm-truck-l fs-6 me-2 align-middle"></i>Congrats! You are eligible for
+                            <b>Free Shipping</b></div>
+                    </div>
+                    <div class="subtotal clearfix my-3">
+                        <div class="totalInfo clearfix mb-1 d-none"><span>Shipping:</span><span
+                                class="item product-price">$10.00</span></div>
+                        <div class="totalInfo clearfix mb-1 d-none"><span>Tax:</span><span
+                                class="item product-price">$0.00</span></div>
+                        <div class="totalInfo clearfix"><span>Total:</span><span
+                                class="item product-price">$163.00</span></div>
+
+                    </div>
+                    <div class="agree-check customCheckbox">
+                        <input id="prTearm" name="tearm" type="checkbox" value="tearm" required />
+                        <label for="prTearm"> I agree with the </label><a href="#" class="ms-1 text-link">Terms &amp;
+                            conditions</a>
+                    </div>
+                    <div class="minicart-action d-flex mt-3">
+                        <a href="checkout-style1.html" class="proceed-to-checkout btn btn-primary w-50 me-1">Check
+                            Out</a>
+                        <a href="cart-style1.html" class="cart-btn btn btn-secondary w-50 ms-1">View Cart</a>
+                    </div>
+                </div>
+            </div>
+            <!--MiniCart Content-->
+        </div>
+        <!--End MiniCart Drawer-->
+
+        <!-- Product Quickshop Modal-->
+        <div class="quickshop-modal modal fade" id="quickshop_modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <form method="post" action="#" id="product-form-quickshop"
+                            class="product-form align-items-center">
+                            <!-- Product Info -->
+                            <div class="row g-0 item mb-3">
+                                <a class="col-4 product-image" href="product-layout1.html"><img class="blur-up lazyload"
+                                        data-src="<?php echo $path ?>assets/images/products/electronic-product1.jpg"
+                                        src="<?php echo $path ?>assets/images/products/electronic-product1.jpg"
+                                        alt="Product" title="Product" width="625" height="625" /></a>
+                                <div class="col-8 product-details">
+                                    <div class="product-variant ps-3">
+                                        <div class="variant-cart mb-1">Electronic</div>
+                                        <a class="product-title" href="product-layout1.html">Digital SLR Camera</a>
+                                        <div class="priceRow mt-2 mb-3">
+                                            <div class="product-price m-0"><span class="old-price">₹1099.00</span><span
+                                                    class="price">₹999.00</span></div>
+                                        </div>
+                                        <div class="qtyField">
+                                            <a class="qtyBtn minus" href="#;"><i class="icon anm anm-minus-r"></i></a>
+                                            <input type="text" name="quantity" value="1" class="qty">
+                                            <a class="qtyBtn plus" href="#;"><i class="icon anm anm-plus-r"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Product Info -->
+                            <!-- Swatches Color -->
+                            <div class="variants-clr swatches-image clearfix mb-3 swatch-0 option1"
+                                data-option-index="0">
+                                <label class="label d-flex justify-content-center">Color:<span
+                                        class="slVariant ms-1 fw-bold">Black</span></label>
+                                <ul class="swatches d-flex-justify-center pt-1 clearfix">
+                                    <li class="swatch large radius available active"><img
+                                            src="<?php echo $path ?>assets/images/products/swatches/blue-red.jpg"
+                                            alt="image" width="70" height="70" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Blue" /></li>
+                                    <li class="swatch large radius available"><img
+                                            src="<?php echo $path ?>assets/images/products/swatches/blue-red.jpg"
+                                            alt="image" width="70" height="70" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Black" /></li>
+                                    <li class="swatch large radius available"><img
+                                            src="<?php echo $path ?>assets/images/products/swatches/blue-red.jpg"
+                                            alt="image" width="70" height="70" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Pink" /></li>
+                                    <li class="swatch large radius available green"><span class="swatchLbl"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Green"></span></li>
+                                    <li class="swatch large radius soldout yellow"><span class="swatchLbl"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Yellow"></span></li>
+                                </ul>
+                            </div>
+                            <!-- End Swatches Color -->
+                            <!-- Swatches Size -->
+                            <div class="variants-size swatches-size clearfix mb-4 swatch-1 option2"
+                                data-option-index="1">
+                                <label class="label d-flex justify-content-center">Size:<span
+                                        class="slVariant ms-1 fw-bold">S</span></label>
+                                <ul class="size-swatches d-flex-justify-center pt-1 clearfix">
+                                    <li class="swatch large radius soldout"><span class="swatchLbl"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" title="XS">XS</span></li>
+                                    <li class="swatch large radius available active"><span class="swatchLbl"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" title="S">S</span></li>
+                                    <li class="swatch large radius available"><span class="swatchLbl"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" title="M">M</span></li>
+                                    <li class="swatch large radius available"><span class="swatchLbl"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" title="L">L</span></li>
+                                    <li class="swatch large radius available"><span class="swatchLbl"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" title="XL">XL</span></li>
+                                </ul>
+                            </div>
+                            <!-- End Swatches Size -->
+                            <!-- Product Action -->
+                            <div class="product-form-submit d-flex-justify-center">
+                                <button type="submit" name="add"
+                                    class="btn btn-primary product-cart-submit me-2"><span>Add to cart</span></button>
+                                <button type="submit" name="sold" class="btn btn-secondary product-sold-out d-none"
+                                    disabled="disabled">Sold out</button>
+                                <button type="submit" name="buy" class="btn btn-secondary proceed-to-checkout">Buy it
+                                    now</button>
+                            </div>
+                            <!-- End Product Action -->
+                            <div class="text-center mt-3"><a class="text-link" href="product-layout1.html">View More
+                                    Details</a></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Product Quickshop Modal -->
+
+        <!-- Product Addtocart Modal-->
+        <div class="addtocart-modal modal fade" id="addtocart_modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <form method="post" action="#" id="product-form-addtocart"
+                            class="product-form align-items-center">
+                            <h3 class="title mb-3 text-success text-center">Added to cart Successfully!</h3>
+                            <div class="row d-flex-center text-center">
+                                <div class="col-md-6">
+                                    <!-- Product Image -->
+                                    <a class="product-image" href="product-layout1.html"><img class="blur-up lazyload"
+                                            data-src="<?php echo $path ?>assets/images/products/electronic-product1.jpg"
+                                            src="<?php echo $path ?>assets/images/products/electronic-product1.jpg"
+                                            alt="Product" title="Product" width="625" height="625" /></a>
+                                    <!-- End Product Image -->
+                                </div>
+                                <div class="col-md-6 mt-3 mt-md-0">
+                                    <!-- Product Info -->
+                                    <div class="product-details">
+                                        <div class="variant-cart mb-1">Electronic</div>
+                                        <a class="product-title" href="product-layout1.html">Digital SLR Camera</a>
+                                        <p class="product-clr my-2 text-muted">Black / XL</p>
+                                    </div>
+                                    <div class="addcart-total rounded-5">
+                                        <p class="product-items mb-2">There are <strong>1</strong> items in your cart
+                                        </p>
+                                        <p class="d-flex-justify-center">Total: <span class="price">₹1099.00</span></p>
+                                    </div>
+                                    <!-- End Product Info -->
+                                    <!-- Product Action -->
+                                    <div class="product-form-submit d-flex-justify-center">
+                                        <a href="#" class="btn btn-outline-primary product-continue w-100">Continue
+                                            Shopping</a>
+                                        <a href="cart-style1.html"
+                                            class="btn btn-secondary product-viewcart w-100 my-2 my-md-3">View Cart</a>
+                                        <a href="checkout-style1.html"
+                                            class="btn btn-primary product-checkout w-100">Proceed to checkout</a>
+                                    </div>
+                                    <!-- End Product Action -->
                                 </div>
                             </div>
                         </form>
                     </div>
-                </div> -->
-                <div class="footer-top clearfix">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
-                                <h4 class="h4">Pages</h4>
-                                <ul>
-                                    <li><a href="javascript:void(0)">Home</a></li>
-                                    <li><a href="javascript:void(0)">About us</a></li>
-                                    <li><a href="javascript:void(0)">Gallery</a></li>
-                                    <li><a href="javascript:void(0)">Shop</a></li>
-                                    <li><a href="#">Contact Us</a></li>
-                                </ul>
-                            </div>
-                            
-                            <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
-                                <h4 class="h4">Customer Services</h4>
-                                <ul>
-                                    <li><a href="#">Privacy policy</a></li>
-                                    <li><a href="javascript:void(0)">FAQ's</a></li>
-                                    <li><a href="javascript:void(0)">Terms &amp; condition</a></li>
-                                    <li><a href="#">Orders and Returns</a></li>
-                                    <li><a href="#">Support Center</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-contact">
-                                <h4 class="h4">Contact Us</h4>
-                                <p class="address d-flex"><i class="icon anm anm-map-marker-al pt-1"></i> Pothamettupatty, near SBI ATM, Manapparai, Tamil Nadu 621306</p>
-                                <p class="phone d-flex align-items-center"><i class="icon anm anm-phone-l"></i>  <b class="me-1 d-none">Phone:</b> <a href="tel:401234567890">+91 98765 43210</a></p>
-                                <p class="email d-flex align-items-center"><i class="icon anm anm-envelope-l"></i> <b class="me-1 d-none">Email:</b> <a href="mailto:info@example.com">imax@gmail.com</a></p>
-                                <ul class="list-inline social-icons mt-3">
-                                    <li class="list-inline-item"><a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook"><i class="icon anm anm-facebook-f"></i></a></li>
-                                    <li class="list-inline-item"><a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter"><i class="icon anm anm-twitter"></i></a></li>
-                                    <li class="list-inline-item"><a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Pinterest"><i class="icon anm anm-pinterest-p"></i></a></li>
-                                    <li class="list-inline-item"><a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Linkedin"><i class="icon anm anm-linkedin-in"></i></a></li>
-                                    <li class="list-inline-item"><a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Instagram"><i class="icon anm anm-instagram"></i></a></li>
-                                    <li class="list-inline-item"><a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Youtube"><i class="icon anm anm-youtube"></i></a></li>
-                                </ul>
-                            </div>
-                           
-                            <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
-                                <h4 class="h4">Location</h4>
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.566658461602!2d78.42477737381135!3d10.61301406218919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baa6f0fa20143ab%3A0xce39e30dda6c9240!2sIMAX%20Trophies!5e0!3m2!1sen!2sin!4v1695214223281!5m2!1sen!2sin" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            </div>
-                            
-                        </div>               
-                    </div>
-                </div>
-                <div class="footer-bottom clearfix">
-                    <div class="container">
-                        <div class="d-flex-center flex-column justify-content-md-between flex-md-row-reverse">
-                            <ul class="payment-icons d-flex-center mb-2 mb-md-0">
-                                <!-- <li><i class="icon anm anm-cc-visa"></i></li>
-                                <li><i class="icon anm anm-cc-mastercard"></i></li>
-                                <li><i class="icon anm anm-cc-amex"></i></li>
-                                <li><i class="icon anm anm-cc-paypal"></i></li>
-                                <li><i class="icon anm anm-cc-discover"></i></li>
-                                <li><i class="icon anm anm-cc-stripe"></i></li>
-                                <li><i class="icon anm anm-cc-jcb"></i></li> -->
-                            </ul>
-                            <div class="copytext">&copy; 2023 Imax Trophies. All Rights Reserved. Designed by <a href="https://www.cryptographicsolutions.in" style="color: red;">Cryptographic solutions</a> </div>
-                        </div>
-                    </div>
                 </div>
             </div>
-            <!--End Footer-->
-
-            <!--Scoll Top-->
-            <div id="site-scroll"><i class="icon anm anm-arw-up"></i></div>
-            <!--End Scoll Top-->
-
-            <!--MiniCart Drawer-->
-            <div id="minicart-drawer" class="minicart-right-drawer offcanvas offcanvas-end" tabindex="-1">
-                <!--MiniCart Empty-->
-                <div id="cartEmpty" class="cartEmpty d-flex-justify-center flex-column text-center p-3 text-muted d-none">
-                    <div class="minicart-header d-flex-center justify-content-between w-100">
-                        <h4 class="fs-6">Your cart (0 Items)</h4>
-                        <button class="close-cart border-0" data-bs-dismiss="offcanvas" aria-label="Close"><i class="icon anm anm-times-r" data-bs-toggle="tooltip" data-bs-placement="left" title="Close"></i></button>
-                    </div>
-                    <div class="cartEmpty-content mt-4">
-                        <i class="icon anm anm-cart-l fs-1 text-muted"></i> 
-                        <p class="my-3">No Products in the Cart</p>
-                        <a href="javascript:void(0)" class="btn btn-primary cart-btn">Continue shopping</a>
-                    </div>
-                </div>
-                <!--End MiniCart Empty-->
-
-                <!--MiniCart Content-->
-                <div id="cart-drawer" class="block block-cart">
-                    <div class="minicart-header">
-                        <button class="close-cart border-0" data-bs-dismiss="offcanvas" aria-label="Close"><i class="icon anm anm-times-r" data-bs-toggle="tooltip" data-bs-placement="left" title="Close"></i></button>
-                        <h4 class="fs-6">Your cart (2 Items)</h4>
-                    </div>
-                    <div class="minicart-content">
-                        <ul class="m-0 clearfix">
-                            <li class="item d-flex justify-content-center align-items-center">
-                                <a class="product-image rounded-0" href="javascript:void(0)">
-                                    <img class="rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/index/cup1.jpg" src="<?php echo $path ?>img/index/cup1.jpg" alt="product" title="Product" width="120" height="170" />
-                                </a>
-                                <div class="product-details">
-                                    <a class="product-title" href="javascript:void(0)">Star Trophy</a>
-                                    <div class="variant-cart my-2">22""</div>
-                                    <div class="priceRow">
-                                        <div class="product-price">
-                                            <span class="price">₹5999.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="qtyDetail text-center">
-                                    <div class="qtyField">
-                                        <a class="qtyBtn minus" href="#;"><i class="icon anm anm-minus-r"></i></a>
-                                        <input type="text" name="quantity" value="1" class="qty">
-                                        <a class="qtyBtn plus" href="#;"><i class="icon anm anm-plus-r"></i></a>
-                                    </div>
-                                    <a href="#" class="edit-i remove"><i class="icon anm anm-pencil-ar" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"></i></a>
-                                    <a href="#" class="remove"><i class="icon anm anm-times-r" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove"></i></a>
-                                </div>
-                            </li>
-                            <li class="item d-flex justify-content-center align-items-center">
-                                <a class="product-image rounded-0" href="javascript:void(0)">
-                                    <img class="rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used/cup1.jpg" src="<?php echo $path ?>img/used/cup1.jpg" alt="product" title="Product" width="120" height="170" />
-                                </a>
-                                <div class="product-details">
-                                    <a class="product-title" href="javascript:void(0)">Gold Individual</a>
-                                    <div class="variant-cart my-2">16"</div>
-                                    <div class="priceRow">
-                                        <div class="product-price">
-                                            <span class="price">₹1199.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="qtyDetail text-center">
-                                    <div class="qtyField">
-                                        <a class="qtyBtn minus" href="#;"><i class="icon anm anm-minus-r"></i></a>
-                                        <input type="text" name="quantity" value="1" class="qty">
-                                        <a class="qtyBtn plus" href="#;"><i class="icon anm anm-plus-r"></i></a>
-                                    </div>
-                                    <a href="#" class="edit-i remove"><i class="icon anm anm-pencil-ar" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"></i></a>
-                                    <a href="#" class="remove"><i class="icon anm anm-times-r" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove"></i></a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="minicart-bottom">
-                        <div class="shipinfo">
-                            <div class="progress mb-2"><div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div></div>
-                            <div class="freeShipMsg"><i class="icon anm anm-truck-l fs-6 me-2 align-middle"></i>Only <span class="money" data-currency-usd="₹2000.00" data-currency="INR">₹2000.00</span> away from <b>Free Shipping</b></div>
-                            <div class="freeShipMsg d-none"><i class="icon anm anm-truck-l fs-6 me-2 align-middle"></i>Congrats! You are eligible for <b>Free Shipping</b></div>
-                        </div>
-                        <div class="subtotal clearfix my-3">
-                            <div class="totalInfo clearfix mb-1 d-none"><span>Shipping:</span><span class="item product-price">₹10.00</span></div>
-                            <div class="totalInfo clearfix mb-1 d-none"><span>Tax:</span><span class="item product-price">₹0.00</span></div>
-                            <div class="totalInfo clearfix"><span>Total:</span><span class="item product-price">₹7198.00</span></div>
-
-                        </div>
-                        <!-- <div class="agree-check customCheckbox">
-                            <input id="prTearm" name="tearm" type="checkbox" value="tearm" required />
-                            <label for="prTearm"> I agree with the </label><a href="#" class="ms-1 text-link">Terms &amp; conditions</a>
-                        </div> -->
-                        <div class="minicart-action d-flex mt-3">
-                            <a href="javascript:void(0)" class="proceed-to-checkout btn btn-primary w-50 me-1">Check Out</a>
-                            <a href="javascript:void(0)" class="cart-btn btn btn-secondary w-50 ms-1">View Cart</a>
-                        </div>
-                    </div>
-                </div>
-                <!--MiniCart Content-->
-            </div>
-            <!--End MiniCart Drawer-->
-
-            <!-- Product Quickshop Modal-->
-            <div class="quickshop-modal modal fade" id="quickshop_modal" tabindex="-1" aria-hidden="true">           
-                <div class="modal-dialog modal-lg modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            <form method="post" action="#" id="product-form-quickshop" class="product-form align-items-center">
-                                <!-- Product Info -->
-                                <div class="row g-0 item mb-3">
-                                    <a class="col-4 product-image" href="javascript:void(0)"><img class="rounded-0 blur-up lazyload" data-src="<?php echo $path ?>assets/images/products/addtocart-modal.jpg" src="<?php echo $path ?>assets/images/products/addtocart-modal.jpg" alt="Product" title="Product" width="625" height="800" /></a>
-                                    <div class="col-8 product-details">
-                                        <div class="product-variant ps-3">
-
-                                            <a class="product-title" href="javascript:void(0)">Weave Hoodie Sweatshirt</a>
-                                            <div class="priceRow mt-2 mb-3">
-                                                <div class="product-price m-0"><span class="old-price">₹114.00</span><span class="price">₹99.00</span></div>
-                                            </div>
-                                            <div class="qtyField">
-                                                <a class="qtyBtn minus" href="#;"><i class="icon anm anm-minus-r"></i></a>
-                                                <input type="text" name="quantity" value="1" class="qty">
-                                                <a class="qtyBtn plus" href="#;"><i class="icon anm anm-plus-r"></i></a>
-                                            </div> 
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Product Info -->
-                                <!-- Swatches Color -->
-                                <div class="variants-clr swatches-image clearfix mb-3 swatch-0 option1" data-option-index="0">
-                                    <label class="label d-flex justify-content-center">Color:<span class="slVariant ms-1 fw-bold">Black</span></label>
-                                    <ul class="swatches d-flex-justify-center pt-1 clearfix">
-                                        <li class="swatch large radius available active"><img src="<?php echo $path ?>assets/images/products/swatches/blue-red.jpg" alt="image" width="70" height="70" data-bs-toggle="tooltip" data-bs-placement="top" title="Blue" /></li>
-                                        <li class="swatch large radius available"><img src="<?php echo $path ?>assets/images/products/swatches/blue-red.jpg" alt="image" width="70" height="70" data-bs-toggle="tooltip" data-bs-placement="top" title="Black" /></li>
-                                        <li class="swatch large radius available"><img src="<?php echo $path ?>assets/images/products/swatches/blue-red.jpg" alt="image" width="70" height="70" data-bs-toggle="tooltip" data-bs-placement="top" title="Pink" /></li>
-                                        <li class="swatch large radius available green"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="Green"></span></li>
-                                        <li class="swatch large radius soldout yellow"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="Yellow"></span></li>
-                                    </ul>
-                                </div>
-                                <!-- End Swatches Color -->
-                                <!-- Swatches Size -->
-                                <div class="variants-size swatches-size clearfix mb-4 swatch-1 option2" data-option-index="1">
-                                    <label class="label d-flex justify-content-center">Size:<span class="slVariant ms-1 fw-bold">S</span></label>
-                                    <ul class="size-swatches d-flex-justify-center pt-1 clearfix">
-                                        <li class="swatch large radius soldout"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="XS">XS</span></li>
-                                        <li class="swatch large radius available active"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="S">S</span></li>
-                                        <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="M">M</span></li>
-                                        <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="L">L</span></li>
-                                        <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="XL">XL</span></li>
-                                    </ul>
-                                </div>
-                                <!-- End Swatches Size -->
-                                <!-- Product Action -->
-                                <div class="product-form-submit d-flex-justify-center">
-                                    <button type="submit" name="add" class="btn product-cart-submit me-2"><span>Add to cart</span></button>
-                                    <button type="submit" name="sold" class="btn btn-secondary product-sold-out d-none" disabled="disabled">Sold out</button>
-                                    <button type="submit" name="buy" class="btn btn-secondary proceed-to-checkout">Buy it now</button>
-                                </div>
-                                <!-- End Product Action -->
-                                <div class="text-center mt-3"><a class="text-link" href="javascript:void(0)">View More Details</a></div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Product Quickshop Modal -->
-
-            <!-- Product Addtocart Modal-->
-            <div class="addtocart-modal modal fade" id="addtocart_modal" tabindex="-1" aria-hidden="true">           
-                <div class="modal-dialog modal-lg modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            <form method="post" action="#" id="product-form-addtocart" class="product-form align-items-center">
-                                <h3 class="title mb-3 text-success text-center">Added to cart Successfully!</h3>
-                                <div class="row d-flex-center text-center">
-                                    <div class="col-md-6">
-                                        <!-- Product Image -->
-                                        <a class="product-image" href="javascript:void(0)"><img class="rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used/cup9.jpg" src="<?php echo $path ?>img/used/cup9.jpg" alt="Product" title="Product" width="625" height="800" /></a>
-                                        <!-- End Product Image -->
-                                    </div>
-                                    <div class="col-md-6 mt-3 mt-md-0">
-                                        <!-- Product Info -->
-                                        <div class="product-details">
-                                            <a class="product-title" href="javascript:void(0)">Globe Trophy</a>
-                                            <p class="product-clr my-2 text-muted">22"</p>
-                                        </div>
-                                        <div class="addcart-total rounded-5">
-                                            <p class="product-items mb-2">There are <strong>1</strong> items in your cart</p>
-                                            <p class="d-flex-justify-center">Total: <span class="price">₹1999.00</span></p>
-                                        </div>
-                                        <!-- End Product Info -->
-                                        <!-- Product Action -->
-                                        <div class="product-form-submit d-flex-justify-center">
-                                            <a href="#" class="btn btn-outline-primary product-continue w-100">Continue Shopping</a>
-                                            <a href="javascript:void(0)" class="btn btn-secondary product-viewcart w-100 my-2 my-md-3">View Cart</a>
-                                            <a href="javascript:void(0)" class="btn btn-primary product-checkout w-100">Proceed to checkout</a>
-                                        </div>
-                                        <!-- End Product Action -->
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Product Addtocart Modal -->
-            <style>
-                .carousel-inner .item img
-                {
-                    height: 500px;
-                }
-            </style>
-
-            <!-- Product Quickview Modal-->
-            <div class="quickview-modal modal fade" id="quickview_modal" tabindex="-1" aria-hidden="true">           
-                <div class="modal-dialog modal-lg modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            <div class="row">
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 mb-md-0">
-                                    <!-- Model Thumbnail -->
-                                    <div id="quickView" class="carousel slide">
-                                        <!-- Image Slide carousel items -->
-                                        <div class="carousel-inner">
-                                            <div class="item carousel-item active" data-bs-slide-number="0">
-                                                <img class="rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup1.jpg" src="<?php echo $path ?>img/used\cup1.jpg" alt="product" title="Product" width="625" height="808" />
-                                            </div>
-                                            <div class="item carousel-item" data-bs-slide-number="1">
-                                                <img class="rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup2.jpg" src="<?php echo $path ?>img/used\cup2.jpg" alt="product" title="Product" width="625" height="808" />
-                                            </div>
-                                            <div class="item carousel-item" data-bs-slide-number="2">
-                                                <img class="rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup3.jpg" src="<?php echo $path ?>img/used\cup3.jpg" alt="product" title="Product" width="625" height="808" />
-                                            </div>
-                                            <div class="item carousel-item" data-bs-slide-number="3">
-                                                <img class="rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup4.jpg" src="<?php echo $path ?>img/used\cup4.jpg" alt="product" title="Product" width="625" height="808" />
-                                            </div>
-                                            <div class="item carousel-item" data-bs-slide-number="4">
-                                                <img class="rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup5.jpg" src="<?php echo $path ?>img/used\cup5.jpg" alt="product" title="Product" width="625" height="808" />
-                                            </div>
-                                            <div class="item carousel-item" data-bs-slide-number="5">
-                                                <img class="rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup6.jpg" src="<?php echo $path ?>img/used\cup6.jpg" alt="product" title="Product" width="625" height="808" />
-                                            </div>
-                                        </div>
-                                        <!-- End Image Slide carousel items -->
-                                       
-                                        <!-- Thumbnail image -->
-                                        <div class="model-thumbnail-img">
-                                            <!-- Thumbnail slide -->
-                                            <div class="carousel-indicators list-inline">
-                                                <div class="list-inline-item active" id="carousel-selector-0" data-bs-slide-to="0" data-bs-target="#quickView">
-                                                    <img class="rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup1.jpg" src="<?php echo $path ?>img/used\cup1.jpg" alt="product" title="Product" width="625" height="808" />
-                                                </div>
-                                                <div class="list-inline-item" id="carousel-selector-1" data-bs-slide-to="1" data-bs-target="#quickView">
-                                                    <img class="rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup2.jpg" src="<?php echo $path ?>img/used\cup2.jpg" alt="product" title="Product" width="625" height="808" />
-                                                </div>
-                                                <div class="list-inline-item" id="carousel-selector-2" data-bs-slide-to="2" data-bs-target="#quickView">
-                                                    <img class="rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup3.jpg" src="<?php echo $path ?>img/used\cup3.jpg" alt="product" title="Product" width="625" height="808" />
-                                                </div>
-                                                <div class="list-inline-item" id="carousel-selector-3" data-bs-slide-to="3" data-bs-target="#quickView">
-                                                    <img class="rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup4.jpg" src="<?php echo $path ?>img/used\cup4.jpg" alt="product" title="Product" width="625" height="808" />
-                                                </div>
-                                                <div class="list-inline-item" id="carousel-selector-4" data-bs-slide-to="4" data-bs-target="#quickView">
-                                                    <img class="rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup5.jpg" src="<?php echo $path ?>img/used\cup5.jpg" alt="product" title="Product" width="625" height="808" />
-                                                </div>
-                                                <div class="list-inline-item" id="carousel-selector-5" data-bs-slide-to="5" data-bs-target="#quickView">
-                                                    <img class="rounded-0 blur-up lazyload" data-src="<?php echo $path ?>img/used\cup6.jpg" src="<?php echo $path ?>img/used\cup6.jpg" alt="product" title="Product" width="625" height="808" />
-                                                </div>
-                                            </div>
-                                            <!-- End Thumbnail slide -->
-                                            <!-- Carousel arrow button -->
-                                            <a class="carousel-control-prev carousel-arrow rounded-1" href="#quickView" data-bs-target="#quickView" data-bs-slide="prev"><i class="icon anm anm-angle-left-r"></i></a>
-                                            <a class="carousel-control-next carousel-arrow rounded-1" href="#quickView" data-bs-target="#quickView" data-bs-slide="next"><i class="icon anm anm-angle-right-r"></i></a>
-                                            <!-- End Carousel arrow button -->
-                                        </div>
-                                        <!-- End Thumbnail image -->
-                                    </div>
-                                    <!-- End Model Thumbnail -->
-                                    <!-- <div class="text-center mt-3"><a href="javascript:void(0)" class="text-link">View More Details</a></div> -->
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                                    <div class="product-arrow d-flex justify-content-between">
-                                        <h2 class="product-title">Globe Trophy</h2>
-                                    </div>
-                                    <!-- <div class="product-review d-flex mt-0 mb-2">
-                                        <div class="rating"><i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i class="icon anm anm-star-o"></i></div>
-                                        <div class="reviews ms-2"><a href="#">6 Reviews</a></div>
-                                    </div> -->
-                                    <!-- <div class="product-info">
-                                        <p class="product-vendor">Vendor:<span class="text"><a href="#">HVL</a></span></p>  
-                                        <p class="product-sku">SKU:<span class="text">RF104</span></p>
-                                    </div> -->
-                                    <div class="pro-stockLbl my-2">
-                                        <span class="d-flex-center stockLbl instock d-none"><span> In stock</span></span>
-                                        <span class="d-flex-center stockLbl preorder d-none"><span> Pre-order Now</span></span>
-                                        <span class="d-flex-center stockLbl outstock d-none"><span>Sold out</span></span>
-                                    </div>
-                                    <div class="product-price d-flex-center my-3">
-                                        <span class="price old-price">₹2000.00</span><span class="price">₹1299.00</span>
-                                    </div>
-                                    <!-- <div class="sort-description">This Perf</div> -->
-                                    <!-- <form method="post" action="#" id="product_form--option" class="product-form">
-                                        <div class="product-options d-flex-wrap">
-                                            <div class="product-item swatches-image w-100 mb-3 swatch-0 option1" data-option-index="0">
-                                                <label class="label d-flex align-items-center">Color:<span class="slVariant ms-1 fw-bold">Blue</span></label>
-                                                <ul class="variants-clr swatches d-flex-center pt-1 clearfix">
-                                                    <li class="swatch large radius available blue"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="Blue"></span></li>
-                                                    <li class="swatch large radius available black"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="Black"></span></li>
-                                                    <li class="swatch large radius available pink"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="Pink"></span></li>
-                                                    <li class="swatch large radius available green"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="Green"></span></li>
-                                                    <li class="swatch large radius soldout yellow"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="Yellow"></span></li>
-                                                </ul>
-                                            </div>
-                                            <div class="product-item swatches-size w-100 mb-3 swatch-1 option2" data-option-index="1">
-                                                <label class="label d-flex align-items-center">Size:<span class="slVariant ms-1 fw-bold">S</span></label>
-                                                <ul class="variants-size size-swatches d-flex-center pt-1 clearfix">
-                                                    <li class="swatch large radius soldout"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="XS">XS</span></li>
-                                                    <li class="swatch large radius available active"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="S">S</span></li>
-                                                    <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="M">M</span></li>
-                                                    <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="L">L</span></li>
-                                                    <li class="swatch large radius available"><span class="swatchLbl" data-bs-toggle="tooltip" data-bs-placement="top" title="XL">XL</span></li>
-                                                </ul>
-                                            </div>
-                                            <div class="product-action d-flex-wrap w-100 pt-1 mb-3 clearfix">
-                                                <div class="quantity">
-                                                    <div class="qtyField">
-                                                        <a class="qtyBtn minus" href="#;"><i class="icon anm anm-minus-r" aria-hidden="true"></i></a>
-                                                        <input type="text" name="quantity" value="1" class="product-form__input qty">
-                                                        <a class="qtyBtn plus" href="#;"><i class="icon anm anm-plus-l" aria-hidden="true"></i></a>
-                                                    </div>
-                                                </div>                                
-                                                <div class="addtocart ms-3 fl-1">
-                                                    <button type="submit" name="add" class="btn product-cart-submit w-100"><span>Add to cart</span></button>
-                                                    <button type="submit" name="sold" class="btn btn-secondary product-sold-out w-100 d-none" disabled="disabled"><span>Sold out</span></button>
-                                                    <button type="submit" name="buy" class="btn btn-secondary proceed-to-checkout w-100 d-none"><span>Buy it now</span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form> -->
-                                    <div class="wishlist-btn d-flex-center">
-                                        <a class="add-wishlist d-flex-center me-3" href="javascript:void(0)" title="Add to Wishlist"><i class="icon anm anm-heart-l me-1"></i> <span>Add to Wishlist</span></a>
-                                        <!-- <a class="add-compare d-flex-center" href="javascript:void(0)" title="Add to Compare"><i class="icon anm anm-random-r me-2"></i> <span>Add to Compare</span></a> -->
-                                    </div>
-                                    <!-- Social Sharing -->
-                                    <!-- <div class="social-sharing share-icon d-flex-center mx-0 mt-3">
-                                        <span class="sharing-lbl">Share :</span>
-                                        <a href="#" class="d-flex-center btn btn-link btn--share share-facebook" data-bs-toggle="tooltip" data-bs-placement="top" title="Share on Facebook"><i class="icon anm anm-facebook-f"></i><span class="share-title d-none">Facebook</span></a>
-                                        <a href="#" class="d-flex-center btn btn-link btn--share share-twitter" data-bs-toggle="tooltip" data-bs-placement="top" title="Tweet on Twitter"><i class="icon anm anm-twitter"></i><span class="share-title d-none">Tweet</span></a>
-                                        <a href="#" class="d-flex-center btn btn-link btn--share share-pinterest" data-bs-toggle="tooltip" data-bs-placement="top" title="Pin on Pinterest"><i class="icon anm anm-pinterest-p"></i> <span class="share-title d-none">Pin it</span></a>
-                                        <a href="#" class="d-flex-center btn btn-link btn--share share-linkedin" data-bs-toggle="tooltip" data-bs-placement="top" title="Share on Instagram"><i class="icon anm anm-linkedin-in"></i><span class="share-title d-none">Instagram</span></a>
-                                        <a href="#" class="d-flex-center btn btn-link btn--share share-whatsapp" data-bs-toggle="tooltip" data-bs-placement="top" title="Share on WhatsApp"><i class="icon anm anm-envelope-l"></i><span class="share-title d-none">WhatsApp</span></a>
-                                        <a href="#" class="d-flex-center btn btn-link btn--share share-email" data-bs-toggle="tooltip" data-bs-placement="top" title="Share by Email"><i class="icon anm anm-whatsapp"></i><span class="share-title d-none">Email</span></a>
-                                    </div> -->
-                                    <!-- End Social Sharing -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--End Product Quickview Modal-->
-
-
-            <!-- Including Jquery/Javascript -->
-            <!-- Plugins JS -->
-            <script src="<?php echo $path ?>assets/js/plugins.js"></script>
-            <!-- Main JS -->
-            <script src="<?php echo $path ?>assets/js/main.js"></script>
-
         </div>
-        <!--End Page Wrapper-->
-    </body>
+        <!-- End Product Addtocart Modal -->
 
-<!-- Mirrored from www.annimexweb.com/items/hema/shop-left-sidebar.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Sep 2023 19:35:01 GMT -->
+        <!-- Product Quickview Modal-->
+        <div class="quickview-modal modal fade" id="quickview_modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 mb-md-0">
+                                <!-- Model Thumbnail -->
+                                <div id="quickView" class="carousel slide">
+                                    <!-- Image Slide carousel items -->
+                                    <div class="carousel-inner">
+                                        <div class="item carousel-item active" data-bs-slide-number="0">
+                                            <img class="blur-up lazyload"
+                                                data-src="<?php echo $path ?>assets/images/products/electronic-product1.jpg"
+                                                src="<?php echo $path ?>assets/images/products/electronic-product1.jpg"
+                                                alt="product" title="Product" width="625" height="625" />
+                                        </div>
+                                        <div class="item carousel-item" data-bs-slide-number="1">
+                                            <img class="blur-up lazyload"
+                                                data-src="<?php echo $path ?>assets/images/products/electronic-product2.jpg"
+                                                src="<?php echo $path ?>assets/images/products/electronic-product2.jpg"
+                                                alt="product" title="Product" width="625" height="625" />
+                                        </div>
+                                        <div class="item carousel-item" data-bs-slide-number="2">
+                                            <img class="blur-up lazyload"
+                                                data-src="<?php echo $path ?>assets/images/products/electronic-product3.jpg"
+                                                src="<?php echo $path ?>assets/images/products/electronic-product3.jpg"
+                                                alt="product" title="Product" width="625" height="625" />
+                                        </div>
+                                        <div class="item carousel-item" data-bs-slide-number="3">
+                                            <img class="blur-up lazyload"
+                                                data-src="<?php echo $path ?>assets/images/products/electronic-product4.jpg"
+                                                src="<?php echo $path ?>assets/images/products/electronic-product4.jpg"
+                                                alt="product" title="Product" width="625" height="625" />
+                                        </div>
+                                        <div class="item carousel-item" data-bs-slide-number="4">
+                                            <img class="blur-up lazyload"
+                                                data-src="<?php echo $path ?>assets/images/products/electronic-product5.jpg"
+                                                src="<?php echo $path ?>assets/images/products/electronic-product5.jpg"
+                                                alt="product" title="Product" width="625" height="625" />
+                                        </div>
+                                        <div class="item carousel-item" data-bs-slide-number="5">
+                                            <img class="blur-up lazyload"
+                                                data-src="<?php echo $path ?>assets/images/products/electronic-product6.jpg"
+                                                src="<?php echo $path ?>assets/images/products/electronic-product6.jpg"
+                                                alt="product" title="Product" width="625" height="625" />
+                                        </div>
+                                    </div>
+                                    <!-- End Image Slide carousel items -->
+                                    <!-- Thumbnail image -->
+                                    <div class="model-thumbnail-img">
+                                        <!-- Thumbnail slide -->
+                                        <div class="carousel-indicators list-inline">
+                                            <div class="list-inline-item active" id="carousel-selector-0"
+                                                data-bs-slide-to="0" data-bs-target="#quickView">
+                                                <img class="blur-up lazyload"
+                                                    data-src="<?php echo $path ?>assets/images/products/electronic-product1.jpg"
+                                                    src="<?php echo $path ?>assets/images/products/electronic-product1.jpg"
+                                                    alt="product" title="Product" width="625" height="625" />
+                                            </div>
+                                            <div class="list-inline-item" id="carousel-selector-1" data-bs-slide-to="1"
+                                                data-bs-target="#quickView">
+                                                <img class="blur-up lazyload"
+                                                    data-src="<?php echo $path ?>assets/images/products/electronic-product2.jpg"
+                                                    src="<?php echo $path ?>assets/images/products/electronic-product2.jpg"
+                                                    alt="product" title="Product" width="625" height="625" />
+                                            </div>
+                                            <div class="list-inline-item" id="carousel-selector-2" data-bs-slide-to="2"
+                                                data-bs-target="#quickView">
+                                                <img class="blur-up lazyload"
+                                                    data-src="<?php echo $path ?>assets/images/products/electronic-product3.jpg"
+                                                    src="<?php echo $path ?>assets/images/products/electronic-product3.jpg"
+                                                    alt="product" title="Product" width="625" height="625" />
+                                            </div>
+                                            <div class="list-inline-item" id="carousel-selector-3" data-bs-slide-to="3"
+                                                data-bs-target="#quickView">
+                                                <img class="blur-up lazyload"
+                                                    data-src="<?php echo $path ?>assets/images/products/electronic-product4.jpg"
+                                                    src="<?php echo $path ?>assets/images/products/electronic-product4.jpg"
+                                                    alt="product" title="Product" width="625" height="625" />
+                                            </div>
+                                            <div class="list-inline-item" id="carousel-selector-4" data-bs-slide-to="4"
+                                                data-bs-target="#quickView">
+                                                <img class="blur-up lazyload"
+                                                    data-src="<?php echo $path ?>assets/images/products/electronic-product5.jpg"
+                                                    src="<?php echo $path ?>assets/images/products/electronic-product5.jpg"
+                                                    alt="product" title="Product" width="625" height="625" />
+                                            </div>
+                                            <div class="list-inline-item" id="carousel-selector-5" data-bs-slide-to="5"
+                                                data-bs-target="#quickView">
+                                                <img class="blur-up lazyload"
+                                                    data-src="<?php echo $path ?>assets/images/products/electronic-product6.jpg"
+                                                    src="<?php echo $path ?>assets/images/products/electronic-product6.jpg"
+                                                    alt="product" title="Product" width="625" height="625" />
+                                            </div>
+                                        </div>
+                                        <!-- End Thumbnail slide -->
+                                        <!-- Carousel arrow button -->
+                                        <a class="carousel-control-prev carousel-arrow rounded-1" href="#quickView"
+                                            data-bs-target="#quickView" data-bs-slide="prev"><i
+                                                class="icon anm anm-angle-left-r"></i></a>
+                                        <a class="carousel-control-next carousel-arrow rounded-1" href="#quickView"
+                                            data-bs-target="#quickView" data-bs-slide="next"><i
+                                                class="icon anm anm-angle-right-r"></i></a>
+                                        <!-- End Carousel arrow button -->
+                                    </div>
+                                    <!-- End Thumbnail image -->
+                                </div>
+                                <!-- End Model Thumbnail -->
+                                <div class="text-center mt-3"><a href="product-layout1.html" class="text-link">View More
+                                        Details</a></div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                <div class="product-subtitle">Electronic</div>
+                                <div class="product-arrow d-flex justify-content-between">
+                                    <h2 class="product-title">Product Quick View Popup</h2>
+                                    <div class="arrows d-flex">
+                                        <a class="pro-next" href="product-layout2.html" title="Previous"><i
+                                                class="icon anm anm-angle-left-l"></i></a>
+                                        <a class="pro-prev" href="product-layout3.html" title="Next"><i
+                                                class="icon anm anm-angle-right-l"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-review d-flex mt-0 mb-2">
+                                    <div class="rating"><i class="icon anm anm-star"></i><i
+                                            class="icon anm anm-star"></i><i class="icon anm anm-star"></i><i
+                                            class="icon anm anm-star"></i><i class="icon anm anm-star-o"></i></div>
+                                    <div class="reviews ms-2"><a href="#">6 Reviews</a></div>
+                                </div>
+                                <div class="product-info">
+                                    <p class="product-vendor">Vendor:<span class="text"><a
+                                                href="#">Electronic</a></span></p>
+                                    <p class="product-type">Product Type:<span class="text">Camera</span></p>
+                                    <p class="product-sku">SKU:<span class="text">RF104</span></p>
+                                </div>
+                                <div class="pro-stockLbl my-2">
+                                    <span class="d-flex-center stockLbl instock d-none"><i
+                                            class="icon anm anm-check-cil text-primary"></i><span> In
+                                            stock</span></span>
+                                    <span class="d-flex-center stockLbl preorder d-none"><i
+                                            class="icon anm anm-clock-r text-primary"></i><span> Pre-order
+                                            Now</span></span>
+                                    <span class="d-flex-center stockLbl outstock d-none"><i
+                                            class="icon anm anm-times-cil text-primary"></i> <span>Sold
+                                            out</span></span>
+                                    <span class="d-flex-center stockLbl lowstock" data-qty="15"><i
+                                            class="icon anm anm-exclamation-cir text-primary"></i><span> Order now, Only
+                                            <span class="items">10</span> left!</span></span>
+                                </div>
+                                <div class="product-price d-flex-center my-3">
+                                    <span class="price old-price">$135.00</span><span class="price">₹999.00</span>
+
+                                </div>
+                                <div class="sort-description">The standard chunk of Lorem Ipsum used since the 1500s is
+                                    reproduced below for those interested.</div>
+                                <form method="post" action="#" id="product_form--option" class="product-form">
+                                    <div class="product-options d-flex-wrap">
+                                        <div class="product-item swatches-image w-100 mb-3 swatch-0 option1"
+                                            data-option-index="0">
+                                            <label class="label d-flex align-items-center">Color:<span
+                                                    class="slVariant ms-1 fw-bold">Blue</span></label>
+                                            <ul class="variants-clr swatches d-flex-center pt-1 clearfix">
+                                                <li class="swatch large radius available active"><img
+                                                        src="<?php echo $path ?>assets/images/products/swatches/blue-red.jpg"
+                                                        alt="image" width="70" height="70" data-bs-toggle="tooltip"
+                                                        data-bs-placement="top" title="Blue" /></li>
+                                                <li class="swatch large radius available"><img
+                                                        src="<?php echo $path ?>assets/images/products/swatches/blue-red.jpg"
+                                                        alt="image" width="70" height="70" data-bs-toggle="tooltip"
+                                                        data-bs-placement="top" title="Black" /></li>
+                                                <li class="swatch large radius available"><img
+                                                        src="<?php echo $path ?>assets/images/products/swatches/blue-red.jpg"
+                                                        alt="image" width="70" height="70" data-bs-toggle="tooltip"
+                                                        data-bs-placement="top" title="Pink" /></li>
+                                                <li class="swatch large radius available green"><span class="swatchLbl"
+                                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                                        title="Green"></span></li>
+                                                <li class="swatch large radius soldout yellow"><span class="swatchLbl"
+                                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                                        title="Yellow"></span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-item swatches-size w-100 mb-3 swatch-1 option2"
+                                            data-option-index="1">
+                                            <label class="label d-flex align-items-center">Size:<span
+                                                    class="slVariant ms-1 fw-bold">S</span></label>
+                                            <ul class="variants-size size-swatches d-flex-center pt-1 clearfix">
+                                                <li class="swatch large radius soldout"><span class="swatchLbl"
+                                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                                        title="XS">XS</span></li>
+                                                <li class="swatch large radius available active"><span class="swatchLbl"
+                                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                                        title="S">S</span></li>
+                                                <li class="swatch large radius available"><span class="swatchLbl"
+                                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                                        title="M">M</span></li>
+                                                <li class="swatch large radius available"><span class="swatchLbl"
+                                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                                        title="L">L</span></li>
+                                                <li class="swatch large radius available"><span class="swatchLbl"
+                                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                                        title="XL">XL</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-action d-flex-wrap w-100 pt-1 mb-3 clearfix">
+                                            <div class="quantity">
+                                                <div class="qtyField rounded">
+                                                    <a class="qtyBtn minus" href="#;"><i class="icon anm anm-minus-r"
+                                                            aria-hidden="true"></i></a>
+                                                    <input type="text" name="quantity" value="1"
+                                                        class="product-form__input qty">
+                                                    <a class="qtyBtn plus" href="#;"><i class="icon anm anm-plus-l"
+                                                            aria-hidden="true"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="addtocart ms-3 fl-1">
+                                                <button type="submit" name="add"
+                                                    class="btn btn-primary product-cart-submit w-100"><i
+                                                        class="icon anm anm-basket-l me-2"></i><span>Add to
+                                                        cart</span></button>
+                                                <button type="submit" name="sold"
+                                                    class="btn btn-secondary product-sold-out w-100 d-none"
+                                                    disabled="disabled"><span>Sold out</span></button>
+                                                <button type="submit" name="buy"
+                                                    class="btn btn-secondary proceed-to-checkout w-100 d-none"><span>Buy
+                                                        it now</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="wishlist-btn d-flex-center">
+                                    <a class="add-wishlist d-flex-center me-3" href="wishlist-style1.html"
+                                        title="Add to Wishlist"><i class="icon anm anm-heart-l me-1"></i> <span>Add to
+                                            Wishlist</span></a>
+                                    <a class="add-compare d-flex-center" href="compare-style1.html"
+                                        title="Add to Compare"><i class="icon anm anm-random-r me-2"></i> <span>Add to
+                                            Compare</span></a>
+                                </div>
+                                <!-- Social Sharing -->
+                                <div class="social-sharing share-icon d-flex-center mx-0 mt-3">
+                                    <span class="sharing-lbl">Share :</span>
+                                    <a href="#" class="d-flex-center btn btn-link btn--share share-facebook"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" title="Share on Facebook"><i
+                                            class="icon anm anm-facebook-f"></i><span
+                                            class="share-title d-none">Facebook</span></a>
+                                    <a href="#" class="d-flex-center btn btn-link btn--share share-twitter"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" title="Tweet on Twitter"><i
+                                            class="icon anm anm-twitter"></i><span
+                                            class="share-title d-none">Tweet</span></a>
+                                    <a href="#" class="d-flex-center btn btn-link btn--share share-pinterest"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" title="Pin on Pinterest"><i
+                                            class="icon anm anm-pinterest-p"></i> <span class="share-title d-none">Pin
+                                            it</span></a>
+                                    <a href="#" class="d-flex-center btn btn-link btn--share share-linkedin"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" title="Share on Instagram"><i
+                                            class="icon anm anm-linkedin-in"></i><span
+                                            class="share-title d-none">Instagram</span></a>
+                                    <a href="#" class="d-flex-center btn btn-link btn--share share-whatsapp"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" title="Share on WhatsApp"><i
+                                            class="icon anm anm-envelope-l"></i><span
+                                            class="share-title d-none">WhatsApp</span></a>
+                                    <a href="#" class="d-flex-center btn btn-link btn--share share-email"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" title="Share by Email"><i
+                                            class="icon anm anm-whatsapp"></i><span
+                                            class="share-title d-none">Email</span></a>
+                                </div>
+                                <!-- End Social Sharing -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Product Quickview Modal-->
+
+        <!--Newsletter Modal-->
+        <div class="newsletter-modal style4 modal fade" id="newsletter_modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content border-0">
+                    <div class="modal-body p-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="newsletter-wrap d-flex flex-row align-items-center">
+                            <div class="newsltr-img col-12 col-md-5 d-none d-sm-none d-md-block">
+                                <img class="rounded-end-0 blur-up lazyload"
+                                    data-src="<?php echo $path ?>assets/images/newsletter/newsletter-s10.jpg"
+                                    src="<?php echo $path ?>assets/images/newsletter/newsletter-s10.jpg" alt="image"
+                                    width="350" height="466" />
+                            </div>
+                            <div class="newsltr-text col-12 col-md-7 text-center text-md-start">
+                                <div class="wraptext mw-100 text-center">
+                                    <h2 class="title mb-2">Hey Good Looking</h2>
+                                    <p class="text mb-3">Here is your <b>10% DISCOUNT</b> to get something new.</p>
+                                    <form action="#" method="post" class="mcNewsletter mb-3">
+                                        <div class="input-group">
+                                            <input type="email" class="form-control input-group-field newsletter-input"
+                                                name="email" value="" placeholder="Enter your email address..."
+                                                required />
+                                            <button type="submit"
+                                                class="input-group-btn btn btn-secondary newsletter-submit"
+                                                name="commit"><i class="anm anm-arw-right"></i></button>
+                                        </div>
+                                    </form>
+                                    <ul
+                                        class="list-inline social-icons d-inline-flex justify-content-center mb-3 w-100">
+                                        <li class="list-inline-item"><a href="#" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="Facebook"><i
+                                                    class="icon anm anm-facebook-f"></i></a></li>
+                                        <li class="list-inline-item"><a href="#" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="Twitter"><i
+                                                    class="icon anm anm-twitter"></i></a></li>
+                                        <li class="list-inline-item"><a href="#" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="Pinterest"><i
+                                                    class="icon anm anm-pinterest-p"></i></a></li>
+                                        <li class="list-inline-item"><a href="#" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="Linkedin"><i
+                                                    class="icon anm anm-linkedin-in"></i></a></li>
+                                        <li class="list-inline-item"><a href="#" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="Instagram"><i
+                                                    class="icon anm anm-instagram"></i></a></li>
+                                        <li class="list-inline-item"><a href="#" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="Youtube"><i
+                                                    class="icon anm anm-youtube"></i></a></li>
+                                    </ul>
+                                    <div class="customCheckbox checkboxlink clearfix justify-content-center">
+                                        <input id="dontshow" name="newsPopup" type="checkbox" />
+                                        <label for="dontshow" class="mb-0">Don't show this popup again</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Newsletter Modal-->
+
+
+        <!-- Including Jquery/Javascript -->
+        <!-- Plugins JS -->
+        <script src="<?php echo $path ?>assets/js/plugins.js"></script>
+        <!-- Main JS -->
+        <script src="<?php echo $path ?>assets/js/main.js"></script>
+
+        <!--Newsletter Modal Cookies-->
+        <!-- <script>
+                $(window).ready(function () {
+                    setTimeout(function () {
+                        $('#newsletter_modal').modal("show");
+                    }, 7000);
+                });
+            </script> -->
+        <!--End Newsletter Modal Cookies-->
+
+    </div>
+    <!--End Page Wrapper-->
+</body>
+
+<!-- Mirrored from www.annimexweb.com/items/hema/index4-electronic.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Sep 2023 19:28:19 GMT -->
+
 </html>
