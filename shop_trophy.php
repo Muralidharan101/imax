@@ -1,5 +1,21 @@
 <?php
     include 'datab.php'; 
+
+    function getTotalItems() {
+        global $conn; // Assuming $conn is your database connection variable
+
+        $result = mysqli_query($conn, "SELECT COUNT(id) AS total FROM product_data WHERE `status`='Active' AND `product_type`='trophy'");
+
+        if ($result) {
+            $row = mysqli_fetch_assoc($result);
+            return $row['total'];
+        }
+
+        return 0;
+    }
+
+    $totalItems = getTotalItems();
+
 ?>
 
 <!DOCTYPE html>
@@ -341,11 +357,11 @@ padding:5px 10px;
                                 </div>
                                 <div
                                     class="col-12 col-sm-4 col-md-4 col-lg-4 text-center product-count order-0 order-md-1 mb-3 mb-sm-0">
-                                    <span class="toolbar-product-count">Showing: 15 products</span>
+                                    <span class="toolbar-product-count">Showing: <?php echo $totalItems; ?> products</span>
                                 </div>
                                 <div
                                     class="col-8 col-sm-6 col-md-4 col-lg-4 text-right filters-toolbar-item d-flex justify-content-end order-2 order-sm-2">
-                                    <div class="filters-item d-flex align-items-center">
+                                    <!-- <div class="filters-item d-flex align-items-center">
                                         <label for="ShowBy"
                                             class="mb-0 me-2 text-nowrap d-none d-sm-inline-flex">Show:</label>
                                         <select name="ShowBy" id="ShowBy" class="filters-toolbar-show">
@@ -355,7 +371,7 @@ padding:5px 10px;
                                             <option>25</option>
                                             <option>30</option>
                                         </select>
-                                    </div>
+                                    </div> -->
                                     <div class="filters-item d-flex align-items-center ms-2 ms-lg-3">
                                         <label for="SortBy" class="mb-0 me-2 text-nowrap d-none">Sort by:</label>
                                         <select name="SortBy" id="SortBy" class="filters-toolbar-sort">
@@ -383,13 +399,21 @@ padding:5px 10px;
                             <!-- Pagination -->
                             <nav class="clearfix pagination-bottom">
                                 <ul class="pagination justify-content-center">
-                                    <?php
-                                    // Assuming $currentPage is the current page number
-                                    for ($i = 1; $i <= $totalPages; $i++) {
-                                        $activeClass = ($i == $currentPage) ? 'active' : '';
-                                        echo '<li class="page-item ' . $activeClass . '"><a class="page-link" href="?page=' . $i . '">' . $i . '</a></li>';
+                                <?php
+                                    $itemsPerPage = 30;
+                                    $currentPage = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+
+                                    // Calculate total pages if total items are greater than 0
+                                    if ($totalItems > 0) {
+                                        $totalPages = ceil($totalItems / $itemsPerPage);
+
+                                        // Assuming $currentPage is the current page number
+                                        for ($i = 1; $i <= $totalPages; $i++) {
+                                            $activeClass = ($i == $currentPage) ? 'active' : '';
+                                            echo '<li class="page-item ' . $activeClass . '"><a class="page-link" href="?page=' . $i . '">' . $i . '</a></li>';
+                                        }
                                     }
-                                    ?>
+                                ?>
 
                                 </ul>
                             </nav>
@@ -438,8 +462,15 @@ padding:5px 10px;
         var categoryValue;
         var startValue;
         var endValue;
+        
 
+        var param = new URLSearchParams(window.location.search);
+        var pageParam = param.get('page');
 
+        if(pageParam !== null && pageParam !== '') {
+            var pages = pageParam;   
+            console.log(pageParam);
+        }
 
         $("#slider-range").slider({
             range: true,
@@ -674,7 +705,7 @@ padding:5px 10px;
 
                 var fd = new FormData();
 
-                
+                fd.append('page', pages);
 
                 $.ajax({
                     url: 'ajax/trophy_list.php',

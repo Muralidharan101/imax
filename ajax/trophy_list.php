@@ -2,7 +2,6 @@
 require_once '../datab.php';
 $res = [];
 
-// Set the number of items per page
 $itemsPerPage = 30;
 
 // Get the current page number from the URL parameter, default to 1
