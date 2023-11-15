@@ -564,7 +564,7 @@
 
                 })
             });
-
+// to test git
                 function postdata() {
                     var formData = new FormData();
                     formData.append("customer_id", customer_id);
