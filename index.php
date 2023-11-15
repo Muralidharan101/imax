@@ -601,6 +601,7 @@
                             </div>                           
                         </div>
                     </div>
+
                 </section> -->
 
             
@@ -787,6 +788,7 @@
                             <h2 class="text-dark">New Arrivals of medals</h2>
                             <p>Shop our new arrivals from established brands</p>
                         </div>
+
                     </div>
                     
                     <div class="row">
@@ -813,7 +815,6 @@
                                 class="grid-products product-slider-3items gp15 arwOut5 hov-arrow circle-arrow arrowlr-0">
                                
 
-                                
                                 <div class="item col-item">
 
 <div class="product-box">
@@ -1017,7 +1018,9 @@
                             </div>
                         </div>
 
+
                         <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-3 mt-4 mt-lg-0">
+
                             <div class="ctg-bnr-wrap two position-relative h-100">
                                 <div class="ctg-image ratio ratio-1x1 h-100">
                                     <img class="blur-up lazyload"
@@ -1033,8 +1036,9 @@
                                             class="icon anm anm-arw-right ms-2"></i></a>
                                 </div>
                             </div>
+
                         </div> -->
-                    </div>
+      </div>
                 </div>
             </section>
             
@@ -1046,7 +1050,7 @@
                             <p>Shop our new arrivals from established brands</p>
                         </div>
                         <div class="section-header-right text-start text-sm-end mt-3 mt-sm-0">
-                            
+
                         </div>
                     </div>
 

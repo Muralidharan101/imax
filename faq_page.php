@@ -34,10 +34,10 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex justify-content-between align-items-center">
-                                <div class="page-title"><h1>Faq's</h1></div>
-                                <!--Breadcrumbs-->
+                                <div class="page-title"><h1>Frequently Asked Questions</h1></div>
+                                <!--Breadcrumbs
                                 <div class="breadcrumbs"><a href="index.html" title="Back to the home page">Home</a><span class="title"><i class="icon anm anm-angle-right-l"></i>Pages</span><span class="main-title fw-bold"><i class="icon anm anm-angle-right-l"></i>Faq's</span></div>
-                                <!--End Breadcrumbs-->
+                                End Breadcrumbs-->
                             </div>
                         </div>
                     </div>
@@ -49,12 +49,12 @@
                     <!-- Frequently Content -->
                     <!-- <div class="row help-center mb-4 mb-md-0">
                         <div class="col-12 col-sm-12 col-md-10 col-lg-6 mx-auto">
-                            <h2 class="mb-3 text-center">Frequently Asked Questions</h2>
+                            <!-- <h2 class="mb-3 text-center">Frequently Asked Questions</h2> -->
                             <form class="frequently-search" id="frequentlysearch" action="#" method="get">
-                                <div class="input-group">
+                                <!-- <div class="input-group">
                                     <input type="text" class="form-control input-group-field" name="search" value="" placeholder="Search…" required />
                                     <button type="submit" class="input-group-btn btn btn-secondary" name="search" style="background-color:#fe0609;">Search</button>
-                                </div>
+                                </div> -->
                             </form>
                         </div>
                     </div> -->
@@ -66,7 +66,7 @@
                         <div class="col-12 col-sm-12 col-md-12 col-lg-10 mx-auto">
                             <div class="accordion" id="accordionFaq">
                                 <div class="section pt-0">
-                                    <h3 class="faqttl mb-3">FAQ Section</h3>
+                                    <!-- <h3 class="faqttl mb-3">FAQ Section</h3> -->
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="headingOne">
                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">What types of trophies do you offer?</button>
