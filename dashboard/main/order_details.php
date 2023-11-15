@@ -135,7 +135,7 @@
 
                 <div class="card-body"> 
                   <div class="payment-buttons text-end mt-3 mb-3">
-                    <button class="btn btn-sm btn-success" id="paid_btn">Paid</button>
+                    <button class="btn btn-sm btn-success" id="paid_btn" href="">Paid</button>
                     <button class="btn btn-sm btn-danger"  id="cancel_btn">Cancel</button>
                   </div>
 
@@ -200,6 +200,14 @@
   <script src="../assets/js/script.js"></script>
   <script src="../assets/js/theme-customizer/customizer.js"> </script>
   <!-- login js-->
+
+  <!--Toastr  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
+      integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script>
     
@@ -268,19 +276,22 @@
 
     $('#paid_btn').click(function () {
       
+      
       var fd = new FormData();
 
       fd.append('order_id', order_id);
-      fd.append('user_name', user_name);
-      fd.append('order_by_name', order_by_name);
-      fd.append('phone', phone);
-      fd.append('ref_no', ref_no);
-      fd.append('total_order_value', total_order_value);
-      fd.append('address', address);
-      fd.append('product_price', product_price);
-      fd.append('product_name', product_name);
-      fd.append('total_price', total_price);
-      fd.append('product_id', product_id);
+      // fd.append('user_name', user_name);
+      // fd.append('order_by_name', order_by_name);
+      // fd.append('phone', phone);
+      // fd.append('ref_no', ref_no);
+      // fd.append('total_order_value', total_order_value);
+      // fd.append('address', address);
+      // fd.append('product_price', product_price);
+      // fd.append('product_name', product_name);
+      // fd.append('total_price', total_price);
+      // fd.append('product_id', product_id);
+
+      // These? only get order id in backend get all data
 
       $.ajax({
         url: 'ajax/orders/order_paid.php',
@@ -290,19 +301,49 @@
         processData: false,
 
         success: function (response) {
+          
           dataTable.clear().draw();
           data = JSON.parse(response);
 
+          console.log(data);
           if (data.status == "Success") {
-            toastr.success("Product Deleted !", "Success")
+            toastr.success("Payment Updated !", "Success")
+              console.log('1');
+              sendToPdf();
+            // fetchdata();
+            // window.open(`ajax/orders/imax.php?order_id=${order_id}`);
+            window.open(`ajax/orders/imax.php?order_id=${order_id}`);
 
-            fetchdata();
           } else {
             toastr.error("Error", "Error Found!")
           }
         }
       });
+
+      function sendToPdf(){
+      // var fd = new FormData();
+
+      // fd.append('order_id', order_id);
+      console.log(order_id);
+      $.ajax({
+        url: 'ajax/orders/pdf_generation.php',
+        type: 'get',
+        data: {order_id: order_id},
+
+        success:function(response){
+          var result = JSON.parse(response);
+
+          if(result.status == 'Success') {
+            console.log('pdf gen');
+          } else {
+            toastr.error('Error');
+          }
+        }
+      })
+    }
+     
     });
+
 
     $('#cancel_btn').click(function () {
       

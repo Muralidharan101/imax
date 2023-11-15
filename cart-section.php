@@ -24,44 +24,20 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 <style>
-         .modal-backdrop {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5); 
-            z-index: 1050; 
-            display: none; 
-        }
-
-        #no_prod {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        .modal-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); 
+        z-index: 1050; 
+        display: none; 
     }
 
-    #no_prod .modal-dialog {
-        max-width: 600px; /* Adjust the maximum width as needed */
+    #no_prod_mo {
+        background: rgba(0, 0, 0, 0.5); 
     }
-
-    #no_prod .modal-content {
-        border-radius: 10px; /* Add some border-radius for a modern look */
-    }
-
-    #no_prod .modal-body {
-        padding: 20px; /* Add some padding for better spacing */
-    }
-
-    #no_prod .btn-success {
-        background-color: #28a745; /* Change button color to green */
-        border-color: #28a745; /* Change button border color to green */
-    }
-
-
-
-
-
 
 </style>
 
@@ -118,11 +94,11 @@
                                                     <!--Cart Form-->
                                                     <div class="cart-table table-bottom-brd form">
                                                         <table class="table align-middle">
-                                                            <thead
-                                                                class="cart-row cart-header small-hide position-relative">
+                                                            <thead class="cart-row cart-header small-hide position-relative">
                                                                 <tr>
                                                                     <th class="action">&nbsp;</th>
                                                                     <th colspan="2" class="text-start">Product</th>
+                                                                    <th class="text-start">Product Name</th>
                                                                     <th class="text-center">Price</th>
                                                                     <th class="text-center">Quantity</th>
                                                                     <th class="text-center">Total</th>
@@ -139,7 +115,7 @@
                                                         <button id="placeOrderButton"
                                                             class="btn btn-lg my-4 checkout w-100"
                                                             style="background-color:orangered;"
-                                                            onclick="toggleAccordions()">Place Order</button>
+                                                           >Place Order</button>
                                                     </div>
                                                     <!--End Cart Form-->
                                                 </div>
@@ -165,14 +141,14 @@
                                                             <fieldset class="row spr-form-contact">
                                                                 <div class="col-sm-6 spr-form-contact-name form-group">
                                                                     <label class="spr-form-label" for="nickname">Name
-                                                                        <span class="required">*</span></label>
+                                                                        </label>
                                                                     <input class="spr-form-input spr-form-input-text"
                                                                         id="username" type="text" name="name"
                                                                         >
                                                                 </div>
                                                                 <div class="col-sm-6 spr-form-contact-email form-group">
                                                                     <label class="spr-form-label" for="email">Email
-                                                                        <span class="required">*</span></label>
+                                                                        </label>
                                                                     <input class="spr-form-input spr-form-input-email "
                                                                         id="useremail" type="email" name="email"
                                                                         >
@@ -189,8 +165,7 @@
                                                 </div> -->
                                                                 <div class="col-12 spr-form-review-body form-group">
                                                                     <label class="spr-form-label"
-                                                                        for="message">Address<span
-                                                                            class="required">*</span></label>
+                                                                        for="message">Address</label>
                                                                     <div class="spr-form-input">
                                                                         <textarea
                                                                             class="spr-form-input spr-form-input-textarea"
@@ -202,7 +177,7 @@
                                                             <div class="spr-form-actions clearfix">
                                                                 <!-- <input type="submit" class="btn btn-primary spr-button spr-button-primary" value="Submit" onclick="closeSecondAccordion()"> -->
                                                                 <input
-                                                                    class="btn btn-primary spr-button spr-button-primary"
+                                                                    class="btn btn-lg my-4 checkout w-100"
                                                                     id="form-submited" value="Submit">
                                                             </div>
                                                         </div>
@@ -277,6 +252,7 @@
                                         <div class="spr-form-actions clearfix">
                                             <img src="img\qr.jpg" alt="">
                                         </div>
+                                        <p>UPI - <b>Q79891202@ybl</b></p>
                                     </div>
 
                                     <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 mb-md-0">
@@ -284,7 +260,7 @@
                                             <h3 class="spr-form-title">order No: <span id="ref_no1"></span></h3>
 
                                             <h5 class="spr-form-title">Note: Send a WhatsApp Message with your ORDER NO to confirm order.</h5>
-                                            <h5 class="spr-form-title">குறிப்பு: ஆர்டர் மாற்றத்தை உறுதிப்படுத்த உங்கள் ஆர்டர் எண்ணுடன் வாட்ஸ்அப் செய்தியை அனுப்பவும்.</h5>
+                                            <h5 class="spr-form-title">குறிப்பு: ஆர்டர்யை உறுதிப்படுத்த உங்கள் ஆர்டர் எண்ணுடன் வாட்ஸ்அப் செய்தியை அனுப்பவும்.</h5>
                                             <p class="cart-shipping mt-3">1. Goods once sold will not be taken back</p>
 
                                             <p class="cart-shipping mt-3">2. If any damage occurred while transport, Company
@@ -296,7 +272,6 @@
                                             <!-- <p class="cart-shipping fst-normal freeShipclaim"><i
                                             class="me-2 align-middle icon anm anm-truck-l"></i><b>FREE SHIPPING</b> ELIGIBLE
                                             </p> -->
-                                            <p>UPI - <b>Q79891202@ybl</b></p>
                                             <!-- <div style="background-color:white;">
                                                 <p class="cart-shipping mt-3"><b>Note : Send a WhatsApp message with your order
                                                     number after making a payment.</b></p>
@@ -329,25 +304,45 @@
                 </style>
 
               
-<div class="modal-backdrop" id="no_prod_modal"></div>
-<div class="quickview-modal justify-content-center modal fade" id="no_prod" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <p>No Products In the Cart</p>
-                        <a href="shop_trophy.php">
-                            <button class="btn btn-lg btn-success">
-                                Continue Shopping
-                            </button>
-                        </a>
+                <!-- <div class="modal-backdrop" id="no_prod_modal"></div>
+                <div class="quickview-modal justify-content-center modal fade" id="no_prod" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-12 text-center">
+                                        <p>No Products In the Cart</p>
+                                        <a href="shop_trophy.php">
+                                            <button class="btn btn-lg btn-success">
+                                                Continue Shopping
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="modal-backdrop" id="no_prod_modal"></div>
+                <div class="quickview-modal modal fade" id="no_prod_mo" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-12 text-center">
+                                        <p>No Products In the Cart</p>
+                                        <a href="shop_trophy.php">
+                                            <button class="btn btn-lg btn-success">
+                                                Continue Shopping
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
 
         </div>
         <!-- End Body Container -->
@@ -383,6 +378,7 @@
 
                 window.open(whatsappURL, '_blank');
             }
+
             function onlyNum(e) {
                 e.value = e.value.replace(/[^0-9]/g,'');
             }
@@ -422,8 +418,8 @@
                 return "";
             }
 
-   var modal = document.getElementById('quickview_modal');
-        var overlay = document.getElementsByClassName('modal-backdrop')[0];
+            var modal = document.getElementById('quickview_modal');
+            var overlay = document.getElementsByClassName('modal-backdrop')[0];
             const customer_id = getCookie('imax_login_user_id');
             console.log(customer_id);
 
@@ -528,8 +524,8 @@
                         var result = JSON.parse(response);
 
                         if (result.status == 'Success') {
-                            toastr.success('Order Placed');
-
+                            // toastr.success('Checkout');
+                            toggleAccordions();
                             var ref_no_div = $('#ref_no');
                             var ref_no_div2 = $('#ref_no1')
                            ref_no_div.html(result.ref_no);
@@ -545,39 +541,17 @@
                     }
                 })
 
-                $('#form-submited').click(function(){
+            $('#form-submited').click(function(){
               
               var username = $("#username").val().trim();
-              console.log(username);
-              
               var useremail = $("#useremail").val().trim();
-              console.log(useremail);
-              
               var usermobile = $("#usermobile").val().trim();
-              console.log(usermobile);
-
               var useraddress = $("#useraddress").val().trim();
-              console.log(useraddress);
 
-              if(username == "")
+              if(usermobile == "")
               {
-                  toastr.error('Enter name here !', 'Empty');
-              }
-              else if(useremail == "")
-              {
-                  toastr.error('Enter mail here !', 'Empty');
-              }
-              else if(usermobile == "")
-              {
-                  toastr.error('Enter mobile number here !', 'Empty');
-              }
-              else if(useraddress == "")
-              {
-                  toastr.error('Enter address here !', 'Empty');
-              }
-            
-              else
-              {
+                toastr.error('Enter mobile number here !', 'Empty');
+              } else {
                   var fd = new FormData();
 
                   var ref_no_in_cart = $('#ref_no').text();
@@ -590,9 +564,6 @@
                   fd.append("usermobile", usermobile);
                   fd.append("useraddress", useraddress);
 
-                  var modal = $('#quickview_modal');
-                  modal.modal('show');
-
                     $.ajax({
                       url: 'ajax/order/order_confirmation.php',
                       data: fd,
@@ -601,13 +572,12 @@
                       processData: false,
                       success: function(response)
                       {
-                              // console.log(response);
                               data = JSON.parse(response);
                               console.log(data);
                               if(data.status == 'Success')
                               {
-                                  toastr.success('Welcome!', 'Success');
-
+                                  toastr.success('Order Placed', 'Success');
+                                  $('#quickview_modal').modal('show');
                                   $("#username").val("");
                                   $("#useremail").val("");
                                   $("#usermobile").val("");
@@ -620,7 +590,6 @@
                           }
                       });
                     }
-
                 })
             });
 
@@ -640,14 +609,22 @@
                             if (result.status == "Success") {
                                 var data = result.data;
 
-                                if(data.length == 0 ) {
-                                    $('#no_prod').modal('show');
+                                if(data.length > 0 ) {
+                                    $('#no_prod_mo').on('hidden.bs.modal', function () {
+                                        setTimeout(function () {
+                                            $('body').removeClass('modal-open');
+                                            $('.modal-backdrop').remove();
+                                        }, 100);
+                                    });
+                                } else {
+                                    console.log(1);
+                                    $('#no_prod_mo').modal('show');
                                 }
+
                                 console.log(data);
                                 data.map(function (value) {
 
-                                    var product_cart = document.getElementById(
-                                        'product-carts');
+                                    var product_cart = document.getElementById('product-carts');
                                     var grandtotal = document.getElementById('grand-total');
                                     var taxtotal = document.getElementById('tax-total');
 
@@ -681,40 +658,42 @@
                                     grandTotTax.innerHTML = grandTotalWithTax;
 
                                     let html = `
-                                                <tr class="tr" data-id="${value.product_id}">
+                                            <tr class="tr" data-id="${value.product_id}">
                                                 <td class="cart-delete text-center small-hide">
-                                                    <button class="removeCookieButton" data-id="">
-                                                    <div class="cart-remove remove-icon position-static" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove from Cart">
-                                                        <i class="icon anm anm-times-r"></i>
-                                                    </div>
+                                                    <button class="removeCookieButton">
+                                                        <div class="cart-remove remove-icon position-static" data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            title="Remove from Cart">
+                                                            <i class="icon anm anm-times-r"></i>
+                                                        </div>
                                                     </button>
                                                 </td>
                                                 <td class="cart-image cart-flex-item">
-                                                <a href=""><img class="cart-image rounded-0 blur-up lazyload" data-src="<?php echo $path; ?>main/product_images/${value.img_id}/main/${value.product_img}" src="<?php echo $path; ?>main/product_images/${value.cart_id}/main/${value.product_img}" alt="" width="120" height="170" /></a>
+                                                    <a href=""><img class="cart-image rounded-0 blur-up lazyload"
+                                                            data-src="<?php echo $path; ?>main/product_images/${value.img_id}/main/${value.product_img}"
+                                                            src="<?php echo $path; ?>main/product_images/${value.cart_id}/main/${value.product_img}" alt=""
+                                                            width="120" height="170" /></a>
                                                 </td>
-                                                <td class="cart-meta small-text-left cart-flex-item">
-                                                    <div class="cart-price d-md-none">₹
-                                                    <span class="price fw-500">${value.product_price}</span>
-                                                    </div>
+                                                <td class="cart-name cart-flex-item text-center" colspan="2">
+                                                    <span class="cart_name">${value.product_name}</span>
                                                 </td>
                                                
-                                                <td class="cart-price cart-flex-item text-center small-hide">₹
+                                                <td class="cart-price cart-flex-item text-center">₹
                                                     <span class="money">${value.product_price}</span>
                                                 </td>
                                                 <td class="cart-update-wrapper cart-flex-item text-end text-md-center">
                                                     <div class="cart-qty d-flex justify-content-end justify-content-md-center">
-                                                    <div class="qtyField">
-                                                        <button class="qtyBtn minus" data-id="" ><i class="icon anm anm-minus-r"></i></button>
-                                                        <input class="cart-qty-input qty" type="text" value="${value.quantity}"/>
-                                                        <button class="qtyBtn plus" data-id="" ><i class="icon anm anm-plus-r"></i></button>
+                                                        <div class="qtyField">
+                                                            <button class="qtyBtn minus" data-id=""><i class="icon anm anm-minus-r"></i></button>
+                                                            <input class="cart-qty-input qty" type="text" value="${value.quantity}" />
+                                                            <button class="qtyBtn plus" data-id=""><i class="icon anm anm-plus-r"></i></button>
+                                                        </div>
                                                     </div>
-                                                    </div>
-                                                    <button id="removemobile" class="removeMb d-md-none d-inline-block text-decoration-underline mt-2 me-3" data-id="">Remove</button>
+                                                    <button id="removemobile"
+                                                        class="removeMb d-md-none d-inline-block text-decoration-underline mt-2 me-3" data-id="">Remove</button>
                                                 </td>
-                                            
-                                            <td class="cart-price cart-flex-item text-center small-hide">₹
-                                            <span class="total_price fw-500" id="money-view-">${total_price_cart}</span>
-                                            </td>
+                                                <td class="cart-price cart-flex-item text-center small-hide">₹
+                                                    <span class="total_price fw-500" id="money-view-">${total_price_cart}</span>
+                                                </td>
                                             </tr>
                                             `;
                                     product_cart.insertAdjacentHTML('beforebegin', html);
@@ -764,6 +743,7 @@
                             if (result.status === 'Success') {
                                 // inputField.val('');
                                 // console.log(currentValue);
+                                location.reload();
                                 inputField.val(currentValue);
                             } else {
                                 console.log('Update failed');
@@ -776,6 +756,37 @@
                         }
                     });
                 });
+
+                $(document).on('click', '.removeMb', function()
+                {
+                    var productId = $(this).closest('.tr').data('id');
+
+                    var formData = new FormData();
+                    formData.append('product_id', productId);
+                    formData.append('customer_id', customer_id);
+
+                    $.ajax({
+                        type: 'POST',
+                        url: 'ajax/cart/remove_from_cart.php',
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function(response) {
+                            console.log(response); 
+                            var result = JSON.parse(response)
+                            if (result.status === 'Success') {
+                                console.log("product row remove");
+                                location.reload();
+                            } else {
+                                console.log('Update failed');
+                            }
+                        },
+                        error: function(xhr, status, error) {
+                            console.log(xhr.responseText);
+                            console.log('Error in the AJAX request:', status, error);
+                        }
+                    });
+                })
 
                 $(document).on('click', '.cart-remove', function() {
                     var productId = $(this).closest('.tr').data('id');
@@ -795,6 +806,7 @@
                             var result = JSON.parse(response)
                             if (result.status === 'Success') {
                                 console.log("product row remove");
+                                location.reload();
                             } else {
                                 console.log('Update failed');
                             }
@@ -806,13 +818,6 @@
                     });
                 })
             });
-
-
-
-
-
-
-
 
             // function sendCartToBackend() {
             //     // Retrieve the customer ID or any other necessary information

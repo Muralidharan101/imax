@@ -113,7 +113,7 @@
                                     designed to do just that, providing you with the perfect token of appreciation.
                                 </p>
 
-                                <a href="home" class="btn btn-lg mt-md-2">Explore Now</a>
+                                <!-- <a href="home" class="btn btn-lg mt-md-2">Explore Now</a> -->
                             </div>
                         </div>
                     </div>
@@ -188,7 +188,7 @@
                                     Join us in celebrating success and let our trophies tell the story of your journey.
                                     At IMAX Trophies, we are more than just a trophy store; we are the keepers of your
                                     proudest moments.</p>
-                                <a href="shop" class="btn btn-lg mt-md-2">Discover Now</a>
+                                <!-- <a href="shop" class="btn btn-lg mt-md-2">Discover Now</a> -->
                             </div>
                         </div>
                         <div class="col-12 col-sm-12 col-md-6">

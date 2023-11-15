@@ -293,7 +293,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="login-signup-text mt-4 mb-2 fs-6 text-center text-muted">Don,t have an
+                                    <div class="login-signup-text mt-4 mb-2 fs-6 text-center text-muted">Didn't have an
                                         account? <a href="register.php" class="btn-link">Sign up now</a></div>
                                 </div>
                             </div>

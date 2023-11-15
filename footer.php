@@ -46,9 +46,9 @@
                     <p class="address d-flex"><i class="icon anm anm-map-marker-al pt-1"></i> Pothamettupatty, near SBI
                         ATM, Manapparai, Tamil Nadu 621306</p>
                     <p class="phone d-flex align-items-center"><i class="icon anm anm-phone-l"></i> <b
-                            class="me-1 d-none">Phone:</b> <a href="tel:401234567890">+91 98765 43210</a></p>
+                            class="me-1 d-none">Phone:</b> <a href="tel:+919876543210">+91 98765 43210</a></p>
                     <p class="email d-flex align-items-center"><i class="icon anm anm-envelope-l"></i> <b
-                            class="me-1 d-none">Email:</b> <a href="mailto:info@example.com">imax@gmail.com</a></p>
+                            class="me-1 d-none">Email:</b> <a href="mailto:imax@gmail.com">imax@gmail.com</a></p>
                     <ul class="list-inline social-icons mt-3">
                         <li class="list-inline-item"><a href="#" data-bs-toggle="tooltip" data-bs-placement="top"
                                 title="Facebook"><i class="icon anm anm-facebook-f"></i></a></li>

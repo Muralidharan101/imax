@@ -36,9 +36,22 @@
                         <div class="slide">
                             <div class="slideshow-wrap">
                                 <picture>
-                                    <source media="(max-width:767px)" srcset="<?php echo $path ?>main/img/banner1.jpg" width="1100" height="800">
-                                    <img class="blur-up lazyload" src="<?php echo $path ?>main/img/banner1.jpg" alt="slideshow" title="" width="1920" height="800"/>
+                                    <source media="(max-width:767px)" srcset="<?php echo $path ?>main/img/banner5.jpg" width="1100" height="800">
+                                    <img class="blur-up lazyload" src="<?php echo $path ?>main/img/banner5.jpg" alt="slideshow" title="" width="1920" height="800"/>
                                 </picture> 
+                                <!-- <div class="container">
+                                    <div class="slideshow-content slideshow-overlay middle-right hidden-sm">
+                                        <div class="slideshow-content-in">
+                                            <div class="wrap-caption animation style1" style="background-color:gainsboro;">
+                                                <p class="ss-small-title">Precision, Quality & Longevity</p>
+                                                <h2 class="ss-mega-title">IMAX Trophies</h2>
+                                                <div class="ss-btnWrap">
+                                                    <a class="btn btn-primary" href="shop-grid-view.html">Explore now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="slide">
@@ -49,6 +62,19 @@
 
                                     <img class="blur-up lazyload" src="<?php echo $path ?>main/img/banner2.jpg" alt="slideshow" title="" width="1920" height="800"/>
                                 </picture>
+                                <!-- <div class="container">
+                                    <div class="slideshow-content slideshow-overlay middle-left">
+                                        <div class="slideshow-content-in">
+                                            <div class="wrap-caption animation style1" style="background-color:gainsboro;">
+                                                <h2 class="ss-mega-title">The New Era of <br>Trophies</h2>
+                                                <p class="ss-sub-title xs-hide text-large">Celebrate your victory !</p>
+                                                <div class="ss-btnWrap">
+                                                    <a class="btn btn-primary" href="shop-grid-view.html">Explore now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
                             </div>
                         </div>
                       
@@ -129,7 +155,7 @@
                             </a>
                         </div>
                         <div class="category-item zoomscal-hov overlay-content">
-                            <a href="shop_sheild.php?type=sheild" class="category-link clr-none">
+                            <a href="shop_shield.php?type=shield" class="category-link clr-none">
                                 <div class="zoom-scal"><img style="width:360px;height:360px" class="blur-up lazyload"
                                 data-src="<?php echo $path ?>assets/img/shields/medal 2.jpg" src="<?php echo $path ?>assets/img/shields/medal 2.jpg" alt="collection" title=""
                                         width="416" height="416" /></div>
@@ -181,7 +207,7 @@
                                         <!-- Start Product Image -->
                                         <div class="product-image">
                                             <!-- Start Product Image -->
-                                            <a href="shop" class="product-img">
+                                            <a href="shop_trophy.php?type=trophy" class="product-img">
                                                 <!-- Image -->
                                                 <img class="primary blur-up lazyload"
                                                     data-src="<?php echo $path ?>assets/img/trophy/trophy 11.jpg"
@@ -227,7 +253,7 @@
                                         <!-- Start Product Image -->
                                         <div class="product-image">
                                             <!-- Start Product Image -->
-                                            <a href="shop" class="product-img">
+                                            <a href="shop_trophy.php?type=trophy" class="product-img">
                                                 <!-- Image -->
                                                 <img class="primary blur-up lazyload"
                                                     data-src="<?php echo $path ?>assets/img/trophy/trophy 22.jpg"
@@ -275,7 +301,7 @@
                                         <!-- Start Product Image -->
                                         <div class="product-image">
                                             <!-- Start Product Image -->
-                                            <a href="product-layout1.html" class="product-img">
+                                            <a href="shop_trophy.php?type=trophy" class="product-img">
                                                 <!-- Image -->
                                                 <img class="primary blur-up lazyload"
                                                     data-src="<?php echo $path ?>assets/img/trophy/trophy 33.jpg"
@@ -603,7 +629,7 @@
                                         
                                         <div class="product-image">
                                            
-                                            <a href="shop" class="product-img">
+                                            <a href="shop_trophy.php?type=trophy" class="product-img">
                                                 
                                                 <img class="primary blur-up lazyload"
                                                     data-src="<?php echo $path ?>assets/img/trophy/trophy 77.jpg"
@@ -642,7 +668,7 @@
                                 <div class="item col-item">
                                     <div class="product-box">
                                         <div class="product-image">
-                                            <a href="shop" class="product-img">
+                                            <a href="shop_trophy.php?type=trophy" class="product-img">
                                                 <img class="primary blur-up lazyload"
                                                     data-src="<?php echo $path ?>assets/img/trophy/trophy 44.jpg"
                                                     src="<?php echo $path ?>assets/img/trophy/trophy 44.jpg"
@@ -672,7 +698,7 @@
                                 <div class="item col-item">
                                     <div class="product-box">
                                         <div class="product-image">
-                                            <a href="shop" class="product-img">
+                                            <a href="shop_trophy.php?type=trophy" class="product-img">
                                                 <img class="primary blur-up lazyload"
                                                     data-src="<?php echo $path ?>assets/img/trophy/trophy 66.jpg"
                                                     src="<?php echo $path ?>assets/img/trophy/trophy 66.jpg"
@@ -703,7 +729,7 @@
                                 <div class="item col-item">
                                     <div class="product-box">
                                         <div class="product-image">
-                                            <a href="shop" class="product-img">
+                                            <a href="shop_trophy.php?type=trophy" class="product-img">
                                                 <img class="primary blur-up lazyload"
                                                     data-src="<?php echo $path ?>assets/img/trophy/trophy 33.jpg"
                                                     src="<?php echo $path ?>assets/img/trophy/trophy 33.jpg"
@@ -746,8 +772,8 @@
                                     <h2 class="ctg-title text-white m-0"><span class="d-block">Best Offers</span> </h2>
                                     <p class="saleText text-uppercase mb-0">30% Off</p>
                                     <p class="ctg-des mt-1 mb-4">On all new arrival product</p>
-                                    <a class="btn btn-secondary explore-btn" href="shop">Shop Now <i
-                                            class="icon anm anm-arw-right ms-2"></i></a>
+                                    <!-- <a class="btn btn-secondary explore-btn" href="shop">Shop Now <i
+                                            class="icon anm anm-arw-right ms-2"></i></a> -->
                                 </div>
                             </div>
                         </div>
@@ -795,7 +821,7 @@
     <!-- Start Product Image -->
     <div class="product-image">
         <!-- Start Product Image -->
-        <a href="shop" class="product-img">
+        <a href="shop_medal.php?type=medal" class="product-img">
             <!-- Image -->
             <img style ="height:325px" class="primary blur-up lazyload"
                 data-src="<?php echo $path ?>assets/img/shields/medal 1.jpg"
@@ -845,7 +871,7 @@
     <!-- Start Product Image -->
     <div class="product-image">
         <!-- Start Product Image -->
-        <a href="shop" class="product-img">
+        <a href="shop_medal.php?type=medal" class="product-img">
             <!-- Image -->
             <img style ="height:325px" class="primary blur-up lazyload"
                 data-src="<?php echo $path ?>assets/img/shields/medal 3.jpg"
@@ -895,7 +921,7 @@
     <!-- Start Product Image -->
     <div class="product-image">
         <!-- Start Product Image -->
-        <a href="shop" class="product-img">
+        <a href="shop_medal.php?type=medal" class="product-img">
             <!-- Image -->
             <img style ="height:325px" class="primary blur-up lazyload"
                 data-src="<?php echo $path ?>assets/img/shields/medal 4.jpg"
@@ -945,7 +971,7 @@
     <!-- Start Product Image -->
     <div class="product-image">
         <!-- Start Product Image -->
-        <a href="shop" class="product-img">
+        <a href="shop_medal.php?type=medal" class="product-img">
             <!-- Image -->
             <img style ="height:325px" class="primary blur-up lazyload"
                 data-src="<?php echo $path ?>assets/img/shields/medal 2.jpg"
@@ -1038,7 +1064,7 @@
     <!-- Start Product Image -->
     <div class="product-image">
         <!-- Start Product Image -->
-        <a href="shop" class="product-img">
+        <a href="shop_shield.php?type=shield" class="product-img">
             <!-- Image -->
             <img class="primary blur-up lazyload"
                 data-src="<?php echo $path ?>assets/img/shields/shield 11.jpg"
@@ -1088,7 +1114,7 @@
     <!-- Start Product Image -->
     <div class="product-image">
         <!-- Start Product Image -->
-        <a href="shop" class="product-img">
+        <a href="shop_shield.php?type=shield" class="product-img">
             <!-- Image -->
             <img class="primary blur-up lazyload"
                 data-src="<?php echo $path ?>assets/img/shields/shield 22.jpg"
@@ -1138,7 +1164,7 @@
     <!-- Start Product Image -->
     <div class="product-image">
         <!-- Start Product Image -->
-        <a href="shop" class="product-img">
+        <a href="shop_shield.php?type=shield" class="product-img">
             <!-- Image -->
             <img class="primary blur-up lazyload"
                 data-src="<?php echo $path ?>assets/img/shields/shield 33.jpg"
@@ -1188,7 +1214,7 @@
     <!-- Start Product Image -->
     <div class="product-image">
         <!-- Start Product Image -->
-        <a href="shop" class="product-img">
+        <a href="shop_shield.php?type=shield" class="product-img">
             <!-- Image -->
             <img class="primary blur-up lazyload"
                 data-src="<?php echo $path ?>assets/img/shields/shield40.jpg"
@@ -1248,8 +1274,8 @@
                                     <h2 class="ctg-title text-white m-0"><span class="d-block">Best Offers</span> </h2>
                                     <p class="saleText text-uppercase mb-0">30% Off</p>
                                     <p class="ctg-des mt-1 mb-4">On all new arrival product</p>
-                                    <a class="btn btn-secondary explore-btn" href="shop">Shop Now <i
-                                            class="icon anm anm-arw-right ms-2"></i></a>
+                                    <!-- <a class="btn btn-secondary explore-btn" href="shop">Shop Now <i
+                                            class="icon anm anm-arw-right ms-2"></i></a> -->
                                 </div>
                             </div>
                         </div>

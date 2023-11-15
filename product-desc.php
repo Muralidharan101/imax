@@ -32,7 +32,7 @@
         <?php include 'header.php'; ?>
         <!--End Header-->
         <!--Mobile Menu-->
-        <div class="mobile-nav-wrapper" role="navigation">
+        <!-- <div class="mobile-nav-wrapper" role="navigation">
             <div class="closemobileMenu">Close Menu <i class="icon anm anm-times-l"></i></div>
             <ul id="MobileNav" class="mobile-nav">
                 <li class="lvl1 parent dropdown"><a href="index.html">Home <i class="icon anm anm-angle-down-l"></i></a>
@@ -215,7 +215,7 @@
                     </div>
                 </li>
             </ul>
-        </div>
+        </div> -->
         <!--End Mobile Menu-->
 
         <!-- Body Container -->
