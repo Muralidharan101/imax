@@ -142,14 +142,14 @@
 
                                         </div>
                                         <div class="form-group col-10">
-                                            <div
+                                            <!-- <div
                                                 class="login-remember-forgot d-flex justify-content-between align-items-center">
                                                 <div class="agree-check customCheckbox">
                                                     <input id="agree" name="agree" type="checkbox" value="agree"
                                                         required />
                                                     <label for="agree"> I agree to terms & Policy.</label>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <div class="form-group col-10 mb-0">
                                             <input type="submit" id="reg" class="btn btn-primary btn-lg w-100"

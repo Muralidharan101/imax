@@ -20,6 +20,10 @@
         <!-- Main Style CSS -->
         <link rel="stylesheet" href="<?php echo $path;?>assets/css/style-min.css">
         <link rel="stylesheet" href="<?php echo $path;?>assets/css/responsive.css">
+        
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
+        
     </head>
 
     <body class="account-page my-account-page">
@@ -59,11 +63,10 @@
                                     <ul class="nav nav-tabs flex-lg-column border-bottom-0" id="top-tab" role="tablist">
                                         <li class="nav-item"><a href="#" data-bs-toggle="tab" data-bs-target="#info" class="nav-link active">Account Info</a></li>
                                         <li class="nav-item"><a href="#" data-bs-toggle="tab" data-bs-target="#orders" class="nav-link">My Orders</a></li>
-                                        <li class="nav-item"><a href="login.html" class="nav-link">Log Out</a> </li>
+                                        <!-- <li class="nav-item"><a href="login.html" class="nav-link">Log Out</a> </li> -->
                                     </ul>
                                 </div>
                             </div>
-                            <!-- End Dashboard sidebar -->
                         </div>
                         <div class="col-12 col-sm-12 col-md-12 col-lg-9">
                             <div class="dashboard-content tab-content h-100" id="top-tabContent">
@@ -108,16 +111,16 @@
                                         </div>
 
                                         <div class="table-bottom-brd table-responsive">
-                                            <table class="table align-middle text-center order-table">
+                                            <table class="table align-middle text-center order-table" id="order_table">
                                                 <thead>
-                                                    <tr class="table-head text-nowrap">
+                                                    <tr class="table-head text-nowrap text-center">
                                                         <th scope="col">Order Id</th>
-                                                        <th scope="col">Price</th>
+                                                        <th scope="col">Total Price</th>
                                                         <th scope="col">Status</th>
                                                         <th scope="col">View</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody id="order_table">
+                                                <tbody>
                                                 </tbody>
                                             </table>
                                         </div>                                               
@@ -145,12 +148,16 @@
 
 
             <!-- Including Jquery/Javascript -->
+            <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
             <!-- Plugins JS -->
             <script src="<?php echo $path;?>/assets/js/plugins.js"></script>
             <!-- Main JS -->
             <script src="<?php echo $path;?>/assets/js/main.js"></script>
+            <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+            
+            <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
 
-            <script>
+           <script>
                 function getCookie(cookieName) {
                     var name = cookieName + "=";
                     var decodedCookie = decodeURIComponent(document.cookie);
@@ -208,7 +215,7 @@
                     var fd = new FormData();
                     fd.append('customer_id', customer_id);
                     $.ajax({
-                        url: 'ajax/order/list_orders_using_id.php',
+                        url: 'ajax/order/myaccount_list.php',
                         method: 'post',
                         contentType:false,
                         processData:false,
@@ -220,24 +227,39 @@
                             if(result.status == 'Success') {
                                 var data = result.data;
 
-                                var table = $('#order_table');
+                                var table = $('#order_table').DataTable();
 
-                                data.map(function(value){
+                                // `<img class="blur-up lazyload" data-src="<?php echo $path;?>/main/product_images/${value.product_id}/main/${value.product_img}" src="<?php echo $path;?>/main/product_images/${value.product_id}/main/${value.product_img}" width="50" alt="product" title="product" />`,
+                                data.forEach(function (value) {
+                                    // Assuming you want to add a row to the DataTable for each order
+                                    table.row.add([
+                                        value.ref_no,
+                                        value.total_price,
+                                        value.order_status,
+                                        `<a href="javascript:void(0)" class="view"><i class="icon anm anm-eye btn-link fs-6"></i></a>`
+                                    ]).draw();
+                                });
+                                // data.map(function(value){
                                     
-                                    console.log(1);
-                                    // <td><img class="blur-up lazyload" data-src="<?php echo $path;?>/assets/images/products/product1-120x170.jpg" src="<?php echo $path;?>/assets/images/products/product1-120x170.jpg" width="50" alt="product" title="product" /></td>
+                                //     console.log(1);
                                     
-                                    let table_html=`
-                                        <tr data-orderId="${value.id}" data-customerId="${value.customer_id}">
-                                            <td><span class="id">${value.ref_no}</span></td>
-                                            <td><span class="price fw-500">${value.total_price}</span></td>
-                                            <td><span class="badge rounded-pill bg-success custom-badge">${value.order_status}</span></td>
-                                            <td><a href="javascript:void(0)" class="view"><i class="icon anm anm-eye btn-link fs-6"></i></a></td>
-                                        </tr>
-                                    `;
+                                //     value.ref_no,
+                                //     value.total_price,
+                                //     value.order_status,
+                                    
 
-                                    table.insertAdjacentHTML('beforeend', table_html);
-                                })
+                                    // let table_html=`
+                                    //     <tr data-orderId="${value.id}" data-customerId="${value.customer_id}">
+                                    //         <td><span class="id">${value.ref_no}</span></td>
+                                    //         <td><span class="price fw-500">${value.total_price}</span></td>
+                                    //         <td><span class="badge rounded-pill bg-success custom-badge">${value.order_status}</span></td>
+                                    //         <td></td>
+                                    //     </tr>
+                                    // `;
+
+                                    // table.insertAdjacentHTML('beforeend', table_html);
+                                    
+                                // })
                             } else {
 
                             }

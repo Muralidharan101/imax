@@ -120,10 +120,10 @@
                   <div class="col-lg-12">
                     <div class="card">
                       <div class="card-body">
-                        <div class="table-responsive theme-scrollbar">
-                          <table class="table" id="mainImageTable">
-                            <thead>
-                              <tr class="border-bottom-info">
+                        <!-- <div class="table-responsive theme-scrollbar"> -->
+                          <!-- <table class="table" id="mainImageTable"> -->
+                            <!-- <thead> -->
+                              <!-- <tr class="border-bottom-info">
 
                                 <th scope="col">Main Image File<button class="btn text-danger" type="button"
                                     data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Choose image less
@@ -132,35 +132,35 @@
 
                                 </th>
                                 <th scope="col">Main Image Preview</th>
-                              </tr>
-                            </thead>
-                            <tbody>
+                              </tr> -->
+                            <!-- </thead> -->
+                            <!-- <tbody> -->
                               <!-- Template row for adding images -->
-                              <tr class="border-bottom-info" id="mainRowTemplate">
-                                <td>
+                              <!-- <tr class="border-bottom-info" id="mainRowTemplate"> -->
+                                <!-- <td> -->
                                   <!-- Replace your button with this code -->
 
-                                  <input type="file" class="mt-4" id="mainImg" accept=".jpg, .jpeg, .png"
-                                    onchange="previewImage(this)">
+                                  <!-- <input type="file" class="mt-4" id="mainImg" accept=".jpg, .jpeg, .png"
+                                    onchange="previewImage(this)"> -->
 
 
                                   <!-- Hidden file input -->
-                                  <p class="pt-3 fsize"></p>
-                                </td>
+                                  <!-- <p class="pt-3 fsize"></p>
+                                </td> -->
 
 
-                                <td>
+                                <!-- <td> -->
                                   <!-- Image preview initially hidden -->
-                                  <img class="mainprev" width="100%" height="100px" style="display: none;">
+                                  <!-- <img class="mainprev" width="100%" height="100px" style="display: none;">
                                   <br>
-                                </td>
-                            </tbody>
-                          </table>
-                        </div>
+                                </td> -->
+                            <!-- </tbody> -->
+                          <!-- </table>
+                        </div> -->
 
-                        <br><br><br><br><br>
+                        <!-- <br><br><br><br><br> -->
 
-                        <div class="mtable-responsive theme-scrollbar">
+                        <!-- <div class="mtable-responsive theme-scrollbar">
                           <table class="table" id="imageTable">
                             <thead>
                               <tr class="border-bottom-info">
@@ -175,37 +175,37 @@
                                 <th scope="col">Actions</th>
                               </tr>
                             </thead>
-                            <tbody>
+                            <tbody> -->
                               <!-- Template row for adding images -->
-                              <tr class="border-bottom-info" id="rowTemplate">
-                                <td>
+                              <!-- <tr class="border-bottom-info" id="rowTemplate">
+                                <td> -->
                                   <!-- Replace your button with this code -->
 
-                                  <input type="file" class="mt-4" id="additionalImageInput" accept=".jpg, .jpeg, .png"
+                                  <!-- <input type="file" class="mt-4" id="additionalImageInput" accept=".jpg, .jpeg, .png"
                                     onchange="previewImage(this)" data-main="0">
-
+ -->
 
                                   <!-- Hidden file input -->
-                                  <p class="pt-3 fsize"></p>
-                                </td>
+                                  <!-- <p class="pt-3 fsize"></p>
+                                </td> -->
 
 
-                                <td>
+                                <!-- <td> -->
                                   <!-- Image preview initially hidden -->
-                                  <img class="mainprev" width="100%" height="100px" style="display: none;">
+                                  <!-- <img class="mainprev" width="100%" height="100px" style="display: none;">
                                   <br>
-                                </td>
+                                </td> -->
 
-                                <td>
+                                <!-- <td> -->
                                   <!-- Container for the delete button -->
-                                  <div class="delete-container mt-4"></div>
+                                  <!-- <div class="delete-container mt-4"></div>
                                 </td>
                               </tr>
                             </tbody>
-                          </table>
+                          </table> -->
                           <!-- Button to add new images -->
-                          <button class="btn btn-info mt-2 float-end" id="addImage">Add Image</button>
-                        </div>
+                          <!-- <button class="btn btn-info mt-2 float-end" id="addImage">Add Image</button>
+                        </div> -->
 
 
                       </div>
@@ -267,7 +267,7 @@
               </div>
 
                             <div class="card-footer text-end">
-                                <button class="btn text-white" style='display:none;' id="submit">Submit</button>
+                                <button class="btn text-white" id="submit">Submit</button>
                             </div>
                         </div>
                     </div>
@@ -318,79 +318,79 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
-        document.getElementById('addImage').addEventListener('click', function () {
-            const table = document.getElementById('imageTable').getElementsByTagName('tbody')[0];
-            const rowTemplate = document.getElementById('rowTemplate');
-            const newRow = rowTemplate.cloneNode(true); // Clone the template row
-            newRow.style.display = ''; // Make the cloned row visible
+        // document.getElementById('addImage').addEventListener('click', function () {
+        //     const table = document.getElementById('imageTable').getElementsByTagName('tbody')[0];
+        //     const rowTemplate = document.getElementById('rowTemplate');
+        //     const newRow = rowTemplate.cloneNode(true); // Clone the template row
+        //     newRow.style.display = ''; // Make the cloned row visible
 
-            // Reset the file input and image preview for the new row
-            const fileInput = newRow.querySelector('input[type="file"]');
-            const imagePreview = newRow.querySelector('img');
-            const fileSizeMessage = newRow.querySelector('.fsize');
-            const deleteContainer = newRow.querySelector('.delete-container');
-            const submit_btn = document.getElementById('submit');
+        //     // Reset the file input and image preview for the new row
+        //     const fileInput = newRow.querySelector('input[type="file"]');
+        //     const imagePreview = newRow.querySelector('img');
+        //     const fileSizeMessage = newRow.querySelector('.fsize');
+        //     const deleteContainer = newRow.querySelector('.delete-container');
+        //     const submit_btn = document.getElementById('submit');
 
-            fileInput.value = '';
-            imagePreview.src = '';
-            imagePreview.style.display = 'none';
-            fileSizeMessage.textContent = '';
+        //     fileInput.value = '';
+        //     imagePreview.src = '';
+        //     imagePreview.style.display = 'none';
+        //     fileSizeMessage.textContent = '';
 
-            // Add a delete button to the new row
-            const deleteButton = document.createElement('button');
-            deleteButton.innerHTML = '<i class="bi bi-trash-fill h6 mt-2"></i>';
-            deleteButton.className = 'btn danger text-white';
-            deleteButton.addEventListener('click', function () {
-                table.removeChild(newRow);
-            });
+        //     // Add a delete button to the new row
+        //     const deleteButton = document.createElement('button');
+        //     deleteButton.innerHTML = '<i class="bi bi-trash-fill h6 mt-2"></i>';
+        //     deleteButton.className = 'btn danger text-white';
+        //     deleteButton.addEventListener('click', function () {
+        //         table.removeChild(newRow);
+        //     });
 
-            deleteContainer.appendChild(deleteButton);
+        //     deleteContainer.appendChild(deleteButton);
 
-            // Remove any additional default rows created by the JavaScript
-            const defaultRows = table.getElementsByClassName('default-row');
-            if (defaultRows.length > 1) {
-                table.removeChild(defaultRows[defaultRows.length - 1]);
-            }
+        //     // Remove any additional default rows created by the JavaScript
+        //     const defaultRows = table.getElementsByClassName('default-row');
+        //     if (defaultRows.length > 1) {
+        //         table.removeChild(defaultRows[defaultRows.length - 1]);
+        //     }
 
-            table.appendChild(newRow);
+        //     table.appendChild(newRow);
 
-        });
+        // });
 
       
 
 
-        function previewImage(input) {
-            const preview = input.closest('tr').querySelector('img.mainprev');
-            const fileSizeMessage = input.closest('td').querySelector('.fsize');
-            const submit_btn = document.getElementById('submit'); // Get the submit button
+        // function previewImage(input) {
+        //     const preview = input.closest('tr').querySelector('img.mainprev');
+        //     const fileSizeMessage = input.closest('td').querySelector('.fsize');
+        //     const submit_btn = document.getElementById('submit'); // Get the submit button
 
-            if (input.files && input.files[0]) {
-                const selectedFile = input.files[0];
-                const maxSizeInBytes = 1024 * 200; // 2MB
+        //     if (input.files && input.files[0]) {
+        //         const selectedFile = input.files[0];
+        //         const maxSizeInBytes = 1024 * 200; // 2MB
 
-                if (selectedFile.size > maxSizeInBytes) {
-                    fileSizeMessage.textContent = 'File size exceeds the allowed limit.';
-                    fileSizeMessage.style.color = 'red';
-                    preview.style.display = 'none'; // Hide the image preview
+        //         if (selectedFile.size > maxSizeInBytes) {
+        //             fileSizeMessage.textContent = 'File size exceeds the allowed limit.';
+        //             fileSizeMessage.style.color = 'red';
+        //             preview.style.display = 'none'; // Hide the image preview
 
-                } else {
-                    fileSizeMessage.textContent = 'File Size is within the limit';
-                    fileSizeMessage.style.color = 'green';
-                    submit_btn.style.display = 'inline-block'; // Show the submit butto
+        //         } else {
+        //             fileSizeMessage.textContent = 'File Size is within the limit';
+        //             fileSizeMessage.style.color = 'green';
+        //             submit_btn.style.display = 'inline-block'; // Show the submit butto
 
-                    const reader = new FileReader();
-                    reader.onload = function (e) {
-                        preview.src = e.target.result;
-                        preview.style.display = 'block'; // Show the image preview
-                    };
-                    reader.readAsDataURL(input.files[0]);
-                }
-            } else {
-                fileSizeMessage.textContent = '';
-                preview.style.display = 'none'; // Hide the image preview
-                submit_btn.style.display = 'none'; // Hide the submit button
-            }
-        }
+        //             const reader = new FileReader();
+        //             reader.onload = function (e) {
+        //                 preview.src = e.target.result;
+        //                 preview.style.display = 'block'; // Show the image preview
+        //             };
+        //             reader.readAsDataURL(input.files[0]);
+        //         }
+        //     } else {
+        //         fileSizeMessage.textContent = '';
+        //         preview.style.display = 'none'; // Hide the image preview
+        //         submit_btn.style.display = 'none'; // Hide the submit button
+        //     }
+        // }
 
 
 
@@ -436,8 +436,6 @@
                             } else {
                                 console.log('No data found');
                             }
-
-
                             document.getElementById('proImage').value = product_img;
                             document.getElementById('proName').value = product_name;
                             document.getElementById('proPrice').value = product_price;
@@ -447,7 +445,6 @@
                         }
                     }
                 })
-
             }
             fetchdata();
 
@@ -455,19 +452,19 @@
             // Initialize a FormData object to store the data
             var formData = new FormData();
 
-            // Additional image input change event
-            $("input[data-main='0']").change(function () {
-                var fileSizeMessage = $(this).closest('td').find('.fsize');
-                var mainPreview = $(this).closest('td').find('img.mainprev');
+            // // Additional image input change event
+            // $("input[data-main='0']").change(function () {
+            //     var fileSizeMessage = $(this).closest('td').find('.fsize');
+            //     var mainPreview = $(this).closest('td').find('img.mainprev');
 
-                // Assuming previewAdditionalImage is a function that displays the selected image
-                previewAdditionalImage(this, mainPreview, fileSizeMessage);
+            //     // Assuming previewAdditionalImage is a function that displays the selected image
+            //     previewAdditionalImage(this, mainPreview, fileSizeMessage);
 
-                // Update the additional image selection
-                var additionalImage = this.files[0];
+            //     // Update the additional image selection
+            //     var additionalImage = this.files[0];
 
-                // Don't append here; we'll append them all when the form is submitted
-            });
+            //     // Don't append here; we'll append them all when the form is submitted
+            // });
 
             // Submit button click event
             $("#submit").click(function (e) {
@@ -477,7 +474,7 @@
                 formData = new FormData();
 
                 // Gather other form data
-                var mainImg = $("#mainImg")[0].files[0];
+                // var mainImg = $("#mainImg")[0].files[0];
                 var proname = $("#proName").val().trim();
                 var proprice = $("#proPrice").val().trim();
                 var prosize = $("#proSize").val().trim();
@@ -500,7 +497,7 @@
                     formData.append("product_color", procolor);
                     formData.append("product_size", prosize);
                     formData.append("product_description", prodes);
-                    formData.append("main_Img", mainImg);
+                    // formData.append("main_Img", mainImg);
 
                     // Append all additional images to the formData
                     $("input[data-main='0']").each(function (index, input) {

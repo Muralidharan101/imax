@@ -40,18 +40,20 @@
 
     <style>
      /* Add some styling for the active category */
-.sidebar-categories .lvl1.active-category {
-    border: 2px solid #ff6600; /* Adjust the color as needed */
-    border-radius: 5px;
-    padding: 0 20px;
+        .sidebar-categories .lvl1.active-category {
+            border: 2px solid #ff6600; /* Adjust the color as needed */
+            border-radius: 5px;
+            padding: 0 20px;
 
-}
+        }
 
-#sidebar_category li{
-cursor:pointer !important;
-padding:5px 10px;
-}
-
+        #sidebar_category li{
+        cursor:pointer !important;
+        padding:5px 10px;
+        }
+        #cart.product-image {
+            height: 250px !important;
+        }
 
 
 
@@ -451,9 +453,6 @@ padding:5px 10px;
         var startValue;
         var endValue;
         
-
-        
-
         $("#slider-range").slider({
             range: true,
             min: 100,
@@ -463,7 +462,6 @@ padding:5px 10px;
                 $("#amount").val("₹" + ui.values[0] + " - ₹" + ui.values[1]);
             }
         });
-
 
         var setpriceRange = document.getElementById('filteration');
         setpriceRange.addEventListener('click', function (e) {
@@ -479,7 +477,6 @@ padding:5px 10px;
             // console.log("Start: " + startValue);
             // console.log("End: " + endValue);
         });
-
 
         var swatchList = document.querySelectorAll('.swatch.available');
 
@@ -525,18 +522,15 @@ padding:5px 10px;
         $(document).ready(function () {
             var selectedCategory = null;
 
-            // Click event for selecting a category
             $(document).on('click', '#sidebar_category li', function() {
                 var categoryValue = $(this).data('value');
 
-                // Highlight the selected category and store the value
                 $('#sidebar_category li').removeClass('selected');
                 $(this).addClass('selected');
 
                 selectedCategory = categoryValue;
             });
 
-            // Click event for the filter button
             $('#filteration').click(function (e) {
                 e.preventDefault();
 
@@ -680,7 +674,6 @@ padding:5px 10px;
                             //     src="product_images/${product_id}/alt/${alt_img}"
                             //     alt="Product Alt Image" title="Product Alt Image" width="625" height="808" style="display: none;" />
 
-
                             if (Array.isArray(data)) {
                                 data.forEach(function(obj) {
                                     var cartHtml = `
@@ -692,9 +685,8 @@ padding:5px 10px;
                                                             <img class="main-img"
                                                                 data-src="product_images/${obj.product_id}/main/${obj.product_img}"
                                                                 src="product_images/${obj.product_id}/main/${obj.product_img}"
-                                                                alt="Product Main Image" title="Product Main Image" width="625" height="808" />
+                                                                alt="Product Main Image" title="Product Main Image" width="625" height="808" style="height: 300px;" />
                                                             </a>
-
                                                     </div>
                                                     <div class="product-details text-left">
                                                         <span class="product-vendor">${obj.product_category}</span>

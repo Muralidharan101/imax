@@ -580,6 +580,7 @@ padding:5px 10px;
             } else {
                 fetchdata();
             }
+
             function categoryFilter() {
                     console.log('1');
 
@@ -616,7 +617,7 @@ padding:5px 10px;
                                                                 <img class="main-img"
                                                                     data-src="product_images/${obj.product_id}/main/${obj.product_img}"
                                                                     src="product_images/${obj.product_id}/main/${obj.product_img}"
-                                                                    alt="Product Main Image" title="Product Main Image" width="625" height="808" />
+                                                                    alt="Product Main Image" title="Product Main Image" width="625" height="808"  style="height: 300px;" />
                                                                 </a>
 
                                                         </div>
@@ -672,6 +673,9 @@ padding:5px 10px;
                         if (result.status === 'Success') {
                             var data = result.data;
                             console.log(data);
+
+                            var cart = document.getElementById('cart-product');
+                            cart.innerHTML = "";
 
                             // Use for hover image when needed
 
@@ -748,8 +752,9 @@ padding:5px 10px;
                             
                             var cart = document.getElementById('cart-product');
                             cart.innerHTML = "";
-                            
                             var data = result.data;
+
+                                                            
                             if (Array.isArray(data)) {
                                 data.forEach(function(obj) {
                                     var cartHtml = `
@@ -792,8 +797,11 @@ padding:5px 10px;
                                         cart.insertAdjacentHTML("beforeend", cartHtml);
                                 })
                             }
+                            
                         } else {
-                           fetchdata();
+
+                            
+                        //    fetchdata();
                         }
                     },
                     error: function (xhr, status, error) {

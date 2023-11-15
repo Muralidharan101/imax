@@ -761,7 +761,7 @@ padding:5px 10px;
                                                             <img class="main-img"
                                                                 data-src="product_images/${obj.product_id}/main/${obj.product_img}"
                                                                 src="product_images/${obj.product_id}/main/${obj.product_img}"
-                                                                alt="Product Main Image" title="Product Main Image" width="625" height="808" />
+                                                                alt="Product Main Image" title="Product Main Image" width="625" height="808" style="height: 300px;" />
                                                             </a>
 
                                                     </div>

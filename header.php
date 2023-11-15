@@ -133,10 +133,10 @@
                     <li><a href="my-account.php" class="d-flex align-items-center"><i
                                 class="icon anm anm-user-cil"></i>My Account</a></li>
                     <li class="title h5">Need Help?</li>
-                    <li><a href="tel:401234567890" class="d-flex align-items-center"><i
-                                class="icon anm anm-phone-l"></i> (+40) 123 456 7890</a></li>
-                    <li><a href="mailto:info@example.com" class="d-flex align-items-center"><i
-                                class="icon anm anm-envelope-l"></i> info@example.com</a></li>
+                    <li><a href="tel:+919876543210" class="d-flex align-items-center"><i
+                                class="icon anm anm-phone-l"></i>+91 98765 43210</a></li>
+                    <li><a href="mailto:imax@gmail.com" class="d-flex align-items-center"><i
+                                class="icon anm anm-envelope-l"></i>imax@gmail.com</a></li>
                 </ul>
             </div>
             <div class="mobile-follow mt-2">

@@ -1,5 +1,5 @@
 <?php
-require('fpdf.php');
+require('pdf/fpdf.php');
 
 class PDF extends FPDF
 {
@@ -37,7 +37,7 @@ $pdf->MultiCell(190,4, '13/5311, TRICHY ROAD, MANAPPARAI, TRICHY', 0, 'L', 0);
 $pdf->MultiCell(190,4, 'GST : 33DZOPS7101A2ZJ', 0, 'L', 0);
 $pdf->MultiCell(190,4, 'Phone : 9894932745', 0, 'L', 0);
 
-$pdf->Image('imax.jpg', 164, 10 , 35);
+$pdf->Image('pdf/imax.jpg', 164, 10 , 35);
 
 $pdf->SetFont('Arial','B',13);
 $pdf->Ln(20);

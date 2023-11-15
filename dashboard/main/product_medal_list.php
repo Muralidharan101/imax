@@ -217,7 +217,7 @@
       fd.append('id', deleteId);
 
       $.ajax({
-        url: 'ajax',
+        url: 'ajax/product/delete_product.php',
         data: fd,
         type: 'post',
         contentType: false,
