@@ -236,7 +236,7 @@
                                         value.ref_no,
                                         value.total_price,
                                         value.order_status,
-                                        `<a href="javascript:void(0)" class="view"><i class="icon anm anm-eye btn-link fs-6"></i></a>`
+                                        `<a href="my_account_order_details.php?order_id=${value.id}" class="view"><i class="icon anm anm-eye btn-link fs-6"></i></a>`
                                     ]).draw();
                                 });
                                 // data.map(function(value){

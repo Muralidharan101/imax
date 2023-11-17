@@ -128,7 +128,7 @@
                                         <p><i class="icon anm anm-map-marker-al me-2 d-none"></i>3/5311, Trichy Road , MANAPPARAI, 621306.</p>
                                     </li>
                                     <li class="mb-2 phone"><strong>Phone :</strong><i
-                                            class="icon anm anm-phone me-2 d-none"></i> <a href="tel:+91 98765 43210">+91 98765 43210</a></li>
+                                            class="icon anm anm-phone me-2 d-none"></i> <a href="tel:+919894932745">+91 98949 32745</a>, <a href="tel:tel:+917010303571">+91 70103 03571</a></li>
                                     <li class="mb-0 email"><strong>Email :</strong><i
                                             class="icon anm anm-envelope-l me-2 d-none"></i> <a
                                             href="mailto:sarandrj@gmail.com">sarandrj@gmail.com</a></li>

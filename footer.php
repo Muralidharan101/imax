@@ -43,12 +43,13 @@
                 </div>
                 <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-contact">
                     <h4 class="h4">Contact Us</h4>
-                    <p class="address d-flex"><i class="icon anm anm-map-marker-al pt-1"></i> Pothamettupatty, near SBI
-                        ATM, Manapparai, Tamil Nadu 621306</p>
+                    <p class="address d-flex"><i class="icon anm anm-map-marker-al pt-1"></i> 13/5311, Trichy Road,<br>Manapparai - 621306</p>
                     <p class="phone d-flex align-items-center"><i class="icon anm anm-phone-l"></i> <b
-                            class="me-1 d-none">Phone:</b> <a href="tel:+919876543210">+91 98765 43210</a></p>
+                            class="me-1 d-none">Phone:</b> <a href="tel:+917010303571">+91 70103 03571</a></p>
+                    <p class="phone d-flex align-items-center" style="margin-left: 20px;"><b class="me-1 d-none">Phone:</b>
+                            <a href="tel:+919894932745">+91 98949 32745</a></p>
                     <p class="email d-flex align-items-center"><i class="icon anm anm-envelope-l"></i> <b
-                            class="me-1 d-none">Email:</b> <a href="mailto:imax@gmail.com">imax@gmail.com</a></p>
+                            class="me-1 d-none">Email:</b> <a href="mailto:imax@gmail.com">sarandrj@gmail.com</a></p>
                     <ul class="list-inline social-icons mt-3">
                         <li class="list-inline-item"><a href="#" data-bs-toggle="tooltip" data-bs-placement="top"
                                 title="Facebook"><i class="icon anm anm-facebook-f"></i></a></li>
@@ -76,6 +77,14 @@
             </div>
         </div>
     </div>
+    <style>
+        .copy_comp{
+            color: #fff;
+        }
+        .copy_comp:hover{
+            color: yellow;
+        }
+    </style>
     <div class="footer-bottom clearfix" style="background-color: #fe0609;color:white;">
         <div class="container">
             <div class="d-flex-center flex-column justify-content-md-between flex-md-row-reverse">
@@ -88,8 +97,8 @@
                                 <li><i class="icon anm anm-cc-stripe"></i></li>
                                 <li><i class="icon anm anm-cc-jcb"></i></li> -->
                 </ul>
-                <div class="copytext">&copy; 2023 Imax Trophies. All Rights Reserved. Designed by <a
-                        href="https://www.cryptographicsolutions.in" style="color: #2f415d;">Cryptographic solutions</a>
+                <div class="copytext">&copy; 2023 Imax Trophies. All Rights Reserved. Designed by 
+                    <a class="copy_comp" href="https://www.cryptographicsolutions.in" >Cryptographic solutions</a>
                 </div>
             </div>
         </div>
