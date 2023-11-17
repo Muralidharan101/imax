@@ -258,7 +258,7 @@
                 value.product_name,
                 value.quantity,
                 value.product_price,
-                value.total_price,
+                value.total_price
                 
               ]).draw(false);
             });
