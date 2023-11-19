@@ -192,15 +192,15 @@
 
               var editButton =
                 `<a href="Product_edit.php?id=${value.id}" class='text-success me-2'><i class="bi bi-pencil-fill h6"></i></a>`;
-              var viewButton =
-                `<a href=".php?id=${value.id}" class=text-success' me-2'><i class="bi bi-box-arrow-up-right pt-2 h6"></i></a>`;
+              // var viewButton =
+              //   `<a href=".php?id=${value.id}" class=text-success' me-2'><i class="bi bi-box-arrow-up-right pt-2 h6"></i></a>`;
               dataTable.row.add([
                 `<img src="../../product_images/${value.id}/main/${value.product_img}" width="70" height="100"/>`,
                
                 value.product_name,
                 value.product_price,
                 value.product_desc,
-                `${editButton}<a data-id="${value.id}" class='text-danger me-2 delete_button'><i class="bi bi-trash3-fill h6"></i></a>${viewButton}`
+                `${editButton}<a data-id="${value.id}" class='text-danger me-2 delete_button'><i class="bi bi-trash3-fill h6"></i></a>`
               ]).draw(false);
             });
           }

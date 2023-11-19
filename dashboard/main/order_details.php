@@ -307,13 +307,12 @@
 
           console.log(data);
           if (data.status == "Success") {
-            toastr.success("Payment Updated !", "Success")
-              console.log('1');
-              // sendToPdf();
-            // fetchdata();
-            // window.open(`ajax/orders/imax.php?order_id=${order_id}`);
+            console.log('1');
             window.open(`ajax/orders/imax.php?order_id=${order_id}`);
+            
+            toastr.success("Payment Updated !", "Success");
 
+            window.location.href = 'orders.php';
           } else {
             toastr.error("Error", "Error Found!")
           }

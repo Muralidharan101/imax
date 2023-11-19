@@ -158,7 +158,7 @@
 
   <script>
     
-    var product_id; //trophy_size,trophy_color;
+    var product_id;
 
     function fetchdata() {
       $.ajax({

@@ -137,8 +137,9 @@
 
                 <div class="card-body"> 
                   <div class="payment-buttons text-end mt-3 mb-3">
-                    <button class="btn btn-sm btn-warning" id="download_btn"><i class="fas fa-download"></i> Download Invoice</button>
-                    <button class="btn btn-sm btn-danger"  id="cancel_btn">Canceled</button>
+                    <a id="download_link"><button class="btn btn-sm btn-warning" id="download_btn"><i class="fas fa-download"></i> Download Invoice</button></a>
+                    
+                    <!-- <button class="btn btn-sm btn-danger"  id="cancel_btn">Canceled</button> -->
                   </div>
 
                   <div class="table-responsive theme-scrollbar">
@@ -269,34 +270,52 @@
     fetchdata();
 
     $(document).ready(function() {
-      $("#download_btn").on("click", function() {
+      // $("#download_btn").on("click", function() {
         
-        var fd = new FormData();
+      //   var fd = new FormData();
 
-        fd.append('order_id', order_id);
+      //   fd.append('order_id', order_id);
 
-        $.ajax({
-            type: "POST",
-            url: "ajax/orders/download_pdf.php",
-            contentType:false,
-            processData:false,
-            data: fd,
+      //   $.ajax({
+      //       type: "POST",
+      //       url: "ajax/orders/download_pdf.php",
+      //       contentType:false,
+      //       processData:false,
+      //       data: fd,
 
-            success: function(response) {
-                if (response.status === "Success") {
+      //       success: function(response) {
+      //           if (response.status === "Success") {
                    
-                    var downloadLink = document.createElement("a");
-                    downloadLink.href = response.pdf_path;
-                    downloadLink.download = "invoice.pdf"; 
-                    downloadLink.click();
-                } else {
-                    alert("Error: " + response.remarks);
-                }
-            },
-            error: function() {
-                alert("Error while processing the request.");
-            }
-        });
+      //               var downloadLink = document.createElement("a");
+      //               downloadLink.href = response.pdf_path;
+      //               downloadLink.download = "invoice.pdf"; 
+      //               downloadLink.click();
+      //           } else {
+      //               alert("Error: " + response.remarks);
+      //           }
+      //       },
+      //       error: function() {
+      //           alert("Error while processing the request.");
+      //       }
+      //   });
+      // });
+
+      $(document).ready(function() {
+          // Assume order_id is a variable containing the current order ID
+
+          // Event listener for the download button
+          $('#download_btn').on('click', function() {
+              // Construct the URL for the PDF file
+              var pdfUrl = `ajax/orders/invoice/${order_id}/invoice.pdf`;
+
+              // Set the download attribute of the download link
+              $('#download_link').attr('download', `invoice_${order_id}.pdf`);
+
+              // Set the href attribute of the download link
+              $('#download_link').attr('href', pdfUrl);
+
+              // Trigger a click event on the download link to initiate the download
+          });
       });
     });
     // $('#paid_btn').click(function () {
@@ -363,6 +382,7 @@
         }
       });
     });
+    
   </script>
 
 </body>

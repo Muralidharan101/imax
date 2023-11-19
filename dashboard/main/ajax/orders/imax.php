@@ -14,6 +14,12 @@
     $order_address = $order_data['address'];
     $order_phone = $order_data['phone'];
 
+    if (!file_exists('invoice/'.$order_id)) {
+        mkdir('invoice/'.$order_id, 0777, true);
+    }
+
+    // chdir($order_id);
+
     class PDF extends FPDF
     {
         function Header()
@@ -396,5 +402,9 @@
     $pdf->SetXY(10+$row_1+$row_2+$row_3+$row_4+$row_5,$y_len);
     $pdf->MultiCell($row_6,4, sprintf("%.2f",$total_tax), 1, 'R', 0);
 
-    $pdf->Output();
+    $pdfFileName = 'invoice.pdf';
+    $pdf->Output('invoice/'.$order_id.'/'.$pdfFileName, 'F');
+
+    // chdir('..');
+    echo '<script>window.close();</script>';
 ?>

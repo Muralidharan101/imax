@@ -160,6 +160,7 @@
     
     var product_id;
     function fetchdata() {
+      console.log(1);
       $.ajax({
         url: 'ajax/orders/paid_orders_list.php',
         type: 'get',
