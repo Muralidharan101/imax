@@ -194,7 +194,7 @@
                                 </div>
                             </div>
                         </div>
-
+                                
                         <div class="col-12 col-sm-12 col-md-12 col-lg-9">
                             <div class="grid-products product-slider-3items gp15 arwOut5 hov-arrow circle-arrow arrowlr-0" id="best_sell">
                                 <?php
@@ -213,6 +213,8 @@
 
                                 if (mysqli_num_rows($sql) > 6) {
                                     while ($row = mysqli_fetch_array($sql)) {
+
+                                        echo $row;
                                         // Extract product information from the $row array
                                         $productName = $row['product_name'];
                                         $productPrice = $row['product_price'];
@@ -268,7 +270,7 @@
                                                                         LIMIT 10");
 
                                     if (mysqli_num_rows($alt_sql) > 0) {
-                                        while ($row = mysqli_fetch_array($sql)) {
+                                        while ($row = mysqli_fetch_array($alt_sql)) {
                                             // Extract product information from the $row array
                                             $productName = $row['product_name'];
                                             $productPrice = $row['product_price'];
@@ -287,7 +289,7 @@
                                                             <!-- Image -->
                                                             <img class="blur-up lazyload" data-src="product_images/<?php echo $product_id ?>/main/<?php echo $productImage; ?>"
                                                                 src="product_images/<?php echo $product_id ?>/main/<?php echo $productImage; ?>" alt="Product" title="Product"
-                                                                width="625" height="625" style="height: 250px;/>
+                                                                width="625" height="625" style="height: 250px;"/>
                                                             <!-- End Image -->
                                                            
                                                         </a>
@@ -324,6 +326,7 @@
                                 ?>
                             </div>
                         </div>
+                        <p><?php echo mysqli_num_rows($sql); ?></p>
 
 
 
@@ -456,6 +459,61 @@
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-12 col-lg-9">
                             <div class="grid-products product-slider-3items gp15 arwOut5 hov-arrow circle-arrow arrowlr-0" id="new_trophy">
+                                <?php
+                                    $trophy_query = "SELECT DISTINCT pd.id AS product_id, pd.product_name, pd.product_price, pd.product_category, pd.product_desc,
+                                                                            pi.id AS product_img_id, pi.product_img, pi.img_category
+                                                                        FROM product_data pd
+                                                                        JOIN product_images pi ON pd.id = pi.product_id
+                                                                        WHERE pd.status='Active' AND pd.product_type='trophy'
+                                                                        ORDER BY pd.id DESC
+                                                                        LIMIT 10";
+
+                                    $new_trophy_query = mysqli_query($conn,"$trophy_query");
+
+                                    while($new_fetch = mysqli_fetch_assoc($new_trophy_query)) {
+                                        $new_trophy_id = $new_fetch["product_id"];
+                                        $new_trophy_name = $new_fetch["product_name"];
+                                        $new_trophy_price = $new_fetch["product_price"];
+                                        $new_trophy_category = $new_fetch["product_category"];
+                                        $new_trophy_image = $new_fetch["product_img"];
+                                ?>
+                                    <div class="item col-item">
+                                        <div class="product-box">
+                                            <!-- Start Product Image -->
+                                            <div class="product-image">
+                                                <!-- Start Product Image -->
+                                                <a href="shop_trophy.php?type=trophy" class="product-img">
+                                                    <!-- Image -->
+                                                    <img class="blur-up lazyload" data-src="product_images/<?php echo $new_trophy_id ?>/main/<?php echo $new_trophy_image; ?>"
+                                                        src="product_images/<?php echo $new_trophy_id ?>/main/<?php echo $new_trophy_image; ?>" alt="Product" title="Product"
+                                                        width="625" height="625" style="height: 250px;"/>
+                                                    <!-- End Image -->
+                                                </a>
+                                                <!-- End Product Image -->
+                                            </div>
+                                            <!-- End Product Image -->
+                                            <!-- Start Product Details -->
+                                            <div class="product-details text-left">
+                                                <!--Product Vendor-->
+                                                <div class="product-vendor"><?php echo $new_trophy_category; ?></div>
+                                                <!--End Product Vendor-->
+                                                <!-- Product Name -->
+                                                <div class="product-name">
+                                                    <a href="shop"><?php echo $new_trophy_name; ?></a>
+                                                </div>
+                                                <!-- End Product Name -->
+                                                <!-- Product Price -->
+                                                <div class="product-price">
+                                                    <span class="price">₹<?php echo $new_trophy_price; ?></span>
+                                                </div>
+                                                <!-- End Product Price -->
+                                            </div>
+                                            <!-- End product details -->
+                                        </div>
+                                    </div>
+                                <?php
+                                    }
+                                ?>
                             </div>
                         </div>
 
@@ -487,11 +545,8 @@
                             <h2 class="text-dark">New Arrivals of medals</h2>
                             <p>Shop our new arrivals from established brands</p>
                         </div>
-
                     </div>
-                    
                     <div class="row">
-                     
                     <div class="col-12 col-sm-12 col-md-12 col-lg-3 mb-4 mb-lg-0">
                             <div class="ctg-bnr-wrap one position-relative h-100">
                                 <div class="ctg-image ratio ratio-1x1 h-100">
@@ -511,6 +566,63 @@
 
                         <div class="col-12 col-sm-12 col-md-12 col-lg-9">
                             <div class="grid-products product-slider-3items gp15 arwOut5 hov-arrow circle-arrow arrowlr-0" id="new_medal">
+                                <?php
+                                    $medal_query = "SELECT DISTINCT pd.id AS product_id, pd.product_name, pd.product_price, pd.product_category, pd.product_desc,
+                                                                            pi.id AS product_img_id, pi.product_img, pi.img_category
+                                                                        FROM product_data pd
+                                                                        JOIN product_images pi ON pd.id = pi.product_id
+                                                                        WHERE pd.status='Active' AND pd.product_type='medal'
+                                                                        ORDER BY pd.id DESC
+                                                                        LIMIT 10";
+
+                                    $new_medal_query = mysqli_query($conn,"$medal_query");
+
+                                    while($new_fetch = mysqli_fetch_assoc($new_medal_query)) {
+                                        $new_medal_id = $new_fetch["product_id"];
+                                        $new_medal_name = $new_fetch["product_name"];
+                                        $new_medal_price = $new_fetch["product_price"];
+                                        $new_medal_category = $new_fetch["product_category"];
+                                        $new_medal_image = $new_fetch["product_img"];
+                                ?>
+                                    <div class="item col-item">
+                                        <div class="product-box">
+                                            <!-- Start Product Image -->
+                                            <div class="product-image">
+                                                <!-- Start Product Image -->
+                                                <a href="shop_trophy.php?type=trophy" class="product-img">
+                                                    <!-- Image -->
+                                                    <img class="blur-up lazyload" data-src="product_images/<?php echo $new_medal_id ?>/main/<?php echo $new_medal_image; ?>"
+                                                        src="product_images/<?php echo $new_medal_id ?>/main/<?php echo $new_medal_image; ?>" alt="Product" title="Product"
+                                                        width="625" height="625" style="height: 250px;"/>
+                                                    <!-- End Image -->
+                                                    
+                                                </a>
+                                                <!-- End Product Image -->
+
+                                            </div>
+                                            <!-- End Product Image -->
+                                            <!-- Start Product Details -->
+                                            <div class="product-details text-left">
+                                                <!--Product Vendor-->
+                                                <div class="product-vendor"><?php echo $new_medal_category; ?></div>
+                                                <!--End Product Vendor-->
+                                                <!-- Product Name -->
+                                                <div class="product-name">
+                                                    <a href="shop"><?php echo $new_medal_name; ?></a>
+                                                </div>
+                                                <!-- End Product Name -->
+                                                <!-- Product Price -->
+                                                <div class="product-price">
+                                                    <span class="price">₹<?php echo $new_medal_price; ?></span>
+                                                </div>
+                                                <!-- End Product Price -->
+                                            </div>
+                                            <!-- End product details -->
+                                        </div>
+                                    </div>
+                                <?php
+                                    }
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -532,6 +644,63 @@
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-12 col-lg-9">
                             <div class="grid-products product-slider-3items gp15 arwOut5 hov-arrow circle-arrow arrowlr-0" id="new_shield">
+                                <?php
+                                    $shield_query = "SELECT DISTINCT pd.id AS product_id, pd.product_name, pd.product_price, pd.product_category, pd.product_desc,
+                                                                            pi.id AS product_img_id, pi.product_img, pi.img_category
+                                                                        FROM product_data pd
+                                                                        JOIN product_images pi ON pd.id = pi.product_id
+                                                                        WHERE pd.status='Active' AND pd.product_type='shield'
+                                                                        ORDER BY pd.id DESC
+                                                                        LIMIT 10";
+
+                                    $new_shield_query = mysqli_query($conn,"$shield_query");
+
+                                    while($new_fetch = mysqli_fetch_assoc($new_shield_query)) {
+                                        $new_shield_id = $new_fetch["product_id"];
+                                        $new_shield_name = $new_fetch["product_name"];
+                                        $new_shield_price = $new_fetch["product_price"];
+                                        $new_shield_category = $new_fetch["product_category"];
+                                        $new_shield_image = $new_fetch["product_img"];
+                                ?>
+                                    <div class="item col-item">
+                                        <div class="product-box">
+                                            <!-- Start Product Image -->
+                                            <div class="product-image">
+                                                <!-- Start Product Image -->
+                                                <a href="shop_trophy.php?type=trophy" class="product-img">
+                                                    <!-- Image -->
+                                                    <img class="blur-up lazyload" data-src="product_images/<?php echo $new_shield_id ?>/main/<?php echo $new_shield_image; ?>"
+                                                        src="product_images/<?php echo $new_shield_id ?>/main/<?php echo $new_shield_image; ?>" alt="Product" title="Product"
+                                                        width="625" height="625" style="height: 250px;"/>
+                                                    <!-- End Image -->
+                                                    
+                                                </a>
+                                                <!-- End Product Image -->
+
+                                            </div>
+                                            <!-- End Product Image -->
+                                            <!-- Start Product Details -->
+                                            <div class="product-details text-left">
+                                                <!--Product Vendor-->
+                                                <div class="product-vendor"><?php echo $new_shield_category; ?></div>
+                                                <!--End Product Vendor-->
+                                                <!-- Product Name -->
+                                                <div class="product-name">
+                                                    <a href="shop"><?php echo $new_shield_name; ?></a>
+                                                </div>
+                                                <!-- End Product Name -->
+                                                <!-- Product Price -->
+                                                <div class="product-price">
+                                                    <span class="price">₹<?php echo $new_shield_price; ?></span>
+                                                </div>
+                                                <!-- End Product Price -->
+                                            </div>
+                                            <!-- End product details -->
+                                        </div>
+                                    </div>
+                                <?php
+                                    }
+                                ?>
                             </div>
                         </div>
                         <div class="col-12 col-sm-12 col-md-12 col-lg-3 mt-4 mt-lg-0">

@@ -309,7 +309,7 @@
           if (data.status == "Success") {
             toastr.success("Payment Updated !", "Success")
               console.log('1');
-              sendToPdf();
+              // sendToPdf();
             // fetchdata();
             // window.open(`ajax/orders/imax.php?order_id=${order_id}`);
             window.open(`ajax/orders/imax.php?order_id=${order_id}`);
@@ -320,27 +320,6 @@
         }
       });
 
-      function sendToPdf(){
-      // var fd = new FormData();
-
-      // fd.append('order_id', order_id);
-      console.log(order_id);
-      $.ajax({
-        url: 'ajax/orders/pdf_generation.php',
-        type: 'get',
-        data: {order_id: order_id},
-
-        success:function(response){
-          var result = JSON.parse(response);
-
-          if(result.status == 'Success') {
-            console.log('pdf gen');
-          } else {
-            toastr.error('Error');
-          }
-        }
-      })
-    }
      
     });
 
