@@ -232,7 +232,7 @@
                                 placeholder='Enter Product Price'>
                             </div>
                           </div>
-                          <div class="col-lg-4">
+                          <!-- <div class="col-lg-4">
                             <div class="mb-3">
                               <label class="form-label" for="proSize">Product Size</label>
                               <select class="form-select" id="proSize" style="border:.5px solid #9b9999;">
@@ -240,10 +240,10 @@
                               </select>
 
                             </div>
-                          </div>
+                          </div> -->
                         </div>
                         <div class="row">
-                          <div class="col-lg-4">
+                          <!-- <div class="col-lg-4">
                             <div class="mb-3">
                               <label class="form-label" for="proColor">Product Color</label>
                               <select class="form-select" id="proColor" style="border:.5px solid #9b9999;">
@@ -251,7 +251,7 @@
                               </select>
 
                             </div>
-                          </div>
+                          </div> -->
                           <div class="col-lg-8">
                             <div class="mb-3">
                               <label class="form-label" for="proDescription">Product Description</label>
@@ -267,7 +267,7 @@
               </div>
 
                             <div class="card-footer text-end">
-                                <button class="btn text-white" id="submit">Submit</button>
+                                <button class="btn text-white" id="submit" >Submit</button>
                             </div>
                         </div>
                     </div>
@@ -432,22 +432,20 @@
                                 var product_size = data[0].product_size;
                                 var product_color = data[0].product_color;
                                 var product_desc = data[0].product_desc;
-
                             } else {
                                 console.log('No data found');
                             }
-                            document.getElementById('proImage').value = product_img;
+                            // document.getElementById('proImage').innerHTML = product_img;
                             document.getElementById('proName').value = product_name;
                             document.getElementById('proPrice').value = product_price;
-                            document.getElementById('proSize').value = product_size;
-                            document.getElementById('proColor').value = product_color;
+                            // document.getElementById('proSize').value = product_size;
+                            // document.getElementById('proColor').value = product_color;
                             document.getElementById('proDescription').value = product_desc;
                         }
                     }
                 })
             }
             fetchdata();
-
 
             // Initialize a FormData object to store the data
             var formData = new FormData();
@@ -468,44 +466,41 @@
 
             // Submit button click event
             $("#submit").click(function (e) {
-                e.preventDefault();
 
-                // Clear the formData object before appending data
+                console.log(1);
+                // e.preventDefault();
                 formData = new FormData();
 
                 // Gather other form data
                 // var mainImg = $("#mainImg")[0].files[0];
-                var proname = $("#proName").val().trim();
-                var proprice = $("#proPrice").val().trim();
-                var prosize = $("#proSize").val().trim();
-                var procolor = $("#proColor").val().trim();
-                var prodes = $("#proDescription").val().trim();
+                var proname = $("#proName").val();
+                var proprice = $("#proPrice").val();
+                // var prosize = $("#proSize").val().trim();
+                // var procolor = $("#proColor").val();
+                var prodes = $("#proDescription").val();
 
                 if (proname == "") {
                     toastr.error("Enter Product Name", "Empty!");
-                } else if (proprice == "") {
-                    toastr.error("Enter Price", "Empty!");
-                } else if (prosize == "") {
-                    toastr.error("Enter Size", "Empty!");
-                } else if (procolor == "") {
-                    toastr.error("Enter Color", "Empty!");
+                } else if(proprice == ""){
+                  toastr.error("Enter Product Price", "Empty!");
                 } else if (prodes == "") {
                     toastr.error("Enter Description", "Empty!");
                 } else {
+                    formData.append("id", productID);
                     formData.append("product_name", proname);
                     formData.append("product_price", proprice);
-                    formData.append("product_color", procolor);
-                    formData.append("product_size", prosize);
+                    // formData.append("product_color", procolor);
+                    // formData.append("product_size", prosize);
                     formData.append("product_description", prodes);
                     // formData.append("main_Img", mainImg);
 
                     // Append all additional images to the formData
-                    $("input[data-main='0']").each(function (index, input) {
-                        var additionalImage = input.files[0];
-                        if (additionalImage) {
-                            formData.append("additionalImage" + index, additionalImage);
-                        }
-                    });
+                    // $("input[data-main='0']").each(function (index, input) {
+                    //     var additionalImage = input.files[0];
+                    //     if (additionalImage) {
+                    //         formData.append("additionalImage" + index, additionalImage);
+                    //     }
+                    // });
 
                     // Send the formData to the server
                     uploadImage(formData);
@@ -515,7 +510,7 @@
             // Function to preview and upload the image via AJAX
             function uploadImage(formData) {
                 $.ajax({
-                    url: 'upload.php', // Replace 'upload.php' with your server-side script
+                    url: 'ajax/product/edit_product.php',
                     type: 'post',
                     contentType: false,
                     processData: false,
@@ -525,11 +520,11 @@
                         if (result.status == "Success") {
                             toastr.success("Product Created Successfully", "Welcome!");
 
-                            $("#proName").val("");
-                            $("#proPrice").val("");
-                            $("#proColor").val("");
-                            $("#proSize").val("");
-                            $("#proDescription").val("");
+                            // $("#proName").val("");
+                            // $("#proPrice").val("");
+                            // $("#proColor").val("");
+                            // $("#proSize").val("");
+                            // $("#proDescription").val("");
                         } else {
                             toastr.error("Unable To Create Product", "Error");
                         }
