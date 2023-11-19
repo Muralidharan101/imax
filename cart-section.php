@@ -368,7 +368,7 @@
         <script>
             var ref_no_whatsapp;
 
-             function openWhatsApp() {
+            function openWhatsApp() {
                 var phoneNumber = '+917010303571';
 
                 var referenceNumber = ref_no_whatsapp;
@@ -382,6 +382,7 @@
             function onlyNum(e) {
                 e.value = e.value.replace(/[^0-9]/g,'');
             }
+
             function toggleAccordions() {
                 // Close the first accordion
                 var collapseOne = new bootstrap.Collapse(document.getElementById('collapseOne'), {
