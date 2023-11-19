@@ -37,14 +37,12 @@
                   <li class="back-btn">
                     <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
                   </li>
-                  <li class="pin-title sidebar-list">
-                    <h6>Pinned</h6>
-                  </li>
+                  
                   <hr>
                   <br>
                   <li class="sidebar-list">
                     <i class="fa fa-thumb-tack"></i>
-                  <a class="sidebar-link sidebar-title" href="javascript:void(0)">
+                  <a class="sidebar-link sidebar-title" href="index.php">
                     <i data-feather="home"></i>
                     <span>Dashboard</span>
                     <div class="according-menu am">
@@ -92,8 +90,8 @@
 
                   <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title active" href="javascript:void(0)" data-bs-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-zap"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg><span >Master Data </span><div class="according-menu"><span><i class="bi bi-chevron-down"></i></span></div></a>
                     <ul class="sidebar-submenu" style="">
-                      <li><a href="Product_size.php" data-bs-original-title="" title="">Product Size Creation</a></li>
-                      <li><a href="Product_color.php" data-bs-original-title="" title="">Product Color Creation</a></li>
+                      <!-- <li><a href="Product_size.php" data-bs-original-title="" title="">Product Size Creation</a></li>
+                      <li><a href="Product_color.php" data-bs-original-title="" title="">Product Color Creation</a></li> -->
                       <li><a href="Product_category.php" data-bs-original-title="" title="">Product Category Creation</a></li>
                     </ul>
                   </li>

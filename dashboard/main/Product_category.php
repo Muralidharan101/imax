@@ -1,3 +1,6 @@
+<?php
+    require_once 'ajax/auth/session.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -87,7 +90,6 @@
                         <div class="col-12">
                             <div class="page-title-box">
                                 <div class="page-title-right">
-
                                 </div>
                                 <h4 class="page-title">Product Category Creation</h4>
                             </div>
@@ -311,7 +313,7 @@
                             data.map(value => {
                                 var editButton =
                                  `<a  data-bs-toggle="modal" data-bs-target="#edit" class='text-success me-2 edit_Category' data-id='${value.id}'><i class="bi bi-pencil-fill h6"></i></a>`;
-                                var deleteButton = `<a  class='text-danger me-2 '><i class="bi bi-trash3-fill h6"></i></a>`
+                                var deleteButton = `<a  class='text-danger me-2 del_cat' data-id='${value.id}'><i class="bi bi-trash3-fill h6"></i></a>`
                                 dataTable.row.add([
 
                                     value.id,
@@ -393,30 +395,31 @@
         
 // deleting product in table
 
-$("#delete_Product").click(function(){
-            
+        $(document).on('click',".del_cat",function(){   
+            var delete_id = $(this).data('id');
+            console.log(delete_id);
             var fd = new FormData();
-            fd.append("edit_Id",Edit_ID);
+            fd.append('id', delete_id);
+            // console.log(1);
 
-            $.ajax({
-                url:'ajax',
-                type:'post',
-                contentType:false,
-                processData:false,
-                data:fd,
+                $.ajax({
+                    url:'ajax/category/delete_category.php',
+                    type:'post',
+                    contentType:false,
+                    processData:false,
+                    data:fd,
 
-                success:function(response){
-                    var result = JSON.parse(respose);
-                    if(status.result == "Success"){
-                        toastr.success("Deleted Successfully","Updated !");
+                    success:function(response){
+                        var result = JSON.parse(response);
+                        if(result.status == "Success"){
+                            toastr.success("Deleted Successfully","Updated !");
+                            dataTable.clear().draw();
+                        }
+                        else{
+                            toastr.error("Unable to delete","Error !")
+                        }
                     }
-                    else{
-                        toastr.error("Unable to delete","Error !")
-                    }
-                }
+                });
             });
-
         });
-
-    });
     </script>

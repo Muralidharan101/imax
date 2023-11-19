@@ -1,3 +1,7 @@
+<?php
+  require_once '../../datab.php';
+  require_once 'ajax/auth/session.php';
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 

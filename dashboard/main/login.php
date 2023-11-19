@@ -1,32 +1,3 @@
-<?php 
-session_start();
-
-// Admin credentials (hard-coded for demonstration purposes)
-$adminUserphone = "1";
-$adminPassword = "1";
-
-// Check if the admin is already logged in
-if (isset($_SESSION['admin']) && $_SESSION['admin'] === true) {
-    echo 'Welcome, Admin!<br>';
-    echo '<a href="/logout">Logout</a>';
-} else {
-    // Check login attempt
-    if (isset($_POST['userphone']) && isset($_POST['password'])) {
-        $userphone = $_POST['userphone'];
-        $password = $_POST['password'];
-
-        // Check if entered credentials match admin credentials
-        if ($userphone === $adminUserphone && $password === $adminPassword) {
-            $_SESSION['admin'] = true;
-            header('Location: /');
-            exit();
-        } else {
-            echo 'Invalid username or password';
-        }
-    }
-  }
-
-?>
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -70,7 +41,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] === true) {
             <div>
               <!-- <div><a class="logo" href="index.html"><img class="img-fluid for-light" src="" alt="looginpage"></a></div> -->
               <div class="login-main"> 
-                <form class="theme-form">
+                <!-- <form class="theme-form"> -->
                   <h4 class="text-center">Sign in to account</h4>
                <br><br>
                   <div class="form-group">
@@ -81,19 +52,19 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] === true) {
                     <label class="col-form-label">Password</label>
                     <div class="form-input position-relative">
                       <input class="form-control" type="password" name="password" required="" id="password">
-                      <div class="show-hide"><span class="show">                         </span></div>
+                      <!-- <div class="show-hide"><span class="show">                         </span></div> -->
                     </div>
                   </div>
                   <div class="form-group mb-0">
                     <div class="checkbox p-0">
                       <input id="checkbox1" type="checkbox">
                     <div class="text-end mt-3">
-                      <button class="btn btn-primary btn-block w-100" type="submit" id="loggin">Sign in                 </button>
+                      <button class="btn btn-primary btn-block w-100" id="loggin">Sign in</button>
                     </div>
                   </div>
                   
                   <!-- <p class="mt-4 mb-0 text-center">Don't have account?<a class="ms-2" href="sign-up.html">Create Account</a></p> -->
-                </form>
+                <!-- </form> -->
               </div>
             </div>
           </div>
@@ -112,14 +83,49 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] === true) {
       <!-- Template js-->
       <script src="../assets/js/script.js"></script>
       <!-- login js-->
-            <!--Toastr  -->
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
-            integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
-            integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
+    integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+      <script>
+        $(document).ready(function(){
+          $('#loggin').click(function(){
+
+            var phone = $('#phone').val();
+            var pass = $('#password').val();
+
+            if(phone == '') {
+              toastr.warning('Enter Phone');
+            } else if(pass == '') {
+              toastr.warning('Enter Password');
+            } else {
+              var fd = new FormData();
+            fd.append('phone', phone);
+            fd.append('pass', pass);
+
+            $.ajax({
+              url: 'ajax/auth/login.php',
+              type: 'post',
+              contentType: false,
+              processData: false,
+              data: fd,
+              success:function(response){
+                var result = JSON.parse(response);
+
+                if(result.status == 'Success'){
+                  window.location.href='Product_creation.php';
+                } else {
+                  toastr.error('Invalid Login details');
+                }
+              }
+            })
+            }
+          })
+        })
+      </script>
     </div>
     
     <!-- <script>
